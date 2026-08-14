@@ -1,0 +1,37 @@
+file_format_version 1.0;
+
+timeset tset_slow_speed_H;
+pattern func_slow_speed_serial_high_en0 (DATA_INS,DATA_OUTS,ENABLES)
+{
+                               tset_slow_speed_H 1111 XXXX 00;
+                               tset_slow_speed_H 1111 XXXX 00;
+                               tset_slow_speed_H 1111 XXXX 00;
+end_loop(Start_init)           tset_slow_speed_H 1111 XXXX 00;
+set_loop (25)                  tset_slow_speed_H 1111 HHHH 00;
+Start1:                        tset_slow_speed_H 0111 LHHH 00;
+repeat(4)                      tset_slow_speed_H 0111 LHHH 00;
+repeat(5)                      tset_slow_speed_H 0111 LHHH 00;
+repeat(5)                      tset_slow_speed_H 0111 LHHH 00;
+repeat(4)                      tset_slow_speed_H 0111 LHHH 00;
+end_loop(Start1)               tset_slow_speed_H 0111 LHHH 00;
+                               tset_slow_speed_H 1011 HLHH 00;
+repeat(4)                      tset_slow_speed_H 1011 HLHH 00;
+repeat(5)                      tset_slow_speed_H 1011 HLHH 00;
+repeat(5)                      tset_slow_speed_H 1011 HLHH 00;
+repeat(4)                      tset_slow_speed_H 1011 HLHH 00;
+end_loop(Start2)               tset_slow_speed_H 1011 HLHH 00;
+                               tset_slow_speed_H 1101 HHLH 00;
+repeat(4)                      tset_slow_speed_H 1101 HHLH 00;
+repeat(5)                      tset_slow_speed_H 1101 HHLH 00;
+repeat(5)                      tset_slow_speed_H 1101 HHLH 00;
+repeat(4)                      tset_slow_speed_H 1101 HHLH 00;
+end_loop(Start3)               tset_slow_speed_H 1101 HHLH 00;
+                               tset_slow_speed_H 1110 HHHL 00;
+repeat(4)                      tset_slow_speed_H 1110 HHHL 00;
+repeat(5)                      tset_slow_speed_H 1110 HHHL 00;
+repeat(5)                      tset_slow_speed_H 1110 HHHL 00;
+repeat(4)                      tset_slow_speed_H 1110 HHHL 00;
+end_loop(Start4)               tset_slow_speed_H 1110 HHHL 00;
+halt                           tset_slow_speed_H 0000 XXXX 00;
+}
+

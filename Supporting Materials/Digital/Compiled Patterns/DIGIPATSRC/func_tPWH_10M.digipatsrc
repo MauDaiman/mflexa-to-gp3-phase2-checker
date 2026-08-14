@@ -1,0 +1,12 @@
+file_format_version 1.0;
+
+timeset tset_PWH_10M;
+pattern func_tPWH_10M (data_ins,data_outs)
+{
+Start:                         tset_PWH_10M   00 XX;
+                               tset_PWH_10M   11 HH;
+                               tset_PWH_10M   00 LL;
+end_loop(Start)                tset_PWH_10M   00 LL;
+halt                           tset_PWH_10M   00 XX;
+}
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="VIA_mux">
+        <Vil>0</Vil>
+        <Vih>4.5</Vih>
+        <Vol>4.5*0.5</Vol>
+        <Voh>4.5*0.5</Voh>
+        <Iol>1.5 mA</Iol>
+        <Ioh>-1.5 mA</Ioh>
+        <Vterm>4.5/2</Vterm>
+        <TerminationMode>Vterm</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VIB_mux">
+        <Vil>0</Vil>
+        <Vih>4.5</Vih>
+        <Vol>4.5*0.5</Vol>
+        <Voh>4.5*0.5</Voh>
+        <Iol>1.5 mA</Iol>
+        <Ioh>-1.5 mA</Ioh>
+        <Vterm>4.5/2</Vterm>
+        <TerminationMode>Vterm</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VOA_mux">
+        <Vil>0</Vil>
+        <Vih>4.5</Vih>
+        <Vol>4.5*0.5</Vol>
+        <Voh>4.5*0.5</Voh>
+        <Iol>0.002</Iol>
+        <Ioh>-0.002</Ioh>
+        <Vterm>4.5/2</Vterm>
+        <TerminationMode>Vterm</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VOB_mux">
+        <Vil>0</Vil>
+        <Vih>4.5</Vih>
+        <Vol>4.5*0.5</Vol>
+        <Voh>4.5*0.5</Voh>
+        <Iol>0.002</Iol>
+        <Ioh>-0.002</Ioh>
+        <Vterm>4.5/2</Vterm>
+        <TerminationMode>Vterm</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

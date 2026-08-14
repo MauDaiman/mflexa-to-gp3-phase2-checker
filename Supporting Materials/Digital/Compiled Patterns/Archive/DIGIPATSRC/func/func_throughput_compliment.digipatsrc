@@ -1,0 +1,28 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern func_throughput_compliment (data_ins,data_outs,enables)
+{
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+set_loop (1)                   tset_func      11 XX 01;
+Start_init:                    tset_func      00 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      00 XX 01;
+end_loop(Start_init)           tset_func      00 XX 01;
+                               tset_func      01 LH 01;
+                               tset_func      10 HL 01;
+                               tset_func      01 LH 01;
+end_loop(Start1)               tset_func      10 HL 01;
+                               tset_func      10 HL 01;
+                               tset_func      01 LH 01;
+                               tset_func      10 HL 01;
+end_loop(Start2)               tset_func      01 LH 01;
+halt                           tset_func      00 XX 01;
+}
+

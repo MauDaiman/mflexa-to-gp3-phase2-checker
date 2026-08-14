@@ -1,0 +1,24 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern func_throughput_parallel (data_ins,data_outs)
+{
+                               tset_func      00 XX;
+                               tset_func      11 XX;
+                               tset_func      00 XX;
+                               tset_func      11 XX;
+                               tset_func      00 XX;
+                               tset_func      11 XX;
+                               tset_func      00 XX;
+set_loop (1)                   tset_func      11 XX;
+Start_init:                    tset_func      00 XX;
+                               tset_func      00 XX;
+                               tset_func      00 XX;
+end_loop(Start_init)           tset_func      00 XX;
+Start1:                        tset_func      00 LL;
+                               tset_func      11 HH;
+                               tset_func      00 LL;
+end_loop(Start1)               tset_func      11 HH;
+halt                           tset_func      00 XX;
+}
+

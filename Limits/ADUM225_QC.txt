@@ -1,0 +1,322 @@
+<SemiconductorModuleTests>																					
+	<SequenceName>	<StepName>	<StepId>	<TestName>	<TestNumber>	<Pin>	<LowLimitExpression>	<HighLimitExpression>	<ComparisonType>	<ScalingFactor>	<Units>	<EvaluationType>	<FailBin>	<PublishedDataId>	<TestDataSource>	<DynamicPAT_Enabled>	<DynamicPAT_TestNumber>	<DynamicPAT_TestName>	<DynamicPAT_FailBin>	<DynamicPAT_LowLimit>	<DynamicPAT_HighLimit>
+	ADuM225_qc_flow	continuity	ID#:8hxtOrPt7xGyL6hZXyCkjD	tt_continuity	30000000				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	continuity	ID#:8hxtOrPt7xGyL6hZXyCkjD	pos_diode	1		0.35	0.71	GELE			Numeric Limit	8	pos_diode		FALSE					
+	ADuM225_qc_flow	continuity	ID#:8hxtOrPt7xGyL6hZXyCkjD	neg_diode	2		-0.7	-0.35	GELE			Numeric Limit	8	neg_diode		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_1p9_1p9	ID#:8xxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N0_1p9_1p9	30000001				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_1p9_1p9	ID#:8xxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_1p9_1p9	9		0.003	0.0096	GELE			Numeric Limit	7	IDD_VDD1_high_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_1p9_1p9	ID#:8xxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_1p9_1p9	10		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_1p9_1p9	ID#:8xxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_1p9_1p9	11		0.0005	0.0012	GELE			Numeric Limit	7	IDD_VDD1_low_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_1p9_1p9	ID#:8xxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_1p9_1p9	12		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_1p9_1p9	ID#:9BxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N1_1p9_1p9	30000002				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_1p9_1p9	ID#:9BxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_1p9_1p9	13		0.0005	0.0012	GELE			Numeric Limit	7	IDD_VDD1_high_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_1p9_1p9	ID#:9BxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_1p9_1p9	14		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_1p9_1p9	ID#:9BxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_1p9_1p9	15		0.003	0.0096	GELE			Numeric Limit	7	IDD_VDD1_low_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_1p9_1p9	ID#:9BxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_1p9_1p9	16		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_1p9_1p9	ID#:9RxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_1Mbps_1p9_1p9	30000003				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_1p9_1p9	ID#:9RxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD1_1p9_1p9	17		0.0005	0.006	GELE			Numeric Limit	9	IDD_1MB_VDD1_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_1p9_1p9	ID#:9RxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD2_1p9_1p9	18		0.0005	0.0018	GELE			Numeric Limit	9	IDD_1MB_VDD2_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_1p9_1p9	ID#:9hxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_25Mbps_1p9_1p9	30000004				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_1p9_1p9	ID#:9hxtOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD1_1p9_1p9	19		0.0005	0.0064	GELE			Numeric Limit	9	IDD_25MB_VDD1_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_1p9_1p9	ID#:9hxtOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD2_1p9_1p9	20		0.0005	0.0028	GELE			Numeric Limit	9	IDD_25MB_VDD2_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_1p9_1p9	ID#:9xxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_100Mbps_1p9_1p9	30000005				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_1p9_1p9	ID#:9xxtOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD1_1p9_1p9	21		0.0005	0.0084	GELE			Numeric Limit	9	IDD_100MB_VDD1_1p9_1p9		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_1p9_1p9	ID#:9xxtOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD2_1p9_1p9	22		0.0005	0.0058	GELE			Numeric Limit	9	IDD_100MB_VDD2_1p9_1p9		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_2p75_2p75	ID#:+BxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N0_2p75_2p75	30000006				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_2p75_2p75	ID#:+BxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_2p75_2p75	23		0.003	0.0095	GELE			Numeric Limit	7	IDD_VDD1_high_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_2p75_2p75	ID#:+BxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_2p75_2p75	24		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_2p75_2p75	ID#:+BxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_2p75_2p75	25		0.0005	0.0012	GELE			Numeric Limit	7	IDD_VDD1_low_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_2p75_2p75	ID#:+BxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_2p75_2p75	26		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_2p75_2p75	ID#:+RxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N1_2p75_2p75	30000007				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_2p75_2p75	ID#:+RxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_2p75_2p75	27		0.0005	0.0012	GELE			Numeric Limit	7	IDD_VDD1_high_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_2p75_2p75	ID#:+RxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_2p75_2p75	28		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_2p75_2p75	ID#:+RxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_2p75_2p75	29		0.003	0.0095	GELE			Numeric Limit	7	IDD_VDD1_low_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_2p75_2p75	ID#:+RxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_2p75_2p75	30		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_2p75_2p75	ID#:+hxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_1Mbps_2p75_2p75	30000008				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_2p75_2p75	ID#:+hxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD1_2p75_2p75	31		0.0005	0.0062	GELE			Numeric Limit	9	IDD_1MB_VDD1_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_2p75_2p75	ID#:+hxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD2_2p75_2p75	32		0.0005	0.0019	GELE			Numeric Limit	9	IDD_1MB_VDD2_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_2p75_2p75	ID#:+xxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_25Mbps_2p75_2p75	30000009				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_2p75_2p75	ID#:+xxtOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD1_2p75_2p75	33		0.0005	0.0066	GELE			Numeric Limit	9	IDD_25MB_VDD1_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_2p75_2p75	ID#:+xxtOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD2_2p75_2p75	34		0.0005	0.0028	GELE			Numeric Limit	9	IDD_25MB_VDD2_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_2p75_2p75	ID#:/BxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_100Mbps_2p75_2p75	30000010				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_2p75_2p75	ID#:/BxtOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD1_2p75_2p75	35		0.0005	0.009	GELE			Numeric Limit	9	IDD_100MB_VDD1_2p75_2p75		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_2p75_2p75	ID#:/BxtOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD2_2p75_2p75	36		0.0005	0.0058	GELE			Numeric Limit	9	IDD_100MB_VDD2_2p75_2p75		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_3p6_3p6	ID#:/RxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N0_3p6_3p6	30000011				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_3p6_3p6	ID#:/RxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_3p6_3p6	37		0.003	0.0097	GELE			Numeric Limit	7	IDD_VDD1_high_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_3p6_3p6	ID#:/RxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_3p6_3p6	38		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_3p6_3p6	ID#:/RxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_3p6_3p6	39		0.0005	0.0013	GELE			Numeric Limit	7	IDD_VDD1_low_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_3p6_3p6	ID#:/RxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_3p6_3p6	40		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_3p6_3p6	ID#:/hxtOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N1_3p6_3p6	30000012				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_3p6_3p6	ID#:/hxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_3p6_3p6	41		0.0005	0.0013	GELE			Numeric Limit	7	IDD_VDD1_high_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_3p6_3p6	ID#:/hxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_3p6_3p6	42		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_3p6_3p6	ID#:/hxtOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_3p6_3p6	43		0.003	0.0097	GELE			Numeric Limit	7	IDD_VDD1_low_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_3p6_3p6	ID#:/hxtOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_3p6_3p6	44		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_3p6_3p6	ID#:/xxtOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_1Mbps_3p6_3p6	30000013				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_3p6_3p6	ID#:/xxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD1_3p6_3p6	45		0.0005	0.0062	GELE			Numeric Limit	9	IDD_1MB_VDD1_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_3p6_3p6	ID#:/xxtOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD2_3p6_3p6	46		0.0005	0.0019	GELE			Numeric Limit	9	IDD_1MB_VDD2_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_3p6_3p6	ID#:AB1tOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_25Mbps_3p6_3p6	30000014				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_3p6_3p6	ID#:AB1tOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD1_3p6_3p6	47		0.0005	0.0067	GELE			Numeric Limit	9	IDD_25MB_VDD1_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_3p6_3p6	ID#:AB1tOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD2_3p6_3p6	48		0.0005	0.0031	GELE			Numeric Limit	9	IDD_25MB_VDD2_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_3p6_3p6	ID#:AR1tOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_100Mbps_3p6_3p6	30000015				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_3p6_3p6	ID#:AR1tOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD1_3p6_3p6	49		0.0005	0.0091	GELE			Numeric Limit	9	IDD_100MB_VDD1_3p6_3p6		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_3p6_3p6	ID#:AR1tOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD2_3p6_3p6	50		0.0005	0.0068	GELE			Numeric Limit	9	IDD_100MB_VDD2_3p6_3p6		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_5p5_5p5	ID#:Ah1tOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N0_5p5_5p5	30000016				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_5p5_5p5	ID#:Ah1tOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_5p5_5p5	51		0.003	0.01	GELE			Numeric Limit	7	IDD_VDD1_high_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_5p5_5p5	ID#:Ah1tOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_5p5_5p5	52		0.0005	0.0019	GELE			Numeric Limit	7	IDD_VDD2_high_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_5p5_5p5	ID#:Ah1tOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_5p5_5p5	53		0.0005	0.0013	GELE			Numeric Limit	7	IDD_VDD1_low_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N0_5p5_5p5	ID#:Ah1tOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_5p5_5p5	54		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_low_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_5p5_5p5	ID#:Ax1tOrPt7xGyL6hZXyCkjD	tt_idle_supply_current_N1_5p5_5p5	30000017				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_5p5_5p5	ID#:Ax1tOrPt7xGyL6hZXyCkjD	IDD_VDD1_high_5p5_5p5	55		0.0005	0.0013	GELE			Numeric Limit	7	IDD_VDD1_high_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_5p5_5p5	ID#:Ax1tOrPt7xGyL6hZXyCkjD	IDD_VDD2_high_5p5_5p5	56		0.0005	0.0018	GELE			Numeric Limit	7	IDD_VDD2_high_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_5p5_5p5	ID#:Ax1tOrPt7xGyL6hZXyCkjD	IDD_VDD1_low_5p5_5p5	57		0.003	0.01	GELE			Numeric Limit	7	IDD_VDD1_low_5p5_5p5		FALSE					
+	ADuM225_qc_flow	idle_supply_current_N1_5p5_5p5	ID#:Ax1tOrPt7xGyL6hZXyCkjD	IDD_VDD2_low_5p5_5p5	58		0.0005	0.0019	GELE			Numeric Limit	7	IDD_VDD2_low_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_5p5_5p5	ID#:BB1tOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_1Mbps_5p5_5p5	30000018				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_5p5_5p5	ID#:BB1tOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD1_5p5_5p5	59		0.0005	0.0068	GELE			Numeric Limit	9	IDD_1MB_VDD1_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_1Mbps_5p5_5p5	ID#:BB1tOrPt7xGyL6hZXyCkjD	IDD_1MB_VDD2_5p5_5p5	60		0.0005	0.002	GELE			Numeric Limit	9	IDD_1MB_VDD2_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_5p5_5p5	ID#:BR1tOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_25Mbps_5p5_5p5	30000019				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_5p5_5p5	ID#:BR1tOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD1_5p5_5p5	61		0.0005	0.0072	GELE			Numeric Limit	9	IDD_25MB_VDD1_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_25Mbps_5p5_5p5	ID#:BR1tOrPt7xGyL6hZXyCkjD	IDD_25MB_VDD2_5p5_5p5	62		0.0005	0.0032	GELE			Numeric Limit	9	IDD_25MB_VDD2_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_5p5_5p5	ID#:Bh1tOrPt7xGyL6hZXyCkjD	tt_dynamic_supply_current_100Mbps_5p5_5p5	30000020				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_5p5_5p5	ID#:Bh1tOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD1_5p5_5p5	63		0.0005	0.0093	GELE			Numeric Limit	9	IDD_100MB_VDD1_5p5_5p5		FALSE					
+	ADuM225_qc_flow	dynamic_supply_current_100Mbps_5p5_5p5	ID#:Bh1tOrPt7xGyL6hZXyCkjD	IDD_100MB_VDD2_5p5_5p5	64		0.0005	0.0081	GELE			Numeric Limit	9	IDD_100MB_VDD2_5p5_5p5		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_1p7_1p7	ID#:Bx1tOrPt7xGyL6hZXyCkjD	tt_Tr_prop_delay_1M_1p7_1p7	30000021				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_1p7_1p7	ID#:Bx1tOrPt7xGyL6hZXyCkjD	tPLH_VOA_1p7_1p7	65		0.000000006	0.000000013	GELE			Numeric Limit	15	tPLH_VOA_1p7_1p7		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_1p7_1p7	ID#:Bx1tOrPt7xGyL6hZXyCkjD	tPLH_VOB_1p7_1p7	66		0.000000006	0.000000013	GELE			Numeric Limit	15	tPLH_VOB_1p7_1p7		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_1p7_1p7	ID#:CB1tOrPt7xGyL6hZXyCkjD	tt_Tf_prop_delay_1M_1p7_1p7	30000022				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_1p7_1p7	ID#:CB1tOrPt7xGyL6hZXyCkjD	tPHL_VOA_1p7_1p7	67		0.000000006	0.000000013	GELE			Numeric Limit	15	tPHL_VOA_1p7_1p7		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_1p7_1p7	ID#:CB1tOrPt7xGyL6hZXyCkjD	tPHL_VOB_1p7_1p7	68		0.000000006	0.000000013	GELE			Numeric Limit	15	tPHL_VOB_1p7_1p7		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_1p7_1p7	ID#:CR1tOrPt7xGyL6hZXyCkjD	tt_pulse_width_distortion_1M_1p7_1p7	30000023				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_1p7_1p7	ID#:CR1tOrPt7xGyL6hZXyCkjD	tPWD_VOA_1p7_1p7	69		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOA_1p7_1p7		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_1p7_1p7	ID#:CR1tOrPt7xGyL6hZXyCkjD	tPWD_VOB_1p7_1p7	70		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOB_1p7_1p7		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_1p7_1p7	ID#:Ch1tOrPt7xGyL6hZXyCkjD	tt_ch_ch_match_1M_1p7_1p7	30000024				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_1p7_1p7	ID#:Ch1tOrPt7xGyL6hZXyCkjD	tPSKCD_Fall_1p7_1p7	71		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Fall_1p7_1p7		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_1p7_1p7	ID#:Ch1tOrPt7xGyL6hZXyCkjD	tPSKCD_RiseFall_1p7_1p7	72		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_RiseFall_1p7_1p7		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_1p7_1p7	ID#:Ch1tOrPt7xGyL6hZXyCkjD	tPSKCD_Rise_1p7_1p7	73		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Rise_1p7_1p7		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	tt_func_1Mbps_1p7_1p7	30000025				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	74		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	75		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	76		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	77		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	78		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	79		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	80		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	81		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	82		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_1Mbps_1p7_1p7	ID#:Cx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_1p7_1p7	83		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	tt_func_5Mbps_1p7_1p7	30000026				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	84		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	85		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	86		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	87		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	88		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	89		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	90		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	91		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	92		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_5Mbps_1p7_1p7	ID#:DB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_1p7_1p7	93		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	tt_func_50Mbps_1p7_1p7	30000027				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	94		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	95		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	96		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	97		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	98		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	99		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	100		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	101		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	102		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_50Mbps_1p7_1p7	ID#:DR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_1p7_1p7	103		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_75MHz_1p7_1p7	ID#:Dh1tOrPt7xGyL6hZXyCkjD	tt_func_75MHz_1p7_1p7	30000028				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_75MHz_1p7_1p7	ID#:Dh1tOrPt7xGyL6hZXyCkjD	func_75MHz_1p7_1p7	104		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_75MHz_1p7_1p7	ID#:Dh1tOrPt7xGyL6hZXyCkjD	func_75MHz_1p7_1p7	105		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_75MHz_1p7_1p7	ID#:Dh1tOrPt7xGyL6hZXyCkjD	func_75MHz_1p7_1p7	106		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_slow_speed_1p7_1p7	ID#:Dx1tOrPt7xGyL6hZXyCkjD	tt_func_slow_speed_1p7_1p7	30000029				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_slow_speed_1p7_1p7	ID#:Dx1tOrPt7xGyL6hZXyCkjD	func_slow_speed_1p7_1p7	107		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	tt_input_output_levels_1p7_1p7	30000030				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOL_20uA	108		-0.05	0.1	GELE			Numeric Limit	11	VOL_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOL_2mA	109		-0.05	0.4	GELE			Numeric Limit	11	VOL_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOL_4mA	110		-0.05	0.4	GELE			Numeric Limit	11	VOL_4mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOH_20uA	111		1.6	1.8	GELE			Numeric Limit	11	VOH_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOH_2mA	112		1.3	1.8	GELE			Numeric Limit	11	VOH_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_1p7_1p7	ID#:EB1tOrPt7xGyL6hZXyCkjD	VOH_4mA	113		1.3	1.8	GELE			Numeric Limit	11	VOH_4mA		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_2p25_2p25	ID#:ER1tOrPt7xGyL6hZXyCkjD	tt_Tr_prop_delay_1M_2p25_2p25	30000031				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_2p25_2p25	ID#:ER1tOrPt7xGyL6hZXyCkjD	tPLH_VOA_2p25_2p25	124		0.000000005	0.000000012	GELE			Numeric Limit	15	tPLH_VOA_2p25_2p25		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_2p25_2p25	ID#:ER1tOrPt7xGyL6hZXyCkjD	tPLH_VOB_2p25_2p25	125		0.000000005	0.000000012	GELE			Numeric Limit	15	tPLH_VOB_2p25_2p25		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_2p25_2p25	ID#:Eh1tOrPt7xGyL6hZXyCkjD	tt_Tf_prop_delay_1M_2p25_2p25	30000032				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_2p25_2p25	ID#:Eh1tOrPt7xGyL6hZXyCkjD	tPHL_VOA_2p25_2p25	126		0.000000005	0.000000012	GELE			Numeric Limit	15	tPHL_VOA_2p25_2p25		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_2p25_2p25	ID#:Eh1tOrPt7xGyL6hZXyCkjD	tPHL_VOB_2p25_2p25	127		0.000000005	0.000000012	GELE			Numeric Limit	15	tPHL_VOB_2p25_2p25		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_2p25_2p25	ID#:Ex1tOrPt7xGyL6hZXyCkjD	tt_pulse_width_distortion_1M_2p25_2p25	30000033				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_2p25_2p25	ID#:Ex1tOrPt7xGyL6hZXyCkjD	tPWD_VOA_2p25_2p25	128		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOA_2p25_2p25		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_2p25_2p25	ID#:Ex1tOrPt7xGyL6hZXyCkjD	tPWD_VOB_2p25_2p25	129		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOB_2p25_2p25		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_2p25_2p25	ID#:FB1tOrPt7xGyL6hZXyCkjD	tt_ch_ch_match_1M_2p25_2p25	30000034				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_2p25_2p25	ID#:FB1tOrPt7xGyL6hZXyCkjD	tPSKCD_Fall_2p25_2p25	130		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Fall_2p25_2p25		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_2p25_2p25	ID#:FB1tOrPt7xGyL6hZXyCkjD	tPSKCD_RiseFall_2p25_2p25	131		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_RiseFall_2p25_2p25		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_2p25_2p25	ID#:FB1tOrPt7xGyL6hZXyCkjD	tPSKCD_Rise_2p25_2p25	132		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Rise_2p25_2p25		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	tt_func_1Mbps_2p25_2p25	30000035				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	133		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	134		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	135		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	136		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	137		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	138		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	139		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	140		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	141		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_1Mbps_2p25_2p25	ID#:FR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_2p25_2p25	142		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	tt_func_5Mbps_2p25_2p25	30000036				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	143		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	144		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	145		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	146		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	147		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	148		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	149		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	150		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	151		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_5Mbps_2p25_2p25	ID#:Fh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_2p25_2p25	152		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	tt_func_50Mbps_2p25_2p25	30000037				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	153		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	154		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	155		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	156		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	157		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	158		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	159		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	160		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	161		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_50Mbps_2p25_2p25	ID#:Fx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_2p25_2p25	162		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_75MHz_2p25_2p25	ID#:GB1tOrPt7xGyL6hZXyCkjD	tt_func_75MHz_2p25_2p25	30000038				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_75MHz_2p25_2p25	ID#:GB1tOrPt7xGyL6hZXyCkjD	func_75MHz_2p25_2p25	163		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_75MHz_2p25_2p25	ID#:GB1tOrPt7xGyL6hZXyCkjD	func_75MHz_2p25_2p25	164		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_75MHz_2p25_2p25	ID#:GB1tOrPt7xGyL6hZXyCkjD	func_75MHz_2p25_2p25	165		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_slow_speed_2p25_2p25	ID#:GR1tOrPt7xGyL6hZXyCkjD	tt_func_slow_speed_2p25_2p25	30000039				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_slow_speed_2p25_2p25	ID#:GR1tOrPt7xGyL6hZXyCkjD	func_slow_speed_2p25_2p25	166		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	tt_input_output_levels_2p25_2p25	30000040				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOL_20uA	167		-0.05	0.1	GELE			Numeric Limit	11	VOL_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOL_2mA	168		-0.05	0.4	GELE			Numeric Limit	11	VOL_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOL_4mA	169		-0.05	0.4	GELE			Numeric Limit	11	VOL_4mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOH_20uA	170		2.15	2.35	GELE			Numeric Limit	11	VOH_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOH_2mA	171		1.85	2.35	GELE			Numeric Limit	11	VOH_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_2p25_2p25	ID#:Gh1tOrPt7xGyL6hZXyCkjD	VOH_4mA	172		1.85	2.35	GELE			Numeric Limit	11	VOH_4mA		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_3p0_3p0	ID#:Gx1tOrPt7xGyL6hZXyCkjD	tt_Tr_prop_delay_1M_3p0_3p0	30000041				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_3p0_3p0	ID#:Gx1tOrPt7xGyL6hZXyCkjD	tPLH_VOA_3p0_3p0	183		0.000000004	0.000000011	GELE			Numeric Limit	15	tPLH_VOA_3p0_3p0		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_3p0_3p0	ID#:Gx1tOrPt7xGyL6hZXyCkjD	tPLH_VOB_3p0_3p0	184		0.000000004	0.000000011	GELE			Numeric Limit	15	tPLH_VOB_3p0_3p0		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_3p0_3p0	ID#:HB1tOrPt7xGyL6hZXyCkjD	tt_Tf_prop_delay_1M_3p0_3p0	30000042				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_3p0_3p0	ID#:HB1tOrPt7xGyL6hZXyCkjD	tPHL_VOA_3p0_3p0	185		0.000000004	0.000000011	GELE			Numeric Limit	15	tPHL_VOA_3p0_3p0		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_3p0_3p0	ID#:HB1tOrPt7xGyL6hZXyCkjD	tPHL_VOB_3p0_3p0	186		0.000000004	0.000000011	GELE			Numeric Limit	15	tPHL_VOB_3p0_3p0		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_3p0_3p0	ID#:HR1tOrPt7xGyL6hZXyCkjD	tt_pulse_width_distortion_1M_3p0_3p0	30000043				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_3p0_3p0	ID#:HR1tOrPt7xGyL6hZXyCkjD	tPWD_VOA_3p0_3p0	187		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOA_3p0_3p0		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_3p0_3p0	ID#:HR1tOrPt7xGyL6hZXyCkjD	tPWD_VOB_3p0_3p0	188		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOB_3p0_3p0		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_3p0_3p0	ID#:Hh1tOrPt7xGyL6hZXyCkjD	tt_ch_ch_match_1M_3p0_3p0	30000044				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_3p0_3p0	ID#:Hh1tOrPt7xGyL6hZXyCkjD	tPSKCD_Fall_3p0_3p0	189		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Fall_3p0_3p0		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_3p0_3p0	ID#:Hh1tOrPt7xGyL6hZXyCkjD	tPSKCD_RiseFall_3p0_3p0	190		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_RiseFall_3p0_3p0		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_3p0_3p0	ID#:Hh1tOrPt7xGyL6hZXyCkjD	tPSKCD_Rise_3p0_3p0	191		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Rise_3p0_3p0		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	tt_func_1Mbps_3p0_3p0	30000045				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	192		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	193		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	194		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	195		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	196		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	197		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	198		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	199		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	200		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_1Mbps_3p0_3p0	ID#:Hx1tOrPt7xGyL6hZXyCkjD	func_1Mbps_3p0_3p0	201		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	tt_func_5Mbps_3p0_3p0	30000046				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	202		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	203		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	204		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	205		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	206		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	207		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	208		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	209		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	210		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_5Mbps_3p0_3p0	ID#:IB1tOrPt7xGyL6hZXyCkjD	func_5Mbps_3p0_3p0	211		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	tt_func_50Mbps_3p0_3p0	30000047				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	212		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	213		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	214		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	215		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	216		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	217		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	218		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	219		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	220		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_50Mbps_3p0_3p0	ID#:IR1tOrPt7xGyL6hZXyCkjD	func_50Mbps_3p0_3p0	221		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_75MHz_3p0_3p0	ID#:Ih1tOrPt7xGyL6hZXyCkjD	tt_func_75MHz_3p0_3p0	30000048				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_75MHz_3p0_3p0	ID#:Ih1tOrPt7xGyL6hZXyCkjD	func_75MHz_3p0_3p0	222		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_75MHz_3p0_3p0	ID#:Ih1tOrPt7xGyL6hZXyCkjD	func_75MHz_3p0_3p0	223		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_75MHz_3p0_3p0	ID#:Ih1tOrPt7xGyL6hZXyCkjD	func_75MHz_3p0_3p0	224		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_slow_speed_3p0_3p0	ID#:Ix1tOrPt7xGyL6hZXyCkjD	tt_func_slow_speed_3p0_3p0	30000049				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_slow_speed_3p0_3p0	ID#:Ix1tOrPt7xGyL6hZXyCkjD	func_slow_speed_3p0_3p0	225		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	tt_input_output_levels_3p0_3p0	30000050				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOL_20uA	226		-0.05	0.1	GELE			Numeric Limit	11	VOL_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOL_2mA	227		-0.05	0.4	GELE			Numeric Limit	11	VOL_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOL_4mA	228		-0.05	0.4	GELE			Numeric Limit	11	VOL_4mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOH_20uA	229		2.9	3.1	GELE			Numeric Limit	11	VOH_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOH_2mA	230		2.6	3.1	GELE			Numeric Limit	11	VOH_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_3p0_3p0	ID#:JB1tOrPt7xGyL6hZXyCkjD	VOH_4mA	231		2.6	3.1	GELE			Numeric Limit	11	VOH_4mA		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_4p5_4p5	ID#:JR1tOrPt7xGyL6hZXyCkjD	tt_Tr_prop_delay_1M_4p5_4p5	30000051				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_4p5_4p5	ID#:JR1tOrPt7xGyL6hZXyCkjD	tPLH_VOA_4p5_4p5	242		0.000000004	0.00000001	GELE			Numeric Limit	15	tPLH_VOA_4p5_4p5		FALSE					
+	ADuM225_qc_flow	Tr_prop_delay_1M_4p5_4p5	ID#:JR1tOrPt7xGyL6hZXyCkjD	tPLH_VOB_4p5_4p5	243		0.000000004	0.00000001	GELE			Numeric Limit	15	tPLH_VOB_4p5_4p5		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_4p5_4p5	ID#:Jh1tOrPt7xGyL6hZXyCkjD	tt_Tf_prop_delay_1M_4p5_4p5	30000052				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_4p5_4p5	ID#:Jh1tOrPt7xGyL6hZXyCkjD	tPHL_VOA_4p5_4p5	244		0.000000004	0.00000001	GELE			Numeric Limit	15	tPHL_VOA_4p5_4p5		FALSE					
+	ADuM225_qc_flow	Tf_prop_delay_1M_4p5_4p5	ID#:Jh1tOrPt7xGyL6hZXyCkjD	tPHL_VOB_4p5_4p5	245		0.000000004	0.00000001	GELE			Numeric Limit	15	tPHL_VOB_4p5_4p5		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_4p5_4p5	ID#:Jx1tOrPt7xGyL6hZXyCkjD	tt_pulse_width_distortion_1M_4p5_4p5	30000053				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_4p5_4p5	ID#:Jx1tOrPt7xGyL6hZXyCkjD	tPWD_VOA_4p5_4p5	246		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOA_4p5_4p5		FALSE					
+	ADuM225_qc_flow	pulse_width_distortion_1M_4p5_4p5	ID#:Jx1tOrPt7xGyL6hZXyCkjD	tPWD_VOB_4p5_4p5	247		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPWD_VOB_4p5_4p5		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_4p5_4p5	ID#:KB1tOrPt7xGyL6hZXyCkjD	tt_ch_ch_match_1M_4p5_4p5	30000054				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_4p5_4p5	ID#:KB1tOrPt7xGyL6hZXyCkjD	tPSKCD_Fall_4p5_4p5	248		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Fall_4p5_4p5		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_4p5_4p5	ID#:KB1tOrPt7xGyL6hZXyCkjD	tPSKCD_RiseFall_4p5_4p5	249		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_RiseFall_4p5_4p5		FALSE					
+	ADuM225_qc_flow	ch_ch_match_1M_4p5_4p5	ID#:KB1tOrPt7xGyL6hZXyCkjD	tPSKCD_Rise_4p5_4p5	250		-0.000000003	0.000000003	GELE			Numeric Limit	15	tPSKCD_Rise_4p5_4p5		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	tt_func_1Mbps_4p5_4p5	30000055				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	251		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	252		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	253		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	254		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	255		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	256		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	257		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	258		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	259		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_1Mbps_4p5_4p5	ID#:KR1tOrPt7xGyL6hZXyCkjD	func_1Mbps_4p5_4p5	260		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	tt_func_5Mbps_4p5_4p5	30000056				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	261		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	262		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	263		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	264		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	265		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	266		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	267		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	268		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	269		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_5Mbps_4p5_4p5	ID#:Kh1tOrPt7xGyL6hZXyCkjD	func_5Mbps_4p5_4p5	270		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	tt_func_50Mbps_4p5_4p5	30000057				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	271		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	272		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	273		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	274		1	1	GELE			Numeric Limit	17	3		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	275		1	1	GELE			Numeric Limit	17	4		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	276		1	1	GELE			Numeric Limit	17	5		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	277		1	1	GELE			Numeric Limit	17	6		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	278		1	1	GELE			Numeric Limit	17	7		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	279		1	1	GELE			Numeric Limit	17	8		FALSE					
+	ADuM225_qc_flow	func_50Mbps_4p5_4p5	ID#:Kx1tOrPt7xGyL6hZXyCkjD	func_50Mbps_4p5_4p5	280		1	1	GELE			Numeric Limit	17	9		FALSE					
+	ADuM225_qc_flow	func_75MHz_4p5_4p5	ID#:LB1tOrPt7xGyL6hZXyCkjD	tt_func_75MHz_4p5_4p5	30000058				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_75MHz_4p5_4p5	ID#:LB1tOrPt7xGyL6hZXyCkjD	func_75MHz_4p5_4p5	281		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	func_75MHz_4p5_4p5	ID#:LB1tOrPt7xGyL6hZXyCkjD	func_75MHz_4p5_4p5	282		1	1	GELE			Numeric Limit	17	1		FALSE					
+	ADuM225_qc_flow	func_75MHz_4p5_4p5	ID#:LB1tOrPt7xGyL6hZXyCkjD	func_75MHz_4p5_4p5	283		1	1	GELE			Numeric Limit	17	2		FALSE					
+	ADuM225_qc_flow	func_slow_speed_4p5_4p5	ID#:LR1tOrPt7xGyL6hZXyCkjD	tt_func_slow_speed_4p5_4p5	30000059				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	func_slow_speed_4p5_4p5	ID#:LR1tOrPt7xGyL6hZXyCkjD	func_slow_speed_4p5_4p5	284		1	1	GELE			Numeric Limit	17	0		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	tt_input_output_levels_4p5_4p5	30000060				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOL_20uA	285		-0.05	0.1	GELE			Numeric Limit	11	VOL_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOL_2mA	286		-0.05	0.4	GELE			Numeric Limit	11	VOL_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOL_4mA	287		-0.05	0.4	GELE			Numeric Limit	11	VOL_4mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOH_20uA	288		4.4	4.6	GELE			Numeric Limit	11	VOH_20uA		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOH_2mA	289		4.1	4.6	GELE			Numeric Limit	11	VOH_2mA		FALSE					
+	ADuM225_qc_flow	input_output_levels_4p5_4p5	ID#:Lh1tOrPt7xGyL6hZXyCkjD	VOH_4mA	290		4.1	4.6	GELE			Numeric Limit	11	VOH_4mA		FALSE					
+	ADuM225_qc_flow	LEAKAGE_5p5_5p5	ID#:Lx1tOrPt7xGyL6hZXyCkjD	tt_LEAKAGE_5p5_5p5	30000061				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+	ADuM225_qc_flow	LEAKAGE_5p5_5p5	ID#:Lx1tOrPt7xGyL6hZXyCkjD	Iin_low_VDD1	301		-0.000001	0.000001	GELE			Numeric Limit	13	Iin_low_VDD1		FALSE					
+	ADuM225_qc_flow	LEAKAGE_5p5_5p5	ID#:Lx1tOrPt7xGyL6hZXyCkjD	Iin_high_VDD1	302		-0.000001	0.000001	GELE			Numeric Limit	13	Iin_high_VDD1		FALSE					
+	ADuM225_qc_flow	PowerDown	ID#:MB1tOrPt7xGyL6hZXyCkjD	tt_PowerDown	30000062				LOG			Numeric Limit			Seconds()-Locals.StepStartTime	FALSE					
+</SemiconductorModuleTests>																					

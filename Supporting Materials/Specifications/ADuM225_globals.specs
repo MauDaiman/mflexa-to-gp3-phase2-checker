@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="_">
+    <f:Formula symbol="_Vcl_default">
+      <f:Definition>-1.5</f:Definition>
+      <f:Comment>Detector clamp voltage low</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="_Vch_default">
+      <f:Definition>  6.5</f:Definition>
+      <f:Comment>Detector clamp voltage high</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="_Vph_default">
+      <f:Definition>5</f:Definition>
+      <f:Comment>Hi-V pin voltage high</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="_Iph_default">
+      <f:Definition>0</f:Definition>
+      <f:Comment>Hi-V pin current limit</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="_Tpr_default">
+      <f:Definition>1.6E-05</f:Definition>
+      <f:Comment>Hi-V pin rise time</f:Comment>
+    </f:Formula>
+  </Section>
+</Specifications>

@@ -1,0 +1,16 @@
+file_format_version 1.0;
+
+timeset tset_0;
+pattern idd_dyn_en0 (DATA_INS,DATA_OUTS,ENABLES)
+{
+Start:
+                               tset_0         0000 XXXX 00;
+                               tset_0         1111 HHHH 00;
+                               tset_0         1111 HHHH 00;
+set_seqflag(seqflag0)          tset_0         1111 HHHH 00;
+test:
+jump_if(seqflag0, test )       tset_0         1111 HHHH 00;
+                               tset_0         1111 HHHH 00;
+halt                           tset_0         1111 HHHH 00;
+}
+

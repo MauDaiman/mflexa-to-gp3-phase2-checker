@@ -1,0 +1,15 @@
+file_format_version 1.0;
+export inputs_lo, inputs_hi;
+
+timeset tset_func;
+pattern static_init_en0 (DATA_INS,DATA_OUTS,ENABLES)
+{
+inputs_lo:
+                               tset_func      00 XX 00;
+halt                           tset_func      00 XX 00;
+inputs_hi:
+                               tset_func      11 XX 00;
+halt                           tset_func      11 XX 00;
+}
+
+

@@ -1,0 +1,31 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern powered_default_state_high (data_ins,data_outs)
+{
+                               tset_func      00 XX;
+                               tset_func      11 XX;
+                               tset_func      00 LL;
+                               tset_func      00 LL;
+                               tset_func      00 LL;
+                               tset_func      00 LL;
+                               tset_func      00 LL;
+                               tset_func      00 HH;
+                               tset_func      00 HH;
+                               tset_func      00 HH;
+                               tset_func      00 HH;
+                               tset_func      00 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      11 HH;
+                               tset_func      00 XX;
+halt                           tset_func      11 XX;
+}
+

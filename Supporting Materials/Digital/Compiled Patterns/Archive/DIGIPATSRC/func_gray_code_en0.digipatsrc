@@ -1,0 +1,30 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern func_gray_code_en0 (DATA_INS,DATA_OUTS,ENABLES)
+{
+                               tset_func      0000 XXXX 00;
+                               tset_func      0000 XXXX 00;
+                               tset_func      0000 XXXX 00;
+                               tset_func      0000 XXXX 00;
+                               tset_func      0000 XXXX 00;
+                               tset_func      0000 LLLL 00;
+                               tset_func      0001 LLLH 00;
+                               tset_func      0011 LLHH 00;
+                               tset_func      0010 LLHL 00;
+                               tset_func      0110 LHHL 00;
+                               tset_func      0111 LHHH 00;
+                               tset_func      0101 LHLH 00;
+                               tset_func      0100 LHLL 00;
+                               tset_func      1100 HHLL 00;
+                               tset_func      1101 HHLH 00;
+                               tset_func      1111 HHHH 00;
+                               tset_func      1110 HHHL 00;
+                               tset_func      1010 HLHL 00;
+                               tset_func      1011 HLHH 00;
+                               tset_func      1001 HLLH 00;
+                               tset_func      1000 HLLL 00;
+                               tset_func      0000 LLLL 00;
+halt                           tset_func      0000 XXXX 00;
+}
+

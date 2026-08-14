@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PinMap schemaVersion="1.4" xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Instruments>
+		<Instrument name="SYNC_6674_C1_S10" instrumentTypeId="SYNC">
+			<Channel id="CLKIN" />
+			<Channel id="CLKOUT" />
+			<Channel id="PFI0" />
+			<Channel id="PFI1" />
+			<Channel id="PFI2" />
+			<Channel id="PFI3" />
+			<Channel id="PFI4" />
+			<Channel id="PFI5" />
+		</Instrument>
+		<NIRelayDriverModule name="RELAY_2567_C1_S08" numberOfControlLines="64" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_AI" taskType="AI" channelList="DAQ_6368_C1_S09/ai0,DAQ_6368_C1_S09/ai1,DAQ_6368_C1_S09/ai2,DAQ_6368_C1_S09/ai3,DAQ_6368_C1_S09/ai4,DAQ_6368_C1_S09/ai5,DAQ_6368_C1_S09/ai6,DAQ_6368_C1_S09/ai7,DAQ_6368_C1_S09/ai8,DAQ_6368_C1_S09/ai9,DAQ_6368_C1_S09/ai10,DAQ_6368_C1_S09/ai11,DAQ_6368_C1_S09/ai12,DAQ_6368_C1_S09/ai13,DAQ_6368_C1_S09/ai14,DAQ_6368_C1_S09/ai15" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_AO" taskType="AO" channelList="DAQ_6368_C1_S09/ao0,DAQ_6368_C1_S09/ao1,DAQ_6368_C1_S09/ao2,DAQ_6368_C1_S09/ao3" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DIO" taskType="DIO" channelList="DAQ_6368_C1_S09/P0.0,&#xD;&#xA;DAQ_6368_C1_S09/P0.1,&#xD;&#xA;DAQ_6368_C1_S09/P0.2,&#xD;&#xA;DAQ_6368_C1_S09/P0.3,&#xD;&#xA;DAQ_6368_C1_S09/port0/line4,&#xD;&#xA;DAQ_6368_C1_S09/P0.5,&#xD;&#xA;DAQ_6368_C1_S09/P0.6,&#xD;&#xA;DAQ_6368_C1_S09/P0.7,&#xD;&#xA;DAQ_6368_C1_S09/P0.8,&#xD;&#xA;DAQ_6368_C1_S09/P0.9,&#xD;&#xA;DAQ_6368_C1_S09/P0.10,&#xD;&#xA;DAQ_6368_C1_S09/P0.11,&#xD;&#xA;DAQ_6368_C1_S09/port0/line12,&#xD;&#xA;DAQ_6368_C1_S09/P0.13,&#xD;&#xA;DAQ_6368_C1_S09/P0.14,&#xD;&#xA;DAQ_6368_C1_S09/P0.15,&#xD;&#xA;DAQ_6368_C1_S09/P0.16,&#xD;&#xA;DAQ_6368_C1_S09/P0.17,&#xD;&#xA;DAQ_6368_C1_S09/P0.18,&#xD;&#xA;DAQ_6368_C1_S09/P0.19,&#xD;&#xA;DAQ_6368_C1_S09/P0.20,&#xD;&#xA;DAQ_6368_C1_S09/P0.21,&#xD;&#xA;DAQ_6368_C1_S09/P0.22,&#xD;&#xA;DAQ_6368_C1_S09/P0.23,&#xD;&#xA;DAQ_6368_C1_S09/P0.24,&#xD;&#xA;DAQ_6368_C1_S09/P0.25,&#xD;&#xA;DAQ_6368_C1_S09/P0.26,&#xD;&#xA;DAQ_6368_C1_S09/P0.27,&#xD;&#xA;DAQ_6368_C1_S09/P0.28,&#xD;&#xA;DAQ_6368_C1_S09/P0.29,&#xD;&#xA;DAQ_6368_C1_S09/P0.30,&#xD;&#xA;DAQ_6368_C1_S09/P0.31,&#xD;&#xA;DAQ_6368_C1_S09/PFI0,&#xD;&#xA;DAQ_6368_C1_S09/PFI1,&#xD;&#xA;DAQ_6368_C1_S09/PFI2,&#xD;&#xA;DAQ_6368_C1_S09/PFI3,&#xD;&#xA;DAQ_6368_C1_S09/PFI4,&#xD;&#xA;DAQ_6368_C1_S09/PFI5,&#xD;&#xA;DAQ_6368_C1_S09/PFI6,&#xD;&#xA;DAQ_6368_C1_S09/PFI7,&#xD;&#xA;DAQ_6368_C1_S09/PFI8,&#xD;&#xA;DAQ_6368_C1_S09/PFI9,&#xD;&#xA;DAQ_6368_C1_S09/PFI10,&#xD;&#xA;DAQ_6368_C1_S09/PFI11,&#xD;&#xA;DAQ_6368_C1_S09/PFI12,&#xD;&#xA;DAQ_6368_C1_S09/PFI13,&#xD;&#xA;DAQ_6368_C1_S09/PFI14,&#xD;&#xA;DAQ_6368_C1_S09/PFI15" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S02" numberOfChannels="32" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S03" numberOfChannels="32" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S04" numberOfChannels="32" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S05" numberOfChannels="32" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S06" numberOfChannels="32" />
+		<NIDmmInstrument name="DMM_4081_C1_S11" />
+		<NIDmmInstrument name="DMM_4081_C1_S12" />
+		<NIDmmInstrument name="DMM_4081_C1_S13" />
+		<NIDmmInstrument name="DMM_4081_C1_S14" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S06" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S07" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S08" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S09" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S02" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S03" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S04" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S05" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4139_C2_S17" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4147_C2_S16" numberOfChannels="4" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S12" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S10" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S11" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S13" numberOfChannels="24" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S14" numberOfChannels="24" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S15" numberOfChannels="24" />
+		<NIDCPowerInstrument name="PPS_4110_C1_S07" numberOfChannels="3" />
+		<NIRelayDriverModule name="RELAY_2567_C1_S12" numberOfControlLines="64" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="VDD1" />
+		<DUTPin name="VDD2" />
+		<DUTPin name="VOA_SMU" />
+		<DUTPin name="VOB_SMU" />
+		<SystemPin name="SMU4139_POS5V" />
+		<DUTPin name="VIA_ODD" />
+		<DUTPin name="VIA" />
+		<DUTPin name="VIB_ODD" />
+		<DUTPin name="VOB_ODD" />
+		<DUTPin name="VOA_ODD" />
+		<DUTPin name="VOB" />
+		<DUTPin name="VOA" />
+		<DUTPin name="VIB" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="AllDC">
+			<PinReference pin="VDD1" />
+			<PinReference pin="VDD2" />
+			<PinReference pin="VOA_SMU" />
+			<PinReference pin="VOB_SMU" />
+		</PinGroup>
+		<PinGroup name="vdd">
+			<PinReference pin="VDD1" />
+			<PinReference pin="VDD2" />
+		</PinGroup>
+		<PinGroup name="data_ins">
+			<PinReference pin="VIA" />
+			<PinReference pin="VIB" />
+		</PinGroup>
+		<PinGroup name="data_outs">
+			<PinReference pin="VOB" />
+			<PinReference pin="VOA" />
+		</PinGroup>
+		<PinGroup name="cont_pins">
+			<PinReference pin="VIA" />
+			<PinReference pin="VIB" />
+			<PinReference pin="VOA" />
+			<PinReference pin="VOB" />
+		</PinGroup>
+		<PinGroup name="inputs">
+			<PinReference pin="VIB" />
+			<PinReference pin="VIA" />
+		</PinGroup>
+		<PinGroup name="outputs">
+			<PinReference pin="VOA" />
+			<PinReference pin="VOB" />
+		</PinGroup>
+		<PinGroup name="leakage_pins">
+			<PinReference pin="VIB" />
+			<PinReference pin="VIA" />
+		</PinGroup>
+		<PinGroup name="vdd1_ins">
+			<PinReference pin="VIA" />
+			<PinReference pin="VIB" />
+		</PinGroup>
+		<PinGroup name="vdd2_outs">
+			<PinReference pin="VOA" />
+			<PinReference pin="VOB" />
+		</PinGroup>
+		<PinGroup name="dib_acc">
+			<PinReference pin="VOA" />
+			<PinReference pin="VOB" />
+		</PinGroup>
+		<PinGroup name="data_ins_odd">
+			<PinReference pin="VIA_ODD" />
+			<PinReference pin="VIB_ODD" />
+		</PinGroup>
+		<PinGroup name="VIA_mux">
+			<PinReference pin="VIA_ODD" />
+			<PinReference pin="VIA" />
+		</PinGroup>
+		<PinGroup name="VIB_mux">
+			<PinReference pin="VIB_ODD" />
+			<PinReference pin="VIB" />
+		</PinGroup>
+		<PinGroup name="VOB_mux">
+			<PinReference pin="VOB_ODD" />
+			<PinReference pin="VOB" />
+		</PinGroup>
+		<PinGroup name="VOA_mux">
+			<PinReference pin="VOA_ODD" />
+			<PinReference pin="VOA" />
+		</PinGroup>
+		<PinGroup name="digital">
+			<PinReference pin="VIA_ODD" />
+			<PinReference pin="VIA" />
+			<PinReference pin="VIB_ODD" />
+			<PinReference pin="VOB_ODD" />
+			<PinReference pin="VOA_ODD" />
+			<PinReference pin="VOB" />
+			<PinReference pin="VOA" />
+			<PinReference pin="VIB" />
+		</PinGroup>
+	</PinGroups>
+	<Sites>
+		<Site siteNumber="0" />
+		<Site siteNumber="1" />
+		<Site siteNumber="2" />
+		<Site siteNumber="3" />
+	</Sites>
+	<Connections></Connections>
+</PinMap>

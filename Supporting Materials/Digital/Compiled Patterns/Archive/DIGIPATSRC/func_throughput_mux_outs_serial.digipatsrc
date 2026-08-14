@@ -1,0 +1,25 @@
+file_format_version 1.0;
+
+timeset tset_phase1_2, tset_phase3_4;
+pattern func_throughput_mux_outs_serial (VIA_MUX,VIB_MUX,VIC_MUX,VID_MUX,VOA_MUX,VOB_MUX,VOC_MUX,VOD_MUX,ENABLES)
+{
+set_loop (100)                 tset_phase1_2  11 00 00 00 XX XX XX XX 11;
+Start1:                        tset_phase1_2  11 00 00 00 HL LL LL LL 11;
+                               tset_phase3_4  11 00 00 00 HL LL LL LL 11;
+end_loop(Start1)               tset_phase1_2  11 00 00 00 HL LL LL LL 11;
+set_loop (100)                 tset_phase3_4  00 11 00 00 XX XX XX XX 11;
+Start1:                        tset_phase1_2  00 11 00 00 LL HL LL LL 11;
+                               tset_phase3_4  00 11 00 00 LL HL LL LL 11;
+end_loop(Start2)               tset_phase1_2  00 11 00 00 LL HL LL LL 11;
+set_loop (100)                 tset_phase3_4  00 00 11 00 XX XX XX XX 11;
+Start1:                        tset_phase1_2  00 00 11 00 LL LL HL LL 11;
+                               tset_phase3_4  00 00 11 00 LL LL HL LL 11;
+end_loop(Start3)               tset_phase1_2  00 00 11 00 LL LL HL LL 11;
+set_loop (100)                 tset_phase3_4  00 00 00 11 XX XX XX XX 11;
+Start1:                        tset_phase1_2  00 00 00 11 LL LL LL HL 11;
+                               tset_phase3_4  00 00 00 11 LL LL LL HL 11;
+end_loop(Start4)               tset_phase1_2  00 00 00 11 LL LL LL HL 11;
+                               tset_phase1_2  11 11 11 11 XX XX XX XX 11;
+halt                           tset_phase1_2  11 11 11 11 XX XX XX XX 11;
+}
+

@@ -1,0 +1,10 @@
+file_format_version 1.0;
+
+timeset tset_find_edge;
+pattern find_edge_Tf (DATA_INS,DATA_OUTS,ENABLES)
+{
+                               tset_find_edge 1111 HHHH 11;
+                               tset_find_edge 0000 LLLL 11;
+halt                           tset_find_edge 0000 LLLL 11;
+}
+
