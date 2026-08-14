@@ -1,0 +1,12 @@
+file_format_version 1.0;
+
+timeset tset_PWL_10M;
+pattern func_tPWL_10M_en0 (DATA_INS,DATA_OUTS,ENABLES)
+{
+                               tset_PWL_10M   1111 XXXX 00;
+                               tset_PWL_10M   0000 LLLL 00;
+                               tset_PWL_10M   1111 HHHH 00;
+end_loop(Start)                tset_PWL_10M   1111 HHHH 00;
+halt                           tset_PWL_10M   1111 XXXX 00;
+}
+

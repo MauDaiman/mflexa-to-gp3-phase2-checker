@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="tset_phase1">
+        <Period>1/75000000</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>1/75000000</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase2">
+        <Period>1/75000000</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>1/75000000</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>6.667E-09</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase3">
+        <Period>1/75000000</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>1/75000000</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase4">
+        <Period>1/75000000</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>(1/75000000)/2</Return>
+              <Off>1/75000000</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>1/75000000</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>1/75000000</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>6.667E-09</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>

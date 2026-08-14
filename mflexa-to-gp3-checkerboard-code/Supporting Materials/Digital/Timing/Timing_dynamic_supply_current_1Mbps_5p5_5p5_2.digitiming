@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="tset_0">
+        <Period>2E-06</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>5E-07</Data>
+              <Return>1.5E-06</Return>
+              <Off>2E-06</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>2E-06</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>2E-06</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>1E-06</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_func">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_PWL_10M">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0.00000025</Data>
+              <Return>0.0000005</Return>
+              <Off>0.000001</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.00000075</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_PWH_10M">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0.00000025</Data>
+              <Return>0.0000005</Return>
+              <Off>0.000001</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.00000075</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_find_edge">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.0000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_sweep">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <ReturnToLow>
+              <On>0</On>
+              <Data>0.00000057</Data>
+              <Return>0.0000006</Return>
+              <Off>0.000001</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_slow_speed_H">
+        <Period>0.000001</Period>
+        <PinEdges>
+          <PinEdge pin="data_ins">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>0.0000005</Return>
+              <Off>0.000001</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.000001</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>0.000001</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.0000003</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>

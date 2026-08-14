@@ -1,0 +1,17 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern VDD1_power_down_high_ABCD (DATA_INS,VDD2_OUTS,ENABLES)
+{
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+                               tset_func      1111 XXXX 11;
+                               tset_func      1111 XXXX 11;
+                               tset_func      1111 HHHH 11;
+                               tset_func      1111 XXXX 10;
+halt                           tset_func      0000 XXXX 01;
+}
+

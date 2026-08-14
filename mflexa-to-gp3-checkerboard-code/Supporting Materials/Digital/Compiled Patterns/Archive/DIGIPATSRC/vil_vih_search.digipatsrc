@@ -1,0 +1,24 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern vil_vih_search (data_ins,data_outs,enables)
+{
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      11 XX 01;
+                               tset_func      00 XX 01;
+set_loop (10)                  tset_func      11 XX 01;
+Start:                         tset_func      00 LL 01;
+                               tset_func      11 HH 01;
+                               tset_func      00 LL 01;
+end_loop(Start)                tset_func      11 HH 01;
+halt                           tset_func      00 XX 01;
+}
+

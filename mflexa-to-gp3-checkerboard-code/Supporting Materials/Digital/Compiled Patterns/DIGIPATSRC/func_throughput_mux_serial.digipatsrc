@@ -1,0 +1,19 @@
+file_format_version 1.0;
+
+timeset tset_phase1, tset_phase2, tset_phase3, tset_phase4;
+pattern func_throughput_mux_serial (VIA_mux,VIB_mux,data_outs)
+{
+set_loop (100)                 tset_phase1    11 00 XX;
+Start1:                        tset_phase1    11 00 HL;
+                               tset_phase3    11 00 HL;
+                               tset_phase2    11 00 LL;
+end_loop(Start1)               tset_phase4    11 00 LL;
+set_loop (100)                 tset_phase4    00 11 XX;
+Start2:                        tset_phase1    00 11 LH;
+                               tset_phase3    00 11 LH;
+                               tset_phase2    00 11 LL;
+end_loop(Start2)               tset_phase4    00 11 LL;
+                               tset_phase4    00 00 XX;
+halt                           tset_phase1    11 11 XX;
+}
+

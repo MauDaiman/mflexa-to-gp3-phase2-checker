@@ -1,0 +1,55 @@
+// The file name and location of this load file is used in the Test Program Definition File. The name of this file is also used in the Site to Site Yield Limits File.
+
+ 
+
+// The section header in brackets [TestProgramData] must be present in every load file!
+// The "PartType" is the name of the part type under test. Example: "ADXL189"
+
+ 
+
+// The "TestFlowID" is used in the test program to determine what test to run or what limits to load. This name should be identical to the Test Program Configuration Name in the test program.
+
+ 
+
+// If more configuration data is needed to run a test program, it can be added to the test program in TestStand by going to Semiconductor Module >> Edit Test Program >> Configurations.
+
+ 
+
+// For example: Some parts need to be soaked at a certain temperature to be tested. This can be specified in the Configuration of a test program.
+
+ 
+
+ 
+
+// The "TestTemperature" is used for handler control, OI information and log file names.
+
+ 
+
+ 
+
+// The "Test Program File" (.seq) is relative to the path of this load file.
+
+ 
+
+// Example: Load file is in directory C:\temp
+
+ 
+
+// Example: Test program then must be in a sub directory. C:\temp\test
+
+ 
+
+// Example: Test Program file should be specified as \test\program.seq
+
+ 
+
+ 
+
+[TestProgramData] 
+PartType = "ADUM225N"
+Configuration = "v31357p02c_adum225n_qc_125c"
+TestTemperature = "125C" 
+TestProgramFile = "STSCsharp_ADuM225N.seq"
+TestSequence = "v31357p02c_adum225n_qc_125c"
+
+ 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="VIA">
+        <Vil>0</Vil>
+        <Vih>2.25</Vih>
+        <Vol>1</Vol>
+        <Voh>1</Voh>
+        <Iol>1.5 mA</Iol>
+        <Ioh>-1.5 mA</Ioh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VIB">
+        <Vil>0</Vil>
+        <Vih>2.25</Vih>
+        <Vol>1</Vol>
+        <Voh>1</Voh>
+        <Iol>1.5 mA</Iol>
+        <Ioh>-1.5 mA</Ioh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VOA">
+        <Vil>0</Vil>
+        <Vih>2.25</Vih>
+        <Vol>1.05</Vol>
+        <Voh>1.05</Voh>
+        <Iol>0.002</Iol>
+        <Ioh>-0.002</Ioh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VOB">
+        <Vil>0</Vil>
+        <Vih>2.25</Vih>
+        <Vol>1.05</Vol>
+        <Voh>1.05</Voh>
+        <Iol>0.002</Iol>
+        <Ioh>-0.002</Ioh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

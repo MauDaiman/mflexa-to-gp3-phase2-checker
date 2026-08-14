@@ -1,0 +1,21 @@
+file_format_version 1.0;
+export Positive_ramp, Negative_ramp;
+
+timeset tset_func;
+
+
+pattern UVLO_VDD2 (DATA_INS,DATA_OUTS,ENABLES)
+{
+Positive_ramp:
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+repeat(512)                    tset_func      0000 HHHH 11;
+halt                           tset_func      0000 XXXX 11;
+Negative_ramp:
+                               tset_func      0000 XXXX 11;
+                               tset_func      0000 XXXX 11;
+repeat(512)                    tset_func      0000 HHHH 11;
+halt                           tset_func      0000 XXXX 11;
+}
+
+

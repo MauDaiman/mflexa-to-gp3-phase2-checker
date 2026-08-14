@@ -1,0 +1,32 @@
+file_format_version 1.0;
+
+timeset tset_func;
+pattern throughput_xMHz (data_ins,data_outs,enables)
+{
+                               tset_func      00 XX 01;
+                               tset_func      00 XX 01;
+                               tset_func      10 HX 01;
+                               tset_func      00 LX 01;
+                               tset_func      10 HX 01;
+                               tset_func      00 LX 01;
+                               tset_func      10 HX 01;
+                               tset_func      00 LX 01;
+                               tset_func      10 HX 01;
+                               tset_func      00 LX 01;
+                               tset_func      10 HX 01;
+                               tset_func      00 LX 01;
+                               tset_func      00 XX 01;
+                               tset_func      01 XH 01;
+                               tset_func      00 XL 01;
+                               tset_func      01 XH 01;
+                               tset_func      00 XL 01;
+                               tset_func      01 XH 01;
+                               tset_func      00 XL 01;
+                               tset_func      01 XH 01;
+                               tset_func      00 XL 01;
+                               tset_func      01 XH 01;
+                               tset_func      00 XL 01;
+                               tset_func      00 XX 01;
+halt                           tset_func      00 XX 01;
+}
+

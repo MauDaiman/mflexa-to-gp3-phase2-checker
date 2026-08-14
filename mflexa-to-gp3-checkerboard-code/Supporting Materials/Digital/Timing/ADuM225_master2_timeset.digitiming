@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="tset_phase1">
+        <Period>_._period</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <SurroundByComplement>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period</Return>
+              <Off>_._period</Off>
+            </SurroundByComplement>
+            <CompareStrobe>
+              <Strobe>_._ph1_strobe</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase2">
+        <Period>_._period</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <SurroundByComplement>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period</Return>
+              <Off>_._period</Off>
+            </SurroundByComplement>
+            <CompareStrobe>
+              <Strobe>_._ph2_strobe</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase3">
+        <Period>_._period</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <SurroundByComplement>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period</Return>
+              <Off>_._period</Off>
+            </SurroundByComplement>
+            <CompareStrobe>
+              <Strobe>_._ph3_strobe</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="tset_phase4">
+        <Period>_._period</Period>
+        <PinEdges>
+          <PinEdge pin="VIA_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIA">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB_ODD">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="VIB">
+            <ReturnToLow>
+              <On>_._period*0</On>
+              <Data>_._period/2</Data>
+              <Return>_._period*3/4</Return>
+              <Off>_._period</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>_._period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+          <PinEdge pin="data_outs">
+            <SurroundByComplement>
+              <On>_._period*0</On>
+              <Data>_._period*0</Data>
+              <Return>_._period</Return>
+              <Off>_._period</Off>
+            </SurroundByComplement>
+            <CompareStrobe>
+              <Strobe>_._ph4_strobe</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>nil</Comment>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>

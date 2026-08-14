@@ -1,0 +1,3 @@
+file_format_version 1.0;
+timeset tset_phase1, tset_phase2, tset_phase3, tset_phase4;
+pattern pat_xMHz_mux__ (VIA_MUXVIB_MUXVOB_MUXVOA_MUX,DATA_OUTS)
