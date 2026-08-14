@@ -1,0 +1,313 @@
+<SemiconductorModuleTests>
+	<SequenceName>	<StepName>	<StepId>	<TestName>	<TestNumber>	<Pin>	<LowLimitExpression>	<HighLimitExpression>	<ScalingFactor>	<Units>	<EvaluationType>	<FailBin>	<PublishedDataId>	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_DIB_Supply_5V_1	10	P143_4081_DMM	4.5	5.5			Numeric Limit		DIB_Supply_5V_1	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_DIB_Supply_5V_2	20	P143_4081_DMM	4.5	5.5		V	Numeric Limit		DIB_Supply_5V_2	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_DIB_Supply_5V_3	30	P143_4081_DMM	4.5	5.5		V	Numeric Limit		DIB_Supply_5V_3	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_DIB_Supply_12V_Slave	40	P143_4081_DMM	10.5	13.05		V	Numeric Limit		DIB_Supply_12V_Slave	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_Master_15V	50	P143_4081_DMM	13.5	16.5		V	Numeric Limit		Master_15V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_Slave_15V	60	P143_4081_DMM	13.5	16.5		V	Numeric Limit		Slave_15V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_Relay_Supply_12V	70	P143_4081_DMM	10.5	13.05		V	Numeric Limit		Relay_Supply_12V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_TFE_5V	80	P143_4081_DMM	4.5	5.5		V	Numeric Limit		TFE_5V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_HMOD_5V	90	P143_4081_DMM	4.5	5.5		V	Numeric Limit		HMOD_5V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_COMP_n5p2V	100	P143_4081_DMM	-5.5	-4.5		V	Numeric Limit		COMP_n5p2V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_XOR_n5V	110	P143_4081_DMM	-5.5	-4.5		V	Numeric Limit		XOR_n5V	
+	TB_Checker	Supply Check	ID#:bIvTA/x08RGJywIAAQ0rpD	TxBrd_n2V	120	P143_4081_DMM	-2.5	-1.5		V	Numeric Limit		n2V	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH1_HI_Voltage	130	DC30V_SL24_CH1	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH3_HI_Voltage	140	DC30V_SL24_CH3	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH5_HI_Voltage	150	DC30V_SL24_CH5	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH7_HI_Voltage	160	DC30V_SL24_CH7	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH9_HI_Voltage	170	DC30V_SL24_CH9	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH11_HI_Voltage	180	DC30V_SL24_CH11	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH13_HI_Voltage	190	DC30V_SL24_CH13	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH15_HI_Voltage	200	DC30V_SL24_CH15	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH17_HI_Voltage	210	DC30V_SL24_CH17	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH19_HI_Voltage	220	DC30V_SL24_CH19	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH1_HI_Voltage	230	DC30V_SL04_CH1	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH3_HI_Voltage	240	DC30V_SL04_CH3	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH5_HI_Voltage	250	DC30V_SL04_CH5	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH7_HI_Voltage	260	DC30V_SL04_CH7	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH9_HI_Voltage	270	DC30V_SL04_CH9	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH11_HI_Voltage	280	DC30V_SL04_CH11	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH13_HI_Voltage	290	DC30V_SL04_CH13	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH15_HI_Voltage	300	DC30V_SL04_CH15	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH17_HI_Voltage	310	DC30V_SL04_CH17	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH19_HI_Voltage	320	DC30V_SL04_CH19	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH1_HI_Voltage	330	DC30V_SL10_CH1	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH3_HI_Voltage	340	DC30V_SL10_CH3	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH5_HI_Voltage	350	DC30V_SL10_CH5	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH7_HI_Voltage	360	DC30V_SL10_CH7	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH9_HI_Voltage	370	DC30V_SL10_CH9	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH11_HI_Voltage	380	DC30V_SL10_CH11	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH13_HI_Voltage	390	DC30V_SL10_CH13	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH15_HI_Voltage	400	DC30V_SL10_CH15	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH17_HI_Voltage	410	DC30V_SL10_CH17	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH19_HI_Voltage	420	DC30V_SL10_CH19	2.5	3.5		V	Numeric Limit		DC30_HI_Voltage	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH2_LO_Current	430	DC30V_SL24_CH2	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH4_LO_Current	440	DC30V_SL24_CH4	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH6_LO_Current	450	DC30V_SL24_CH6	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH8_LO_Current	460	DC30V_SL24_CH8	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH10_LO_Current	470	DC30V_SL24_CH10	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH12_LO_Current	480	DC30V_SL24_CH12	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH14_LO_Current	490	DC30V_SL24_CH14	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH16_LO_Current	500	DC30V_SL24_CH16	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH18_LO_Current	510	DC30V_SL24_CH18	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL24_CH20_LO_Current	520	DC30V_SL24_CH20	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH2_LO_Current	530	DC30V_SL10_CH2	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH4_LO_Current	540	DC30V_SL10_CH4	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH6_LO_Current	550	DC30V_SL10_CH6	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH8_LO_Current	560	DC30V_SL10_CH8	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH10_LO_Current	570	DC30V_SL10_CH10	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH12_LO_Current	580	DC30V_SL10_CH12	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH14_LO_Current	590	DC30V_SL10_CH14	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH16_LO_Current	600	DC30V_SL10_CH16	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH18_LO_Current	610	DC30V_SL10_CH18	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL10_CH20_LO_Current	620	DC30V_SL10_CH20	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH2_LO_Current	630	DC30V_SL04_CH2	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH4_LO_Current	640	DC30V_SL04_CH4	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH6_LO_Current	650	DC30V_SL04_CH6	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH8_LO_Current	660	DC30V_SL04_CH8	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH10_LO_Current	670	DC30V_SL04_CH10	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH12_LO_Current	680	DC30V_SL04_CH12	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH14_LO_Current	690	DC30V_SL04_CH14	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH16_LO_Current	700	DC30V_SL04_CH16	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH18_LO_Current	710	DC30V_SL04_CH18	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC30 Open Check	ID#:8BGn0zJ08RGJywIAAQ0rpD	TxBrd_DC30V_SL04_CH20_LO_Current	720	DC30V_SL04_CH20	0.0005	0.0015		A	Numeric Limit		DC30_LO_Current	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_1A_Voltage	730	DC90V_SL23_1A	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_2A_Voltage	740	DC90V_SL23_2A	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_3A_Voltage	750	DC90V_SL23_3A	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_4A_Voltage	760	DC90V_SL23_4A	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_1B_Voltage	770	DC90V_SL23_1B	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_2B_Voltage	780	DC90V_SL23_2B	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_3B_Voltage	790	DC90V_SL23_3B	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90V_SL23_4B_Voltage	800	DC90V_SL23_4B	0.3	5.1		V	Numeric Limit		Voltage	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay1_Droop	810	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay1_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay2_Droop	820	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay2_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay3_Droop	830	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay3_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay4_Droop	840	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay4_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay5_Droop	850	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay5_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay6_Droop	860	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay6_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay7_Droop	870	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay7_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay8_Droop	880	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay8_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay9_Droop	890	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay9_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay10_Droop	900	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay10_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay11_Droop	910	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay11_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay12_Droop	920	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay12_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay13_Droop	930	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay13_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay14_Droop	940	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay14_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay15_Droop	950	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay15_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay16_Droop	960	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay16_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay17_Droop	970	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay17_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay18_Droop	980	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay18_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay19_Droop	990	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay19_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay20_Droop	1000	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay20_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay21_Droop	1010	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay21_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay22_Droop	1020	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay22_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay23_Droop	1030	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay23_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay24_Droop	1040	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay24_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay25_Droop	1050	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay25_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay26_Droop	1060	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay26_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay27_Droop	1070	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay27_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay28_Droop	1080	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay28_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay29_Droop	1090	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay29_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay30_Droop	1100	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay30_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay31_Droop	1110	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay31_Droop	
+	TB_Checker	DC90 Open Check	ID#:8RGn0zJ08RGJywIAAQ0rpD	TxBrd_DC90_Relay32_Droop	1120	P143_4081_DMM	0.001	0.5		V	Numeric Limit		Relay32_Droop	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_0_HSD_HI_Current	1130	P174_6571_DIO_0	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_4_HSD_HI_Current	1140	P174_6571_DIO_4	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_8_HSD_HI_Current	1150	P174_6571_DIO_8	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_12_HSD_HI_Current	1160	P174_6571_DIO_12	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_16_HSD_HI_Current	1170	P174_6571_DIO_16	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_20_HSD_HI_Current	1180	P174_6571_DIO_20	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_24_HSD_HI_Current	1190	P174_6571_DIO_24	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_28_HSD_HI_Current	1200	P174_6571_DIO_28	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_0_HSD_HI_Current	1210	P166_6571_DIO_0	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_4_HSD_HI_Current	1220	P166_6571_DIO_4	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_8_HSD_HI_Current	1230	P166_6571_DIO_8	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_12_HSD_HI_Current	1240	P166_6571_DIO_12	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_16_HSD_HI_Current	1250	P166_6571_DIO_16	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_20_HSD_HI_Current	1260	P166_6571_DIO_20	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_24_HSD_HI_Current	1270	P166_6571_DIO_24	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_28_HSD_HI_Current	1280	P166_6571_DIO_28	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_0_HSD_HI_Current	1290	P170_6571_DIO_0	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_4_HSD_HI_Current	1300	P170_6571_DIO_4	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_8_HSD_HI_Current	1310	P170_6571_DIO_8	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_12_HSD_HI_Current	1320	P170_6571_DIO_12	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_16_HSD_HI_Current	1330	P170_6571_DIO_16	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_20_HSD_HI_Current	1340	P170_6571_DIO_20	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_24_HSD_HI_Current	1350	P170_6571_DIO_24	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_28_HSD_HI_Current	1360	P170_6571_DIO_28	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_0_HSD_HI_Current	1370	P146_6571_DIO_0	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_4_HSD_HI_Current	1380	P146_6571_DIO_4	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_8_HSD_HI_Current	1390	P146_6571_DIO_8	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_12_HSD_HI_Current	1400	P146_6571_DIO_12	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_16_HSD_HI_Current	1410	P146_6571_DIO_16	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_20_HSD_HI_Current	1420	P146_6571_DIO_20	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_24_HSD_HI_Current	1430	P146_6571_DIO_24	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_28_HSD_HI_Current	1440	P146_6571_DIO_28	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_0_HSD_HI_Current	1450	P154_6571_DIO_0	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_4_HSD_HI_Current	1460	P154_6571_DIO_4	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_8_HSD_HI_Current	1470	P154_6571_DIO_8	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_12_HSD_HI_Current	1480	P154_6571_DIO_12	0.002	0.004		A	Numeric Limit		HSD_HI_Current	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_1_HSD_LO_Voltage	1490	P174_6571_DIO_1	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_2_HSD_LO_Voltage	1500	P174_6571_DIO_2	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_3_HSD_LO_Voltage	1510	P174_6571_DIO_3	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_5_HSD_LO_Voltage	1520	P174_6571_DIO_5	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_6_HSD_LO_Voltage	1530	P174_6571_DIO_6	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_7_HSD_LO_Voltage	1540	P174_6571_DIO_7	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_9_HSD_LO_Voltage	1550	P174_6571_DIO_9	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_10_HSD_LO_Voltage	1560	P174_6571_DIO_10	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_11_HSD_LO_Voltage	1570	P174_6571_DIO_11	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_13_HSD_LO_Voltage	1580	P174_6571_DIO_13	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_14_HSD_LO_Voltage	1590	P174_6571_DIO_14	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_15_HSD_LO_Voltage	1600	P174_6571_DIO_15	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_17_HSD_LO_Voltage	1610	P174_6571_DIO_17	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_18_HSD_LO_Voltage	1620	P174_6571_DIO_18	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_19_HSD_LO_Voltage	1630	P174_6571_DIO_19	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_21_HSD_LO_Voltage	1640	P174_6571_DIO_21	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_22_HSD_LO_Voltage	1650	P174_6571_DIO_22	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_23_HSD_LO_Voltage	1660	P174_6571_DIO_23	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_25_HSD_LO_Voltage	1670	P174_6571_DIO_25	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_26_HSD_LO_Voltage	1680	P174_6571_DIO_26	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_27_HSD_LO_Voltage	1690	P174_6571_DIO_27	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_29_HSD_LO_Voltage	1700	P174_6571_DIO_29	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_30_HSD_LO_Voltage	1710	P174_6571_DIO_30	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P174_6571_DIO_31_HSD_LO_Voltage	1720	P174_6571_DIO_31	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_1_HSD_LO_Voltage	1730	P166_6571_DIO_1	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_2_HSD_LO_Voltage	1740	P166_6571_DIO_2	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_3_HSD_LO_Voltage	1750	P166_6571_DIO_3	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_5_HSD_LO_Voltage	1760	P166_6571_DIO_5	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_6_HSD_LO_Voltage	1770	P166_6571_DIO_6	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_7_HSD_LO_Voltage	1780	P166_6571_DIO_7	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_9_HSD_LO_Voltage	1790	P166_6571_DIO_9	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_10_HSD_LO_Voltage	1800	P166_6571_DIO_10	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_11_HSD_LO_Voltage	1810	P166_6571_DIO_11	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_13_HSD_LO_Voltage	1820	P166_6571_DIO_13	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_14_HSD_LO_Voltage	1830	P166_6571_DIO_14	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_15_HSD_LO_Voltage	1840	P166_6571_DIO_15	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_17_HSD_LO_Voltage	1850	P166_6571_DIO_17	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_18_HSD_LO_Voltage	1860	P166_6571_DIO_18	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_19_HSD_LO_Voltage	1870	P166_6571_DIO_19	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_21_HSD_LO_Voltage	1880	P166_6571_DIO_21	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_22_HSD_LO_Voltage	1890	P166_6571_DIO_22	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_23_HSD_LO_Voltage	1900	P166_6571_DIO_23	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_25_HSD_LO_Voltage	1910	P166_6571_DIO_25	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_26_HSD_LO_Voltage	1920	P166_6571_DIO_26	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_27_HSD_LO_Voltage	1930	P166_6571_DIO_27	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_29_HSD_LO_Voltage	1940	P166_6571_DIO_29	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_30_HSD_LO_Voltage	1950	P166_6571_DIO_30	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P166_6571_DIO_31_HSD_LO_Voltage	1960	P166_6571_DIO_31	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_1_HSD_LO_Voltage	1970	P170_6571_DIO_1	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_2_HSD_LO_Voltage	1980	P170_6571_DIO_2	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_3_HSD_LO_Voltage	1990	P170_6571_DIO_3	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_5_HSD_LO_Voltage	2000	P170_6571_DIO_5	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_6_HSD_LO_Voltage	2010	P170_6571_DIO_6	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_7_HSD_LO_Voltage	2020	P170_6571_DIO_7	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_9_HSD_LO_Voltage	2030	P170_6571_DIO_9	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_10_HSD_LO_Voltage	2040	P170_6571_DIO_10	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_11_HSD_LO_Voltage	2050	P170_6571_DIO_11	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_13_HSD_LO_Voltage	2060	P170_6571_DIO_13	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_14_HSD_LO_Voltage	2070	P170_6571_DIO_14	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_15_HSD_LO_Voltage	2080	P170_6571_DIO_15	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_17_HSD_LO_Voltage	2090	P170_6571_DIO_17	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_18_HSD_LO_Voltage	2100	P170_6571_DIO_18	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_19_HSD_LO_Voltage	2110	P170_6571_DIO_19	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_21_HSD_LO_Voltage	2120	P170_6571_DIO_21	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_22_HSD_LO_Voltage	2130	P170_6571_DIO_22	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_23_HSD_LO_Voltage	2140	P170_6571_DIO_23	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_25_HSD_LO_Voltage	2150	P170_6571_DIO_25	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_26_HSD_LO_Voltage	2160	P170_6571_DIO_26	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_27_HSD_LO_Voltage	2170	P170_6571_DIO_27	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_29_HSD_LO_Voltage	2180	P170_6571_DIO_29	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_30_HSD_LO_Voltage	2190	P170_6571_DIO_30	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P170_6571_DIO_31_HSD_LO_Voltage	2200	P170_6571_DIO_31	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_1_HSD_LO_Voltage	2210	P146_6571_DIO_1	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_2_HSD_LO_Voltage	2220	P146_6571_DIO_2	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_3_HSD_LO_Voltage	2230	P146_6571_DIO_3	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_5_HSD_LO_Voltage	2240	P146_6571_DIO_5	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_6_HSD_LO_Voltage	2250	P146_6571_DIO_6	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_7_HSD_LO_Voltage	2260	P146_6571_DIO_7	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_9_HSD_LO_Voltage	2270	P146_6571_DIO_9	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_10_HSD_LO_Voltage	2280	P146_6571_DIO_10	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_11_HSD_LO_Voltage	2290	P146_6571_DIO_11	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_13_HSD_LO_Voltage	2300	P146_6571_DIO_13	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_14_HSD_LO_Voltage	2310	P146_6571_DIO_14	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_15_HSD_LO_Voltage	2320	P146_6571_DIO_15	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_17_HSD_LO_Voltage	2330	P146_6571_DIO_17	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_18_HSD_LO_Voltage	2340	P146_6571_DIO_18	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_19_HSD_LO_Voltage	2350	P146_6571_DIO_19	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_21_HSD_LO_Voltage	2360	P146_6571_DIO_21	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_22_HSD_LO_Voltage	2370	P146_6571_DIO_22	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_23_HSD_LO_Voltage	2380	P146_6571_DIO_23	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_25_HSD_LO_Voltage	2390	P146_6571_DIO_25	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_26_HSD_LO_Voltage	2400	P146_6571_DIO_26	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_27_HSD_LO_Voltage	2410	P146_6571_DIO_27	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_29_HSD_LO_Voltage	2420	P146_6571_DIO_29	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_30_HSD_LO_Voltage	2430	P146_6571_DIO_30	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P146_6571_DIO_31_HSD_LO_Voltage	2440	P146_6571_DIO_31	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_1_HSD_LO_Voltage	2450	P154_6571_DIO_1	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_2_HSD_LO_Voltage	2460	P154_6571_DIO_2	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_3_HSD_LO_Voltage	2470	P154_6571_DIO_3	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_5_HSD_LO_Voltage	2480	P154_6571_DIO_5	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_6_HSD_LO_Voltage	2490	P154_6571_DIO_6	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_7_HSD_LO_Voltage	2500	P154_6571_DIO_7	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_9_HSD_LO_Voltage	2510	P154_6571_DIO_9	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_10_HSD_LO_Voltage	2520	P154_6571_DIO_10	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_11_HSD_LO_Voltage	2530	P154_6571_DIO_11	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_13_HSD_LO_Voltage	2540	P154_6571_DIO_13	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_14_HSD_LO_Voltage	2550	P154_6571_DIO_14	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	HSD Open Check	ID#:8hGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_6571_DIO_15_HSD_LO_Voltage	2560	P154_6571_DIO_15	2.5	3.5		V	Numeric Limit		HSD_LO_Voltage	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO24_POOL_Open	2570	P154_6571_DIO_24	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO25_POOL_Open	2580	P154_6571_DIO_25	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO26_POOL_Open	2590	P154_6571_DIO_26	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO27_POOL_Open	2600	P154_6571_DIO_27	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO28_POOL_Open	2610	P154_6571_DIO_28	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO29_POOL_Open	2620	P154_6571_DIO_29	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO30_POOL_Open	2630	P154_6571_DIO_30	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO31_POOL_Open	2640	P154_6571_DIO_31	3	6		V	Numeric Limit		POOL_Open	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO24_POOL_Grounded	2650	P154_6571_DIO_24	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO25_POOL_Grounded	2660	P154_6571_DIO_25	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO26_POOL_Grounded	2670	P154_6571_DIO_26	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO27_POOL_Grounded	2680	P154_6571_DIO_27	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO28_POOL_Grounded	2690	P154_6571_DIO_28	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO29_POOL_Grounded	2700	P154_6571_DIO_29	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO30_POOL_Grounded	2710	P154_6571_DIO_30	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	POOL Open Check	ID#:8xGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO31_POOL_Grounded	2720	P154_6571_DIO_31	-0.5	0.5		V	Numeric Limit		POOL_Grounded	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO24_WinComp_Inside	2730	P154_6571_DIO_24	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO25_WinComp_Inside	2740	P154_6571_DIO_25	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO26_WinComp_Inside	2750	P154_6571_DIO_26	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO27_WinComp_Inside	2760	P154_6571_DIO_27	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO28_WinComp_Inside	2770	P154_6571_DIO_28	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO29_WinComp_Inside	2780	P154_6571_DIO_29	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO30_WinComp_Inside	2790	P154_6571_DIO_30	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO31_WinComp_Inside	2800	P154_6571_DIO_31	-1.1	-0.7		V	Numeric Limit		WinComp_Inside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO24_WinComp_Outside	2810	P154_6571_DIO_24	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO25_WinComp_Outside	2820	P154_6571_DIO_25	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO26_WinComp_Outside	2830	P154_6571_DIO_26	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO27_WinComp_Outside	2840	P154_6571_DIO_27	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO28_WinComp_Outside	2850	P154_6571_DIO_28	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO29_WinComp_Outside	2860	P154_6571_DIO_29	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO30_WinComp_Outside	2870	P154_6571_DIO_30	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	Window Comparator	ID#:9BGn0zJ08RGJywIAAQ0rpD	TxBrd_P154_DIO31_WinComp_Outside	2880	P154_6571_DIO_31	-1.9	-1.5		V	Numeric Limit		WinComp_Outside	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD1_Droop	2890	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD1_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD2_Droop	2900	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD2_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD3_Droop	2910	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD3_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD4_Droop	2920	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD4_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD5_Droop	2930	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD5_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD6_Droop	2940	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD6_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD7_Droop	2950	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD7_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD8_Droop	2960	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD8_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD9_Droop	2970	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD9_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD10_Droop	2980	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD10_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD11_Droop	2990	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD11_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD12_Droop	3000	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD12_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD13_Droop	3010	P143_4081_DMM	0.003	0.008		V	Numeric Limit		HMOD13_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD14_Droop	3020	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD14_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD15_Droop	3030	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD15_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD16_Droop	3040	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD16_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD17_Droop	3050	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD17_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD19_Droop	3060	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD19_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD20_Droop	3070	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD20_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD21_Droop	3080	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD21_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD22_Droop	3090	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD22_Droop	
+	TB_Checker	HMOD Relays Check	ID#:9RGn0zJ08RGJywIAAQ0rpD	TxBrd_HMOD23_Droop	3100	P143_4081_DMM	0.05	0.115		V	Numeric Limit		HMOD23_Droop	
+</SemiconductorModuleTests>

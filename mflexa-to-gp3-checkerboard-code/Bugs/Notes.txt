@@ -1,0 +1,21 @@
+﻿<Connection pin="VDD1" siteNumber="0" instrument="SMU_4162_C2_S12" channel="0" /> DC30_SL24_CH1
+<Connection pin="VDD1" siteNumber="2" instrument="SMU_4162_C2_S11" channel="0" /> DC30_SL10_CH1
+<Connection pin="VDD1" siteNumber="1" instrument="SMU_4162_C2_S11" channel="8" /> DC30_SL10_CH9
+<Connection pin="VDD1" siteNumber="3" instrument="SMU_4162_C2_S10" channel="8" /> DC30_SL04_CH9
+<Connection pin="VDD2" siteNumber="0" instrument="SMU_4162_C2_S12" channel="1" /> DC30_SL24_CH2
+<Connection pin="VDD2" siteNumber="1" instrument="SMU_4162_C2_S11" channel="9" /> DC30_SL10_CH10
+<Connection pin="VDD2" siteNumber="2" instrument="SMU_4162_C2_S11" channel="1" /> DC30_SL10_CH2
+<Connection pin="VDD2" siteNumber="3" instrument="SMU_4162_C2_S10" channel="9" /> DC30_SL04_CH10
+
+Can't access the SMU Pins above since they are connected to a DUT Pin. Better assume they are good
+
+Fix wrong use of instrument
+Need to change digitalDIOPins into DUT Pins
+Initialized DAQmx
+Inserted ClearDAQTask before Setup (For Robustness)
+swap index out of bounds
+
+Add publish abstraction (should)
+fixed publish errors
+
+removed SMU ID from all diode check
