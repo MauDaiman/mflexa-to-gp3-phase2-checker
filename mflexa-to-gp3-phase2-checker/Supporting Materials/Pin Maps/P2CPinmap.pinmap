@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PinMap schemaVersion="1.5" xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Instruments>
+		<!--Chassis #1-->
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S02" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S03" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S04" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S05" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S06" numberOfChannels="32" group="Digital" />
+		<NIDCPowerInstrument name="PPS_4110_C1_S07" numberOfChannels="3" />
+		<NIRelayDriverModule name="RELAY_2567_C1_S08" numberOfControlLines="64" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_AI" taskType="AI" channelList="DAQ_6368_C1_S09/ai0,&#xD;&#xA;DAQ_6368_C1_S09/ai1" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_0" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line0" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_1" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line1" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_2" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line2" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_3" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line3" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_4" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line4" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_5" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line5" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_6" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line6" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_7" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line7" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_8" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line8" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_9" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line9" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_10" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line10" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_11" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line11" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_12" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line12" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_13" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line13" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_14" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line14" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_15" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line15" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_16" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line16" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_17" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line17" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_18" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line18" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_19" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line19" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_20" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line20" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_21" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line21" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_22" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line22" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_23" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line23" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_24" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line24" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_25" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line25" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_26" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line26" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_27" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line27" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_28" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line28" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_29" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line29" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_30" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line30" />
+		<NIDAQmxTask name="DAQ_6368_C1_S09_DO_31" taskType="DO" channelList="DAQ_6368_C1_S09/port0/line31" />
+		<NIDmmInstrument name="DMM_4081_C1_S11" />
+		<NIRelayDriverModule name="RELAY_2567_C1_S12" numberOfControlLines="64" />
+		<NIDmmInstrument name="DMM_4081_C1_S13" />
+		<NIDmmInstrument name="DMM_4081_C1_S14" />
+		<NIDmmInstrument name="DMM_4081_C1_S16" />
+		<NIScopeInstrument name="SCOPE_5172_C1_S17" numberOfChannels="8" group="Scope" />
+		<!--Chassis #2-->
+		<NIDCPowerInstrument name="SMU_4137_C2_S02" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S03" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S04" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S05" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S06" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S07" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S08" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4137_C2_S09" numberOfChannels="1" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S10" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S11" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4162_C2_S12" numberOfChannels="12" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S13" numberOfChannels="24" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S14" numberOfChannels="24" />
+		<NIDCPowerInstrument name="SMU_4163_C2_S15" numberOfChannels="24" />
+		<NIDCPowerInstrument name="SMU_4147_C2_S16" numberOfChannels="4" />
+		<NIDCPowerInstrument name="SMU_4139_C2_S17" numberOfChannels="1" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="HMOD_CS_11_13_24_25" />
+		<DUTPin name="HMOD_CS_14_18" />
+		<DUTPin name="HMOD_CS_1_4" />
+		<DUTPin name="HMOD_CS_19_23" />
+		<DUTPin name="HMOD_CS_5_10" />
+		<DUTPin name="HMOD_DIN" />
+		<DUTPin name="HMOD_RESET" />
+		<DUTPin name="HMOD_SCLK" />
+		<DUTPin name="P154_6571_DIO_24" />
+		<DUTPin name="P154_6571_DIO_25" />
+		<DUTPin name="P154_6571_DIO_26" />
+		<DUTPin name="P154_6571_DIO_27" />
+		<DUTPin name="P154_6571_DIO_28" />
+		<DUTPin name="P154_6571_DIO_29" />
+		<DUTPin name="P154_6571_DIO_30" />
+		<DUTPin name="P154_6571_DIO_31" />
+		<DUTPin name="P174_6571_DIO_0" />
+		<DUTPin name="P174_6571_DIO_1" />
+		<DUTPin name="P174_6571_DIO_2" />
+		<DUTPin name="P174_6571_DIO_3" />
+		<DUTPin name="P174_6571_DIO_4" />
+		<DUTPin name="P174_6571_DIO_5" />
+		<DUTPin name="P174_6571_DIO_6" />
+		<DUTPin name="P174_6571_DIO_7" />
+		<DUTPin name="P174_6571_DIO_8" />
+		<DUTPin name="P174_6571_DIO_9" />
+		<DUTPin name="P174_6571_DIO_10" />
+		<DUTPin name="P174_6571_DIO_11" />
+		<DUTPin name="P174_6571_DIO_12" />
+		<DUTPin name="P174_6571_DIO_13" />
+		<DUTPin name="P174_6571_DIO_14" />
+		<DUTPin name="P174_6571_DIO_15" />
+		<DUTPin name="P174_6571_DIO_16" />
+		<DUTPin name="P174_6571_DIO_17" />
+		<DUTPin name="P174_6571_DIO_18" />
+		<DUTPin name="P174_6571_DIO_19" />
+		<DUTPin name="P174_6571_DIO_20" />
+		<DUTPin name="P174_6571_DIO_21" />
+		<DUTPin name="P174_6571_DIO_22" />
+		<DUTPin name="P174_6571_DIO_23" />
+		<DUTPin name="P174_6571_DIO_24" />
+		<DUTPin name="P174_6571_DIO_25" />
+		<DUTPin name="P174_6571_DIO_26" />
+		<DUTPin name="P174_6571_DIO_27" />
+		<DUTPin name="P174_6571_DIO_28" />
+		<DUTPin name="P174_6571_DIO_29" />
+		<DUTPin name="P174_6571_DIO_30" />
+		<DUTPin name="P174_6571_DIO_31" />
+		<DUTPin name="P166_6571_DIO_0" />
+		<DUTPin name="P166_6571_DIO_1" />
+		<DUTPin name="P166_6571_DIO_2" />
+		<DUTPin name="P166_6571_DIO_3" />
+		<DUTPin name="P166_6571_DIO_4" />
+		<DUTPin name="P166_6571_DIO_5" />
+		<DUTPin name="P166_6571_DIO_6" />
+		<DUTPin name="P166_6571_DIO_7" />
+		<DUTPin name="P166_6571_DIO_8" />
+		<DUTPin name="P166_6571_DIO_9" />
+		<DUTPin name="P166_6571_DIO_10" />
+		<DUTPin name="P166_6571_DIO_11" />
+		<DUTPin name="P166_6571_DIO_12" />
+		<DUTPin name="P166_6571_DIO_13" />
+		<DUTPin name="P166_6571_DIO_14" />
+		<DUTPin name="P166_6571_DIO_15" />
+		<DUTPin name="P166_6571_DIO_16" />
+		<DUTPin name="P166_6571_DIO_17" />
+		<DUTPin name="P166_6571_DIO_18" />
+		<DUTPin name="P166_6571_DIO_19" />
+		<DUTPin name="P166_6571_DIO_20" />
+		<DUTPin name="P166_6571_DIO_21" />
+		<DUTPin name="P166_6571_DIO_22" />
+		<DUTPin name="P166_6571_DIO_23" />
+		<DUTPin name="P166_6571_DIO_24" />
+		<DUTPin name="P166_6571_DIO_25" />
+		<DUTPin name="P166_6571_DIO_26" />
+		<DUTPin name="P166_6571_DIO_27" />
+		<DUTPin name="P166_6571_DIO_28" />
+		<DUTPin name="P166_6571_DIO_29" />
+		<DUTPin name="P166_6571_DIO_30" />
+		<DUTPin name="P166_6571_DIO_31" />
+		<DUTPin name="P170_6571_DIO_0" />
+		<DUTPin name="P170_6571_DIO_1" />
+		<DUTPin name="P170_6571_DIO_2" />
+		<DUTPin name="P170_6571_DIO_3" />
+		<DUTPin name="P170_6571_DIO_4" />
+		<DUTPin name="P170_6571_DIO_5" />
+		<DUTPin name="P170_6571_DIO_6" />
+		<DUTPin name="P170_6571_DIO_7" />
+		<DUTPin name="P170_6571_DIO_8" />
+		<DUTPin name="P170_6571_DIO_9" />
+		<DUTPin name="P170_6571_DIO_10" />
+		<DUTPin name="P170_6571_DIO_11" />
+		<DUTPin name="P170_6571_DIO_12" />
+		<DUTPin name="P170_6571_DIO_13" />
+		<DUTPin name="P170_6571_DIO_14" />
+		<DUTPin name="P170_6571_DIO_15" />
+		<DUTPin name="P170_6571_DIO_16" />
+		<DUTPin name="P170_6571_DIO_17" />
+		<DUTPin name="P170_6571_DIO_18" />
+		<DUTPin name="P170_6571_DIO_19" />
+		<DUTPin name="P170_6571_DIO_20" />
+		<DUTPin name="P170_6571_DIO_21" />
+		<DUTPin name="P170_6571_DIO_22" />
+		<DUTPin name="P170_6571_DIO_23" />
+		<DUTPin name="P170_6571_DIO_24" />
+		<DUTPin name="P170_6571_DIO_25" />
+		<DUTPin name="P170_6571_DIO_26" />
+		<DUTPin name="P170_6571_DIO_27" />
+		<DUTPin name="P170_6571_DIO_28" />
+		<DUTPin name="P170_6571_DIO_29" />
+		<DUTPin name="P170_6571_DIO_30" />
+		<DUTPin name="P170_6571_DIO_31" />
+		<DUTPin name="P146_6571_DIO_0" />
+		<DUTPin name="P146_6571_DIO_1" />
+		<DUTPin name="P146_6571_DIO_2" />
+		<DUTPin name="P146_6571_DIO_3" />
+		<DUTPin name="P146_6571_DIO_4" />
+		<DUTPin name="P146_6571_DIO_5" />
+		<DUTPin name="P146_6571_DIO_6" />
+		<DUTPin name="P146_6571_DIO_7" />
+		<DUTPin name="P146_6571_DIO_8" />
+		<DUTPin name="P146_6571_DIO_9" />
+		<DUTPin name="P146_6571_DIO_10" />
+		<DUTPin name="P146_6571_DIO_11" />
+		<DUTPin name="P146_6571_DIO_12" />
+		<DUTPin name="P146_6571_DIO_13" />
+		<DUTPin name="P146_6571_DIO_14" />
+		<DUTPin name="P146_6571_DIO_15" />
+		<DUTPin name="P146_6571_DIO_16" />
+		<DUTPin name="P146_6571_DIO_17" />
+		<DUTPin name="P146_6571_DIO_18" />
+		<DUTPin name="P146_6571_DIO_19" />
+		<DUTPin name="P146_6571_DIO_20" />
+		<DUTPin name="P146_6571_DIO_21" />
+		<DUTPin name="P146_6571_DIO_22" />
+		<DUTPin name="P146_6571_DIO_23" />
+		<DUTPin name="P146_6571_DIO_24" />
+		<DUTPin name="P146_6571_DIO_25" />
+		<DUTPin name="P146_6571_DIO_26" />
+		<DUTPin name="P146_6571_DIO_27" />
+		<DUTPin name="P146_6571_DIO_28" />
+		<DUTPin name="P146_6571_DIO_29" />
+		<DUTPin name="P146_6571_DIO_30" />
+		<DUTPin name="P146_6571_DIO_31" />
+		<DUTPin name="P154_6571_DIO_0" />
+		<DUTPin name="P154_6571_DIO_1" />
+		<DUTPin name="P154_6571_DIO_2" />
+		<DUTPin name="P154_6571_DIO_3" />
+		<DUTPin name="P154_6571_DIO_4" />
+		<DUTPin name="P154_6571_DIO_5" />
+		<DUTPin name="P154_6571_DIO_6" />
+		<DUTPin name="P154_6571_DIO_7" />
+		<DUTPin name="P154_6571_DIO_8" />
+		<DUTPin name="P154_6571_DIO_9" />
+		<DUTPin name="P154_6571_DIO_10" />
+		<DUTPin name="P154_6571_DIO_11" />
+		<DUTPin name="P154_6571_DIO_12" />
+		<DUTPin name="P154_6571_DIO_13" />
+		<DUTPin name="P154_6571_DIO_14" />
+		<DUTPin name="P154_6571_DIO_15" />
+		<SystemPin name="DIB_POS5V_1" />
+		<SystemPin name="DIB_POS5V_2" />
+		<SystemPin name="DIB_POS5V_3" />
+		<SystemPin name="SMU4139_POS5V" />
+		<SystemPin name="PPS4110_POS20V" />
+		<SystemPin name="PPS4110_POS6V" />
+		<SystemPin name="PPS4110_NEG20V" />
+		<SystemPin name="P143_4081_DMM" />
+		<SystemPin name="P131_4081_DMM" />
+		<SystemPin name="P163_4163_SMU_CH18" />
+		<SystemPin name="P163_4163_SMU_CH20" />
+		<SystemPin name="P163_4163_SMU_CH22" />
+		<SystemPin name="P163_4163_SMU_CH23" />
+		<SystemPin name="P151_4163_SMU_CH18" />
+		<SystemPin name="P151_4163_SMU_CH20" />
+		<SystemPin name="P151_4163_SMU_CH22" />
+		<SystemPin name="P138_4163_SMU_CH16" />
+		<SystemPin name="P163_4163_SMU_CH17" />
+		<SystemPin name="P163_4163_SMU_CH19" />
+		<SystemPin name="P163_4163_SMU_CH21" />
+		<SystemPin name="P151_4163_SMU_CH16" />
+		<SystemPin name="P151_4163_SMU_CH17" />
+		<SystemPin name="P151_4163_SMU_CH19" />
+		<SystemPin name="P151_4163_SMU_CH21" />
+		<SystemPin name="P151_4163_SMU_CH23" />
+		<SystemPin name="P127_6368_DIG0_P0_0" />
+		<SystemPin name="P127_6368_DIG0_P0_1" />
+		<SystemPin name="P127_6368_DIG0_P0_2" />
+		<SystemPin name="P127_6368_DIG0_P0_3" />
+		<SystemPin name="P127_6368_DIG0_P0_4" />
+		<SystemPin name="P127_6368_DIG0_P0_5" />
+		<SystemPin name="P127_6368_DIG0_P0_6" />
+		<SystemPin name="P127_6368_DIG0_P0_7" />
+		<SystemPin name="P115_6368_DIG0_P0_8" />
+		<SystemPin name="P115_6368_DIG0_P0_9" />
+		<SystemPin name="P115_6368_DIG0_P0_10" />
+		<SystemPin name="P115_6368_DIG0_P0_11" />
+		<SystemPin name="P115_6368_DIG0_P0_12" />
+		<SystemPin name="P115_6368_DIG0_P0_13" />
+		<SystemPin name="P115_6368_DIG0_P0_14" />
+		<SystemPin name="P115_6368_DIG0_P0_15" />
+		<SystemPin name="P115_6368_DIG1_P0_16" />
+		<SystemPin name="P115_6368_DIG1_P0_17" />
+		<SystemPin name="P115_6368_DIG1_P0_18" />
+		<SystemPin name="P115_6368_DIG1_P0_19" />
+		<SystemPin name="P115_6368_DIG1_P0_20" />
+		<SystemPin name="P115_6368_DIG1_P0_21" />
+		<SystemPin name="P115_6368_DIG1_P0_22" />
+		<SystemPin name="P115_6368_DIG1_P0_23" />
+		<SystemPin name="P115_6368_DIG1_P0_24" />
+		<SystemPin name="P115_6368_DIG1_P0_25" />
+		<SystemPin name="P115_6368_DIG1_P0_26" />
+		<SystemPin name="P115_6368_DIG1_P0_27" />
+		<SystemPin name="P115_6368_DIG1_P0_28" />
+		<SystemPin name="P115_6368_DIG1_P0_29" />
+		<SystemPin name="P115_6368_DIG1_P0_30" />
+		<SystemPin name="P115_6368_DIG1_P0_31" />
+		<SystemPin name="DC30V_SL04_CH1" />
+		<SystemPin name="DC30V_SL04_CH2" />
+		<SystemPin name="DC30V_SL04_CH3" />
+		<SystemPin name="DC30V_SL04_CH4" />
+		<SystemPin name="DC30V_SL04_CH5" />
+		<SystemPin name="DC30V_SL04_CH6" />
+		<SystemPin name="DC30V_SL04_CH7" />
+		<SystemPin name="DC30V_SL04_CH8" />
+		<SystemPin name="DC30V_SL04_CH9" />
+		<SystemPin name="DC30V_SL04_CH10" />
+		<SystemPin name="DC30V_SL04_CH11" />
+		<SystemPin name="DC30V_SL04_CH12" />
+		<SystemPin name="DC30V_SL04_CH13" />
+		<SystemPin name="DC30V_SL04_CH14" />
+		<SystemPin name="DC30V_SL04_CH15" />
+		<SystemPin name="DC30V_SL04_CH16" />
+		<SystemPin name="DC30V_SL04_CH17" />
+		<SystemPin name="DC30V_SL04_CH18" />
+		<SystemPin name="DC30V_SL04_CH19" />
+		<SystemPin name="DC30V_SL04_CH20" />
+		<SystemPin name="DC30V_SL10_CH1" />
+		<SystemPin name="DC30V_SL10_CH2" />
+		<SystemPin name="DC30V_SL10_CH3" />
+		<SystemPin name="DC30V_SL10_CH4" />
+		<SystemPin name="DC30V_SL10_CH5" />
+		<SystemPin name="DC30V_SL10_CH6" />
+		<SystemPin name="DC30V_SL10_CH7" />
+		<SystemPin name="DC30V_SL10_CH8" />
+		<SystemPin name="DC30V_SL10_CH9" />
+		<SystemPin name="DC30V_SL10_CH10" />
+		<SystemPin name="DC30V_SL10_CH11" />
+		<SystemPin name="DC30V_SL10_CH12" />
+		<SystemPin name="DC30V_SL10_CH13" />
+		<SystemPin name="DC30V_SL10_CH14" />
+		<SystemPin name="DC30V_SL10_CH15" />
+		<SystemPin name="DC30V_SL10_CH16" />
+		<SystemPin name="DC30V_SL10_CH17" />
+		<SystemPin name="DC30V_SL10_CH18" />
+		<SystemPin name="DC30V_SL10_CH19" />
+		<SystemPin name="DC30V_SL10_CH20" />
+		<SystemPin name="DC30V_SL24_CH1" />
+		<SystemPin name="DC30V_SL24_CH2" />
+		<SystemPin name="DC30V_SL24_CH3" />
+		<SystemPin name="DC30V_SL24_CH4" />
+		<SystemPin name="DC30V_SL24_CH5" />
+		<SystemPin name="DC30V_SL24_CH6" />
+		<SystemPin name="DC30V_SL24_CH7" />
+		<SystemPin name="DC30V_SL24_CH8" />
+		<SystemPin name="DC30V_SL24_CH9" />
+		<SystemPin name="DC30V_SL24_CH10" />
+		<SystemPin name="DC30V_SL24_CH11" />
+		<SystemPin name="DC30V_SL24_CH12" />
+		<SystemPin name="DC30V_SL24_CH13" />
+		<SystemPin name="DC30V_SL24_CH14" />
+		<SystemPin name="DC30V_SL24_CH15" />
+		<SystemPin name="DC30V_SL24_CH16" />
+		<SystemPin name="DC30V_SL24_CH17" />
+		<SystemPin name="DC30V_SL24_CH18" />
+		<SystemPin name="DC30V_SL24_CH19" />
+		<SystemPin name="DC30V_SL24_CH20" />
+		<SystemPin name="DC90V_SL23_1A" />
+		<SystemPin name="DC90V_SL23_2A" />
+		<SystemPin name="DC90V_SL23_3A" />
+		<SystemPin name="DC90V_SL23_4A" />
+		<SystemPin name="DC90V_SL23_1B" />
+		<SystemPin name="DC90V_SL23_2B" />
+		<SystemPin name="DC90V_SL23_3B" />
+		<SystemPin name="DC90V_SL23_4B" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="DIB_SMU4147_POS5V">
+			<PinReference pin="DIB_POS5V_1" />
+			<PinReference pin="DIB_POS5V_2" />
+			<PinReference pin="DIB_POS5V_3" />
+		</PinGroup>
+		<PinGroup name="AllDC">
+			<PinReference pin="DC90V_SL23_4B" />
+			<PinReference pin="DC90V_SL23_2B" />
+			<PinReference pin="DC30V_SL24_CH5" />
+			<PinReference pin="DC30V_SL24_CH7" />
+		</PinGroup>
+		<PinGroup name="Digital">
+			<PinReference pin="P174_6571_DIO_0" />
+			<PinReference pin="P174_6571_DIO_1" />
+			<PinReference pin="P174_6571_DIO_2" />
+			<PinReference pin="P174_6571_DIO_3" />
+			<PinReference pin="P174_6571_DIO_4" />
+			<PinReference pin="P174_6571_DIO_5" />
+			<PinReference pin="P174_6571_DIO_6" />
+			<PinReference pin="P174_6571_DIO_7" />
+			<PinReference pin="P174_6571_DIO_8" />
+			<PinReference pin="P174_6571_DIO_9" />
+			<PinReference pin="P174_6571_DIO_10" />
+			<PinReference pin="P174_6571_DIO_11" />
+			<PinReference pin="P174_6571_DIO_12" />
+			<PinReference pin="P174_6571_DIO_13" />
+			<PinReference pin="P174_6571_DIO_14" />
+			<PinReference pin="P174_6571_DIO_15" />
+			<PinReference pin="P174_6571_DIO_16" />
+			<PinReference pin="P174_6571_DIO_17" />
+			<PinReference pin="P174_6571_DIO_18" />
+			<PinReference pin="P174_6571_DIO_19" />
+			<PinReference pin="P174_6571_DIO_20" />
+			<PinReference pin="P174_6571_DIO_21" />
+			<PinReference pin="P174_6571_DIO_22" />
+			<PinReference pin="P174_6571_DIO_23" />
+			<PinReference pin="P174_6571_DIO_24" />
+			<PinReference pin="P174_6571_DIO_25" />
+			<PinReference pin="P174_6571_DIO_26" />
+			<PinReference pin="P174_6571_DIO_27" />
+			<PinReference pin="P174_6571_DIO_28" />
+			<PinReference pin="P174_6571_DIO_29" />
+			<PinReference pin="P174_6571_DIO_30" />
+			<PinReference pin="P174_6571_DIO_31" />
+			<PinReference pin="P166_6571_DIO_0" />
+			<PinReference pin="P166_6571_DIO_1" />
+			<PinReference pin="P166_6571_DIO_2" />
+			<PinReference pin="P166_6571_DIO_3" />
+			<PinReference pin="P166_6571_DIO_4" />
+			<PinReference pin="P166_6571_DIO_5" />
+			<PinReference pin="P166_6571_DIO_6" />
+			<PinReference pin="P166_6571_DIO_7" />
+			<PinReference pin="P166_6571_DIO_8" />
+			<PinReference pin="P166_6571_DIO_9" />
+			<PinReference pin="P166_6571_DIO_10" />
+			<PinReference pin="P166_6571_DIO_11" />
+			<PinReference pin="P166_6571_DIO_12" />
+			<PinReference pin="P166_6571_DIO_13" />
+			<PinReference pin="P166_6571_DIO_14" />
+			<PinReference pin="P166_6571_DIO_15" />
+			<PinReference pin="P166_6571_DIO_16" />
+			<PinReference pin="P166_6571_DIO_17" />
+			<PinReference pin="P166_6571_DIO_18" />
+			<PinReference pin="P166_6571_DIO_19" />
+			<PinReference pin="P166_6571_DIO_20" />
+			<PinReference pin="P166_6571_DIO_21" />
+			<PinReference pin="P166_6571_DIO_22" />
+			<PinReference pin="P166_6571_DIO_23" />
+			<PinReference pin="P166_6571_DIO_24" />
+			<PinReference pin="P166_6571_DIO_25" />
+			<PinReference pin="P166_6571_DIO_26" />
+			<PinReference pin="P166_6571_DIO_27" />
+			<PinReference pin="P166_6571_DIO_28" />
+			<PinReference pin="P166_6571_DIO_29" />
+			<PinReference pin="P166_6571_DIO_30" />
+			<PinReference pin="P166_6571_DIO_31" />
+			<PinReference pin="P170_6571_DIO_0" />
+			<PinReference pin="P170_6571_DIO_1" />
+			<PinReference pin="P170_6571_DIO_2" />
+			<PinReference pin="P170_6571_DIO_3" />
+			<PinReference pin="P170_6571_DIO_4" />
+			<PinReference pin="P170_6571_DIO_5" />
+			<PinReference pin="P170_6571_DIO_6" />
+			<PinReference pin="P170_6571_DIO_7" />
+			<PinReference pin="P170_6571_DIO_8" />
+			<PinReference pin="P170_6571_DIO_9" />
+			<PinReference pin="P170_6571_DIO_10" />
+			<PinReference pin="P170_6571_DIO_11" />
+			<PinReference pin="P170_6571_DIO_12" />
+			<PinReference pin="P170_6571_DIO_13" />
+			<PinReference pin="P170_6571_DIO_14" />
+			<PinReference pin="P170_6571_DIO_15" />
+			<PinReference pin="P170_6571_DIO_16" />
+			<PinReference pin="P170_6571_DIO_17" />
+			<PinReference pin="P170_6571_DIO_18" />
+			<PinReference pin="P170_6571_DIO_19" />
+			<PinReference pin="P170_6571_DIO_20" />
+			<PinReference pin="P170_6571_DIO_21" />
+			<PinReference pin="P170_6571_DIO_22" />
+			<PinReference pin="P170_6571_DIO_23" />
+			<PinReference pin="P170_6571_DIO_24" />
+			<PinReference pin="P170_6571_DIO_25" />
+			<PinReference pin="P170_6571_DIO_26" />
+			<PinReference pin="P170_6571_DIO_27" />
+			<PinReference pin="P170_6571_DIO_28" />
+			<PinReference pin="P170_6571_DIO_29" />
+			<PinReference pin="P170_6571_DIO_30" />
+			<PinReference pin="P170_6571_DIO_31" />
+			<PinReference pin="P146_6571_DIO_0" />
+			<PinReference pin="P146_6571_DIO_1" />
+			<PinReference pin="P146_6571_DIO_2" />
+			<PinReference pin="P146_6571_DIO_3" />
+			<PinReference pin="P146_6571_DIO_4" />
+			<PinReference pin="P146_6571_DIO_5" />
+			<PinReference pin="P146_6571_DIO_6" />
+			<PinReference pin="P146_6571_DIO_7" />
+			<PinReference pin="P146_6571_DIO_8" />
+			<PinReference pin="P146_6571_DIO_9" />
+			<PinReference pin="P146_6571_DIO_10" />
+			<PinReference pin="P146_6571_DIO_11" />
+			<PinReference pin="P146_6571_DIO_12" />
+			<PinReference pin="P146_6571_DIO_13" />
+			<PinReference pin="P146_6571_DIO_14" />
+			<PinReference pin="P146_6571_DIO_15" />
+			<PinReference pin="P146_6571_DIO_16" />
+			<PinReference pin="P146_6571_DIO_17" />
+			<PinReference pin="P146_6571_DIO_18" />
+			<PinReference pin="P146_6571_DIO_19" />
+			<PinReference pin="P146_6571_DIO_20" />
+			<PinReference pin="P146_6571_DIO_21" />
+			<PinReference pin="P146_6571_DIO_22" />
+			<PinReference pin="P146_6571_DIO_23" />
+			<PinReference pin="P146_6571_DIO_24" />
+			<PinReference pin="P146_6571_DIO_25" />
+			<PinReference pin="P146_6571_DIO_26" />
+			<PinReference pin="P146_6571_DIO_27" />
+			<PinReference pin="P146_6571_DIO_28" />
+			<PinReference pin="P146_6571_DIO_29" />
+			<PinReference pin="P146_6571_DIO_30" />
+			<PinReference pin="P146_6571_DIO_31" />
+			<PinReference pin="P154_6571_DIO_0" />
+			<PinReference pin="P154_6571_DIO_1" />
+			<PinReference pin="P154_6571_DIO_2" />
+			<PinReference pin="P154_6571_DIO_3" />
+			<PinReference pin="P154_6571_DIO_4" />
+			<PinReference pin="P154_6571_DIO_5" />
+			<PinReference pin="P154_6571_DIO_6" />
+			<PinReference pin="P154_6571_DIO_7" />
+			<PinReference pin="P154_6571_DIO_8" />
+			<PinReference pin="P154_6571_DIO_9" />
+			<PinReference pin="P154_6571_DIO_10" />
+			<PinReference pin="P154_6571_DIO_11" />
+			<PinReference pin="P154_6571_DIO_12" />
+			<PinReference pin="P154_6571_DIO_13" />
+			<PinReference pin="P154_6571_DIO_14" />
+			<PinReference pin="P154_6571_DIO_15" />
+			<PinReference pin="P154_6571_DIO_24" />
+			<PinReference pin="P154_6571_DIO_25" />
+			<PinReference pin="P154_6571_DIO_26" />
+			<PinReference pin="P154_6571_DIO_27" />
+			<PinReference pin="P154_6571_DIO_28" />
+			<PinReference pin="P154_6571_DIO_29" />
+			<PinReference pin="P154_6571_DIO_30" />
+			<PinReference pin="P154_6571_DIO_31" />
+		</PinGroup>
+		<PinGroup name="HMOD_DigiPins">
+			<PinReference pin="HMOD_CS_11_13_24_25" />
+			<PinReference pin="HMOD_CS_14_18" />
+			<PinReference pin="HMOD_CS_1_4" />
+			<PinReference pin="HMOD_CS_19_23" />
+			<PinReference pin="HMOD_CS_5_10" />
+			<PinReference pin="HMOD_DIN" />
+			<PinReference pin="HMOD_RESET" />
+			<PinReference pin="HMOD_SCLK" />
+		</PinGroup>
+	</PinGroups>
+	<Sites>
+		<Site siteNumber="0" />
+		<Site siteNumber="1" />
+		<Site siteNumber="2" />
+		<Site siteNumber="3" />
+	</Sites>
+	<Connections>
+		<Connection pin="HMOD_CS_11_13_24_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="21" />
+		<Connection pin="HMOD_CS_14_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="22" />
+		<Connection pin="HMOD_CS_19_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="23" />
+		<Connection pin="HMOD_CS_1_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="19" />
+		<Connection pin="HMOD_CS_5_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="20" />
+		<Connection pin="HMOD_DIN" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="16" />
+		<Connection pin="HMOD_RESET" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="18" />
+		<Connection pin="HMOD_SCLK" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="17" />
+		<!--P174 = C1_S05 (Slot 5)-->
+		<Connection pin="P174_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="0" />
+		<Connection pin="P174_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="1" />
+		<Connection pin="P174_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="2" />
+		<Connection pin="P174_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="3" />
+		<Connection pin="P174_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="4" />
+		<Connection pin="P174_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="5" />
+		<Connection pin="P174_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="6" />
+		<Connection pin="P174_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="7" />
+		<Connection pin="P174_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="8" />
+		<Connection pin="P174_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="9" />
+		<Connection pin="P174_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="10" />
+		<Connection pin="P174_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="11" />
+		<Connection pin="P174_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="12" />
+		<Connection pin="P174_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="13" />
+		<Connection pin="P174_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="14" />
+		<Connection pin="P174_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="15" />
+		<Connection pin="P174_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="16" />
+		<Connection pin="P174_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="17" />
+		<Connection pin="P174_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="18" />
+		<Connection pin="P174_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="19" />
+		<Connection pin="P174_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="20" />
+		<Connection pin="P174_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="21" />
+		<Connection pin="P174_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="22" />
+		<Connection pin="P174_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="23" />
+		<Connection pin="P174_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="24" />
+		<Connection pin="P174_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="25" />
+		<Connection pin="P174_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="26" />
+		<Connection pin="P174_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="27" />
+		<Connection pin="P174_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="28" />
+		<Connection pin="P174_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="29" />
+		<Connection pin="P174_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="30" />
+		<Connection pin="P174_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="31" />
+		<!--P166 = C1_S02 (Slot 2)-->
+		<Connection pin="P166_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="0" />
+		<Connection pin="P166_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="1" />
+		<Connection pin="P166_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="2" />
+		<Connection pin="P166_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="3" />
+		<Connection pin="P166_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="4" />
+		<Connection pin="P166_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="5" />
+		<Connection pin="P166_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="6" />
+		<Connection pin="P166_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="7" />
+		<Connection pin="P166_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="8" />
+		<Connection pin="P166_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="9" />
+		<Connection pin="P166_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="10" />
+		<Connection pin="P166_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="11" />
+		<Connection pin="P166_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="12" />
+		<Connection pin="P166_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="13" />
+		<Connection pin="P166_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="14" />
+		<Connection pin="P166_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="15" />
+		<Connection pin="P166_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="16" />
+		<Connection pin="P166_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="17" />
+		<Connection pin="P166_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="18" />
+		<Connection pin="P166_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="19" />
+		<Connection pin="P166_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="20" />
+		<Connection pin="P166_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="21" />
+		<Connection pin="P166_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="22" />
+		<Connection pin="P166_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="23" />
+		<Connection pin="P166_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="24" />
+		<Connection pin="P166_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="25" />
+		<Connection pin="P166_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="26" />
+		<Connection pin="P166_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="27" />
+		<Connection pin="P166_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="28" />
+		<Connection pin="P166_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="29" />
+		<Connection pin="P166_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="30" />
+		<Connection pin="P166_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="31" />
+		<!--P170 = C1_S04 (Slot 4)-->
+		<Connection pin="P170_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="0" />
+		<Connection pin="P170_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="1" />
+		<Connection pin="P170_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="2" />
+		<Connection pin="P170_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="3" />
+		<Connection pin="P170_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="4" />
+		<Connection pin="P170_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="5" />
+		<Connection pin="P170_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="6" />
+		<Connection pin="P170_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="7" />
+		<Connection pin="P170_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="8" />
+		<Connection pin="P170_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="9" />
+		<Connection pin="P170_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="10" />
+		<Connection pin="P170_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="11" />
+		<Connection pin="P170_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="12" />
+		<Connection pin="P170_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="13" />
+		<Connection pin="P170_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="14" />
+		<Connection pin="P170_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="15" />
+		<Connection pin="P170_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="16" />
+		<Connection pin="P170_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="17" />
+		<Connection pin="P170_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="18" />
+		<Connection pin="P170_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="19" />
+		<Connection pin="P170_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="20" />
+		<Connection pin="P170_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="21" />
+		<Connection pin="P170_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="22" />
+		<Connection pin="P170_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="23" />
+		<Connection pin="P170_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="24" />
+		<Connection pin="P170_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="25" />
+		<Connection pin="P170_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="26" />
+		<Connection pin="P170_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="27" />
+		<Connection pin="P170_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="28" />
+		<Connection pin="P170_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="29" />
+		<Connection pin="P170_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="30" />
+		<Connection pin="P170_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="31" />
+		<!--P146 = C1_S03 (Slot 3)-->
+		<Connection pin="P146_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="0" />
+		<Connection pin="P146_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="1" />
+		<Connection pin="P146_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="2" />
+		<Connection pin="P146_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="3" />
+		<Connection pin="P146_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="4" />
+		<Connection pin="P146_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="5" />
+		<Connection pin="P146_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="6" />
+		<Connection pin="P146_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="7" />
+		<Connection pin="P146_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="8" />
+		<Connection pin="P146_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="9" />
+		<Connection pin="P146_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="10" />
+		<Connection pin="P146_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="11" />
+		<Connection pin="P146_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="12" />
+		<Connection pin="P146_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="13" />
+		<Connection pin="P146_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="14" />
+		<Connection pin="P146_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="15" />
+		<Connection pin="P146_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="16" />
+		<Connection pin="P146_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="17" />
+		<Connection pin="P146_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="18" />
+		<Connection pin="P146_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="19" />
+		<Connection pin="P146_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="20" />
+		<Connection pin="P146_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="21" />
+		<Connection pin="P146_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="22" />
+		<Connection pin="P146_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="23" />
+		<Connection pin="P146_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="24" />
+		<Connection pin="P146_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="25" />
+		<Connection pin="P146_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="26" />
+		<Connection pin="P146_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="27" />
+		<Connection pin="P146_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="28" />
+		<Connection pin="P146_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="29" />
+		<Connection pin="P146_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="30" />
+		<Connection pin="P146_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="31" />
+		<!--P154 = C1_S06 (Slot 6), channels 0-15 and 24-31 (16-23 used by HMOD)-->
+		<Connection pin="P154_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="0" />
+		<Connection pin="P154_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="1" />
+		<Connection pin="P154_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="2" />
+		<Connection pin="P154_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="3" />
+		<Connection pin="P154_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="4" />
+		<Connection pin="P154_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="5" />
+		<Connection pin="P154_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="6" />
+		<Connection pin="P154_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="7" />
+		<Connection pin="P154_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="8" />
+		<Connection pin="P154_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="9" />
+		<Connection pin="P154_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="10" />
+		<Connection pin="P154_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="11" />
+		<Connection pin="P154_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="12" />
+		<Connection pin="P154_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="13" />
+		<Connection pin="P154_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="14" />
+		<Connection pin="P154_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="15" />
+		<Connection pin="P154_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="24" />
+		<Connection pin="P154_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="25" />
+		<Connection pin="P154_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="26" />
+		<Connection pin="P154_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="27" />
+		<Connection pin="P154_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="28" />
+		<Connection pin="P154_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="29" />
+		<Connection pin="P154_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="30" />
+		<Connection pin="P154_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="31" />
+		<SystemConnection pin="DC30V_SL04_CH1" instrument="SMU_4162_C2_S10" channel="0" />
+		<SystemConnection pin="DC30V_SL04_CH2" instrument="SMU_4162_C2_S10" channel="1" />
+		<SystemConnection pin="DC30V_SL04_CH3" instrument="SMU_4162_C2_S10" channel="2" />
+		<SystemConnection pin="DC30V_SL04_CH4" instrument="SMU_4162_C2_S10" channel="3" />
+		<SystemConnection pin="DC30V_SL04_CH5" instrument="SMU_4162_C2_S10" channel="4" />
+		<SystemConnection pin="DC30V_SL04_CH6" instrument="SMU_4162_C2_S10" channel="5" />
+		<SystemConnection pin="DC30V_SL04_CH7" instrument="SMU_4162_C2_S10" channel="6" />
+		<SystemConnection pin="DC30V_SL04_CH8" instrument="SMU_4162_C2_S10" channel="7" />
+		<SystemConnection pin="DC30V_SL04_CH9" instrument="SMU_4162_C2_S10" channel="8" />
+		<SystemConnection pin="DC30V_SL04_CH10" instrument="SMU_4162_C2_S10" channel="9" />
+		<SystemConnection pin="DC30V_SL04_CH11" instrument="SMU_4162_C2_S10" channel="10" />
+		<SystemConnection pin="DC30V_SL04_CH12" instrument="SMU_4162_C2_S10" channel="11" />
+		<SystemConnection pin="DC30V_SL04_CH13" instrument="SMU_4163_C2_S14" channel="0" />
+		<SystemConnection pin="DC30V_SL04_CH14" instrument="SMU_4163_C2_S14" channel="2" />
+		<SystemConnection pin="DC30V_SL04_CH15" instrument="SMU_4163_C2_S14" channel="4" />
+		<SystemConnection pin="DC30V_SL04_CH16" instrument="SMU_4163_C2_S14" channel="6" />
+		<SystemConnection pin="DC30V_SL04_CH17" instrument="SMU_4163_C2_S14" channel="8" />
+		<SystemConnection pin="DC30V_SL04_CH18" instrument="SMU_4163_C2_S14" channel="10" />
+		<SystemConnection pin="DC30V_SL04_CH19" instrument="SMU_4163_C2_S14" channel="12" />
+		<SystemConnection pin="DC30V_SL04_CH20" instrument="SMU_4163_C2_S14" channel="14" />
+		<SystemConnection pin="DC30V_SL10_CH1" instrument="SMU_4162_C2_S11" channel="0" />
+		<SystemConnection pin="DC30V_SL10_CH2" instrument="SMU_4162_C2_S11" channel="1" />
+		<SystemConnection pin="DC30V_SL10_CH3" instrument="SMU_4162_C2_S11" channel="2" />
+		<SystemConnection pin="DC30V_SL10_CH4" instrument="SMU_4162_C2_S11" channel="3" />
+		<SystemConnection pin="DC30V_SL10_CH5" instrument="SMU_4162_C2_S11" channel="4" />
+		<SystemConnection pin="DC30V_SL10_CH6" instrument="SMU_4162_C2_S11" channel="5" />
+		<SystemConnection pin="DC30V_SL10_CH7" instrument="SMU_4162_C2_S11" channel="6" />
+		<SystemConnection pin="DC30V_SL10_CH8" instrument="SMU_4162_C2_S11" channel="7" />
+		<SystemConnection pin="DC30V_SL10_CH9" instrument="SMU_4162_C2_S11" channel="8" />
+		<SystemConnection pin="DC30V_SL10_CH10" instrument="SMU_4162_C2_S11" channel="9" />
+		<SystemConnection pin="DC30V_SL10_CH11" instrument="SMU_4162_C2_S11" channel="10" />
+		<SystemConnection pin="DC30V_SL10_CH12" instrument="SMU_4162_C2_S11" channel="11" />
+		<SystemConnection pin="DC30V_SL10_CH13" instrument="SMU_4163_C2_S15" channel="0" />
+		<SystemConnection pin="DC30V_SL10_CH14" instrument="SMU_4163_C2_S15" channel="2" />
+		<SystemConnection pin="DC30V_SL10_CH15" instrument="SMU_4163_C2_S15" channel="4" />
+		<SystemConnection pin="DC30V_SL10_CH16" instrument="SMU_4163_C2_S15" channel="6" />
+		<SystemConnection pin="DC30V_SL10_CH17" instrument="SMU_4163_C2_S15" channel="8" />
+		<SystemConnection pin="DC30V_SL10_CH18" instrument="SMU_4163_C2_S15" channel="10" />
+		<SystemConnection pin="DC30V_SL10_CH19" instrument="SMU_4163_C2_S15" channel="12" />
+		<SystemConnection pin="DC30V_SL10_CH20" instrument="SMU_4163_C2_S15" channel="14" />
+		<SystemConnection pin="DC30V_SL24_CH1" instrument="SMU_4162_C2_S12" channel="0" />
+		<SystemConnection pin="DC30V_SL24_CH2" instrument="SMU_4162_C2_S12" channel="1" />
+		<SystemConnection pin="DC30V_SL24_CH3" instrument="SMU_4162_C2_S12" channel="2" />
+		<SystemConnection pin="DC30V_SL24_CH4" instrument="SMU_4162_C2_S12" channel="3" />
+		<SystemConnection pin="DC30V_SL24_CH5" instrument="SMU_4162_C2_S12" channel="4" />
+		<SystemConnection pin="DC30V_SL24_CH6" instrument="SMU_4162_C2_S12" channel="5" />
+		<SystemConnection pin="DC30V_SL24_CH7" instrument="SMU_4162_C2_S12" channel="6" />
+		<SystemConnection pin="DC30V_SL24_CH8" instrument="SMU_4162_C2_S12" channel="7" />
+		<SystemConnection pin="DC30V_SL24_CH9" instrument="SMU_4162_C2_S12" channel="8" />
+		<SystemConnection pin="DC30V_SL24_CH10" instrument="SMU_4162_C2_S12" channel="9" />
+		<SystemConnection pin="DC30V_SL24_CH11" instrument="SMU_4162_C2_S12" channel="10" />
+		<SystemConnection pin="DC30V_SL24_CH12" instrument="SMU_4162_C2_S12" channel="11" />
+		<SystemConnection pin="DC30V_SL24_CH13" instrument="SMU_4163_C2_S13" channel="0" />
+		<SystemConnection pin="DC30V_SL24_CH14" instrument="SMU_4163_C2_S13" channel="2" />
+		<SystemConnection pin="DC30V_SL24_CH15" instrument="SMU_4163_C2_S13" channel="4" />
+		<SystemConnection pin="DC30V_SL24_CH16" instrument="SMU_4163_C2_S13" channel="6" />
+		<SystemConnection pin="DC30V_SL24_CH17" instrument="SMU_4163_C2_S13" channel="8" />
+		<SystemConnection pin="DC30V_SL24_CH18" instrument="SMU_4163_C2_S13" channel="10" />
+		<SystemConnection pin="DC30V_SL24_CH19" instrument="SMU_4163_C2_S13" channel="12" />
+		<SystemConnection pin="DC30V_SL24_CH20" instrument="SMU_4163_C2_S13" channel="14" />
+		<SystemConnection pin="DC90V_SL23_1A" instrument="SMU_4137_C2_S07" channel="0" />
+		<SystemConnection pin="DC90V_SL23_1B" instrument="SMU_4137_C2_S08" channel="0" />
+		<SystemConnection pin="DC90V_SL23_2A" instrument="SMU_4137_C2_S09" channel="0" />
+		<SystemConnection pin="DC90V_SL23_2B" instrument="SMU_4137_C2_S02" channel="0" />
+		<SystemConnection pin="DC90V_SL23_3A" instrument="SMU_4137_C2_S03" channel="0" />
+		<SystemConnection pin="DC90V_SL23_3B" instrument="SMU_4137_C2_S04" channel="0" />
+		<SystemConnection pin="DC90V_SL23_4A" instrument="SMU_4137_C2_S05" channel="0" />
+		<SystemConnection pin="DC90V_SL23_4B" instrument="SMU_4137_C2_S06" channel="0" />
+		<SystemConnection pin="P115_6368_DIG0_P0_10" instrument="DAQ_6368_C1_S09_DO_10" channel="DAQ_6368_C1_S09/port0/line10" />
+		<SystemConnection pin="P115_6368_DIG0_P0_11" instrument="DAQ_6368_C1_S09_DO_11" channel="DAQ_6368_C1_S09/port0/line11" />
+		<SystemConnection pin="P115_6368_DIG0_P0_12" instrument="DAQ_6368_C1_S09_DO_12" channel="DAQ_6368_C1_S09/port0/line12" />
+		<SystemConnection pin="P115_6368_DIG0_P0_13" instrument="DAQ_6368_C1_S09_DO_13" channel="DAQ_6368_C1_S09/port0/line13" />
+		<SystemConnection pin="P115_6368_DIG0_P0_14" instrument="DAQ_6368_C1_S09_DO_14" channel="DAQ_6368_C1_S09/port0/line14" />
+		<SystemConnection pin="P115_6368_DIG0_P0_15" instrument="DAQ_6368_C1_S09_DO_15" channel="DAQ_6368_C1_S09/port0/line15" />
+		<SystemConnection pin="P115_6368_DIG1_P0_16" instrument="DAQ_6368_C1_S09_DO_16" channel="DAQ_6368_C1_S09/port0/line16" />
+		<SystemConnection pin="P115_6368_DIG1_P0_17" instrument="DAQ_6368_C1_S09_DO_17" channel="DAQ_6368_C1_S09/port0/line17" />
+		<SystemConnection pin="P115_6368_DIG1_P0_18" instrument="DAQ_6368_C1_S09_DO_18" channel="DAQ_6368_C1_S09/port0/line18" />
+		<SystemConnection pin="P115_6368_DIG1_P0_19" instrument="DAQ_6368_C1_S09_DO_19" channel="DAQ_6368_C1_S09/port0/line19" />
+		<SystemConnection pin="P115_6368_DIG1_P0_20" instrument="DAQ_6368_C1_S09_DO_20" channel="DAQ_6368_C1_S09/port0/line20" />
+		<SystemConnection pin="P115_6368_DIG1_P0_21" instrument="DAQ_6368_C1_S09_DO_21" channel="DAQ_6368_C1_S09/port0/line21" />
+		<SystemConnection pin="P115_6368_DIG1_P0_22" instrument="DAQ_6368_C1_S09_DO_22" channel="DAQ_6368_C1_S09/port0/line22" />
+		<SystemConnection pin="P115_6368_DIG1_P0_23" instrument="DAQ_6368_C1_S09_DO_23" channel="DAQ_6368_C1_S09/port0/line23" />
+		<SystemConnection pin="P115_6368_DIG1_P0_24" instrument="DAQ_6368_C1_S09_DO_24" channel="DAQ_6368_C1_S09/port0/line24" />
+		<SystemConnection pin="P115_6368_DIG1_P0_25" instrument="DAQ_6368_C1_S09_DO_25" channel="DAQ_6368_C1_S09/port0/line25" />
+		<SystemConnection pin="P115_6368_DIG1_P0_26" instrument="DAQ_6368_C1_S09_DO_26" channel="DAQ_6368_C1_S09/port0/line26" />
+		<SystemConnection pin="P115_6368_DIG1_P0_27" instrument="DAQ_6368_C1_S09_DO_27" channel="DAQ_6368_C1_S09/port0/line27" />
+		<SystemConnection pin="P115_6368_DIG1_P0_28" instrument="DAQ_6368_C1_S09_DO_28" channel="DAQ_6368_C1_S09/port0/line28" />
+		<SystemConnection pin="P115_6368_DIG1_P0_29" instrument="DAQ_6368_C1_S09_DO_29" channel="DAQ_6368_C1_S09/port0/line29" />
+		<SystemConnection pin="P115_6368_DIG1_P0_30" instrument="DAQ_6368_C1_S09_DO_30" channel="DAQ_6368_C1_S09/port0/line30" />
+		<SystemConnection pin="P115_6368_DIG1_P0_31" instrument="DAQ_6368_C1_S09_DO_31" channel="DAQ_6368_C1_S09/port0/line31" />
+		<SystemConnection pin="P127_6368_DIG0_P0_0" instrument="DAQ_6368_C1_S09_DO_0" channel="DAQ_6368_C1_S09/port0/line0" />
+		<SystemConnection pin="P127_6368_DIG0_P0_1" instrument="DAQ_6368_C1_S09_DO_1" channel="DAQ_6368_C1_S09/port0/line1" />
+		<SystemConnection pin="P127_6368_DIG0_P0_2" instrument="DAQ_6368_C1_S09_DO_2" channel="DAQ_6368_C1_S09/port0/line2" />
+		<SystemConnection pin="P127_6368_DIG0_P0_3" instrument="DAQ_6368_C1_S09_DO_3" channel="DAQ_6368_C1_S09/port0/line3" />
+		<SystemConnection pin="P127_6368_DIG0_P0_4" instrument="DAQ_6368_C1_S09_DO_4" channel="DAQ_6368_C1_S09/port0/line4" />
+		<SystemConnection pin="P127_6368_DIG0_P0_5" instrument="DAQ_6368_C1_S09_DO_5" channel="DAQ_6368_C1_S09/port0/line5" />
+		<SystemConnection pin="P127_6368_DIG0_P0_6" instrument="DAQ_6368_C1_S09_DO_6" channel="DAQ_6368_C1_S09/port0/line6" />
+		<SystemConnection pin="P127_6368_DIG0_P0_7" instrument="DAQ_6368_C1_S09_DO_7" channel="DAQ_6368_C1_S09/port0/line7" />
+		<SystemConnection pin="P115_6368_DIG0_P0_8" instrument="DAQ_6368_C1_S09_DO_8" channel="DAQ_6368_C1_S09/port0/line8" />
+		<SystemConnection pin="P115_6368_DIG0_P0_9" instrument="DAQ_6368_C1_S09_DO_9" channel="DAQ_6368_C1_S09/port0/line9" />
+		<SystemConnection pin="P131_4081_DMM" instrument="DMM_4081_C1_S13" channel="0" />
+		<SystemConnection pin="P143_4081_DMM" instrument="DMM_4081_C1_S11" channel="0" />
+		<SystemConnection pin="P151_4163_SMU_CH16" instrument="SMU_4163_C2_S15" channel="16" />
+		<SystemConnection pin="P151_4163_SMU_CH17" instrument="SMU_4163_C2_S15" channel="17" />
+		<SystemConnection pin="P151_4163_SMU_CH18" instrument="SMU_4163_C2_S15" channel="18" />
+		<SystemConnection pin="P151_4163_SMU_CH19" instrument="SMU_4163_C2_S15" channel="19" />
+		<SystemConnection pin="P151_4163_SMU_CH20" instrument="SMU_4163_C2_S15" channel="20" />
+		<SystemConnection pin="P151_4163_SMU_CH21" instrument="SMU_4163_C2_S15" channel="21" />
+		<SystemConnection pin="P151_4163_SMU_CH22" instrument="SMU_4163_C2_S15" channel="22" />
+		<SystemConnection pin="P151_4163_SMU_CH23" instrument="SMU_4163_C2_S15" channel="23" />
+		<SystemConnection pin="P163_4163_SMU_CH17" instrument="SMU_4163_C2_S14" channel="17" />
+		<SystemConnection pin="P163_4163_SMU_CH18" instrument="SMU_4163_C2_S14" channel="18" />
+		<SystemConnection pin="P163_4163_SMU_CH19" instrument="SMU_4163_C2_S14" channel="19" />
+		<SystemConnection pin="P163_4163_SMU_CH20" instrument="SMU_4163_C2_S14" channel="20" />
+		<SystemConnection pin="P163_4163_SMU_CH21" instrument="SMU_4163_C2_S14" channel="21" />
+		<SystemConnection pin="P163_4163_SMU_CH22" instrument="SMU_4163_C2_S14" channel="22" />
+		<SystemConnection pin="P163_4163_SMU_CH23" instrument="SMU_4163_C2_S14" channel="23" />
+		<SystemConnection pin="P138_4163_SMU_CH16" instrument="SMU_4163_C2_S13" channel="16" />
+		<SystemConnection pin="PPS4110_NEG20V" instrument="PPS_4110_C1_S07" channel="2" />
+		<SystemConnection pin="PPS4110_POS20V" instrument="PPS_4110_C1_S07" channel="1" />
+		<SystemConnection pin="PPS4110_POS6V" instrument="PPS_4110_C1_S07" channel="0" />
+		<SystemConnection pin="DIB_POS5V_1" instrument="SMU_4147_C2_S16" channel="0" />
+		<SystemConnection pin="DIB_POS5V_2" instrument="SMU_4147_C2_S16" channel="1" />
+		<SystemConnection pin="DIB_POS5V_3" instrument="SMU_4147_C2_S16" channel="2" />
+		<SystemConnection pin="SMU4139_POS5V" instrument="SMU_4139_C2_S17" channel="0" />
+	</Connections>
+</PinMap>
