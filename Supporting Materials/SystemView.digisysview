@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="93CD76C0AEA4D5DAC9DF412153E8A873" Timestamp="1DC080F31495F4B" xmlns="http://www.ni.com/PlatformFramework">
-	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
-		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
-		<ApplicationVersionInfo Build="5.3.2.54637" Name="Digital Pattern Editor" Version="21.0.0" />
-	</SourceModelFeatureSet>
-	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSortDescriptions="LastCurrentMeasurementForSorting:Ascending" DigitalPinColumnInfo="" DigitalPinSectionExpanded="False" DigitalPinSortDescriptions="PMU_LastVoltageMeasurementForSorting:Ascending" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySortDescriptions="RelayName:Ascending" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSectionExpanded="False" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
-</SourceFile>

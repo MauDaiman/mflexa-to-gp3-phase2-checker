@@ -1,9 +1,0 @@
-file_format_version 1.0;
-export inputs_lo, inputs_hi;
-
-
-pattern static_init (data_ins,data_outs)
-{
-inputs_lo:
-inputs_hi:
-

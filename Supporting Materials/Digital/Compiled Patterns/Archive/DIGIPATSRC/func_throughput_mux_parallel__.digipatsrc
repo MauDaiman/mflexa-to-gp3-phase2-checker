@@ -1,3 +1,0 @@
-file_format_version 1.0;
-timeset tset_phase1, tset_phase2, tset_phase3, tset_phase4;
-pattern func_throughput_mux_parallel__ (VIA_MUXVIB_MUXVOB_MUXVOA_MUX,DATA_OUTS)
