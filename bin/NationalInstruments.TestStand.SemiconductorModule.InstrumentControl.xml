@@ -2845,7 +2845,7 @@
             A bool array stating result for each Under Range comparison within the session.
             </returns>
         </member>
-        <member name="M:NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Dmm.Read(NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI.ISemiconductorModuleContext)">
+        <member name="M:NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Dmm.Read">
             <summary>
             Acquires a single measurement and fetches the measured value. 
             </summary>

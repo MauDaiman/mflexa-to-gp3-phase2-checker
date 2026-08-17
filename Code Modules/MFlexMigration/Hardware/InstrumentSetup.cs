@@ -30,7 +30,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 				dcPowerSessions;
 
 				string[] dcPowerChannelStrings;
-				Globals.tsmContext.GetNIDCPowerSessions("AllDC", out dcPowerSessions, out dcPowerChannelStrings); // Fixed pin group name
+				Globals.tsmContext.GetNIDCPowerSessions("ALLDC", out dcPowerSessions, out dcPowerChannelStrings); // Fixed pin group name
 				for (int i = 0; i < dcPowerSessions.Length; i++)
 				{
 					var output = dcPowerSessions[i].Outputs[dcPowerChannelStrings[i]];

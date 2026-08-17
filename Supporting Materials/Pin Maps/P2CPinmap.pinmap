@@ -67,6 +67,7 @@
 		<NIDCPowerInstrument name="SMU_4139_C2_S17" numberOfChannels="1" />
 	</Instruments>
 	<Pins>
+		<!--TxBoard HMOD-->
 		<DUTPin name="HMOD_CS_11_13_24_25" />
 		<DUTPin name="HMOD_CS_14_18" />
 		<DUTPin name="HMOD_CS_1_4" />
@@ -75,6 +76,11 @@
 		<DUTPin name="HMOD_DIN" />
 		<DUTPin name="HMOD_RESET" />
 		<DUTPin name="HMOD_SCLK" />
+		<!--CxBoard HMOD-->
+		<DUTPin name="CHMOD_CS" />
+		<DUTPin name="CHMOD_DIN" />
+		<DUTPin name="CHMOD_RESET" />
+		<DUTPin name="CHMOD_SCLK" />
 		<DUTPin name="P154_6571_DIO_24" />
 		<DUTPin name="P154_6571_DIO_25" />
 		<DUTPin name="P154_6571_DIO_26" />
@@ -83,10 +89,6 @@
 		<DUTPin name="P154_6571_DIO_29" />
 		<DUTPin name="P154_6571_DIO_30" />
 		<DUTPin name="P154_6571_DIO_31" />
-		<DUTPin name="P174_6571_DIO_0" />
-		<DUTPin name="P174_6571_DIO_1" />
-		<DUTPin name="P174_6571_DIO_2" />
-		<DUTPin name="P174_6571_DIO_3" />
 		<DUTPin name="P174_6571_DIO_4" />
 		<DUTPin name="P174_6571_DIO_5" />
 		<DUTPin name="P174_6571_DIO_6" />
@@ -359,17 +361,13 @@
 			<PinReference pin="DIB_POS5V_2" />
 			<PinReference pin="DIB_POS5V_3" />
 		</PinGroup>
-		<PinGroup name="AllDC">
+		<PinGroup name="ALLDC">
 			<PinReference pin="DC90V_SL23_4B" />
 			<PinReference pin="DC90V_SL23_2B" />
 			<PinReference pin="DC30V_SL24_CH5" />
 			<PinReference pin="DC30V_SL24_CH7" />
 		</PinGroup>
-		<PinGroup name="Digital">
-			<PinReference pin="P174_6571_DIO_0" />
-			<PinReference pin="P174_6571_DIO_1" />
-			<PinReference pin="P174_6571_DIO_2" />
-			<PinReference pin="P174_6571_DIO_3" />
+		<PinGroup name="DIGITAL">
 			<PinReference pin="P174_6571_DIO_4" />
 			<PinReference pin="P174_6571_DIO_5" />
 			<PinReference pin="P174_6571_DIO_6" />
@@ -519,7 +517,7 @@
 			<PinReference pin="P154_6571_DIO_30" />
 			<PinReference pin="P154_6571_DIO_31" />
 		</PinGroup>
-		<PinGroup name="HMOD_DigiPins">
+		<PinGroup name="HMOD_DIGITAL_PINS">
 			<PinReference pin="HMOD_CS_11_13_24_25" />
 			<PinReference pin="HMOD_CS_14_18" />
 			<PinReference pin="HMOD_CS_1_4" />
@@ -529,7 +527,88 @@
 			<PinReference pin="HMOD_RESET" />
 			<PinReference pin="HMOD_SCLK" />
 		</PinGroup>
+		<PinGroup name="RESET_PINS">
+			<PinReference pin="HMOD_RESET" />
+			<PinReference pin="CHMOD_RESET" />
+		</PinGroup>
+		<PinGroup name="DC90_PINS">
+			<PinReference pin="DC90V_SL23_1A" />
+			<PinReference pin="DC90V_SL23_2A" />
+			<PinReference pin="DC90V_SL23_3A" />
+			<PinReference pin="DC90V_SL23_4A" />
+			<PinReference pin="DC90V_SL23_1B" />
+			<PinReference pin="DC90V_SL23_2B" />
+			<PinReference pin="DC90V_SL23_3B" />
+			<PinReference pin="DC90V_SL23_4B" />
+		</PinGroup>
+		<PinGroup name="DC90_RELAY_DRIVE">
+			<PinReference pin="P127_6368_DIG0_P0_0" />
+			<PinReference pin="P127_6368_DIG0_P0_1" />
+			<PinReference pin="P127_6368_DIG0_P0_2" />
+			<PinReference pin="P127_6368_DIG0_P0_3" />
+			<PinReference pin="P127_6368_DIG0_P0_4" />
+			<PinReference pin="P127_6368_DIG0_P0_5" />
+			<PinReference pin="P127_6368_DIG0_P0_6" />
+			<PinReference pin="P127_6368_DIG0_P0_7" />
+			<PinReference pin="P115_6368_DIG0_P0_8" />
+			<PinReference pin="P115_6368_DIG0_P0_9" />
+			<PinReference pin="P115_6368_DIG0_P0_10" />
+			<PinReference pin="P115_6368_DIG0_P0_11" />
+			<PinReference pin="P115_6368_DIG0_P0_12" />
+			<PinReference pin="P115_6368_DIG0_P0_13" />
+			<PinReference pin="P115_6368_DIG0_P0_14" />
+			<PinReference pin="P115_6368_DIG0_P0_15" />
+		</PinGroup>
 	</PinGroups>
+	<Relays>
+		<SystemRelay name="RL3" />
+		<SystemRelay name="RL6" />
+		<SystemRelay name="RL4" />
+		<SystemRelay name="RL5" />
+		<SystemRelay name="RL13" />
+		<SystemRelay name="RL14" />
+		<SystemRelay name="RL0" />
+		<SystemRelay name="RL1" />
+		<SystemRelay name="RL2" />
+		<SystemRelay name="RL7" />
+		<SystemRelay name="RL8" />
+		<SystemRelay name="RL9" />
+		<SystemRelay name="RL10" />
+		<SystemRelay name="RL11" />
+		<SystemRelay name="RL12" />
+		<SystemRelay name="RL15" />
+		<SystemRelay name="RL16" />
+		<SystemRelay name="RL17" />
+		<SystemRelay name="RL18" />
+		<SystemRelay name="RL19" />
+	</Relays>
+	<RelayGroups>
+		<RelayGroup name="ALL_CXBOARD_RELAY">
+			<RelayReference relay="RL3" />
+			<RelayReference relay="RL6" />
+			<RelayReference relay="RL4" />
+			<RelayReference relay="RL5" />
+			<RelayReference relay="RL13" />
+			<RelayReference relay="RL14" />
+			<RelayReference relay="RL0" />
+			<RelayReference relay="RL1" />
+			<RelayReference relay="RL2" />
+			<RelayReference relay="RL7" />
+			<RelayReference relay="RL8" />
+			<RelayReference relay="RL9" />
+			<RelayReference relay="RL10" />
+			<RelayReference relay="RL11" />
+			<RelayReference relay="RL12" />
+			<RelayReference relay="RL15" />
+			<RelayReference relay="RL16" />
+			<RelayReference relay="RL17" />
+			<RelayReference relay="RL18" />
+			<RelayReference relay="RL19" />
+		</RelayGroup>
+	</RelayGroups>
+	<RelayConfigurations>
+		<RelayConfiguration name="Disconnect All Relays"></RelayConfiguration>
+	</RelayConfigurations>
 	<Sites>
 		<Site siteNumber="0" />
 		<Site siteNumber="1" />
@@ -537,6 +616,12 @@
 		<Site siteNumber="3" />
 	</Sites>
 	<Connections>
+		<!--CxBoard HMOD-->
+		<Connection pin="CHMOD_CS" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="3" />
+		<Connection pin="CHMOD_DIN" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="0" />
+		<Connection pin="CHMOD_RESET" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="2" />
+		<Connection pin="CHMOD_SCLK" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="1" />
+		<!--TxBoard HMOD-->
 		<Connection pin="HMOD_CS_11_13_24_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="21" />
 		<Connection pin="HMOD_CS_14_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="22" />
 		<Connection pin="HMOD_CS_19_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="23" />
@@ -546,10 +631,6 @@
 		<Connection pin="HMOD_RESET" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="18" />
 		<Connection pin="HMOD_SCLK" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="17" />
 		<!--P174 = C1_S05 (Slot 5)-->
-		<Connection pin="P174_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="0" />
-		<Connection pin="P174_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="1" />
-		<Connection pin="P174_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="2" />
-		<Connection pin="P174_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="3" />
 		<Connection pin="P174_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="4" />
 		<Connection pin="P174_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="5" />
 		<Connection pin="P174_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="6" />
@@ -827,5 +908,26 @@
 		<SystemConnection pin="DIB_POS5V_2" instrument="SMU_4147_C2_S16" channel="1" />
 		<SystemConnection pin="DIB_POS5V_3" instrument="SMU_4147_C2_S16" channel="2" />
 		<SystemConnection pin="SMU4139_POS5V" instrument="SMU_4139_C2_S17" channel="0" />
+		<!--Checker Board Relays-->
+		<SystemRelayConnection relay="RL0" relayDriverModule="RELAY_2567_C1_S12" controlLine="K8" />
+		<SystemRelayConnection relay="RL1" relayDriverModule="RELAY_2567_C1_S12" controlLine="K9" />
+		<SystemRelayConnection relay="RL10" relayDriverModule="RELAY_2567_C1_S12" controlLine="K13" />
+		<SystemRelayConnection relay="RL11" relayDriverModule="RELAY_2567_C1_S12" controlLine="K14" />
+		<SystemRelayConnection relay="RL12" relayDriverModule="RELAY_2567_C1_S12" controlLine="K15" />
+		<SystemRelayConnection relay="RL13" relayDriverModule="RELAY_2567_C1_S12" controlLine="K29" />
+		<SystemRelayConnection relay="RL14" relayDriverModule="RELAY_2567_C1_S12" controlLine="K30" />
+		<SystemRelayConnection relay="RL15" relayDriverModule="RELAY_2567_C1_S12" controlLine="K31" />
+		<SystemRelayConnection relay="RL16" relayDriverModule="RELAY_2567_C1_S12" controlLine="K40" />
+		<SystemRelayConnection relay="RL17" relayDriverModule="RELAY_2567_C1_S12" controlLine="K41" />
+		<SystemRelayConnection relay="RL18" relayDriverModule="RELAY_2567_C1_S12" controlLine="K42" />
+		<SystemRelayConnection relay="RL19" relayDriverModule="RELAY_2567_C1_S12" controlLine="K56" />
+		<SystemRelayConnection relay="RL2" relayDriverModule="RELAY_2567_C1_S12" controlLine="K10" />
+		<SystemRelayConnection relay="RL3" relayDriverModule="RELAY_2567_C1_S12" controlLine="K24" />
+		<SystemRelayConnection relay="RL4" relayDriverModule="RELAY_2567_C1_S12" controlLine="K25" />
+		<SystemRelayConnection relay="RL5" relayDriverModule="RELAY_2567_C1_S12" controlLine="K26" />
+		<SystemRelayConnection relay="RL6" relayDriverModule="RELAY_2567_C1_S12" controlLine="K11" />
+		<SystemRelayConnection relay="RL7" relayDriverModule="RELAY_2567_C1_S12" controlLine="K12" />
+		<SystemRelayConnection relay="RL8" relayDriverModule="RELAY_2567_C1_S12" controlLine="K27" />
+		<SystemRelayConnection relay="RL9" relayDriverModule="RELAY_2567_C1_S12" controlLine="K28" />
 	</Connections>
 </PinMap>

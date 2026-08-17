@@ -99,6 +99,52 @@
             <DataSource>Pattern</DataSource>
             <Comment>HMOD 19 to 23</Comment>
           </PinEdge>
+          <PinEdge pin="CHMOD_SCLK">
+            <ReturnToLow>
+              <On>0 ns</On>
+              <Data>500 ns</Data>
+              <Return>1 µs</Return>
+              <Off>1 µs</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_DIN">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>350 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_RESET">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_CS">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>250 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>HMOD 1 to 13</Comment>
+          </PinEdge>
         </PinEdges>
       </TimeSet>
     </TimeSets>

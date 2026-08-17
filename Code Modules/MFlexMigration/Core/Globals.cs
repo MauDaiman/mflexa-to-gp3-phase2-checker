@@ -131,8 +131,8 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         public static string[] TNames = null;
         public static string edgeSetSheetName = null, MixedSignalTiming = null;
         public static string LevelsTimingsPins = null;
-        public static string AllDigitalPins = "Digital";
-        public static string AllScopePins = "Scope";
+        public static string AllDigitalPins = "DIGITAL";
+        public static string AllScopePins = "SCOPE";
 
         public static Dictionary<string, string[,]> PinGroupMap = new Dictionary<string, string[,]>();
 

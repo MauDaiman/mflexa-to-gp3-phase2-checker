@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -78,14 +78,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\DC90_SL23_Check.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Modules\ADuM225_lvl_dc_levels.cs" />
-    <Compile Include="Modules\ADuM225_pd_instances.cs" />
-    <Compile Include="Modules\ADuM225_qc_flow.cs" />
-    <Compile Include="Modules\DAQmxRelayDriver.cs" />
-    <Compile Include="Modules\TxChecker_instances.cs" />
-    <Compile Include="Modules\STS_ADUM225n.cs" />
-    <Compile Include="Modules\Globals.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InstrCtrl\StsInstrCtrl.csproj">
@@ -101,6 +95,8 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

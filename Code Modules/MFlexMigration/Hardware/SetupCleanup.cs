@@ -55,7 +55,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             //Double VO_dc30__ApertureTime = .001,
             DCPowerSourceTransientResponse dCPowerSourceTransientResponse = DCPowerSourceTransientResponse.Normal)
         {
-            DCPower AllDC = InstrCtrl.DCPowerPinsToSessions(tsmContext, "AllDC");
+            DCPower AllDC = InstrCtrl.DCPowerPinsToSessions(tsmContext, "ALLDC");
             AllDC.ForceVoltage(0, 100e-3);
             Globals.TheHdw.Wait(3e-3);
             AllDC.ConfigureOutputEnabled(false);

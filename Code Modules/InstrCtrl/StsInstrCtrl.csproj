@@ -27,7 +27,7 @@
     <DocumentationFile>bin\x64\Debug\NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <Optimize>false</Optimize>
     <DebugType>pdbonly</DebugType>
