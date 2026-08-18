@@ -1,0 +1,80 @@
+﻿using System;
+using NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex;
+using NationalInstruments.TestStand.SemiconductorModule.InstrumentControl;
+using NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI;
+using NationalInstruments.ModularInstruments.NIDCPower;
+
+namespace TestSteps.Modules
+{
+    public class SL04_DC30_DA_Check
+    {
+        private const double SettlingTimeSec = 1e-3;
+
+        /// <summary>
+        /// Checks DIB Access functionality for Slot04 DC30 channels by forcing 5V on two 1Kohm resistors
+        /// located at the MFlex checker board. One 1Kohm is directly connected to the SMU-4162,
+        /// the other 1Kohm gets connected through DIB Access.
+        /// </summary>
+        public static void SL04DACheck(ISemiconductorModuleContext tsmContext)
+        {
+            double[] sl04OddI, sl04EvenI;
+
+            // Reset all HMODs (Tx Board and Checker Board)
+            HMODControl.AllHMODReset(tsmContext);
+
+            // Turn ON HMOD relays to connect PXIE-4162/63, to connect ODD channels to DIB Access
+            // HMOD1 - DB1 to DB20 -> ON          = 0000 0000 0000 1111 1111 1111 1111 11111 = 1048575
+            // HMOD2 - DB29 and DB30 -> ON        = 0101 0000 0000 0000 0000 0000 0000 0000  = 1342177280
+            // HMOD3 - DB1 to DB16 ODD bits -> ON = 0000 0000 0000 0000 0101 0101 0101 0101  = 21845
+            HMODControl.HMOD1to4(tsmContext, 
+                HMOD_Data_1: HMODControl.RelayRange(1, 20), 
+                HMOD_Data_2: HMODControl.RelayID("K29, K31"), 
+                HMOD_Data_3: HMODControl.RelayID("K1, K3, K5, K7, K9, K11, K13, K15"));
+
+            // Initiate Pin to Session
+            DCPower sl04Dc30 = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_DC30");
+            DCPower sl04OddCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_ODD_CH");
+            DCPower sl04EvenCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_EVEN_CH");
+
+            // Configure and acquisition SMU's
+            sl04Dc30.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
+            sl04Dc30.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
+            sl04Dc30.ConfigureVoltageLevelRange(24.0);
+            sl04Dc30.ConfigureOutputConnected(true);
+            sl04Dc30.ConfigureOutputEnabled(true);
+
+            // Force voltage, expected resulting total current is 10mA = 5V/(1Kohms//1Kohms)
+            sl04Dc30.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            Globals.TheHdw.Wait(SettlingTimeSec);
+
+            // Measure current expected to be +10mA, ODD channels
+            sl04OddCh.Measure(out _, out sl04OddI);
+
+            // Turn ON HMOD relays to connect EVEN channels to DIB Access
+            // HMOD1 - DB1 to DB20 -> ON          = 0000 0000 0000 1111 1111 1111 1111 11111 = 1048575
+            // HMOD2 - DB30 and DB32 -> ON        = 1010 0000 0000 0000 0000 0000 0000 0000  = 2684354560
+            // HMOD3 - DB1 to DB16 EVEN bits -> ON = 0000 0000 0000 0000 1010 1010 1010 1010  = 43690
+            HMODControl.HMOD1to4(tsmContext, 
+                HMOD_Data_1: HMODControl.RelayRange(1, 20), 
+                HMOD_Data_2: HMODControl.RelayID("K30, K32"), 
+                HMOD_Data_3: HMODControl.RelayID("K2, K4, K6, K8, K10, K12, K14, K16"));
+
+            // Measure current expected to be +10mA, EVEN channels
+            sl04EvenCh.Measure(out _, out sl04EvenI);
+
+            // Return to initial settings
+            sl04Dc30.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+
+            // Disconnect DIB Access, but retain the connection of SMU-4162/63 to SLOT4 DC30
+            HMODControl.HMOD1to4(tsmContext, HMOD_Data_1: HMODControl.RelayRange(1, 20));
+
+            sl04Dc30.Abort();
+            sl04Dc30.ConfigureOutputEnabled(false);
+            sl04Dc30.ConfigureOutputConnected(false);
+
+            // Publish results
+            sl04OddCh.PinQueryContext.Publish(sl04OddI, "Odd_Current");
+            sl04EvenCh.PinQueryContext.Publish(sl04EvenI, "Even_Current");
+        }
+    }
+}

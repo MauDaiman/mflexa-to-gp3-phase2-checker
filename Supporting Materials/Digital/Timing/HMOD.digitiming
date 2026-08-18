@@ -63,7 +63,7 @@
             <DataSource>Pattern</DataSource>
             <Comment>HMOD 5 to 10</Comment>
           </PinEdge>
-          <PinEdge pin="HMOD_CS_11_13_24_25">
+          <PinEdge pin="HMOD_CS_11_13">
             <DriveNonReturn>
               <On>0 ns</On>
               <Data>250 ns</Data>

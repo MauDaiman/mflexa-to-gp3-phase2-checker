@@ -29,13 +29,13 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         private static uint HMOD10_dgs = RelayID("K6, K9, K10, K11, K21, K24, K27, K28");
 
         private const string allHMODResetPin = "RESET_PINS";
-        private static string allHMODDigiPins = "HMOD_DIGITAL_PINS";
-        private static string hmodTxResetPin = "HMOD_RESET";
-        private static string hmodCxResetPin = "CHMOD_RESET";
-        private static string dataLevels = "HMOD";
-        private static string dataTimings = "HMOD";
-        public static string hmodTxDataPin = "HMOD_DIN";
-        public static string hmodCxDataPin = "CHMOD_DIN";
+        private const string allHMODDigiPins = "HMOD_DIGITAL_PINS";
+        private const string hmodTxResetPin = "HMOD_RESET";
+        private const string hmodCxResetPin = "CHMOD_RESET";
+        private const string dataLevels = "HMOD";
+        private const string dataTimings = "HMOD";
+        private const string hmodTxDataPin = "HMOD_DIN";
+        private const string hmodCxDataPin = "CHMOD_DIN";
 
         public static void HMODInitialization(ISemiconductorModuleContext tsmContext)
         {
@@ -223,6 +223,19 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
                 if (int.TryParse(digits, out int n) && n >= 1 && n <= maxRelay)
                     result |= (1u << (n - 1));
             }
+            return result;
+        }
+
+        public static uint RelayRange(int startRelay, int endRelay)
+        {
+            if (startRelay < 1 || endRelay < 1 || startRelay > 32 || endRelay > 32)
+                throw new ArgumentOutOfRangeException("Relay numbers must be between 1 and 32.");
+            if (startRelay > endRelay)
+                throw new ArgumentException("startRelay must be <= endRelay.");
+
+            uint result = 0;
+            for (int i = startRelay; i <= endRelay; i++)
+                result |= (1u << (i - 1));
             return result;
         }
 

@@ -68,7 +68,7 @@
 	</Instruments>
 	<Pins>
 		<!--TxBoard HMOD-->
-		<DUTPin name="HMOD_CS_11_13_24_25" />
+		<DUTPin name="HMOD_CS_11_13" />
 		<DUTPin name="HMOD_CS_14_18" />
 		<DUTPin name="HMOD_CS_1_4" />
 		<DUTPin name="HMOD_CS_19_23" />
@@ -367,6 +367,150 @@
 			<PinReference pin="DC30V_SL24_CH5" />
 			<PinReference pin="DC30V_SL24_CH7" />
 		</PinGroup>
+		<PinGroup name ="SL24_DC30">
+			<PinReference pin="DC30V_SL24_CH1" />
+			<PinReference pin="DC30V_SL24_CH2" />
+			<PinReference pin="DC30V_SL24_CH3" />
+			<PinReference pin="DC30V_SL24_CH4" />
+			<PinReference pin="DC30V_SL24_CH5" />
+			<PinReference pin="DC30V_SL24_CH6" />
+			<PinReference pin="DC30V_SL24_CH7" />
+			<PinReference pin="DC30V_SL24_CH8" />
+			<PinReference pin="DC30V_SL24_CH9" />
+			<PinReference pin="DC30V_SL24_CH10" />
+			<PinReference pin="DC30V_SL24_CH11" />
+			<PinReference pin="DC30V_SL24_CH12" />
+			<PinReference pin="DC30V_SL24_CH13" />
+			<PinReference pin="DC30V_SL24_CH14" />
+			<PinReference pin="DC30V_SL24_CH15" />
+			<PinReference pin="DC30V_SL24_CH16" />
+			<PinReference pin="DC30V_SL24_CH17" />
+			<PinReference pin="DC30V_SL24_CH18" />
+			<PinReference pin="DC30V_SL24_CH19" />
+			<PinReference pin="DC30V_SL24_CH20" />
+		</PinGroup>
+		<!--SL24 ODD channels for DIB Access check-->
+		<PinGroup name="SL24_ODD_CH">
+			<PinReference pin="DC30V_SL24_CH1" />
+			<PinReference pin="DC30V_SL24_CH3" />
+			<PinReference pin="DC30V_SL24_CH5" />
+			<PinReference pin="DC30V_SL24_CH7" />
+			<PinReference pin="DC30V_SL24_CH9" />
+			<PinReference pin="DC30V_SL24_CH11" />
+			<PinReference pin="DC30V_SL24_CH13" />
+			<PinReference pin="DC30V_SL24_CH15" />
+			<PinReference pin="DC30V_SL24_CH17" />
+			<PinReference pin="DC30V_SL24_CH19" />
+		</PinGroup>
+		<!--SL24 EVEN channels for DIB Access check-->
+		<PinGroup name="SL24_EVEN_CH">
+			<PinReference pin="DC30V_SL24_CH2" />
+			<PinReference pin="DC30V_SL24_CH4" />
+			<PinReference pin="DC30V_SL24_CH6" />
+			<PinReference pin="DC30V_SL24_CH8" />
+			<PinReference pin="DC30V_SL24_CH10" />
+			<PinReference pin="DC30V_SL24_CH12" />
+			<PinReference pin="DC30V_SL24_CH14" />
+			<PinReference pin="DC30V_SL24_CH16" />
+			<PinReference pin="DC30V_SL24_CH18" />
+			<PinReference pin="DC30V_SL24_CH20" />
+		</PinGroup>
+		<PinGroup name ="SL10_DC30">
+			<PinReference pin="DC30V_SL10_CH1" />
+			<PinReference pin="DC30V_SL10_CH2" />
+			<PinReference pin="DC30V_SL10_CH3" />
+			<PinReference pin="DC30V_SL10_CH4" />
+			<PinReference pin="DC30V_SL10_CH5" />
+			<PinReference pin="DC30V_SL10_CH6" />
+			<PinReference pin="DC30V_SL10_CH7" />
+			<PinReference pin="DC30V_SL10_CH8" />
+			<PinReference pin="DC30V_SL10_CH9" />
+			<PinReference pin="DC30V_SL10_CH10" />
+			<PinReference pin="DC30V_SL10_CH11" />
+			<PinReference pin="DC30V_SL10_CH12" />
+			<PinReference pin="DC30V_SL10_CH13" />
+			<PinReference pin="DC30V_SL10_CH14" />
+			<PinReference pin="DC30V_SL10_CH15" />
+			<PinReference pin="DC30V_SL10_CH16" />
+			<PinReference pin="DC30V_SL10_CH17" />
+			<PinReference pin="DC30V_SL10_CH18" />
+			<PinReference pin="DC30V_SL10_CH19" />
+			<PinReference pin="DC30V_SL10_CH20" />
+		</PinGroup>
+		<!--SL10 ODD channels for DIB Access check-->
+		<PinGroup name="SL10_ODD_CH">
+			<PinReference pin="DC30V_SL10_CH1" />
+			<PinReference pin="DC30V_SL10_CH3" />
+			<PinReference pin="DC30V_SL10_CH5" />
+			<PinReference pin="DC30V_SL10_CH7" />
+			<PinReference pin="DC30V_SL10_CH9" />
+			<PinReference pin="DC30V_SL10_CH11" />
+			<PinReference pin="DC30V_SL10_CH13" />
+			<PinReference pin="DC30V_SL10_CH15" />
+			<PinReference pin="DC30V_SL10_CH17" />
+			<PinReference pin="DC30V_SL10_CH19" />
+		</PinGroup>
+		<!--SL10 EVEN channels for DIB Access check-->
+		<PinGroup name="SL10_EVEN_CH">
+			<PinReference pin="DC30V_SL10_CH2" />
+			<PinReference pin="DC30V_SL10_CH4" />
+			<PinReference pin="DC30V_SL10_CH6" />
+			<PinReference pin="DC30V_SL10_CH8" />
+			<PinReference pin="DC30V_SL10_CH10" />
+			<PinReference pin="DC30V_SL10_CH12" />
+			<PinReference pin="DC30V_SL10_CH14" />
+			<PinReference pin="DC30V_SL10_CH16" />
+			<PinReference pin="DC30V_SL10_CH18" />
+			<PinReference pin="DC30V_SL10_CH20" />
+		</PinGroup>
+		<PinGroup name ="SL04_DC30">
+			<PinReference pin="DC30V_SL04_CH1" />
+			<PinReference pin="DC30V_SL04_CH2" />
+			<PinReference pin="DC30V_SL04_CH3" />
+			<PinReference pin="DC30V_SL04_CH4" />
+			<PinReference pin="DC30V_SL04_CH5" />
+			<PinReference pin="DC30V_SL04_CH6" />
+			<PinReference pin="DC30V_SL04_CH7" />
+			<PinReference pin="DC30V_SL04_CH8" />
+			<PinReference pin="DC30V_SL04_CH9" />
+			<PinReference pin="DC30V_SL04_CH10" />
+			<PinReference pin="DC30V_SL04_CH11" />
+			<PinReference pin="DC30V_SL04_CH12" />
+			<PinReference pin="DC30V_SL04_CH13" />
+			<PinReference pin="DC30V_SL04_CH14" />
+			<PinReference pin="DC30V_SL04_CH15" />
+			<PinReference pin="DC30V_SL04_CH16" />
+			<PinReference pin="DC30V_SL04_CH17" />
+			<PinReference pin="DC30V_SL04_CH18" />
+			<PinReference pin="DC30V_SL04_CH19" />
+			<PinReference pin="DC30V_SL04_CH20" />
+		</PinGroup>
+		<!--SL04 ODD channels for DIB Access check-->
+		<PinGroup name="SL04_ODD_CH">
+			<PinReference pin="DC30V_SL04_CH1" />
+			<PinReference pin="DC30V_SL04_CH3" />
+			<PinReference pin="DC30V_SL04_CH5" />
+			<PinReference pin="DC30V_SL04_CH7" />
+			<PinReference pin="DC30V_SL04_CH9" />
+			<PinReference pin="DC30V_SL04_CH11" />
+			<PinReference pin="DC30V_SL04_CH13" />
+			<PinReference pin="DC30V_SL04_CH15" />
+			<PinReference pin="DC30V_SL04_CH17" />
+			<PinReference pin="DC30V_SL04_CH19" />
+		</PinGroup>
+		<!--SL04 EVEN channels for DIB Access check-->
+		<PinGroup name="SL04_EVEN_CH">
+			<PinReference pin="DC30V_SL04_CH2" />
+			<PinReference pin="DC30V_SL04_CH4" />
+			<PinReference pin="DC30V_SL04_CH6" />
+			<PinReference pin="DC30V_SL04_CH8" />
+			<PinReference pin="DC30V_SL04_CH10" />
+			<PinReference pin="DC30V_SL04_CH12" />
+			<PinReference pin="DC30V_SL04_CH14" />
+			<PinReference pin="DC30V_SL04_CH16" />
+			<PinReference pin="DC30V_SL04_CH18" />
+			<PinReference pin="DC30V_SL04_CH20" />
+		</PinGroup>
 		<PinGroup name="DIGITAL">
 			<PinReference pin="P174_6571_DIO_4" />
 			<PinReference pin="P174_6571_DIO_5" />
@@ -517,8 +661,14 @@
 			<PinReference pin="P154_6571_DIO_30" />
 			<PinReference pin="P154_6571_DIO_31" />
 		</PinGroup>
+		<PinGroup name="CHMOD_DIGITAL_PINS">
+			<PinReference pin="CHMOD_CS" />
+			<PinReference pin="CHMOD_DIN" />
+			<PinReference pin="CHMOD_RESET" />
+			<PinReference pin="CHMOD_SCLK" />
+		</PinGroup>
 		<PinGroup name="HMOD_DIGITAL_PINS">
-			<PinReference pin="HMOD_CS_11_13_24_25" />
+			<PinReference pin="HMOD_CS_11_13" />
 			<PinReference pin="HMOD_CS_14_18" />
 			<PinReference pin="HMOD_CS_1_4" />
 			<PinReference pin="HMOD_CS_19_23" />
@@ -622,7 +772,7 @@
 		<Connection pin="CHMOD_RESET" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="2" />
 		<Connection pin="CHMOD_SCLK" siteNumber="0, 1, 2, 3" instrument="HSD_6571_C1_S05" channel="1" />
 		<!--TxBoard HMOD-->
-		<Connection pin="HMOD_CS_11_13_24_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="21" />
+		<Connection pin="HMOD_CS_11_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="21" />
 		<Connection pin="HMOD_CS_14_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="22" />
 		<Connection pin="HMOD_CS_19_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="23" />
 		<Connection pin="HMOD_CS_1_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="19" />

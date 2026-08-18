@@ -78,6 +78,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\MeterInstance.cs" />
+    <Compile Include="Common\HMODCtrl.cs" />
+    <Compile Include="Modules\SL24_DC30_DGS_Check.cs" />
+    <Compile Include="Modules\SL10_DC30_DGS_Check.cs" />
+    <Compile Include="Modules\SL04_DC30_DGS_Check.cs" />
+    <Compile Include="Modules\SL24_DC30_DA_Check.cs" />
+    <Compile Include="Modules\SL10_DC30_DA_Check.cs" />
+    <Compile Include="Modules\SL04_DC30_DA_Check.cs" />
+    <Compile Include="Modules\DC30_SL04_Check.cs" />
+    <Compile Include="Modules\DC30_SL10_Check.cs" />
+    <Compile Include="Modules\DC30_SL24_Check.cs" />
+    <Compile Include="Modules\SPI_Pins_Check.cs" />
+    <Compile Include="Modules\DMM_SL14_Check.cs" />
+    <Compile Include="Modules\DIB_Supply_Check.cs" />
     <Compile Include="Modules\DC90_SL23_Check.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,8 +109,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
