@@ -90,7 +90,7 @@
     <Compile Include="Modules\DC30_SL10_Check.cs" />
     <Compile Include="Modules\DC30_SL24_Check.cs" />
     <Compile Include="Modules\SPI_Pins_Check.cs" />
-    <Compile Include="Modules\DMM_SL14_Check.cs" />
+    <Compile Include="Modules\SL01_GPIO_Check.cs" />
     <Compile Include="Modules\DIB_Supply_Check.cs" />
     <Compile Include="Modules\DC90_SL23_Check.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

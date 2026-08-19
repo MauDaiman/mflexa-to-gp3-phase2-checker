@@ -3,3 +3,6 @@
 ################################################################################
 
 /Error pinmap.jpg
+
+# Windows Zone.Identifier alternate data stream files
+*:Zone.Identifier

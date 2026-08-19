@@ -37,6 +37,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         private const string hmodTxDataPin = "HMOD_DIN";
         private const string hmodCxDataPin = "CHMOD_DIN";
 
+        /// <summary>
+        /// Initializes all HMOD digital pins, applies levels/timings, and sets default relay configurations.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void HMODInitialization(ISemiconductorModuleContext tsmContext)
         {
             InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
@@ -67,6 +71,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
                 HMOD_Data_10: HMOD10_dgs);
         }
 
+        /// <summary>
+        /// Resets the Tx Board HMODs by pulsing the HMOD_RESET pin low then high.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void THMODReset(ISemiconductorModuleContext tsmContext)
         {
             InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxResetPin);
@@ -75,6 +83,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             HMOD_Reset.WriteStatic(PinState._1);
         }
         
+        /// <summary>
+        /// Resets the Checker Board HMODs by pulsing the CHMOD_RESET pin low then high.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void CHMODReset(ISemiconductorModuleContext tsmContext)
         {
             InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxResetPin);
@@ -83,6 +95,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             HMOD_Reset.WriteStatic(PinState._1);
         }
         
+        /// <summary>
+        /// Resets all HMODs (both Tx Board and Checker Board) by pulsing the combined reset pin.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void AllHMODReset(ISemiconductorModuleContext tsmContext)
         {
             InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
@@ -91,6 +107,9 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             HMOD_Reset.WriteStatic(PinState._1);
         }
 
+        /// <summary>
+        /// Shifts 32-bit data into Tx Board HMOD1 through HMOD4.
+        /// </summary>
         public static void HMOD1to4(ISemiconductorModuleContext tsmContext,
             uint HMOD_Data_1 = 0,
             uint HMOD_Data_2 = 0,
@@ -111,6 +130,9 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             Globals.TestTimeMeasure.TestTimeStop();
 #endif
         }
+        /// <summary>
+        /// Shifts 32-bit data into Tx Board HMOD5 through HMOD10.
+        /// </summary>
         public static void HMOD5to10(ISemiconductorModuleContext tsmContext,
            uint HMOD_Data_5 = 0,
            uint HMOD_Data_6 = 0,
@@ -134,6 +156,9 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #endif
         }
 
+        /// <summary>
+        /// Shifts 32-bit data into Tx Board HMOD11 through HMOD13.
+        /// </summary>
         public static void HMOD11to13(ISemiconductorModuleContext tsmContext,
             uint HMOD_Data_11 = 0,
             uint HMOD_Data_12 = 0,
@@ -154,6 +179,9 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #endif
         }
 
+        /// <summary>
+        /// Shifts 32-bit data into Tx Board HMOD14 through HMOD18.
+        /// </summary>
         public static void HMOD14to18(ISemiconductorModuleContext tsmContext,
             uint HMOD_Data_14 = 0,
             uint HMOD_Data_15 = 0,
@@ -175,6 +203,9 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             Globals.TestTimeMeasure.TestTimeStop();
 #endif
         }
+        /// <summary>
+        /// Shifts 32-bit data into Tx Board HMOD19 through HMOD23.
+        /// </summary>
         public static void HMOD19to23(ISemiconductorModuleContext tsmContext,
             uint HMOD_Data_19 = 0,
             uint HMOD_Data_20 = 0,
@@ -197,6 +228,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #endif
         }
  
+        /// <summary>
+        /// Resets all HMOD registers and clears all shift data to zero.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void HMODCleanup(ISemiconductorModuleContext tsmContext)
         {
             NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
@@ -212,6 +247,12 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 
         }
 
+        /// <summary>
+        /// Converts a comma-separated relay string (e.g. "K1, K5, K21") into a uint bitmask
+        /// where bit N-1 represents relay KN.
+        /// </summary>
+        /// <param name="relayToggle">Comma or semicolon-separated relay names (K1–K32).</param>
+        /// <param name="maxRelay">Maximum relay number (default 32).</param>
         public static uint RelayID(string relayToggle, int maxRelay = 32)
         {
             if (relayToggle == null) throw new ArgumentNullException(nameof(relayToggle));
@@ -226,6 +267,11 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             return result;
         }
 
+        /// <summary>
+        /// Creates a uint bitmask with all relays from startRelay to endRelay (inclusive) set.
+        /// </summary>
+        /// <param name="startRelay">First relay number (1-based, 1–32).</param>
+        /// <param name="endRelay">Last relay number (1-based, 1–32).</param>
         public static uint RelayRange(int startRelay, int endRelay)
         {
             if (startRelay < 1 || endRelay < 1 || startRelay > 32 || endRelay > 32)
@@ -239,6 +285,10 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             return result;
         }
 
+        /// <summary>
+        /// Shifts 32-bit data into Checker Board HMOD1 through HMOD13
+        /// (1x 32-ch + 12x 32-bit groups = 416 clocks, 392 effective bits).
+        /// </summary>
         public static void CHMOD1to13(ISemiconductorModuleContext tsmContext,
            uint HMOD_Data_1 = 0,
            uint HMOD_Data_2 = 0,

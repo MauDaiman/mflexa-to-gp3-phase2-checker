@@ -15,6 +15,12 @@ namespace TestSteps.Modules
         /// located at the MFlex checker board. One 1Kohm is directly connected to the SMU-4162,
         /// the other 1Kohm gets connected through DIB Access.
         /// </summary>
+        /// <summary>
+        /// Checks DIB Access functionality for Slot10 DC30 channels by forcing 5V on two 1Kohm resistors
+        /// located at the MFlex checker board. One 1Kohm is directly connected to the SMU-4162,
+        /// the other 1Kohm gets connected through DIB Access.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL10DACheck(ISemiconductorModuleContext tsmContext)
         {
             double[] sl10OddI, sl10EvenI;
@@ -34,19 +40,25 @@ namespace TestSteps.Modules
                 HMOD_Data_4: HMODControl.RelayID("K1, K3"));
 
             // Initiate Pin to Session
-            DCPower sl10Dc30 = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL10_DC30");
             DCPower sl10OddCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL10_ODD_CH");
             DCPower sl10EvenCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL10_EVEN_CH");
 
             // Configure and acquisition SMU's
-            sl10Dc30.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
-            sl10Dc30.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
-            sl10Dc30.ConfigureVoltageLevelRange(24.0);
-            sl10Dc30.ConfigureOutputConnected(true);
-            sl10Dc30.ConfigureOutputEnabled(true);
+            sl10OddCh.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
+            sl10OddCh.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
+            sl10OddCh.ConfigureVoltageLevelRange(24.0);
+            sl10OddCh.ConfigureOutputConnected(true);
+            sl10OddCh.ConfigureOutputEnabled(true);
+
+            sl10EvenCh.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
+            sl10EvenCh.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
+            sl10EvenCh.ConfigureVoltageLevelRange(24.0);
+            sl10EvenCh.ConfigureOutputConnected(true);
+            sl10EvenCh.ConfigureOutputEnabled(true);
 
             // Force voltage, expected resulting total current is 10mA = 5V/(1Kohms//1Kohms)
-            sl10Dc30.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            sl10OddCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            sl10EvenCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
             Globals.TheHdw.Wait(SettlingTimeSec);
 
             // Measure current expected to be +10mA, ODD channels
@@ -67,14 +79,18 @@ namespace TestSteps.Modules
             sl10EvenCh.Measure(out _, out sl10EvenI);
 
             // Return to initial settings
-            sl10Dc30.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+            sl10OddCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+            sl10EvenCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
 
             // Disconnect DIB Access, but retain the connection of SMU-4162/63 to SLOT10 DC30
             HMODControl.HMOD1to4(tsmContext, HMOD_Data_1: HMODControl.RelayRange(1, 20));
 
-            sl10Dc30.Abort();
-            sl10Dc30.ConfigureOutputEnabled(false);
-            sl10Dc30.ConfigureOutputConnected(false);
+            sl10OddCh.Abort(); sl10EvenCh.Abort();
+            sl10OddCh.ConfigureOutputEnabled(false);
+            sl10OddCh.ConfigureOutputConnected(false);
+
+            sl10EvenCh.ConfigureOutputEnabled(false);
+            sl10EvenCh.ConfigureOutputConnected(false);
 
             // Publish results
             sl10OddCh.PinQueryContext.Publish(sl10OddI, "Odd_Current");

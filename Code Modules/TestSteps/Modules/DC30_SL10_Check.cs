@@ -15,6 +15,7 @@ namespace TestSteps.Modules
         /// Checks if SMU-4162/63 signals are able to reach the MFlex board.
         /// Done by forcing +1mA on the resistor load located at the MFlex board checker.
         /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL10Check(ISemiconductorModuleContext tsmContext)
         {
             // Reset all HMODs (Tx Board and Checker Board)

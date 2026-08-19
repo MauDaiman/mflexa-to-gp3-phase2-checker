@@ -11,6 +11,9 @@ using NationalInstruments.ModularInstruments.NIDigital;
 
 namespace TestSteps.Common
 {
+    /// <summary>
+    /// Controls the Checker Board HMOD shift-register chain (6 HMODs: 1x 32-ch + 5x 72-ch = 392 bits).
+    /// </summary>
     public static class HMODCtrl
     {
 
@@ -23,6 +26,16 @@ namespace TestSteps.Common
         public static string hmodTxDataPin = "HMOD_DIN";
         public static string hmodCxDataPin = "CHMOD_DIN";
 
+        /// <summary>
+        /// Shifts data into the Checker Board HMOD chain (392 bits total).
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="hmod1Data">32-bit data for Checker HMOD1 (K1–K32).</param>
+        /// <param name="hmod2Data">72-bit data for Checker HMOD2 (K1–K72), as uint[3].</param>
+        /// <param name="hmod3Data">72-bit data for Checker HMOD3 (K1–K72), as uint[3].</param>
+        /// <param name="hmod4Data">72-bit data for Checker HMOD4 (K1–K72), as uint[3].</param>
+        /// <param name="hmod5Data">72-bit data for Checker HMOD5 (K1–K72), as uint[3].</param>
+        /// <param name="hmod6Data">72-bit data for Checker HMOD6 (K1–K72), as uint[3].</param>
         public static void CHMOD1to13(ISemiconductorModuleContext tsmContext,
             uint hmod1Data = 0,       // 32-bit HMOD (K1–K32)
             uint[] hmod2Data = null,  // 72-bit HMOD (K1–K72) → uint[3]
@@ -72,6 +85,11 @@ namespace TestSteps.Common
             ExpandBits(waveform, ref offset, new uint[] { data }, bitCount);
         }
 
+        /// <summary>
+        /// Converts a comma-separated relay string (e.g. "K1, K3, K72") into a uint[3] bitmask
+        /// suitable for 72-channel HMOD data parameters.
+        /// </summary>
+        /// <param name="relayToggle">Comma or semicolon-separated relay names (K1–K72).</param>
         public static uint[] RelayID72(string relayToggle)
         {
             uint[] result = new uint[3]; // 72 bits = 3 words

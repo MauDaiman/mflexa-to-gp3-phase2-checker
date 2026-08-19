@@ -16,10 +16,12 @@ namespace TestSteps.Modules
         /// <summary>
         /// Checks if the signal from the checker board SPI pins is able to reach the MFlex board.
         /// </summary>
-        public static void CheckerBoardSPICheck(ISemiconductorModuleContext tsmContext, MeterType meterType = MeterType.Smu4137)
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="meterType">Meter selection: 0 = PXIe-4137 SMU, 1 = PXIe-4081 DMM.</param>
+        public static void CheckerBoardSPICheck(ISemiconductorModuleContext tsmContext, int meterType = 0)
         {
             // Configure the selected meter resource (PXIE-4137 or PXIE-4081)
-            IMeterStrategy meter = MeterFactory.Create(meterType);
+            IMeterStrategy meter = MeterFactory.Create((MeterType)meterType);
             meter.Configure(tsmContext);
 
             // Turn OFF RL15 to RL18 to connect Checker board
@@ -64,6 +66,7 @@ namespace TestSteps.Modules
 
             // Program the SPI pins to force low - vil
             chmodPins.WriteStatic(PinState._0);
+            meter.Cleanup(tsmContext);
 
             // Publish results
             meter.PublishResult(dataVoltageChk, "DATA_Voltage_Check");

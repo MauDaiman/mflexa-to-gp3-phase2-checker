@@ -19,6 +19,7 @@ namespace TestSteps.Modules
         /// Checks if DC90 (PXIe-4137) signals are able to reach the MFlex board.
         /// Done by forcing +1mA on the resistor load located at the MFlex board checker.
         /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL23Check(ISemiconductorModuleContext tsmContext)
         {
             DCPower smu = InstrCtrl.DCPowerPinsToSessions(tsmContext, dc90PinGroup);
@@ -60,6 +61,12 @@ namespace TestSteps.Modules
             smu.PinQueryContext.Publish(voltages, "Voltage");
         }
 
+        /// <summary>
+        /// Drives on-board relays via DAQmx digital output and waits for relay settling.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="doPin">DAQmx digital output pin group name.</param>
+        /// <param name="state">True to close relays, false to open.</param>
         private static void DaqRelayDrive(ISemiconductorModuleContext tsmContext, string doPin, bool state)
         {
             DAQmx daqTask = InstrCtrl.PinsToDAQmxTasks(tsmContext, doPin);

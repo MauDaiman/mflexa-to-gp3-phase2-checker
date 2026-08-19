@@ -15,6 +15,7 @@ namespace TestSteps.Modules
         /// on the 1Kohm load located on the Checker board. Resulting voltage is measured at
         /// different DGS1/2/3/4 reference.
         /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL04DGSCheck(ISemiconductorModuleContext tsmContext)
         {
             double[] MeasDC30_SL04_DGS1, MeasDC30_SL04_DGS2, MeasDC30_SL04_DGS3, MeasDC30_SL04_DGS4;
@@ -36,7 +37,6 @@ namespace TestSteps.Modules
             SL04_DC30.ConfigureOutputConnected(true);
             SL04_DC30.ConfigureOutputEnabled(true);
             SL04_DC30.ForceCurrent(currentLevel: 1e-3, voltageLimit: 24); // force current on 1Kohm resistor
-            SL04_DC30.Initiate();
 
             // Connect LO_S of SLOT4 DC30's to DGS1 only, disconnect LO_s channels from DGS2/3/4
             // HMOD5 - 0000 0001 1111 0000 0111 1111 1110 0000 = 32538592
@@ -92,6 +92,7 @@ namespace TestSteps.Modules
 
             // Return to initial settings
             SL04_DC30.ForceCurrent(currentLevel: 0, voltageLimit: 24);
+
             SL04_DC30.Abort();
             SL04_DC30.ConfigureOutputEnabled(false);
             SL04_DC30.ConfigureOutputConnected(false);

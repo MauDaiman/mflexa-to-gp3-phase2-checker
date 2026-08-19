@@ -15,6 +15,7 @@ namespace TestSteps.Modules
         /// located at the MFlex checker board. One 1Kohm is directly connected to the SMU-4162,
         /// the other 1Kohm gets connected through DIB Access.
         /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL04DACheck(ISemiconductorModuleContext tsmContext)
         {
             double[] sl04OddI, sl04EvenI;
@@ -32,19 +33,25 @@ namespace TestSteps.Modules
                 HMOD_Data_3: HMODControl.RelayID("K1, K3, K5, K7, K9, K11, K13, K15"));
 
             // Initiate Pin to Session
-            DCPower sl04Dc30 = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_DC30");
             DCPower sl04OddCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_ODD_CH");
             DCPower sl04EvenCh = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SL04_EVEN_CH");
 
             // Configure and acquisition SMU's
-            sl04Dc30.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
-            sl04Dc30.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
-            sl04Dc30.ConfigureVoltageLevelRange(24.0);
-            sl04Dc30.ConfigureOutputConnected(true);
-            sl04Dc30.ConfigureOutputEnabled(true);
+            sl04OddCh.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
+            sl04OddCh.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
+            sl04OddCh.ConfigureVoltageLevelRange(24.0);
+            sl04OddCh.ConfigureOutputConnected(true);
+            sl04OddCh.ConfigureOutputEnabled(true);
+
+            sl04EvenCh.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
+            sl04EvenCh.ConfigureSense(sense: DCPowerMeasurementSense.Remote, initiateSessionAfter: true);
+            sl04EvenCh.ConfigureVoltageLevelRange(24.0);
+            sl04EvenCh.ConfigureOutputConnected(true);
+            sl04EvenCh.ConfigureOutputEnabled(true);
 
             // Force voltage, expected resulting total current is 10mA = 5V/(1Kohms//1Kohms)
-            sl04Dc30.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            sl04OddCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            sl04EvenCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
             Globals.TheHdw.Wait(SettlingTimeSec);
 
             // Measure current expected to be +10mA, ODD channels
@@ -63,14 +70,18 @@ namespace TestSteps.Modules
             sl04EvenCh.Measure(out _, out sl04EvenI);
 
             // Return to initial settings
-            sl04Dc30.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+            sl04OddCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+            sl04EvenCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
 
             // Disconnect DIB Access, but retain the connection of SMU-4162/63 to SLOT4 DC30
             HMODControl.HMOD1to4(tsmContext, HMOD_Data_1: HMODControl.RelayRange(1, 20));
 
-            sl04Dc30.Abort();
-            sl04Dc30.ConfigureOutputEnabled(false);
-            sl04Dc30.ConfigureOutputConnected(false);
+            sl04OddCh.Abort(); sl04EvenCh.Abort();
+            sl04OddCh.ConfigureOutputEnabled(false);
+            sl04OddCh.ConfigureOutputConnected(false);
+
+            sl04EvenCh.ConfigureOutputEnabled(false);
+            sl04EvenCh.ConfigureOutputConnected(false);
 
             // Publish results
             sl04OddCh.PinQueryContext.Publish(sl04OddI, "Odd_Current");

@@ -7,19 +7,43 @@ using NationalInstruments.ModularInstruments.NIDmm;
 
 namespace TestSteps.Common
 {
+    /// <summary>
+    /// Selects which physical meter resource to use for voltage measurement.
+    /// </summary>
     public enum MeterType
     {
-        Smu4137,
-        Dmm4081
+        /// <summary>PXIe-4137 SMU used as voltage meter via RL1.</summary>
+        Smu4137 = 0,
+        /// <summary>PXIe-4081 DMM used as current meter via RL2.</summary>
+        Dmm4081 = 1
     }
 
+    /// <summary>
+    /// Strategy interface for configuring, measuring, publishing, and cleaning up a meter resource.
+    /// </summary>
     public interface IMeterStrategy
     {
+        /// <summary>Configures the meter instrument and connects the appropriate relay path.</summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         void Configure(ISemiconductorModuleContext tsmContext);
+
+        /// <summary>Performs a measurement and returns the result array.</summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         double[] Measure(ISemiconductorModuleContext tsmContext);
+
+        /// <summary>Publishes measured values to the TSM results.</summary>
+        /// <param name="values">Measured data array.</param>
+        /// <param name="name">Published result name.</param>
         void PublishResult(double[] values, string name);
+
+        /// <summary>Aborts the meter session and disconnects the relay path.</summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        void Cleanup(ISemiconductorModuleContext tsmContext);
     }
 
+    /// <summary>
+    /// Meter strategy using PXIe-4137 SMU as a voltage meter. Routes signal via RL1.
+    /// </summary>
     public class Smu4137Strategy : IMeterStrategy
     {
         private const string Dc901A = "DC90V_SL23_1A";
@@ -50,8 +74,19 @@ namespace TestSteps.Common
         {
             _smu.PinQueryContext.Publish(values, name);
         }
+
+        public void Cleanup(ISemiconductorModuleContext tsmContext)
+        {
+            _smu.Abort();
+            _smu.ConfigureOutputEnabled(false);
+            _smu.ConfigureOutputConnected(false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL1" }, false);
+        }
     }
 
+    /// <summary>
+    /// Meter strategy using PXIe-4081 DMM as a current meter. Routes signal via RL2.
+    /// </summary>
     public class Dmm4081Strategy : IMeterStrategy
     {
         private const string DmmP131 = "P131_4081_DMM";
@@ -82,10 +117,23 @@ namespace TestSteps.Common
         {
             _dmm.PinQueryContext.Publish(values, name);
         }
+
+        public void Cleanup(ISemiconductorModuleContext tsmContext)
+        {
+            _dmm.Abort();
+            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
+        }
     }
 
+    /// <summary>
+    /// Factory for creating meter strategy instances based on MeterType.
+    /// </summary>
     public static class MeterFactory
     {
+        /// <summary>
+        /// Creates an <see cref="IMeterStrategy"/> instance for the specified meter type.
+        /// </summary>
+        /// <param name="type">The meter type (0 = Smu4137, 1 = Dmm4081).</param>
         public static IMeterStrategy Create(MeterType type)
         {
             switch (type)
@@ -97,36 +145,6 @@ namespace TestSteps.Common
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type));
             }
-        }
-    }
-
-    public static class MeterInstance
-    {
-        public static void PowerDown_Checker(ISemiconductorModuleContext tsmContext)
-        {
-            Dmm dmm = InstrCtrl.DmmPinsToSessions(tsmContext, "P131_4081_DMM");
-            dmm.Abort();
-            dmm.ConfigureDmmSessions(
-                DmmMeasurementFunction.DCVolts,
-                DmmApertureTimeUnits.Seconds,
-                apertureTime: 1e-3,
-                DmmAuto.Off,
-                DmmAdcCalibration.Off,
-                settleTimeSeconds: 0,
-                voltageRange: 10);
-            dmm.Initiate();
-
-            DCPower smuDC90 = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DC90_PINS");
-            smuDC90.Abort();
-            smuDC90.ForceVoltage(voltageLevel: 0, currentLimit: 10e-3);
-            smuDC90.ConfigureVoltageLevelRange(6);
-            smuDC90.Initiate();
-            smuDC90.ConfigureOutputConnected();
-            smuDC90.ConfigureOutputEnabled();
-
-            DCPower smuDC30 = InstrCtrl.DCPowerPinsToSessions(tsmContext,
-                new string[] { "SL24_DC30", "SL10_DC30", "SL04_DC30" });
-            smuDC30.ForceVoltage(voltageLevel: 0, currentLimit: 10e-3);
         }
     }
 }

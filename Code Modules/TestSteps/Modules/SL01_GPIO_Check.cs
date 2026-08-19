@@ -5,7 +5,7 @@ using NationalInstruments.ModularInstruments.NIDmm;
 
 namespace TestSteps.Modules
 {
-    public class DMM_SL14_Check
+    public class SL01_GPIO_Check
     {
         private const string DmmP131 = "P131_4081_DMM";
         private const double SettlingTimeSec = 1e-3;
@@ -14,7 +14,8 @@ namespace TestSteps.Modules
         /// <summary>
         /// Check the Ammeter, Voltmeter and Ohmmeter (2W, 4W) functionality of the PXIE-4081.
         /// </summary>
-        public static void Dmm4081Sl14Check(ISemiconductorModuleContext tsmContext)
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        public static void SL01Check(ISemiconductorModuleContext tsmContext)
         {
             Dmm dmm = InstrCtrl.DmmPinsToSessions(tsmContext, DmmP131);
             dmm.Abort();
@@ -90,6 +91,12 @@ namespace TestSteps.Modules
             dmm.PinQueryContext.Publish(resMeas4W, "DMM_4W_Resistance_Measurement");
         }
 
+        /// <summary>
+        /// Configures DMM measurement function and range with standard aperture settings.
+        /// </summary>
+        /// <param name="dmm">The DMM session wrapper.</param>
+        /// <param name="function">Measurement function (DCCurrent, DCVolts, TwoWireResistance, FourWireResistance).</param>
+        /// <param name="range">Measurement range value.</param>
         private static void ConfigureDmm(Dmm dmm, DmmMeasurementFunction function, double range)
         {
             dmm.ConfigureDmmSessions(
