@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="A24E38049955C59E75E6504A4763483E" Timestamp="1DD26026528A250" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="832D507639437E5D6DEFA12557BA7D3C" Timestamp="1DD2F84DA644D76" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
 		<ApplicationVersionInfo Build="5.3.2.54637" Name="Digital Pattern Editor" Version="21.0.0" />
 	</SourceModelFeatureSet>
-	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSectionExpanded="False" DCPowerPinSortDescriptions="PinName:Ascending" DigitalPinColumnInfo="" DigitalPinSortDescriptions="" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySortDescriptions="" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSectionExpanded="False" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
+	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSortDescriptions="PinName:Ascending" DigitalPinColumnInfo="" DigitalPinSortDescriptions="" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySortDescriptions="" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSectionExpanded="False" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
 </SourceFile>

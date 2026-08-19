@@ -9,6 +9,8 @@ namespace TestSteps.Modules
 {
     public class DIB_Supply_Check
     {
+        private const double SettlingTimeSec = 5e-3;
+
         /// <summary>
         /// Measures 6 on-board power supply voltages via DMM through relay muxing
         /// and publishes each reading per site.
@@ -27,6 +29,8 @@ namespace TestSteps.Modules
                 {
                     // Turn ON relay
                     Relay.ControlRelay(tsmContext, entry.RelayId, true);
+                    Globals.TheHdw.Wait(SettlingTimeSec);
+
                     double[] reading = meter.Measure(tsmContext);
 
                     // Turn OFF relay

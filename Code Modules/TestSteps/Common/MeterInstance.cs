@@ -52,16 +52,22 @@ namespace TestSteps.Common
         public void Configure(ISemiconductorModuleContext tsmContext)
         {
             _smu = InstrCtrl.DCPowerPinsToSessions(tsmContext, Dc901A);
-            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2" }, false);
-            Relay.ControlRelay(tsmContext, new string[] { "RL1" }, true);
+            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, true);
+
+            _smu.Abort();
             _smu.ConfigureSettings(
                 apertureTime: 10e-3,
                 apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
-            _smu.ConfigureSense(DCPowerMeasurementSense.Remote);
-            _smu.ConfigureVoltageLevelRange(6);
-            _smu.Initiate();
-            _smu.ConfigureOutputConnected(true);
-            _smu.ConfigureOutputEnabled(true);
+            _smu.ConfigureSense(
+                DCPowerMeasurementSense.Remote,
+                initiateSessionAfter: false);
+            _smu.ConfigureCurrentLevelRange(currentLevelRange: 10e-3);
+            _smu.ConfigureVoltageLevelRange(voltageLevelRange: 20);
+            _smu.ConfigureOutputConnected();
+            _smu.ConfigureOutputEnabled();
+
+            _smu.ForceCurrent(currentLevel: 0, voltageLimit: 20);
         }
 
         public double[] Measure(ISemiconductorModuleContext tsmContext)
@@ -80,7 +86,7 @@ namespace TestSteps.Common
             _smu.Abort();
             _smu.ConfigureOutputEnabled(false);
             _smu.ConfigureOutputConnected(false);
-            Relay.ControlRelay(tsmContext, new string[] { "RL1" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
         }
     }
 
@@ -95,8 +101,8 @@ namespace TestSteps.Common
         public void Configure(ISemiconductorModuleContext tsmContext)
         {
             _dmm = InstrCtrl.DmmPinsToSessions(tsmContext, DmmP131);
-            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2" }, false);
-            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, true);
+            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL1" }, true);
             _dmm.ConfigureDmmSessions(
                 DmmMeasurementFunction.DCCurrent,
                 DmmApertureTimeUnits.Seconds,
@@ -121,7 +127,7 @@ namespace TestSteps.Common
         public void Cleanup(ISemiconductorModuleContext tsmContext)
         {
             _dmm.Abort();
-            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL1" }, false);
         }
     }
 

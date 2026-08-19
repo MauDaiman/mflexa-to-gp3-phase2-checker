@@ -15,11 +15,6 @@ namespace TestSteps.Modules
         /// on the 1Kohm load located on the Checker board. Resulting voltage is measured at
         /// different DGS1/2/3/4 reference.
         /// </summary>
-        /// <summary>
-        /// Checks DGS connectivity of each SMU-4162/63 channel. Each SMU channel forces current
-        /// on the 1Kohm load located on the Checker board. Resulting voltage is measured at
-        /// different DGS1/2/3/4 reference.
-        /// </summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
         public static void SL24DGSCheck(ISemiconductorModuleContext tsmContext)
         {

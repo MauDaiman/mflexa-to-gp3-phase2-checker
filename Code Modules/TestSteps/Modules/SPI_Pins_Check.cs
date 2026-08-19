@@ -27,11 +27,17 @@ namespace TestSteps.Modules
             // Turn OFF RL15 to RL18 to connect Checker board
             // SPI Pins resource to the Checker Board HMOD circuit
             Relay.ControlRelay(tsmContext, new string[] { "RL15", "RL16", "RL17", "RL18" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL0" }, true); // Grounds the METER LO
+
+            // Turn ON relays to connect DIO pins to HSD
+            HMODControl.HMOD14to18(tsmContext, HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4"));
 
             // Initiate Pins to Session
             Digital chmodPins = InstrCtrl.DigitalPinsToSessions(tsmContext, AllChmodDigiPins);
+            chmodPins.Abort();
             // At this point, VIH/VIL should have been already set to 5V/0V during process setup.
-            chmodPins.ConfigureVoltgeLevels(vil: 0, vih: 5, vol: 0, voh: 0, vterm: 0);
+            chmodPins.SelectFunction(SelectedFunction.Digital);
+            chmodPins.ApplyLevelsandTimings(levelsSheetName: "HMOD", timingsSheetName: "HMOD");
             // Program the SPI pins to force high - vih
             chmodPins.WriteStatic(PinState._1);
 
@@ -66,6 +72,7 @@ namespace TestSteps.Modules
 
             // Program the SPI pins to force low - vil
             chmodPins.WriteStatic(PinState._0);
+            chmodPins.Abort();
             meter.Cleanup(tsmContext);
 
             // Publish results

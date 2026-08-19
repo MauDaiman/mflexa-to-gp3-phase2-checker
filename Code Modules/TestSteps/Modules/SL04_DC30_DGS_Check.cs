@@ -56,7 +56,9 @@ namespace TestSteps.Modules
             // Connect LO_S of SLOT4 DC30's to DGS2 only, disconnect LO_s channels from DGS1/3/4
             // HMOD5 - 0011 1110 0000 1111 1000 0000 0001 1111 = 1041203231
             // HMOD6 - 0000 1100 0000 0000 0000 0111 0000 0000 = 201328384
-            HMODControl.HMOD5to10(tsmContext, HMOD_Data_5: HMODControl.RelayID("K1, K2, K3, K4, K5, K16, K17, K18, K19, K20, K26, K27, K28, K29, K30"), HMOD_Data_6: HMODControl.RelayID("K9, K10, K11, K27, K28"));
+            HMODControl.HMOD5to10(tsmContext, 
+                HMOD_Data_5: HMODControl.RelayID("K1, K2, K3, K4, K5, K16, K17, K18, K19, K20, K26, K27, K28, K29, K30"), 
+                HMOD_Data_6: HMODControl.RelayID("K9, K10, K11, K27, K28"));
 
             // Measure voltage, expected to be +1V - 2V(DGS = 2V REF) = -1V
             HMODControl.CHMOD1to13(tsmContext, HMOD_Data_1: HMODControl.RelayID("K2")); // connect SL04 DGS2 to 2V reference

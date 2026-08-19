@@ -50,8 +50,8 @@ namespace TestSteps.Modules
             sl04EvenCh.ConfigureOutputEnabled(true);
 
             // Force voltage, expected resulting total current is 10mA = 5V/(1Kohms//1Kohms)
-            sl04OddCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
-            sl04EvenCh.ForceVoltage(voltageLevel: 5, currentLimit: 60e-3);
+            sl04OddCh.ForceVoltage(voltageLevel: 5, currentLimit: 50e-3);
+            sl04EvenCh.ForceVoltage(voltageLevel: 5, currentLimit: 50e-3);
             Globals.TheHdw.Wait(SettlingTimeSec);
 
             // Measure current expected to be +10mA, ODD channels
@@ -70,8 +70,8 @@ namespace TestSteps.Modules
             sl04EvenCh.Measure(out _, out sl04EvenI);
 
             // Return to initial settings
-            sl04OddCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
-            sl04EvenCh.ForceVoltage(voltageLevel: 0, currentLimit: 60e-3);
+            sl04OddCh.ForceVoltage(voltageLevel: 0, currentLimit: 50e-3);
+            sl04EvenCh.ForceVoltage(voltageLevel: 0, currentLimit: 50e-3);
 
             // Disconnect DIB Access, but retain the connection of SMU-4162/63 to SLOT4 DC30
             HMODControl.HMOD1to4(tsmContext, HMOD_Data_1: HMODControl.RelayRange(1, 20));
