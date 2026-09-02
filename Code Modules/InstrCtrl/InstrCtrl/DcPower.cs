@@ -2020,6 +2020,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.InstrumentControl
             currentMeasurements = iMeasurements;
         }
 
+
         /// <summary>
         /// Performs voltage and current measurements.
         /// </summary>

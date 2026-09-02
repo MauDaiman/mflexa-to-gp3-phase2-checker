@@ -4,6 +4,7 @@ using NationalInstruments.TestStand.SemiconductorModule.InstrumentControl;
 using NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI;
 using NationalInstruments.ModularInstruments.NIDCPower;
 using NationalInstruments.ModularInstruments.NIDmm;
+using static TestSteps.Common.DAQmxRelay;
 
 namespace TestSteps.Common
 {
@@ -25,16 +26,21 @@ namespace TestSteps.Common
     {
         /// <summary>Configures the meter instrument and connects the appropriate relay path.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
-        void Configure(ISemiconductorModuleContext tsmContext);
+        void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType);
 
-        /// <summary>Performs a measurement and returns the result array.</summary>
+        /// <summary>Performs a voltage measurement and returns the result array.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
-        double[] Measure(ISemiconductorModuleContext tsmContext);
+        double[] MeasureVoltage(ISemiconductorModuleContext tsmContext);
+        
+        /// <summary>Performs a current measurement and returns the result array.</summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        double[] MeasureCurrent(ISemiconductorModuleContext tsmContext);
 
-        /// <summary>Publishes measured values to the TSM results.</summary>
+        /// <summary>Publishes measured values using tsmContext.PublishPerSite so no Pin input is needed in TestStand.</summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
         /// <param name="values">Measured data array.</param>
         /// <param name="name">Published result name.</param>
-        void PublishResult(double[] values, string name);
+        void PublishResult(ISemiconductorModuleContext tsmContext, double[] values, string name);
 
         /// <summary>Aborts the meter session and disconnects the relay path.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
@@ -49,36 +55,49 @@ namespace TestSteps.Common
         private const string Dc901A = "DC90V_SL23_1A";
         private DCPower _smu;
 
-        public void Configure(ISemiconductorModuleContext tsmContext)
+        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType)
         {
             _smu = InstrCtrl.DCPowerPinsToSessions(tsmContext, Dc901A);
             Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
-            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, true);
 
             _smu.Abort();
+            _smu.ConfigureSense(
+                sense: senseType,
+                initiateSessionAfter: false);
             _smu.ConfigureSettings(
                 apertureTime: 10e-3,
                 apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
-            _smu.ConfigureSense(
-                DCPowerMeasurementSense.Remote,
-                initiateSessionAfter: false);
             _smu.ConfigureCurrentLevelRange(currentLevelRange: 10e-3);
-            _smu.ConfigureVoltageLevelRange(voltageLevelRange: 20);
+            _smu.ConfigureVoltageLimitRange(voltageLimitRange: 20);
             _smu.ConfigureOutputConnected();
             _smu.ConfigureOutputEnabled();
 
             _smu.ForceCurrent(currentLevel: 0, voltageLimit: 20);
+
+            DaqRelayDrive(tsmContext, new string[] { 
+                "P127_6368_DIG0_P0_0", 
+                "P127_6368_DIG0_P0_1" }, 
+                true);
+
+            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, true);
+            Globals.TheHdw.Wait(5e-3);
         }
 
-        public double[] Measure(ISemiconductorModuleContext tsmContext)
+        public double[] MeasureVoltage(ISemiconductorModuleContext tsmContext)
         {
             _smu.Measure(out double[] voltages, out _);
             return voltages;
         }
-
-        public void PublishResult(double[] values, string name)
+        
+        public double[] MeasureCurrent(ISemiconductorModuleContext tsmContext)
         {
-            _smu.PinQueryContext.Publish(values, name);
+            _smu.Measure(out _, out double[] currents);
+            return currents;
+        }
+
+        public void PublishResult(ISemiconductorModuleContext tsmContext, double[] values, string name)
+        {
+            tsmContext.PublishPerSite(values, name);
         }
 
         public void Cleanup(ISemiconductorModuleContext tsmContext)
@@ -86,6 +105,10 @@ namespace TestSteps.Common
             _smu.Abort();
             _smu.ConfigureOutputEnabled(false);
             _smu.ConfigureOutputConnected(false);
+            DaqRelayDrive(tsmContext, new string[] { 
+                "P127_6368_DIG0_P0_0", 
+                "P127_6368_DIG0_P0_1" }, 
+                false);
             Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
         }
     }
@@ -98,36 +121,54 @@ namespace TestSteps.Common
         private const string DmmP131 = "P131_4081_DMM";
         private Dmm _dmm;
 
-        public void Configure(ISemiconductorModuleContext tsmContext)
+        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType)
         {
             _dmm = InstrCtrl.DmmPinsToSessions(tsmContext, DmmP131);
             Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
             Relay.ControlRelay(tsmContext, new string[] { "RL1" }, true);
-            _dmm.ConfigureDmmSessions(
-                DmmMeasurementFunction.DCCurrent,
-                DmmApertureTimeUnits.Seconds,
-                apertureTime: 1e-3,
-                DmmAuto.Off,
-                DmmAdcCalibration.Off,
-                settleTimeSeconds: 0,
-                voltageRange: 10);
-            _dmm.Initiate();
         }
 
-        public double[] Measure(ISemiconductorModuleContext tsmContext)
+        public double[] MeasureVoltage(ISemiconductorModuleContext tsmContext)
         {
+            ConfigureDmm(_dmm, DmmMeasurementFunction.DCVolts, range: 100);
+            return _dmm.Read();
+        }
+        
+        public double[] MeasureCurrent(ISemiconductorModuleContext tsmContext)
+        {
+            ConfigureDmm(_dmm, DmmMeasurementFunction.DCCurrent, range: 10e-3);
             return _dmm.Read();
         }
 
-        public void PublishResult(double[] values, string name)
+        public void PublishResult(ISemiconductorModuleContext tsmContext, double[] values, string name)
         {
-            _dmm.PinQueryContext.Publish(values, name);
+            tsmContext.PublishPerSite(values, name);
         }
 
         public void Cleanup(ISemiconductorModuleContext tsmContext)
         {
             _dmm.Abort();
             Relay.ControlRelay(tsmContext, new string[] { "RL1" }, false);
+        }
+
+        /// <summary>
+        /// Configures DMM measurement function and range with standard aperture settings.
+        /// </summary>
+        /// <param name="dmm">The DMM session wrapper.</param>
+        /// <param name="function">Measurement function (DCCurrent, DCVolts, TwoWireResistance, FourWireResistance).</param>
+        /// <param name="range">Measurement range value.</param>
+        private static void ConfigureDmm(Dmm dmm, DmmMeasurementFunction function, double range)
+        {
+            dmm.Abort();
+            dmm.ConfigureDmmSessions(
+                function,
+                DmmApertureTimeUnits.Seconds,
+                apertureTime: 1e-3,
+                DmmAuto.Off,
+                DmmAdcCalibration.Off,
+                settleTimeSeconds: 0,
+                voltageRange: range);
+            dmm.Initiate();
         }
     }
 

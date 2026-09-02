@@ -78,21 +78,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DAQmxRelay.cs" />
     <Compile Include="Common\MeterInstance.cs" />
-    <Compile Include="Common\HMODCtrl.cs" />
-    <Compile Include="Modules\SL24_DC30_DGS_Check.cs" />
-    <Compile Include="Modules\SL10_DC30_DGS_Check.cs" />
-    <Compile Include="Modules\SL04_DC30_DGS_Check.cs" />
-    <Compile Include="Modules\SL24_DC30_DA_Check.cs" />
-    <Compile Include="Modules\SL10_DC30_DA_Check.cs" />
-    <Compile Include="Modules\SL04_DC30_DA_Check.cs" />
-    <Compile Include="Modules\DC30_SL04_Check.cs" />
-    <Compile Include="Modules\DC30_SL10_Check.cs" />
-    <Compile Include="Modules\DC30_SL24_Check.cs" />
-    <Compile Include="Modules\SPI_Pins_Check.cs" />
-    <Compile Include="Modules\SL01_GPIO_Check.cs" />
-    <Compile Include="Modules\DIB_Supply_Check.cs" />
-    <Compile Include="Modules\DC90_SL23_Check.cs" />
+    <Compile Include="P2Checker\SL45_Relay_Check.cs" />
+    <Compile Include="P2Checker\SL33_Relay_Check.cs" />
+    <Compile Include="P2Checker\SL20_Relay_Check.cs" />
+    <Compile Include="P2Checker\SL08_Relay_Check.cs" />
+    <Compile Include="P2Checker\SL15_HSD200_Check.cs" />
+    <Compile Include="P2Checker\SL13_HSD200_Check.cs" />
+    <Compile Include="P2Checker\SL11_HSD200_Check.cs" />
+    <Compile Include="P2Checker\DC90_SL23_DA_Check.cs" />
+    <Compile Include="P2Checker\SL24_DC30_DGS_Check.cs" />
+    <Compile Include="P2Checker\SL10_DC30_DGS_Check.cs" />
+    <Compile Include="P2Checker\SL04_DC30_DGS_Check.cs" />
+    <Compile Include="P2Checker\SL24_DC30_DA_Check.cs" />
+    <Compile Include="P2Checker\SL10_DC30_DA_Check.cs" />
+    <Compile Include="P2Checker\SL04_DC30_DA_Check.cs" />
+    <Compile Include="P2Checker\DC30_SL04_Check.cs" />
+    <Compile Include="P2Checker\DC30_SL10_Check.cs" />
+    <Compile Include="P2Checker\DC30_SL24_Check.cs" />
+    <Compile Include="P2Checker\SPI_Pins_Check.cs" />
+    <Compile Include="P2Checker\SL01_GPIO_Check.cs" />
+    <Compile Include="P2Checker\DIB_Supply_Check.cs" />
+    <Compile Include="P2Checker\DC90_SL23_Check.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

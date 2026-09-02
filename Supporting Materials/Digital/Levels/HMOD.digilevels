@@ -61,29 +61,29 @@
       <DigitalPinLevelSet pin="CHMOD_CS">
         <Vil>0</Vil>
         <Vih>5</Vih>
-        <Vol>2.5</Vol>
-        <Voh>2.5</Voh>
+        <Vol>2</Vol>
+        <Voh>2</Voh>
         <TerminationMode>HighZ</TerminationMode>
       </DigitalPinLevelSet>
       <DigitalPinLevelSet pin="CHMOD_DIN">
         <Vil>0</Vil>
         <Vih>5</Vih>
-        <Vol>2.5</Vol>
-        <Voh>2.5</Voh>
+        <Vol>2</Vol>
+        <Voh>2</Voh>
         <TerminationMode>HighZ</TerminationMode>
       </DigitalPinLevelSet>
       <DigitalPinLevelSet pin="CHMOD_RESET">
         <Vil>0</Vil>
         <Vih>5</Vih>
-        <Vol>2.5</Vol>
-        <Voh>2.5</Voh>
+        <Vol>2</Vol>
+        <Voh>2</Voh>
         <TerminationMode>HighZ</TerminationMode>
       </DigitalPinLevelSet>
       <DigitalPinLevelSet pin="CHMOD_SCLK">
         <Vil>0</Vil>
         <Vih>5</Vih>
-        <Vol>2.5</Vol>
-        <Voh>2.5</Voh>
+        <Vol>2</Vol>
+        <Voh>2</Voh>
         <TerminationMode>HighZ</TerminationMode>
       </DigitalPinLevelSet>
     </DigitalPinLevelSets>

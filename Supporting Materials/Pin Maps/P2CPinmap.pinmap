@@ -89,146 +89,146 @@
 		<DUTPin name="P154_6571_DIO_29" />
 		<DUTPin name="P154_6571_DIO_30" />
 		<DUTPin name="P154_6571_DIO_31" />
-		<DUTPin name="P174_6571_DIO_4" />
-		<DUTPin name="P174_6571_DIO_5" />
-		<DUTPin name="P174_6571_DIO_6" />
-		<DUTPin name="P174_6571_DIO_7" />
-		<DUTPin name="P174_6571_DIO_8" />
-		<DUTPin name="P174_6571_DIO_9" />
-		<DUTPin name="P174_6571_DIO_10" />
-		<DUTPin name="P174_6571_DIO_11" />
-		<DUTPin name="P174_6571_DIO_12" />
-		<DUTPin name="P174_6571_DIO_13" />
-		<DUTPin name="P174_6571_DIO_14" />
-		<DUTPin name="P174_6571_DIO_15" />
-		<DUTPin name="P174_6571_DIO_16" />
-		<DUTPin name="P174_6571_DIO_17" />
-		<DUTPin name="P174_6571_DIO_18" />
-		<DUTPin name="P174_6571_DIO_19" />
-		<DUTPin name="P174_6571_DIO_20" />
-		<DUTPin name="P174_6571_DIO_21" />
-		<DUTPin name="P174_6571_DIO_22" />
-		<DUTPin name="P174_6571_DIO_23" />
-		<DUTPin name="P174_6571_DIO_24" />
-		<DUTPin name="P174_6571_DIO_25" />
-		<DUTPin name="P174_6571_DIO_26" />
-		<DUTPin name="P174_6571_DIO_27" />
-		<DUTPin name="P174_6571_DIO_28" />
-		<DUTPin name="P174_6571_DIO_29" />
-		<DUTPin name="P174_6571_DIO_30" />
-		<DUTPin name="P174_6571_DIO_31" />
-		<DUTPin name="P166_6571_DIO_0" />
-		<DUTPin name="P166_6571_DIO_1" />
-		<DUTPin name="P166_6571_DIO_2" />
-		<DUTPin name="P166_6571_DIO_3" />
-		<DUTPin name="P166_6571_DIO_4" />
-		<DUTPin name="P166_6571_DIO_5" />
-		<DUTPin name="P166_6571_DIO_6" />
-		<DUTPin name="P166_6571_DIO_7" />
-		<DUTPin name="P166_6571_DIO_8" />
-		<DUTPin name="P166_6571_DIO_9" />
-		<DUTPin name="P166_6571_DIO_10" />
-		<DUTPin name="P166_6571_DIO_11" />
-		<DUTPin name="P166_6571_DIO_12" />
-		<DUTPin name="P166_6571_DIO_13" />
-		<DUTPin name="P166_6571_DIO_14" />
-		<DUTPin name="P166_6571_DIO_15" />
-		<DUTPin name="P166_6571_DIO_16" />
-		<DUTPin name="P166_6571_DIO_17" />
-		<DUTPin name="P166_6571_DIO_18" />
-		<DUTPin name="P166_6571_DIO_19" />
-		<DUTPin name="P166_6571_DIO_20" />
-		<DUTPin name="P166_6571_DIO_21" />
-		<DUTPin name="P166_6571_DIO_22" />
-		<DUTPin name="P166_6571_DIO_23" />
-		<DUTPin name="P166_6571_DIO_24" />
-		<DUTPin name="P166_6571_DIO_25" />
-		<DUTPin name="P166_6571_DIO_26" />
-		<DUTPin name="P166_6571_DIO_27" />
-		<DUTPin name="P166_6571_DIO_28" />
-		<DUTPin name="P166_6571_DIO_29" />
-		<DUTPin name="P166_6571_DIO_30" />
-		<DUTPin name="P166_6571_DIO_31" />
-		<DUTPin name="P170_6571_DIO_0" />
-		<DUTPin name="P170_6571_DIO_1" />
-		<DUTPin name="P170_6571_DIO_2" />
-		<DUTPin name="P170_6571_DIO_3" />
-		<DUTPin name="P170_6571_DIO_4" />
-		<DUTPin name="P170_6571_DIO_5" />
-		<DUTPin name="P170_6571_DIO_6" />
-		<DUTPin name="P170_6571_DIO_7" />
-		<DUTPin name="P170_6571_DIO_8" />
-		<DUTPin name="P170_6571_DIO_9" />
-		<DUTPin name="P170_6571_DIO_10" />
-		<DUTPin name="P170_6571_DIO_11" />
-		<DUTPin name="P170_6571_DIO_12" />
-		<DUTPin name="P170_6571_DIO_13" />
-		<DUTPin name="P170_6571_DIO_14" />
-		<DUTPin name="P170_6571_DIO_15" />
-		<DUTPin name="P170_6571_DIO_16" />
-		<DUTPin name="P170_6571_DIO_17" />
-		<DUTPin name="P170_6571_DIO_18" />
-		<DUTPin name="P170_6571_DIO_19" />
-		<DUTPin name="P170_6571_DIO_20" />
-		<DUTPin name="P170_6571_DIO_21" />
-		<DUTPin name="P170_6571_DIO_22" />
-		<DUTPin name="P170_6571_DIO_23" />
-		<DUTPin name="P170_6571_DIO_24" />
-		<DUTPin name="P170_6571_DIO_25" />
-		<DUTPin name="P170_6571_DIO_26" />
-		<DUTPin name="P170_6571_DIO_27" />
-		<DUTPin name="P170_6571_DIO_28" />
-		<DUTPin name="P170_6571_DIO_29" />
-		<DUTPin name="P170_6571_DIO_30" />
-		<DUTPin name="P170_6571_DIO_31" />
-		<DUTPin name="P146_6571_DIO_0" />
-		<DUTPin name="P146_6571_DIO_1" />
-		<DUTPin name="P146_6571_DIO_2" />
-		<DUTPin name="P146_6571_DIO_3" />
-		<DUTPin name="P146_6571_DIO_4" />
-		<DUTPin name="P146_6571_DIO_5" />
-		<DUTPin name="P146_6571_DIO_6" />
-		<DUTPin name="P146_6571_DIO_7" />
-		<DUTPin name="P146_6571_DIO_8" />
-		<DUTPin name="P146_6571_DIO_9" />
-		<DUTPin name="P146_6571_DIO_10" />
-		<DUTPin name="P146_6571_DIO_11" />
-		<DUTPin name="P146_6571_DIO_12" />
-		<DUTPin name="P146_6571_DIO_13" />
-		<DUTPin name="P146_6571_DIO_14" />
-		<DUTPin name="P146_6571_DIO_15" />
-		<DUTPin name="P146_6571_DIO_16" />
-		<DUTPin name="P146_6571_DIO_17" />
-		<DUTPin name="P146_6571_DIO_18" />
-		<DUTPin name="P146_6571_DIO_19" />
-		<DUTPin name="P146_6571_DIO_20" />
-		<DUTPin name="P146_6571_DIO_21" />
-		<DUTPin name="P146_6571_DIO_22" />
-		<DUTPin name="P146_6571_DIO_23" />
-		<DUTPin name="P146_6571_DIO_24" />
-		<DUTPin name="P146_6571_DIO_25" />
-		<DUTPin name="P146_6571_DIO_26" />
-		<DUTPin name="P146_6571_DIO_27" />
-		<DUTPin name="P146_6571_DIO_28" />
-		<DUTPin name="P146_6571_DIO_29" />
-		<DUTPin name="P146_6571_DIO_30" />
-		<DUTPin name="P146_6571_DIO_31" />
-		<DUTPin name="P154_6571_DIO_0" />
-		<DUTPin name="P154_6571_DIO_1" />
-		<DUTPin name="P154_6571_DIO_2" />
-		<DUTPin name="P154_6571_DIO_3" />
-		<DUTPin name="P154_6571_DIO_4" />
-		<DUTPin name="P154_6571_DIO_5" />
-		<DUTPin name="P154_6571_DIO_6" />
-		<DUTPin name="P154_6571_DIO_7" />
-		<DUTPin name="P154_6571_DIO_8" />
-		<DUTPin name="P154_6571_DIO_9" />
-		<DUTPin name="P154_6571_DIO_10" />
-		<DUTPin name="P154_6571_DIO_11" />
-		<DUTPin name="P154_6571_DIO_12" />
-		<DUTPin name="P154_6571_DIO_13" />
-		<DUTPin name="P154_6571_DIO_14" />
-		<DUTPin name="P154_6571_DIO_15" />
+		<DUTPin name="T_HSD200_SL11_CH5" />
+		<DUTPin name="T_HSD200_SL11_CH6" />
+		<DUTPin name="T_HSD200_SL11_CH7" />
+		<DUTPin name="T_HSD200_SL11_CH8" />
+		<DUTPin name="T_HSD200_SL11_CH9" />
+		<DUTPin name="T_HSD200_SL11_CH10" />
+		<DUTPin name="T_HSD200_SL11_CH11" />
+		<DUTPin name="T_HSD200_SL11_CH12" />
+		<DUTPin name="T_HSD200_SL11_CH13" />
+		<DUTPin name="T_HSD200_SL11_CH14" />
+		<DUTPin name="T_HSD200_SL11_CH15" />
+		<DUTPin name="T_HSD200_SL11_CH16" />
+		<DUTPin name="T_HSD200_SL11_CH17" />
+		<DUTPin name="T_HSD200_SL11_CH18" />
+		<DUTPin name="T_HSD200_SL11_CH19" />
+		<DUTPin name="T_HSD200_SL11_CH20" />
+		<DUTPin name="T_HSD200_SL11_CH21" />
+		<DUTPin name="T_HSD200_SL11_CH22" />
+		<DUTPin name="T_HSD200_SL11_CH23" />
+		<DUTPin name="T_HSD200_SL11_CH24" />
+		<DUTPin name="T_HSD200_SL11_CH25" />
+		<DUTPin name="T_HSD200_SL11_CH26" />
+		<DUTPin name="T_HSD200_SL11_CH27" />
+		<DUTPin name="T_HSD200_SL11_CH28" />
+		<DUTPin name="T_HSD200_SL11_CH29" />
+		<DUTPin name="T_HSD200_SL11_CH30" />
+		<DUTPin name="T_HSD200_SL11_CH31" />
+		<DUTPin name="T_HSD200_SL11_CH32" />
+		<DUTPin name="T_HSD200_SL11_CH33" />
+		<DUTPin name="T_HSD200_SL11_CH34" />
+		<DUTPin name="T_HSD200_SL11_CH35" />
+		<DUTPin name="T_HSD200_SL11_CH36" />
+		<DUTPin name="T_HSD200_SL11_CH37" />
+		<DUTPin name="T_HSD200_SL11_CH38" />
+		<DUTPin name="T_HSD200_SL11_CH39" />
+		<DUTPin name="T_HSD200_SL11_CH40" />
+		<DUTPin name="T_HSD200_SL11_CH41" />
+		<DUTPin name="T_HSD200_SL11_CH42" />
+		<DUTPin name="T_HSD200_SL11_CH43" />
+		<DUTPin name="T_HSD200_SL11_CH44" />
+		<DUTPin name="T_HSD200_SL11_CH45" />
+		<DUTPin name="T_HSD200_SL11_CH46" />
+		<DUTPin name="T_HSD200_SL11_CH47" />
+		<DUTPin name="T_HSD200_SL11_CH48" />
+		<DUTPin name="T_HSD200_SL13_CH33" />
+		<DUTPin name="T_HSD200_SL13_CH34" />
+		<DUTPin name="T_HSD200_SL13_CH35" />
+		<DUTPin name="T_HSD200_SL13_CH36" />
+		<DUTPin name="T_HSD200_SL13_CH37" />
+		<DUTPin name="T_HSD200_SL13_CH38" />
+		<DUTPin name="T_HSD200_SL13_CH39" />
+		<DUTPin name="T_HSD200_SL13_CH40" />
+		<DUTPin name="T_HSD200_SL13_CH41" />
+		<DUTPin name="T_HSD200_SL13_CH42" />
+		<DUTPin name="T_HSD200_SL13_CH43" />
+		<DUTPin name="T_HSD200_SL13_CH44" />
+		<DUTPin name="T_HSD200_SL13_CH45" />
+		<DUTPin name="T_HSD200_SL13_CH46" />
+		<DUTPin name="T_HSD200_SL13_CH47" />
+		<DUTPin name="T_HSD200_SL13_CH48" />
+		<DUTPin name="T_HSD200_SL13_CH1" />
+		<DUTPin name="T_HSD200_SL13_CH2" />
+		<DUTPin name="T_HSD200_SL13_CH3" />
+		<DUTPin name="T_HSD200_SL13_CH4" />
+		<DUTPin name="T_HSD200_SL13_CH5" />
+		<DUTPin name="T_HSD200_SL13_CH6" />
+		<DUTPin name="T_HSD200_SL13_CH7" />
+		<DUTPin name="T_HSD200_SL13_CH8" />
+		<DUTPin name="T_HSD200_SL13_CH9" />
+		<DUTPin name="T_HSD200_SL13_CH10" />
+		<DUTPin name="T_HSD200_SL13_CH11" />
+		<DUTPin name="T_HSD200_SL13_CH12" />
+		<DUTPin name="T_HSD200_SL13_CH13" />
+		<DUTPin name="T_HSD200_SL13_CH14" />
+		<DUTPin name="T_HSD200_SL13_CH15" />
+		<DUTPin name="T_HSD200_SL13_CH16" />
+		<DUTPin name="T_HSD200_SL13_CH17" />
+		<DUTPin name="T_HSD200_SL13_CH18" />
+		<DUTPin name="T_HSD200_SL13_CH19" />
+		<DUTPin name="T_HSD200_SL13_CH20" />
+		<DUTPin name="T_HSD200_SL13_CH21" />
+		<DUTPin name="T_HSD200_SL13_CH22" />
+		<DUTPin name="T_HSD200_SL13_CH23" />
+		<DUTPin name="T_HSD200_SL13_CH24" />
+		<DUTPin name="T_HSD200_SL13_CH25" />
+		<DUTPin name="T_HSD200_SL13_CH26" />
+		<DUTPin name="T_HSD200_SL13_CH27" />
+		<DUTPin name="T_HSD200_SL13_CH28" />
+		<DUTPin name="T_HSD200_SL13_CH29" />
+		<DUTPin name="T_HSD200_SL13_CH30" />
+		<DUTPin name="T_HSD200_SL13_CH31" />
+		<DUTPin name="T_HSD200_SL13_CH32" />
+		<DUTPin name="T_HSD200_SL15_CH1" />
+		<DUTPin name="T_HSD200_SL15_CH2" />
+		<DUTPin name="T_HSD200_SL15_CH3" />
+		<DUTPin name="T_HSD200_SL15_CH4" />
+		<DUTPin name="T_HSD200_SL15_CH5" />
+		<DUTPin name="T_HSD200_SL15_CH6" />
+		<DUTPin name="T_HSD200_SL15_CH7" />
+		<DUTPin name="T_HSD200_SL15_CH8" />
+		<DUTPin name="T_HSD200_SL15_CH9" />
+		<DUTPin name="T_HSD200_SL15_CH10" />
+		<DUTPin name="T_HSD200_SL15_CH11" />
+		<DUTPin name="T_HSD200_SL15_CH12" />
+		<DUTPin name="T_HSD200_SL15_CH13" />
+		<DUTPin name="T_HSD200_SL15_CH14" />
+		<DUTPin name="T_HSD200_SL15_CH15" />
+		<DUTPin name="T_HSD200_SL15_CH16" />
+		<DUTPin name="T_HSD200_SL15_CH17" />
+		<DUTPin name="T_HSD200_SL15_CH18" />
+		<DUTPin name="T_HSD200_SL15_CH19" />
+		<DUTPin name="T_HSD200_SL15_CH20" />
+		<DUTPin name="T_HSD200_SL15_CH21" />
+		<DUTPin name="T_HSD200_SL15_CH22" />
+		<DUTPin name="T_HSD200_SL15_CH23" />
+		<DUTPin name="T_HSD200_SL15_CH24" />
+		<DUTPin name="T_HSD200_SL15_CH25" />
+		<DUTPin name="T_HSD200_SL15_CH26" />
+		<DUTPin name="T_HSD200_SL15_CH27" />
+		<DUTPin name="T_HSD200_SL15_CH28" />
+		<DUTPin name="T_HSD200_SL15_CH29" />
+		<DUTPin name="T_HSD200_SL15_CH30" />
+		<DUTPin name="T_HSD200_SL15_CH31" />
+		<DUTPin name="T_HSD200_SL15_CH32" />
+		<DUTPin name="T_HSD200_SL15_CH33" />
+		<DUTPin name="T_HSD200_SL15_CH34" />
+		<DUTPin name="T_HSD200_SL15_CH35" />
+		<DUTPin name="T_HSD200_SL15_CH36" />
+		<DUTPin name="T_HSD200_SL15_CH37" />
+		<DUTPin name="T_HSD200_SL15_CH38" />
+		<DUTPin name="T_HSD200_SL15_CH39" />
+		<DUTPin name="T_HSD200_SL15_CH40" />
+		<DUTPin name="T_HSD200_SL15_CH41" />
+		<DUTPin name="T_HSD200_SL15_CH42" />
+		<DUTPin name="T_HSD200_SL15_CH43" />
+		<DUTPin name="T_HSD200_SL15_CH44" />
+		<DUTPin name="T_HSD200_SL15_CH45" />
+		<DUTPin name="T_HSD200_SL15_CH46" />
+		<DUTPin name="T_HSD200_SL15_CH47" />
+		<DUTPin name="T_HSD200_SL15_CH48" />
 		<SystemPin name="DIB_POS5V_1" />
 		<SystemPin name="DIB_POS5V_2" />
 		<SystemPin name="DIB_POS5V_3" />
@@ -512,146 +512,236 @@
 			<PinReference pin="DC30V_SL04_CH20" />
 		</PinGroup>
 		<PinGroup name="DIGITAL">
-			<PinReference pin="P174_6571_DIO_4" />
-			<PinReference pin="P174_6571_DIO_5" />
-			<PinReference pin="P174_6571_DIO_6" />
-			<PinReference pin="P174_6571_DIO_7" />
-			<PinReference pin="P174_6571_DIO_8" />
-			<PinReference pin="P174_6571_DIO_9" />
-			<PinReference pin="P174_6571_DIO_10" />
-			<PinReference pin="P174_6571_DIO_11" />
-			<PinReference pin="P174_6571_DIO_12" />
-			<PinReference pin="P174_6571_DIO_13" />
-			<PinReference pin="P174_6571_DIO_14" />
-			<PinReference pin="P174_6571_DIO_15" />
-			<PinReference pin="P174_6571_DIO_16" />
-			<PinReference pin="P174_6571_DIO_17" />
-			<PinReference pin="P174_6571_DIO_18" />
-			<PinReference pin="P174_6571_DIO_19" />
-			<PinReference pin="P174_6571_DIO_20" />
-			<PinReference pin="P174_6571_DIO_21" />
-			<PinReference pin="P174_6571_DIO_22" />
-			<PinReference pin="P174_6571_DIO_23" />
-			<PinReference pin="P174_6571_DIO_24" />
-			<PinReference pin="P174_6571_DIO_25" />
-			<PinReference pin="P174_6571_DIO_26" />
-			<PinReference pin="P174_6571_DIO_27" />
-			<PinReference pin="P174_6571_DIO_28" />
-			<PinReference pin="P174_6571_DIO_29" />
-			<PinReference pin="P174_6571_DIO_30" />
-			<PinReference pin="P174_6571_DIO_31" />
-			<PinReference pin="P166_6571_DIO_0" />
-			<PinReference pin="P166_6571_DIO_1" />
-			<PinReference pin="P166_6571_DIO_2" />
-			<PinReference pin="P166_6571_DIO_3" />
-			<PinReference pin="P166_6571_DIO_4" />
-			<PinReference pin="P166_6571_DIO_5" />
-			<PinReference pin="P166_6571_DIO_6" />
-			<PinReference pin="P166_6571_DIO_7" />
-			<PinReference pin="P166_6571_DIO_8" />
-			<PinReference pin="P166_6571_DIO_9" />
-			<PinReference pin="P166_6571_DIO_10" />
-			<PinReference pin="P166_6571_DIO_11" />
-			<PinReference pin="P166_6571_DIO_12" />
-			<PinReference pin="P166_6571_DIO_13" />
-			<PinReference pin="P166_6571_DIO_14" />
-			<PinReference pin="P166_6571_DIO_15" />
-			<PinReference pin="P166_6571_DIO_16" />
-			<PinReference pin="P166_6571_DIO_17" />
-			<PinReference pin="P166_6571_DIO_18" />
-			<PinReference pin="P166_6571_DIO_19" />
-			<PinReference pin="P166_6571_DIO_20" />
-			<PinReference pin="P166_6571_DIO_21" />
-			<PinReference pin="P166_6571_DIO_22" />
-			<PinReference pin="P166_6571_DIO_23" />
-			<PinReference pin="P166_6571_DIO_24" />
-			<PinReference pin="P166_6571_DIO_25" />
-			<PinReference pin="P166_6571_DIO_26" />
-			<PinReference pin="P166_6571_DIO_27" />
-			<PinReference pin="P166_6571_DIO_28" />
-			<PinReference pin="P166_6571_DIO_29" />
-			<PinReference pin="P166_6571_DIO_30" />
-			<PinReference pin="P166_6571_DIO_31" />
-			<PinReference pin="P170_6571_DIO_0" />
-			<PinReference pin="P170_6571_DIO_1" />
-			<PinReference pin="P170_6571_DIO_2" />
-			<PinReference pin="P170_6571_DIO_3" />
-			<PinReference pin="P170_6571_DIO_4" />
-			<PinReference pin="P170_6571_DIO_5" />
-			<PinReference pin="P170_6571_DIO_6" />
-			<PinReference pin="P170_6571_DIO_7" />
-			<PinReference pin="P170_6571_DIO_8" />
-			<PinReference pin="P170_6571_DIO_9" />
-			<PinReference pin="P170_6571_DIO_10" />
-			<PinReference pin="P170_6571_DIO_11" />
-			<PinReference pin="P170_6571_DIO_12" />
-			<PinReference pin="P170_6571_DIO_13" />
-			<PinReference pin="P170_6571_DIO_14" />
-			<PinReference pin="P170_6571_DIO_15" />
-			<PinReference pin="P170_6571_DIO_16" />
-			<PinReference pin="P170_6571_DIO_17" />
-			<PinReference pin="P170_6571_DIO_18" />
-			<PinReference pin="P170_6571_DIO_19" />
-			<PinReference pin="P170_6571_DIO_20" />
-			<PinReference pin="P170_6571_DIO_21" />
-			<PinReference pin="P170_6571_DIO_22" />
-			<PinReference pin="P170_6571_DIO_23" />
-			<PinReference pin="P170_6571_DIO_24" />
-			<PinReference pin="P170_6571_DIO_25" />
-			<PinReference pin="P170_6571_DIO_26" />
-			<PinReference pin="P170_6571_DIO_27" />
-			<PinReference pin="P170_6571_DIO_28" />
-			<PinReference pin="P170_6571_DIO_29" />
-			<PinReference pin="P170_6571_DIO_30" />
-			<PinReference pin="P170_6571_DIO_31" />
-			<PinReference pin="P146_6571_DIO_0" />
-			<PinReference pin="P146_6571_DIO_1" />
-			<PinReference pin="P146_6571_DIO_2" />
-			<PinReference pin="P146_6571_DIO_3" />
-			<PinReference pin="P146_6571_DIO_4" />
-			<PinReference pin="P146_6571_DIO_5" />
-			<PinReference pin="P146_6571_DIO_6" />
-			<PinReference pin="P146_6571_DIO_7" />
-			<PinReference pin="P146_6571_DIO_8" />
-			<PinReference pin="P146_6571_DIO_9" />
-			<PinReference pin="P146_6571_DIO_10" />
-			<PinReference pin="P146_6571_DIO_11" />
-			<PinReference pin="P146_6571_DIO_12" />
-			<PinReference pin="P146_6571_DIO_13" />
-			<PinReference pin="P146_6571_DIO_14" />
-			<PinReference pin="P146_6571_DIO_15" />
-			<PinReference pin="P146_6571_DIO_16" />
-			<PinReference pin="P146_6571_DIO_17" />
-			<PinReference pin="P146_6571_DIO_18" />
-			<PinReference pin="P146_6571_DIO_19" />
-			<PinReference pin="P146_6571_DIO_20" />
-			<PinReference pin="P146_6571_DIO_21" />
-			<PinReference pin="P146_6571_DIO_22" />
-			<PinReference pin="P146_6571_DIO_23" />
-			<PinReference pin="P146_6571_DIO_24" />
-			<PinReference pin="P146_6571_DIO_25" />
-			<PinReference pin="P146_6571_DIO_26" />
-			<PinReference pin="P146_6571_DIO_27" />
-			<PinReference pin="P146_6571_DIO_28" />
-			<PinReference pin="P146_6571_DIO_29" />
-			<PinReference pin="P146_6571_DIO_30" />
-			<PinReference pin="P146_6571_DIO_31" />
-			<PinReference pin="P154_6571_DIO_0" />
-			<PinReference pin="P154_6571_DIO_1" />
-			<PinReference pin="P154_6571_DIO_2" />
-			<PinReference pin="P154_6571_DIO_3" />
-			<PinReference pin="P154_6571_DIO_4" />
-			<PinReference pin="P154_6571_DIO_5" />
-			<PinReference pin="P154_6571_DIO_6" />
-			<PinReference pin="P154_6571_DIO_7" />
-			<PinReference pin="P154_6571_DIO_8" />
-			<PinReference pin="P154_6571_DIO_9" />
-			<PinReference pin="P154_6571_DIO_10" />
-			<PinReference pin="P154_6571_DIO_11" />
-			<PinReference pin="P154_6571_DIO_12" />
-			<PinReference pin="P154_6571_DIO_13" />
-			<PinReference pin="P154_6571_DIO_14" />
-			<PinReference pin="P154_6571_DIO_15" />
+			<PinReference pin="CHMOD_CS" />
+			<PinReference pin="CHMOD_DIN" />
+			<PinReference pin="CHMOD_RESET" />
+			<PinReference pin="CHMOD_SCLK" />
+			<PinReference pin="HMOD_CS_11_13" />
+			<PinReference pin="HMOD_CS_14_18" />
+			<PinReference pin="HMOD_CS_1_4" />
+			<PinReference pin="HMOD_CS_19_23" />
+			<PinReference pin="HMOD_CS_5_10" />
+			<PinReference pin="HMOD_DIN" />
+			<PinReference pin="HMOD_RESET" />
+			<PinReference pin="HMOD_SCLK" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC1">
+			<PinReference pin="CHMOD_CS" />
+			<PinReference pin="CHMOD_DIN" />
+			<PinReference pin="CHMOD_RESET" />
+			<PinReference pin="CHMOD_SCLK" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC2">
+			<PinReference pin="T_HSD200_SL11_CH5" />
+			<PinReference pin="T_HSD200_SL11_CH6" />
+			<PinReference pin="T_HSD200_SL11_CH7" />
+			<PinReference pin="T_HSD200_SL11_CH8" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC3">
+			<PinReference pin="T_HSD200_SL11_CH9" />
+			<PinReference pin="T_HSD200_SL11_CH10" />
+			<PinReference pin="T_HSD200_SL11_CH11" />
+			<PinReference pin="T_HSD200_SL11_CH12" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC4">
+			<PinReference pin="T_HSD200_SL11_CH13" />
+			<PinReference pin="T_HSD200_SL11_CH14" />
+			<PinReference pin="T_HSD200_SL11_CH15" />
+			<PinReference pin="T_HSD200_SL11_CH16" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC5">
+			<PinReference pin="T_HSD200_SL11_CH17" />
+			<PinReference pin="T_HSD200_SL11_CH18" />
+			<PinReference pin="T_HSD200_SL11_CH19" />
+			<PinReference pin="T_HSD200_SL11_CH20" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC6">
+			<PinReference pin="T_HSD200_SL11_CH21" />
+			<PinReference pin="T_HSD200_SL11_CH22" />
+			<PinReference pin="T_HSD200_SL11_CH23" />
+			<PinReference pin="T_HSD200_SL11_CH24" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC7">
+			<PinReference pin="T_HSD200_SL11_CH25" />
+			<PinReference pin="T_HSD200_SL11_CH26" />
+			<PinReference pin="T_HSD200_SL11_CH27" />
+			<PinReference pin="T_HSD200_SL11_CH28" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC8">
+			<PinReference pin="T_HSD200_SL11_CH29" />
+			<PinReference pin="T_HSD200_SL11_CH30" />
+			<PinReference pin="T_HSD200_SL11_CH31" />
+			<PinReference pin="T_HSD200_SL11_CH32" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC9">
+			<PinReference pin="T_HSD200_SL11_CH33" />
+			<PinReference pin="T_HSD200_SL11_CH34" />
+			<PinReference pin="T_HSD200_SL11_CH35" />
+			<PinReference pin="T_HSD200_SL11_CH36" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC10">
+			<PinReference pin="T_HSD200_SL11_CH37" />
+			<PinReference pin="T_HSD200_SL11_CH38" />
+			<PinReference pin="T_HSD200_SL11_CH39" />
+			<PinReference pin="T_HSD200_SL11_CH40" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC11">
+			<PinReference pin="T_HSD200_SL11_CH41" />
+			<PinReference pin="T_HSD200_SL11_CH42" />
+			<PinReference pin="T_HSD200_SL11_CH43" />
+			<PinReference pin="T_HSD200_SL11_CH44" />
+		</PinGroup>
+		<PinGroup name="SL11_HSD_ACC12">
+			<PinReference pin="T_HSD200_SL11_CH45" />
+			<PinReference pin="T_HSD200_SL11_CH46" />
+			<PinReference pin="T_HSD200_SL11_CH47" />
+			<PinReference pin="T_HSD200_SL11_CH48" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC1">
+			<PinReference pin="T_HSD200_SL13_CH1" />
+			<PinReference pin="T_HSD200_SL13_CH2" />
+			<PinReference pin="T_HSD200_SL13_CH3" />
+			<PinReference pin="T_HSD200_SL13_CH4" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC2">
+			<PinReference pin="T_HSD200_SL13_CH5" />
+			<PinReference pin="T_HSD200_SL13_CH6" />
+			<PinReference pin="T_HSD200_SL13_CH7" />
+			<PinReference pin="T_HSD200_SL13_CH8" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC3">
+			<PinReference pin="T_HSD200_SL13_CH9" />
+			<PinReference pin="T_HSD200_SL13_CH10" />
+			<PinReference pin="T_HSD200_SL13_CH11" />
+			<PinReference pin="T_HSD200_SL13_CH12" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC4">
+			<PinReference pin="T_HSD200_SL13_CH13" />
+			<PinReference pin="T_HSD200_SL13_CH14" />
+			<PinReference pin="T_HSD200_SL13_CH15" />
+			<PinReference pin="T_HSD200_SL13_CH16" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC5">
+			<PinReference pin="T_HSD200_SL13_CH17" />
+			<PinReference pin="T_HSD200_SL13_CH18" />
+			<PinReference pin="T_HSD200_SL13_CH19" />
+			<PinReference pin="T_HSD200_SL13_CH20" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC6">
+			<PinReference pin="T_HSD200_SL13_CH21" />
+			<PinReference pin="T_HSD200_SL13_CH22" />
+			<PinReference pin="T_HSD200_SL13_CH23" />
+			<PinReference pin="T_HSD200_SL13_CH24" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC7">
+			<PinReference pin="T_HSD200_SL13_CH25" />
+			<PinReference pin="T_HSD200_SL13_CH26" />
+			<PinReference pin="T_HSD200_SL13_CH27" />
+			<PinReference pin="T_HSD200_SL13_CH28" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC8">
+			<PinReference pin="T_HSD200_SL13_CH29" />
+			<PinReference pin="T_HSD200_SL13_CH30" />
+			<PinReference pin="T_HSD200_SL13_CH31" />
+			<PinReference pin="T_HSD200_SL13_CH32" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC9">
+			<PinReference pin="T_HSD200_SL13_CH33" />
+			<PinReference pin="T_HSD200_SL13_CH34" />
+			<PinReference pin="T_HSD200_SL13_CH35" />
+			<PinReference pin="T_HSD200_SL13_CH36" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC10">
+			<PinReference pin="T_HSD200_SL13_CH37" />
+			<PinReference pin="T_HSD200_SL13_CH38" />
+			<PinReference pin="T_HSD200_SL13_CH39" />
+			<PinReference pin="T_HSD200_SL13_CH40" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC11">
+			<PinReference pin="T_HSD200_SL13_CH41" />
+			<PinReference pin="T_HSD200_SL13_CH42" />
+			<PinReference pin="T_HSD200_SL13_CH43" />
+			<PinReference pin="T_HSD200_SL13_CH44" />
+		</PinGroup>
+		<PinGroup name="SL13_HSD_ACC12">
+			<PinReference pin="T_HSD200_SL13_CH45" />
+			<PinReference pin="T_HSD200_SL13_CH46" />
+			<PinReference pin="T_HSD200_SL13_CH47" />
+			<PinReference pin="T_HSD200_SL13_CH48" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC1">
+			<PinReference pin="T_HSD200_SL15_CH1" />
+			<PinReference pin="T_HSD200_SL15_CH2" />
+			<PinReference pin="T_HSD200_SL15_CH3" />
+			<PinReference pin="T_HSD200_SL15_CH4" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC2">
+			<PinReference pin="T_HSD200_SL15_CH5" />
+			<PinReference pin="T_HSD200_SL15_CH6" />
+			<PinReference pin="T_HSD200_SL15_CH7" />
+			<PinReference pin="T_HSD200_SL15_CH8" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC3">
+			<PinReference pin="T_HSD200_SL15_CH9" />
+			<PinReference pin="T_HSD200_SL15_CH10" />
+			<PinReference pin="T_HSD200_SL15_CH11" />
+			<PinReference pin="T_HSD200_SL15_CH12" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC4">
+			<PinReference pin="T_HSD200_SL15_CH13" />
+			<PinReference pin="T_HSD200_SL15_CH14" />
+			<PinReference pin="T_HSD200_SL15_CH15" />
+			<PinReference pin="T_HSD200_SL15_CH16" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC5">
+			<PinReference pin="T_HSD200_SL15_CH17" />
+			<PinReference pin="T_HSD200_SL15_CH18" />
+			<PinReference pin="T_HSD200_SL15_CH19" />
+			<PinReference pin="T_HSD200_SL15_CH20" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC6">
+			<PinReference pin="T_HSD200_SL15_CH21" />
+			<PinReference pin="T_HSD200_SL15_CH22" />
+			<PinReference pin="T_HSD200_SL15_CH23" />
+			<PinReference pin="T_HSD200_SL15_CH24" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC7">
+			<PinReference pin="T_HSD200_SL15_CH25" />
+			<PinReference pin="T_HSD200_SL15_CH26" />
+			<PinReference pin="T_HSD200_SL15_CH27" />
+			<PinReference pin="T_HSD200_SL15_CH28" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC8">
+			<PinReference pin="T_HSD200_SL15_CH29" />
+			<PinReference pin="T_HSD200_SL15_CH30" />
+			<PinReference pin="T_HSD200_SL15_CH31" />
+			<PinReference pin="T_HSD200_SL15_CH32" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC9">
+			<PinReference pin="T_HSD200_SL15_CH33" />
+			<PinReference pin="T_HSD200_SL15_CH34" />
+			<PinReference pin="T_HSD200_SL15_CH35" />
+			<PinReference pin="T_HSD200_SL15_CH36" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC10">
+			<PinReference pin="T_HSD200_SL15_CH37" />
+			<PinReference pin="T_HSD200_SL15_CH38" />
+			<PinReference pin="T_HSD200_SL15_CH39" />
+			<PinReference pin="T_HSD200_SL15_CH40" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC11">
+			<PinReference pin="T_HSD200_SL15_CH41" />
+			<PinReference pin="T_HSD200_SL15_CH42" />
+			<PinReference pin="T_HSD200_SL15_CH43" />
+			<PinReference pin="T_HSD200_SL15_CH44" />
+		</PinGroup>
+		<PinGroup name="SL15_HSD_ACC12">
+			<PinReference pin="T_HSD200_SL15_CH45" />
+			<PinReference pin="T_HSD200_SL15_CH46" />
+			<PinReference pin="T_HSD200_SL15_CH47" />
+			<PinReference pin="T_HSD200_SL15_CH48" />
+		</PinGroup>
+		<PinGroup name="POOL_DIO_PINS">
 			<PinReference pin="P154_6571_DIO_24" />
 			<PinReference pin="P154_6571_DIO_25" />
 			<PinReference pin="P154_6571_DIO_26" />
@@ -709,6 +799,24 @@
 			<PinReference pin="P115_6368_DIG0_P0_14" />
 			<PinReference pin="P115_6368_DIG0_P0_15" />
 		</PinGroup>
+		<PinGroup name="DC90_DA_RELAY_DRIVE">
+			<PinReference pin="P115_6368_DIG1_P0_16" />
+			<PinReference pin="P115_6368_DIG1_P0_17" />
+			<PinReference pin="P115_6368_DIG1_P0_18" />
+			<PinReference pin="P115_6368_DIG1_P0_19" />
+			<PinReference pin="P115_6368_DIG1_P0_20" />
+			<PinReference pin="P115_6368_DIG1_P0_21" />
+			<PinReference pin="P115_6368_DIG1_P0_22" />
+			<PinReference pin="P115_6368_DIG1_P0_23" />
+			<PinReference pin="P115_6368_DIG1_P0_24" />
+			<PinReference pin="P115_6368_DIG1_P0_25" />
+			<PinReference pin="P115_6368_DIG1_P0_26" />
+			<PinReference pin="P115_6368_DIG1_P0_27" />
+			<PinReference pin="P115_6368_DIG1_P0_28" />
+			<PinReference pin="P115_6368_DIG1_P0_29" />
+			<PinReference pin="P115_6368_DIG1_P0_30" />
+			<PinReference pin="P115_6368_DIG1_P0_31" />
+		</PinGroup>
 	</PinGroups>
 	<Relays>
 		<SystemRelay name="RL3" />
@@ -731,6 +839,114 @@
 		<SystemRelay name="RL17" />
 		<SystemRelay name="RL18" />
 		<SystemRelay name="RL19" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB20" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB21" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB22" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB23" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB24" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB25" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB26" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB27" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB28" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB29" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB30" />
+		<SystemRelay name="T_SUPPORT_SL08_UDB31" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB32" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB33" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB34" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB35" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB36" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB37" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB38" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB39" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB40" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB41" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB42" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB43" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB44" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB45" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB46" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB47" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB48" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB49" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB50" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB51" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB52" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB53" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB54" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB55" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB56" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB57" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB58" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB59" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB60" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB61" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB62" />
+		<SystemRelay name="T_SUPPORT_SL20_UDB63" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB64" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB65" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB66" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB67" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB68" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB69" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB70" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB71" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB72" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB73" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB74" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB75" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB76" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB77" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB78" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB79" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB80" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB81" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB82" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB83" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB84" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB85" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB86" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB87" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB88" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB89" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB90" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB91" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB92" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB93" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB94" />
+		<SystemRelay name="T_SUPPORT_SL45_UDB95" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB96" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB97" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB98" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB99" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB100" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB101" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB102" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB103" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB104" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB105" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB106" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB107" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB108" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB109" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB110" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB111" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB112" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB113" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB114" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB115" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB116" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB117" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB118" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB119" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB120" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB121" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB122" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB123" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB124" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB125" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB126" />
+		<SystemRelay name="T_SUPPORT_SL33_UDB127" />
 	</Relays>
 	<RelayGroups>
 		<RelayGroup name="ALL_CXBOARD_RELAY">
@@ -754,6 +970,124 @@
 			<RelayReference relay="RL17" />
 			<RelayReference relay="RL18" />
 			<RelayReference relay="RL19" />
+		</RelayGroup>
+		<RelayGroup name="ALL_SUPPORT_SL08_RELAY">
+			<RelayReference relay="T_SUPPORT_SL08_UDB20" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB21" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB22" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB23" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB24" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB25" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB26" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB27" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB28" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB29" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB30" />
+			<RelayReference relay="T_SUPPORT_SL08_UDB31" />
+		</RelayGroup>
+
+		<RelayGroup name="ALL_SUPPORT_SL20_RELAY">
+			<RelayReference relay="T_SUPPORT_SL20_UDB32" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB33" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB34" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB35" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB36" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB37" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB38" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB39" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB40" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB41" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB42" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB43" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB44" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB45" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB46" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB47" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB48" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB49" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB50" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB51" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB52" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB53" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB54" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB55" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB56" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB57" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB58" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB59" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB60" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB61" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB62" />
+			<RelayReference relay="T_SUPPORT_SL20_UDB63" />
+		</RelayGroup>
+
+		<RelayGroup name="ALL_SUPPORT_SL45_RELAY">
+			<RelayReference relay="T_SUPPORT_SL45_UDB64" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB65" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB66" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB67" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB68" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB69" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB70" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB71" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB72" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB73" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB74" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB75" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB76" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB77" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB78" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB79" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB80" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB81" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB82" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB83" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB84" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB85" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB86" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB87" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB88" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB89" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB90" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB91" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB92" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB93" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB94" />
+			<RelayReference relay="T_SUPPORT_SL45_UDB95" />
+		</RelayGroup>
+		<RelayGroup name="ALL_SUPPORT_SL33_RELAY">
+			<RelayReference relay="T_SUPPORT_SL33_UDB96" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB97" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB98" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB99" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB100" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB101" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB102" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB103" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB104" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB105" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB106" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB107" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB108" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB109" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB110" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB111" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB112" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB113" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB114" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB115" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB116" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB117" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB118" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB119" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB120" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB121" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB122" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB123" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB124" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB125" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB126" />
+			<RelayReference relay="T_SUPPORT_SL33_UDB127" />
 		</RelayGroup>
 	</RelayGroups>
 	<RelayConfigurations>
@@ -781,150 +1115,150 @@
 		<Connection pin="HMOD_RESET" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="18" />
 		<Connection pin="HMOD_SCLK" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="17" />
 		<!--P174 = C1_S05 (Slot 5)-->
-		<Connection pin="P174_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="4" />
-		<Connection pin="P174_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="5" />
-		<Connection pin="P174_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="6" />
-		<Connection pin="P174_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="7" />
-		<Connection pin="P174_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="8" />
-		<Connection pin="P174_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="9" />
-		<Connection pin="P174_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="10" />
-		<Connection pin="P174_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="11" />
-		<Connection pin="P174_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="12" />
-		<Connection pin="P174_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="13" />
-		<Connection pin="P174_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="14" />
-		<Connection pin="P174_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="15" />
-		<Connection pin="P174_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="16" />
-		<Connection pin="P174_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="17" />
-		<Connection pin="P174_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="18" />
-		<Connection pin="P174_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="19" />
-		<Connection pin="P174_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="20" />
-		<Connection pin="P174_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="21" />
-		<Connection pin="P174_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="22" />
-		<Connection pin="P174_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="23" />
-		<Connection pin="P174_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="24" />
-		<Connection pin="P174_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="25" />
-		<Connection pin="P174_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="26" />
-		<Connection pin="P174_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="27" />
-		<Connection pin="P174_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="28" />
-		<Connection pin="P174_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="29" />
-		<Connection pin="P174_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="30" />
-		<Connection pin="P174_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="31" />
+		<Connection pin="T_HSD200_SL11_CH5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="4" />
+		<Connection pin="T_HSD200_SL11_CH6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="5" />
+		<Connection pin="T_HSD200_SL11_CH7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="6" />
+		<Connection pin="T_HSD200_SL11_CH8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="7" />
+		<Connection pin="T_HSD200_SL11_CH9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="8" />
+		<Connection pin="T_HSD200_SL11_CH10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="9" />
+		<Connection pin="T_HSD200_SL11_CH11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="10" />
+		<Connection pin="T_HSD200_SL11_CH12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="11" />
+		<Connection pin="T_HSD200_SL11_CH13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="12" />
+		<Connection pin="T_HSD200_SL11_CH14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="13" />
+		<Connection pin="T_HSD200_SL11_CH15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="14" />
+		<Connection pin="T_HSD200_SL11_CH16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="15" />
+		<Connection pin="T_HSD200_SL11_CH17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="16" />
+		<Connection pin="T_HSD200_SL11_CH18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="17" />
+		<Connection pin="T_HSD200_SL11_CH19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="18" />
+		<Connection pin="T_HSD200_SL11_CH20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="19" />
+		<Connection pin="T_HSD200_SL11_CH21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="20" />
+		<Connection pin="T_HSD200_SL11_CH22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="21" />
+		<Connection pin="T_HSD200_SL11_CH23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="22" />
+		<Connection pin="T_HSD200_SL11_CH24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="23" />
+		<Connection pin="T_HSD200_SL11_CH25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="24" />
+		<Connection pin="T_HSD200_SL11_CH26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="25" />
+		<Connection pin="T_HSD200_SL11_CH27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="26" />
+		<Connection pin="T_HSD200_SL11_CH28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="27" />
+		<Connection pin="T_HSD200_SL11_CH29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="28" />
+		<Connection pin="T_HSD200_SL11_CH30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="29" />
+		<Connection pin="T_HSD200_SL11_CH31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="30" />
+		<Connection pin="T_HSD200_SL11_CH32" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S05" channel="31" />
 		<!--P166 = C1_S02 (Slot 2)-->
-		<Connection pin="P166_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="0" />
-		<Connection pin="P166_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="1" />
-		<Connection pin="P166_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="2" />
-		<Connection pin="P166_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="3" />
-		<Connection pin="P166_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="4" />
-		<Connection pin="P166_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="5" />
-		<Connection pin="P166_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="6" />
-		<Connection pin="P166_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="7" />
-		<Connection pin="P166_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="8" />
-		<Connection pin="P166_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="9" />
-		<Connection pin="P166_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="10" />
-		<Connection pin="P166_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="11" />
-		<Connection pin="P166_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="12" />
-		<Connection pin="P166_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="13" />
-		<Connection pin="P166_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="14" />
-		<Connection pin="P166_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="15" />
-		<Connection pin="P166_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="16" />
-		<Connection pin="P166_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="17" />
-		<Connection pin="P166_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="18" />
-		<Connection pin="P166_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="19" />
-		<Connection pin="P166_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="20" />
-		<Connection pin="P166_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="21" />
-		<Connection pin="P166_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="22" />
-		<Connection pin="P166_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="23" />
-		<Connection pin="P166_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="24" />
-		<Connection pin="P166_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="25" />
-		<Connection pin="P166_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="26" />
-		<Connection pin="P166_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="27" />
-		<Connection pin="P166_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="28" />
-		<Connection pin="P166_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="29" />
-		<Connection pin="P166_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="30" />
-		<Connection pin="P166_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="31" />
+		<Connection pin="T_HSD200_SL11_CH33" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="0" />
+		<Connection pin="T_HSD200_SL11_CH34" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="1" />
+		<Connection pin="T_HSD200_SL11_CH35" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="2" />
+		<Connection pin="T_HSD200_SL11_CH36" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="3" />
+		<Connection pin="T_HSD200_SL11_CH37" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="4" />
+		<Connection pin="T_HSD200_SL11_CH38" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="5" />
+		<Connection pin="T_HSD200_SL11_CH39" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="6" />
+		<Connection pin="T_HSD200_SL11_CH40" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="7" />
+		<Connection pin="T_HSD200_SL11_CH41" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="8" />
+		<Connection pin="T_HSD200_SL11_CH42" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="9" />
+		<Connection pin="T_HSD200_SL11_CH43" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="10" />
+		<Connection pin="T_HSD200_SL11_CH44" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="11" />
+		<Connection pin="T_HSD200_SL11_CH45" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="12" />
+		<Connection pin="T_HSD200_SL11_CH46" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="13" />
+		<Connection pin="T_HSD200_SL11_CH47" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="14" />
+		<Connection pin="T_HSD200_SL11_CH48" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="15" />
+		<Connection pin="T_HSD200_SL13_CH33" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="16" />
+		<Connection pin="T_HSD200_SL13_CH34" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="17" />
+		<Connection pin="T_HSD200_SL13_CH35" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="18" />
+		<Connection pin="T_HSD200_SL13_CH36" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="19" />
+		<Connection pin="T_HSD200_SL13_CH37" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="20" />
+		<Connection pin="T_HSD200_SL13_CH38" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="21" />
+		<Connection pin="T_HSD200_SL13_CH39" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="22" />
+		<Connection pin="T_HSD200_SL13_CH40" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="23" />
+		<Connection pin="T_HSD200_SL13_CH41" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="24" />
+		<Connection pin="T_HSD200_SL13_CH42" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="25" />
+		<Connection pin="T_HSD200_SL13_CH43" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="26" />
+		<Connection pin="T_HSD200_SL13_CH44" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="27" />
+		<Connection pin="T_HSD200_SL13_CH45" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="28" />
+		<Connection pin="T_HSD200_SL13_CH46" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="29" />
+		<Connection pin="T_HSD200_SL13_CH47" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="30" />
+		<Connection pin="T_HSD200_SL13_CH48" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S02" channel="31" />
 		<!--P170 = C1_S04 (Slot 4)-->
-		<Connection pin="P170_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="0" />
-		<Connection pin="P170_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="1" />
-		<Connection pin="P170_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="2" />
-		<Connection pin="P170_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="3" />
-		<Connection pin="P170_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="4" />
-		<Connection pin="P170_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="5" />
-		<Connection pin="P170_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="6" />
-		<Connection pin="P170_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="7" />
-		<Connection pin="P170_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="8" />
-		<Connection pin="P170_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="9" />
-		<Connection pin="P170_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="10" />
-		<Connection pin="P170_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="11" />
-		<Connection pin="P170_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="12" />
-		<Connection pin="P170_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="13" />
-		<Connection pin="P170_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="14" />
-		<Connection pin="P170_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="15" />
-		<Connection pin="P170_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="16" />
-		<Connection pin="P170_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="17" />
-		<Connection pin="P170_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="18" />
-		<Connection pin="P170_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="19" />
-		<Connection pin="P170_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="20" />
-		<Connection pin="P170_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="21" />
-		<Connection pin="P170_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="22" />
-		<Connection pin="P170_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="23" />
-		<Connection pin="P170_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="24" />
-		<Connection pin="P170_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="25" />
-		<Connection pin="P170_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="26" />
-		<Connection pin="P170_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="27" />
-		<Connection pin="P170_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="28" />
-		<Connection pin="P170_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="29" />
-		<Connection pin="P170_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="30" />
-		<Connection pin="P170_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="31" />
+		<Connection pin="T_HSD200_SL13_CH1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="0" />
+		<Connection pin="T_HSD200_SL13_CH2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="1" />
+		<Connection pin="T_HSD200_SL13_CH3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="2" />
+		<Connection pin="T_HSD200_SL13_CH4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="3" />
+		<Connection pin="T_HSD200_SL13_CH5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="4" />
+		<Connection pin="T_HSD200_SL13_CH6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="5" />
+		<Connection pin="T_HSD200_SL13_CH7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="6" />
+		<Connection pin="T_HSD200_SL13_CH8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="7" />
+		<Connection pin="T_HSD200_SL13_CH9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="8" />
+		<Connection pin="T_HSD200_SL13_CH10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="9" />
+		<Connection pin="T_HSD200_SL13_CH11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="10" />
+		<Connection pin="T_HSD200_SL13_CH12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="11" />
+		<Connection pin="T_HSD200_SL13_CH13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="12" />
+		<Connection pin="T_HSD200_SL13_CH14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="13" />
+		<Connection pin="T_HSD200_SL13_CH15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="14" />
+		<Connection pin="T_HSD200_SL13_CH16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="15" />
+		<Connection pin="T_HSD200_SL13_CH17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="16" />
+		<Connection pin="T_HSD200_SL13_CH18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="17" />
+		<Connection pin="T_HSD200_SL13_CH19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="18" />
+		<Connection pin="T_HSD200_SL13_CH20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="19" />
+		<Connection pin="T_HSD200_SL13_CH21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="20" />
+		<Connection pin="T_HSD200_SL13_CH22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="21" />
+		<Connection pin="T_HSD200_SL13_CH23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="22" />
+		<Connection pin="T_HSD200_SL13_CH24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="23" />
+		<Connection pin="T_HSD200_SL13_CH25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="24" />
+		<Connection pin="T_HSD200_SL13_CH26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="25" />
+		<Connection pin="T_HSD200_SL13_CH27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="26" />
+		<Connection pin="T_HSD200_SL13_CH28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="27" />
+		<Connection pin="T_HSD200_SL13_CH29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="28" />
+		<Connection pin="T_HSD200_SL13_CH30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="29" />
+		<Connection pin="T_HSD200_SL13_CH31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="30" />
+		<Connection pin="T_HSD200_SL13_CH32" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S04" channel="31" />
 		<!--P146 = C1_S03 (Slot 3)-->
-		<Connection pin="P146_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="0" />
-		<Connection pin="P146_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="1" />
-		<Connection pin="P146_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="2" />
-		<Connection pin="P146_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="3" />
-		<Connection pin="P146_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="4" />
-		<Connection pin="P146_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="5" />
-		<Connection pin="P146_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="6" />
-		<Connection pin="P146_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="7" />
-		<Connection pin="P146_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="8" />
-		<Connection pin="P146_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="9" />
-		<Connection pin="P146_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="10" />
-		<Connection pin="P146_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="11" />
-		<Connection pin="P146_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="12" />
-		<Connection pin="P146_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="13" />
-		<Connection pin="P146_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="14" />
-		<Connection pin="P146_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="15" />
-		<Connection pin="P146_6571_DIO_16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="16" />
-		<Connection pin="P146_6571_DIO_17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="17" />
-		<Connection pin="P146_6571_DIO_18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="18" />
-		<Connection pin="P146_6571_DIO_19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="19" />
-		<Connection pin="P146_6571_DIO_20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="20" />
-		<Connection pin="P146_6571_DIO_21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="21" />
-		<Connection pin="P146_6571_DIO_22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="22" />
-		<Connection pin="P146_6571_DIO_23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="23" />
-		<Connection pin="P146_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="24" />
-		<Connection pin="P146_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="25" />
-		<Connection pin="P146_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="26" />
-		<Connection pin="P146_6571_DIO_27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="27" />
-		<Connection pin="P146_6571_DIO_28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="28" />
-		<Connection pin="P146_6571_DIO_29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="29" />
-		<Connection pin="P146_6571_DIO_30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="30" />
-		<Connection pin="P146_6571_DIO_31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="31" />
+		<Connection pin="T_HSD200_SL15_CH1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="0" />
+		<Connection pin="T_HSD200_SL15_CH2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="1" />
+		<Connection pin="T_HSD200_SL15_CH3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="2" />
+		<Connection pin="T_HSD200_SL15_CH4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="3" />
+		<Connection pin="T_HSD200_SL15_CH5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="4" />
+		<Connection pin="T_HSD200_SL15_CH6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="5" />
+		<Connection pin="T_HSD200_SL15_CH7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="6" />
+		<Connection pin="T_HSD200_SL15_CH8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="7" />
+		<Connection pin="T_HSD200_SL15_CH9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="8" />
+		<Connection pin="T_HSD200_SL15_CH10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="9" />
+		<Connection pin="T_HSD200_SL15_CH11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="10" />
+		<Connection pin="T_HSD200_SL15_CH12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="11" />
+		<Connection pin="T_HSD200_SL15_CH13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="12" />
+		<Connection pin="T_HSD200_SL15_CH14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="13" />
+		<Connection pin="T_HSD200_SL15_CH15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="14" />
+		<Connection pin="T_HSD200_SL15_CH16" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="15" />
+		<Connection pin="T_HSD200_SL15_CH17" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="16" />
+		<Connection pin="T_HSD200_SL15_CH18" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="17" />
+		<Connection pin="T_HSD200_SL15_CH19" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="18" />
+		<Connection pin="T_HSD200_SL15_CH20" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="19" />
+		<Connection pin="T_HSD200_SL15_CH21" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="20" />
+		<Connection pin="T_HSD200_SL15_CH22" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="21" />
+		<Connection pin="T_HSD200_SL15_CH23" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="22" />
+		<Connection pin="T_HSD200_SL15_CH24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="23" />
+		<Connection pin="T_HSD200_SL15_CH25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="24" />
+		<Connection pin="T_HSD200_SL15_CH26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="25" />
+		<Connection pin="T_HSD200_SL15_CH27" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="26" />
+		<Connection pin="T_HSD200_SL15_CH28" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="27" />
+		<Connection pin="T_HSD200_SL15_CH29" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="28" />
+		<Connection pin="T_HSD200_SL15_CH30" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="29" />
+		<Connection pin="T_HSD200_SL15_CH31" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="30" />
+		<Connection pin="T_HSD200_SL15_CH32" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S03" channel="31" />
 		<!--P154 = C1_S06 (Slot 6), channels 0-15 and 24-31 (16-23 used by HMOD)-->
-		<Connection pin="P154_6571_DIO_0" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="0" />
-		<Connection pin="P154_6571_DIO_1" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="1" />
-		<Connection pin="P154_6571_DIO_2" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="2" />
-		<Connection pin="P154_6571_DIO_3" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="3" />
-		<Connection pin="P154_6571_DIO_4" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="4" />
-		<Connection pin="P154_6571_DIO_5" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="5" />
-		<Connection pin="P154_6571_DIO_6" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="6" />
-		<Connection pin="P154_6571_DIO_7" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="7" />
-		<Connection pin="P154_6571_DIO_8" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="8" />
-		<Connection pin="P154_6571_DIO_9" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="9" />
-		<Connection pin="P154_6571_DIO_10" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="10" />
-		<Connection pin="P154_6571_DIO_11" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="11" />
-		<Connection pin="P154_6571_DIO_12" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="12" />
-		<Connection pin="P154_6571_DIO_13" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="13" />
-		<Connection pin="P154_6571_DIO_14" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="14" />
-		<Connection pin="P154_6571_DIO_15" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="15" />
+		<Connection pin="T_HSD200_SL15_CH33" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="0" />
+		<Connection pin="T_HSD200_SL15_CH34" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="1" />
+		<Connection pin="T_HSD200_SL15_CH35" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="2" />
+		<Connection pin="T_HSD200_SL15_CH36" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="3" />
+		<Connection pin="T_HSD200_SL15_CH37" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="4" />
+		<Connection pin="T_HSD200_SL15_CH38" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="5" />
+		<Connection pin="T_HSD200_SL15_CH39" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="6" />
+		<Connection pin="T_HSD200_SL15_CH40" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="7" />
+		<Connection pin="T_HSD200_SL15_CH41" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="8" />
+		<Connection pin="T_HSD200_SL15_CH42" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="9" />
+		<Connection pin="T_HSD200_SL15_CH43" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="10" />
+		<Connection pin="T_HSD200_SL15_CH44" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="11" />
+		<Connection pin="T_HSD200_SL15_CH45" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="12" />
+		<Connection pin="T_HSD200_SL15_CH46" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="13" />
+		<Connection pin="T_HSD200_SL15_CH47" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="14" />
+		<Connection pin="T_HSD200_SL15_CH48" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="15" />
 		<Connection pin="P154_6571_DIO_24" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="24" />
 		<Connection pin="P154_6571_DIO_25" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="25" />
 		<Connection pin="P154_6571_DIO_26" siteNumber="0,1,2,3" instrument="HSD_6571_C1_S06" channel="26" />
@@ -1061,6 +1395,14 @@
 		<!--Checker Board Relays-->
 		<SystemRelayConnection relay="RL0" relayDriverModule="RELAY_2567_C1_S12" controlLine="K8" />
 		<SystemRelayConnection relay="RL1" relayDriverModule="RELAY_2567_C1_S12" controlLine="K9" />
+		<SystemRelayConnection relay="RL2" relayDriverModule="RELAY_2567_C1_S12" controlLine="K10" />
+		<SystemRelayConnection relay="RL3" relayDriverModule="RELAY_2567_C1_S12" controlLine="K24" />
+		<SystemRelayConnection relay="RL4" relayDriverModule="RELAY_2567_C1_S12" controlLine="K25" />
+		<SystemRelayConnection relay="RL5" relayDriverModule="RELAY_2567_C1_S12" controlLine="K26" />
+		<SystemRelayConnection relay="RL6" relayDriverModule="RELAY_2567_C1_S12" controlLine="K11" />
+		<SystemRelayConnection relay="RL7" relayDriverModule="RELAY_2567_C1_S12" controlLine="K12" />
+		<SystemRelayConnection relay="RL8" relayDriverModule="RELAY_2567_C1_S12" controlLine="K27" />
+		<SystemRelayConnection relay="RL9" relayDriverModule="RELAY_2567_C1_S12" controlLine="K28" />
 		<SystemRelayConnection relay="RL10" relayDriverModule="RELAY_2567_C1_S12" controlLine="K13" />
 		<SystemRelayConnection relay="RL11" relayDriverModule="RELAY_2567_C1_S12" controlLine="K14" />
 		<SystemRelayConnection relay="RL12" relayDriverModule="RELAY_2567_C1_S12" controlLine="K15" />
@@ -1071,13 +1413,113 @@
 		<SystemRelayConnection relay="RL17" relayDriverModule="RELAY_2567_C1_S12" controlLine="K41" />
 		<SystemRelayConnection relay="RL18" relayDriverModule="RELAY_2567_C1_S12" controlLine="K42" />
 		<SystemRelayConnection relay="RL19" relayDriverModule="RELAY_2567_C1_S12" controlLine="K56" />
-		<SystemRelayConnection relay="RL2" relayDriverModule="RELAY_2567_C1_S12" controlLine="K10" />
-		<SystemRelayConnection relay="RL3" relayDriverModule="RELAY_2567_C1_S12" controlLine="K24" />
-		<SystemRelayConnection relay="RL4" relayDriverModule="RELAY_2567_C1_S12" controlLine="K25" />
-		<SystemRelayConnection relay="RL5" relayDriverModule="RELAY_2567_C1_S12" controlLine="K26" />
-		<SystemRelayConnection relay="RL6" relayDriverModule="RELAY_2567_C1_S12" controlLine="K11" />
-		<SystemRelayConnection relay="RL7" relayDriverModule="RELAY_2567_C1_S12" controlLine="K12" />
-		<SystemRelayConnection relay="RL8" relayDriverModule="RELAY_2567_C1_S12" controlLine="K27" />
-		<SystemRelayConnection relay="RL9" relayDriverModule="RELAY_2567_C1_S12" controlLine="K28" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB20" relayDriverModule="RELAY_2567_C1_S12" controlLine="K57" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB21" relayDriverModule="RELAY_2567_C1_S12" controlLine="K58" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB22" relayDriverModule="RELAY_2567_C1_S12" controlLine="K43" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB23" relayDriverModule="RELAY_2567_C1_S12" controlLine="K44" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB24" relayDriverModule="RELAY_2567_C1_S12" controlLine="K59" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB25" relayDriverModule="RELAY_2567_C1_S12" controlLine="K60" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB26" relayDriverModule="RELAY_2567_C1_S12" controlLine="K45" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB27" relayDriverModule="RELAY_2567_C1_S12" controlLine="K46" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB28" relayDriverModule="RELAY_2567_C1_S12" controlLine="K47" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB29" relayDriverModule="RELAY_2567_C1_S12" controlLine="K61" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB30" relayDriverModule="RELAY_2567_C1_S12" controlLine="K62" />
+		<SystemRelayConnection relay="T_SUPPORT_SL08_UDB31" relayDriverModule="RELAY_2567_C1_S12" controlLine="K63" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB32" relayDriverModule="RELAY_2567_C1_S12" controlLine="K0" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB33" relayDriverModule="RELAY_2567_C1_S12" controlLine="K1" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB34" relayDriverModule="RELAY_2567_C1_S12" controlLine="K2" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB35" relayDriverModule="RELAY_2567_C1_S12" controlLine="K16" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB36" relayDriverModule="RELAY_2567_C1_S12" controlLine="K17" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB37" relayDriverModule="RELAY_2567_C1_S12" controlLine="K18" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB38" relayDriverModule="RELAY_2567_C1_S12" controlLine="K3" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB39" relayDriverModule="RELAY_2567_C1_S12" controlLine="K4" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB40" relayDriverModule="RELAY_2567_C1_S12" controlLine="K19" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB41" relayDriverModule="RELAY_2567_C1_S12" controlLine="K20" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB42" relayDriverModule="RELAY_2567_C1_S12" controlLine="K5" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB43" relayDriverModule="RELAY_2567_C1_S12" controlLine="K6" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB44" relayDriverModule="RELAY_2567_C1_S12" controlLine="K7" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB45" relayDriverModule="RELAY_2567_C1_S12" controlLine="K21" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB46" relayDriverModule="RELAY_2567_C1_S12" controlLine="K22" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB47" relayDriverModule="RELAY_2567_C1_S12" controlLine="K23" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB48" relayDriverModule="RELAY_2567_C1_S12" controlLine="K32" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB49" relayDriverModule="RELAY_2567_C1_S12" controlLine="K33" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB50" relayDriverModule="RELAY_2567_C1_S12" controlLine="K34" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB51" relayDriverModule="RELAY_2567_C1_S12" controlLine="K48" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB52" relayDriverModule="RELAY_2567_C1_S12" controlLine="K49" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB53" relayDriverModule="RELAY_2567_C1_S12" controlLine="K50" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB54" relayDriverModule="RELAY_2567_C1_S12" controlLine="K35" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB55" relayDriverModule="RELAY_2567_C1_S12" controlLine="K36" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB56" relayDriverModule="RELAY_2567_C1_S12" controlLine="K51" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB57" relayDriverModule="RELAY_2567_C1_S12" controlLine="K52" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB58" relayDriverModule="RELAY_2567_C1_S12" controlLine="K37" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB59" relayDriverModule="RELAY_2567_C1_S12" controlLine="K38" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB60" relayDriverModule="RELAY_2567_C1_S12" controlLine="K39" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB61" relayDriverModule="RELAY_2567_C1_S12" controlLine="K53" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB62" relayDriverModule="RELAY_2567_C1_S12" controlLine="K54" />
+		<SystemRelayConnection relay="T_SUPPORT_SL20_UDB63" relayDriverModule="RELAY_2567_C1_S12" controlLine="K55" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB64" relayDriverModule="RELAY_2567_C1_S08" controlLine="K0" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB65" relayDriverModule="RELAY_2567_C1_S08" controlLine="K1" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB66" relayDriverModule="RELAY_2567_C1_S08" controlLine="K2" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB67" relayDriverModule="RELAY_2567_C1_S08" controlLine="K16" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB68" relayDriverModule="RELAY_2567_C1_S08" controlLine="K17" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB69" relayDriverModule="RELAY_2567_C1_S08" controlLine="K18" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB70" relayDriverModule="RELAY_2567_C1_S08" controlLine="K3" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB71" relayDriverModule="RELAY_2567_C1_S08" controlLine="K4" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB72" relayDriverModule="RELAY_2567_C1_S08" controlLine="K19" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB73" relayDriverModule="RELAY_2567_C1_S08" controlLine="K20" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB74" relayDriverModule="RELAY_2567_C1_S08" controlLine="K5" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB75" relayDriverModule="RELAY_2567_C1_S08" controlLine="K6" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB76" relayDriverModule="RELAY_2567_C1_S08" controlLine="K7" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB77" relayDriverModule="RELAY_2567_C1_S08" controlLine="K21" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB78" relayDriverModule="RELAY_2567_C1_S08" controlLine="K22" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB79" relayDriverModule="RELAY_2567_C1_S08" controlLine="K23" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB80" relayDriverModule="RELAY_2567_C1_S08" controlLine="K32" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB81" relayDriverModule="RELAY_2567_C1_S08" controlLine="K33" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB82" relayDriverModule="RELAY_2567_C1_S08" controlLine="K34" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB83" relayDriverModule="RELAY_2567_C1_S08" controlLine="K48" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB84" relayDriverModule="RELAY_2567_C1_S08" controlLine="K49" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB85" relayDriverModule="RELAY_2567_C1_S08" controlLine="K50" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB86" relayDriverModule="RELAY_2567_C1_S08" controlLine="K35" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB87" relayDriverModule="RELAY_2567_C1_S08" controlLine="K36" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB88" relayDriverModule="RELAY_2567_C1_S08" controlLine="K51" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB89" relayDriverModule="RELAY_2567_C1_S08" controlLine="K52" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB90" relayDriverModule="RELAY_2567_C1_S08" controlLine="K37" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB91" relayDriverModule="RELAY_2567_C1_S08" controlLine="K38" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB92" relayDriverModule="RELAY_2567_C1_S08" controlLine="K39" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB93" relayDriverModule="RELAY_2567_C1_S08" controlLine="K53" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB94" relayDriverModule="RELAY_2567_C1_S08" controlLine="K54" />
+		<SystemRelayConnection relay="T_SUPPORT_SL45_UDB95" relayDriverModule="RELAY_2567_C1_S08" controlLine="K55" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB96" relayDriverModule="RELAY_2567_C1_S08" controlLine="K8" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB97" relayDriverModule="RELAY_2567_C1_S08" controlLine="K9" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB98" relayDriverModule="RELAY_2567_C1_S08" controlLine="K10" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB99" relayDriverModule="RELAY_2567_C1_S08" controlLine="K24" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB100" relayDriverModule="RELAY_2567_C1_S08" controlLine="K25" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB101" relayDriverModule="RELAY_2567_C1_S08" controlLine="K26" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB102" relayDriverModule="RELAY_2567_C1_S08" controlLine="K11" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB103" relayDriverModule="RELAY_2567_C1_S08" controlLine="K12" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB104" relayDriverModule="RELAY_2567_C1_S08" controlLine="K27" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB105" relayDriverModule="RELAY_2567_C1_S08" controlLine="K28" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB106" relayDriverModule="RELAY_2567_C1_S08" controlLine="K13" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB107" relayDriverModule="RELAY_2567_C1_S08" controlLine="K14" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB108" relayDriverModule="RELAY_2567_C1_S08" controlLine="K15" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB109" relayDriverModule="RELAY_2567_C1_S08" controlLine="K29" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB110" relayDriverModule="RELAY_2567_C1_S08" controlLine="K30" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB111" relayDriverModule="RELAY_2567_C1_S08" controlLine="K31" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB112" relayDriverModule="RELAY_2567_C1_S08" controlLine="K40" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB113" relayDriverModule="RELAY_2567_C1_S08" controlLine="K41" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB114" relayDriverModule="RELAY_2567_C1_S08" controlLine="K42" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB115" relayDriverModule="RELAY_2567_C1_S08" controlLine="K56" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB116" relayDriverModule="RELAY_2567_C1_S08" controlLine="K57" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB117" relayDriverModule="RELAY_2567_C1_S08" controlLine="K58" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB118" relayDriverModule="RELAY_2567_C1_S08" controlLine="K43" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB119" relayDriverModule="RELAY_2567_C1_S08" controlLine="K44" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB120" relayDriverModule="RELAY_2567_C1_S08" controlLine="K59" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB121" relayDriverModule="RELAY_2567_C1_S08" controlLine="K60" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB122" relayDriverModule="RELAY_2567_C1_S08" controlLine="K45" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB123" relayDriverModule="RELAY_2567_C1_S08" controlLine="K46" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB124" relayDriverModule="RELAY_2567_C1_S08" controlLine="K47" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB125" relayDriverModule="RELAY_2567_C1_S08" controlLine="K61" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB126" relayDriverModule="RELAY_2567_C1_S08" controlLine="K62" />
+		<SystemRelayConnection relay="T_SUPPORT_SL33_UDB127" relayDriverModule="RELAY_2567_C1_S08" controlLine="K63" />
 	</Connections>
 </PinMap>

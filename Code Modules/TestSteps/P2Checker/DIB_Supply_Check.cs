@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Linq;
 using NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex;
 using NationalInstruments.TestStand.SemiconductorModule.InstrumentControl;
 using NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI;
+using NationalInstruments.ModularInstruments.NIDCPower;
 using NationalInstruments.ModularInstruments.NIDmm;
 using TestSteps.Common;
 
-namespace TestSteps.Modules
+namespace TestSteps.P2Checker
 {
     public class DIB_Supply_Check
     {
@@ -17,11 +19,13 @@ namespace TestSteps.Modules
         /// </summary>
         /// <param name="tsmContext">The semiconductor module context for session and site management.</param>
         /// <param name="meterType">Meter selection: 0 = PXIe-4137 SMU, 1 = PXIe-4081 DMM.</param>
-        public static void SupplyCheck(ISemiconductorModuleContext tsmContext, int meterType = 0)
+        public static void SupplyCheck(ISemiconductorModuleContext tsmContext, 
+            DCPowerMeasurementSense senseType,
+            int meterType = 0)
         {
             // Configure the selected meter resource (PXIE-4137 or PXIE-4081)
             IMeterStrategy meter = MeterFactory.Create((MeterType)meterType);
-            meter.Configure(tsmContext);
+            meter.Configure(tsmContext, senseType);
 
             try
             {
@@ -31,11 +35,11 @@ namespace TestSteps.Modules
                     Relay.ControlRelay(tsmContext, entry.RelayId, true);
                     Globals.TheHdw.Wait(SettlingTimeSec);
 
-                    double[] reading = meter.Measure(tsmContext);
+                    double[] reading = meter.MeasureVoltage(tsmContext);
 
                     // Turn OFF relay
                     Relay.ControlRelay(tsmContext, entry.RelayId, false);
-                    meter.PublishResult(reading, entry.PublishedName);
+                    meter.PublishResult(tsmContext, reading, entry.PublishedName);
                 }
             }
             finally

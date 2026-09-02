@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="tset1">
+        <Period>1 µs</Period>
+        <PinEdges>
+          <PinEdge pin="CHMOD_SCLK">
+            <ReturnToLow>
+              <On>0 ns</On>
+              <Data>500 ns</Data>
+              <Return>1 µs</Return>
+              <Off>1 µs</Off>
+            </ReturnToLow>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_DIN">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>350 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_RESET">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="CHMOD_CS">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>250 ns</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+            <Comment>HMOD 1 to 6</Comment>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>

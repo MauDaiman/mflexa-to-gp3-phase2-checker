@@ -28,8 +28,16 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         private static uint HMOD9_dgs = RelayID("K6, K7, K8, K9, K10, K11, K12, K13, K14, K15, K21, K22, K23, K24, K25");
         private static uint HMOD10_dgs = RelayID("K6, K9, K10, K11, K21, K24, K27, K28");
 
+        private static uint chmod1 = RelayID("K1, K32");
+        private static uint[] chmod2 = RelayID72("K1, K3, K72");
+        private static uint[] chmod3 = RelayID72("K1, K3, K70, K72");
+        private static uint[] chmod4 = RelayID72("K1, K3, K70, K5, K72");
+        private static uint[] chmod5 = RelayID72("K1, K3, K70, K5, K68, K72");
+        private static uint[] chmod6 = RelayID72("K1, K3, K70, K5, K68, K7, K72");
+
         private const string allHMODResetPin = "RESET_PINS";
         private const string allHMODDigiPins = "HMOD_DIGITAL_PINS";
+        private static string allCHMODDigiPins = "CHMOD_DIGITAL_PINS";
         private const string hmodTxResetPin = "HMOD_RESET";
         private const string hmodCxResetPin = "CHMOD_RESET";
         private const string dataLevels = "HMOD";
@@ -43,7 +51,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// <param name="tsmContext">The semiconductor module context.</param>
         public static void HMODInitialization(ISemiconductorModuleContext tsmContext)
         {
-            InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
+            InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxResetPin);
             HMOD_Reset.WriteStatic(PinState._0);
 
             InstrumentControl.Digital HMOD_DigiPins = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODDigiPins);
@@ -120,7 +128,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStart();
 #endif
-            NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
+            InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
             HMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
             HMOD_DIN.CreateSourceWaveformBroadcast("HMOD_1_4", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
             HMOD_DIN.WriteSourceWaveformBroadcast("HMOD_1_4", new uint[] { HMOD_Data_4, HMOD_Data_3, HMOD_Data_2, HMOD_Data_1 });
@@ -145,7 +153,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStart();
 #endif
-            NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
+            InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
             HMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
             HMOD_DIN.CreateSourceWaveformBroadcast("HMOD_5_10", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
             HMOD_DIN.WriteSourceWaveformBroadcast("HMOD_5_10", new uint[] { HMOD_Data_10, HMOD_Data_9, HMOD_Data_8, HMOD_Data_7, HMOD_Data_6, HMOD_Data_5 });
@@ -168,7 +176,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStart();
 #endif
-            NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
+            InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
             HMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
             HMOD_DIN.CreateSourceWaveformBroadcast("HMOD_11_13", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
             HMOD_DIN.WriteSourceWaveformBroadcast("HMOD_11_13", new uint[] { HMOD_Data_13, HMOD_Data_12, HMOD_Data_11 });
@@ -217,7 +225,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStart();
 #endif
-            NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
+            InstrumentControl.Digital HMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
             HMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
             HMOD_DIN.CreateSourceWaveformBroadcast("HMOD_19_23", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
             HMOD_DIN.WriteSourceWaveformBroadcast("HMOD_19_23", new uint[] { HMOD_Data_23, HMOD_Data_22, HMOD_Data_21, HMOD_Data_20, HMOD_Data_19 });
@@ -234,7 +242,7 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// <param name="tsmContext">The semiconductor module context.</param>
         public static void HMODCleanup(ISemiconductorModuleContext tsmContext)
         {
-            NationalInstruments.TestStand.SemiconductorModule.InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
+            InstrumentControl.Digital HMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODResetPin);
             HMOD_Reset.WriteStatic(PinState._0);
 
             InstrumentControl.Digital HMOD_DigiPins = InstrCtrl.DigitalPinsToSessions(tsmContext, allHMODDigiPins);
@@ -313,28 +321,151 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStart();
 #endif
+            // Turn ON relays to connect DIO pins to HSD
+            HMOD14to18(tsmContext, HMOD_Data_14: RelayID("K1, K2, K3, K4"));
+
             InstrumentControl.Digital CHMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxDataPin);
-            CHMOD_DIN.ApplyLevelsandTimings("HMOD", "HMOD");
-            CHMOD_DIN.CreateSourceWaveformBroadcast("Checker_HMOD", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
-            CHMOD_DIN.WriteSourceWaveformBroadcast("Checker_HMOD", new uint[] { 
+            CHMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
+            CHMOD_DIN.CreateSourceWaveformBroadcast("HMOD_1_13", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
+
+            CHMOD_DIN.WriteSourceWaveformBroadcast("HMOD_1_13", new uint[] { 
                 HMOD_Data_13, 
-                HMOD_Data_12, 
-                HMOD_Data_11, 
-                HMOD_Data_10,
-                HMOD_Data_9, 
-                HMOD_Data_8, 
-                HMOD_Data_7, 
-                HMOD_Data_6,
-                HMOD_Data_5, 
-                HMOD_Data_4, 
-                HMOD_Data_3, 
-                HMOD_Data_2, 
-                HMOD_Data_1 }
-            );
-            CHMOD_DIN.BurstPattern("Checker_HMOD_pat");
+                    HMOD_Data_12, 
+                        HMOD_Data_11, 
+                            HMOD_Data_10,
+                                HMOD_Data_9, 
+                                    HMOD_Data_8, 
+                                        HMOD_Data_7, 
+                                            HMOD_Data_6,
+                                                HMOD_Data_5, 
+                                                    HMOD_Data_4, 
+                                                        HMOD_Data_3, 
+                                                            HMOD_Data_2, 
+                                                                HMOD_Data_1 });
+
+            CHMOD_DIN.BurstPattern("HMOD_1_13_pat");
+            Globals.TheHdw.Wait(5 * Globals.mS);
 #if TestTimeMeasure
             Globals.TestTimeMeasure.TestTimeStop();
 #endif
         }
+
+        public static void CHMODInit(ISemiconductorModuleContext tsmContext)
+        {
+            InstrumentControl.Digital CHMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxResetPin);
+            CHMOD_Reset.WriteStatic(PinState._0);
+
+            InstrumentControl.Digital CHMOD_DigiPins = InstrCtrl.DigitalPinsToSessions(tsmContext, allCHMODDigiPins);
+            CHMOD_DigiPins.ApplyLevelsandTimings(
+                levelsSheetName: "HMOD",
+                timingsSheetName: "HMOD");
+
+            CHMOD1to6(tsmContext,
+                HMOD_Data_1: chmod1,
+                HMOD_Data_2: chmod2,
+                HMOD_Data_3: chmod3,
+                HMOD_Data_4: chmod4,
+                HMOD_Data_5: chmod5,
+                HMOD_Data_6: chmod6);
+
+            // CHMOD1to13(tsmContext, HMOD_Data_1: chmod1);
+        }
+
+        /// <summary>
+        /// Shifts data into the Checker Board HMOD chain (392 bits total).
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="HMOD_Data_1">32-bit data for Checker HMOD1 (K1–K32).</param>
+        /// <param name="HMOD_Data_2">72-bit data for Checker HMOD2 (K1–K72), as uint[3].</param>
+        /// <param name="HMOD_Data_3">72-bit data for Checker HMOD3 (K1–K72), as uint[3].</param>
+        /// <param name="HMOD_Data_4">72-bit data for Checker HMOD4 (K1–K72), as uint[3].</param>
+        /// <param name="HMOD_Data_5">72-bit data for Checker HMOD5 (K1–K72), as uint[3].</param>
+        /// <param name="HMOD_Data_6">72-bit data for Checker HMOD6 (K1–K72), as uint[3].</param>
+        public static void CHMOD1to6(ISemiconductorModuleContext tsmContext,
+            uint HMOD_Data_1 = 0,       // 32-bit HMOD (K1–K32)
+            uint[] HMOD_Data_2 = null,  // 72-bit HMOD (K1–K72) → uint[3]
+            uint[] HMOD_Data_3 = null,
+            uint[] HMOD_Data_4 = null,
+            uint[] HMOD_Data_5 = null,
+            uint[] HMOD_Data_6 = null)
+        {
+            // Build the full 392-bit waveform (1 bit per sample, MSB first)
+            // Shift order: last in chain shifts first → HMOD6, HMOD5, ..., HMOD1
+            uint[] waveform = new uint[392];
+            int offset = 0;
+
+            ExpandBits(waveform, ref offset, HMOD_Data_6, 72);
+            ExpandBits(waveform, ref offset, HMOD_Data_5, 72);
+            ExpandBits(waveform, ref offset, HMOD_Data_4, 72);
+            ExpandBits(waveform, ref offset, HMOD_Data_3, 72);
+            ExpandBits(waveform, ref offset, HMOD_Data_2, 72);
+            ExpandBits(waveform, ref offset, HMOD_Data_1, 32);
+
+            // Turn ON relays to connect DIO pins to HSD
+            HMOD14to18(tsmContext, HMOD_Data_14: RelayID("K1, K2, K3, K4"));
+
+            InstrumentControl.Digital CHMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxDataPin);
+            CHMOD_DIN.ApplyLevelsandTimings(
+                levelsSheetName: "HMOD",
+                timingsSheetName: "HMOD");
+
+            /*CHMOD_DIN.CreateSourceWaveformBroadcast(
+                waveformName: "CHMOD", 
+                SourceDataMapping.Broadcast, 
+                sampleWidth: 1, 
+                BitOrder.MostSignificantBitFirst);*/
+
+            // Write 1-bit-per-sample waveform via raw session 
+            foreach (var ssc in CHMOD_DIN.SSC)
+            {
+                ssc.Session.SourceWaveforms.WriteBroadcast(
+                    waveformName: "HMOD_1_6",
+                    waveformData: waveform);
+            }
+
+            CHMOD_DIN.BurstPattern(
+                startLabel: "HMOD_1_6_pat",
+                selectDigitalFunction: true,
+                waitUntilDone: true);
+            Globals.TheHdw.Wait(5e-3);
+        }
+
+        private static void ExpandBits(uint[] waveform, ref int offset, uint[] data, int bitCount)
+        {
+            for (int i = 0; i < bitCount; i++)
+            {
+                int bitIndex = bitCount - 1 - i; // MSB first
+                int wordIndex = bitIndex / 32;
+                int bitPosition = bitIndex % 32;
+                if (data != null && wordIndex < data.Length && ((data[wordIndex] >> bitPosition) & 1u) != 0)
+                    waveform[offset] = 1;
+                offset++;
+            }
+        }
+
+        private static void ExpandBits(uint[] waveform, ref int offset, uint data, int bitCount)
+        {
+            ExpandBits(waveform, ref offset, new uint[] { data }, bitCount);
+        }
+
+        /// <summary>
+        /// Converts a comma-separated relay string (e.g. "K1, K3, K72") into a uint[3] bitmask
+        /// suitable for 72-channel HMOD data parameters.
+        /// </summary>
+        /// <param name="relayToggle">Comma or semicolon-separated relay names (K1–K72).</param>
+        public static uint[] RelayID72(string relayToggle)
+        {
+            uint[] result = new uint[3]; // 72 bits = 3 words
+            foreach (var raw in relayToggle.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var digits = new string(raw.Where(char.IsDigit).ToArray());
+                if (int.TryParse(digits, out int n) && n >= 1 && n <= 72)
+                {
+                    result[(n - 1) / 32] |= (1u << ((n - 1) % 32));
+                }
+            }
+            return result;
+        }
     }
 }
+
