@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="A2911B19C5C3176FEB7D673F223F0E34" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="204D8F363124ACF314B26A3A3E0FE510" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
@@ -38,7 +38,6 @@
 			<FileReference Id="2900" ModelDefinitionType="SourceWaveformDefinition" Name="HMOD_1_13\.tdms" StoragePath="Digital\Source Waveforms\HMOD_1_13.tdms" />
 			<FileReference Id="2901" ModelDefinitionType="SourceWaveformDefinition" Name="HMOD_1_6\.tdms" StoragePath="Digital\Source Waveforms\HMOD_1_6.tdms" />
 			<FileReference Id="2902" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="HMOD_1_6\.digipat" StoragePath="Digital\Compiled Patterns\HMOD_1_6.digipat" />
-			<FileReference Id="2903" ModelDefinitionType="PinMap" Name="PinMap\.pinmap" StoragePath="Digital\Compiled Patterns\PinMap.pinmap" />
 			<FileReference Id="2904" ModelDefinitionType="PinMap" Name="P2CPinmap\.pinmap" StoragePath="Pin Maps\P2CPinmap.pinmap" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
 		</NameScopingEnvoy>
 		<EmbeddedDefinitionReference Id="9" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
