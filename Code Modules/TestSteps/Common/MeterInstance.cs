@@ -9,14 +9,25 @@ using static TestSteps.Common.DAQmxRelay;
 namespace TestSteps.Common
 {
     /// <summary>
-    /// Selects which physical meter resource to use for voltage measurement.
+    /// Selects which physical meter resource to use.
     /// </summary>
     public enum MeterType
     {
-        /// <summary>PXIe-4137 SMU used as voltage meter via RL1.</summary>
+        /// <summary>PXIe-4137 SMU used as meter via RL2.</summary>
         Smu4137 = 0,
-        /// <summary>PXIe-4081 DMM used as current meter via RL2.</summary>
+        /// <summary>PXIe-4081 DMM used as meter via RL1.</summary>
         Dmm4081 = 1
+    }
+
+    /// <summary>
+    /// Selects the SMU source mode for meter configuration.
+    /// </summary>
+    public enum ForceMode
+    {
+        /// <summary>Force 0 V, measure current.</summary>
+        ForceVoltage = 0,
+        /// <summary>Force 0 A, measure voltage.</summary>
+        ForceCurrent = 1
     }
 
     /// <summary>
@@ -26,12 +37,14 @@ namespace TestSteps.Common
     {
         /// <summary>Configures the meter instrument and connects the appropriate relay path.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
-        void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType);
+        /// <param name="senseType">Sense mode (Local or Remote). Ignored by DMM strategy.</param>
+        /// <param name="forceMode">SMU source mode selection. Ignored by DMM strategy.</param>
+        void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType, ForceMode forceMode);
 
         /// <summary>Performs a voltage measurement and returns the result array.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
         double[] MeasureVoltage(ISemiconductorModuleContext tsmContext);
-        
+
         /// <summary>Performs a current measurement and returns the result array.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
         double[] MeasureCurrent(ISemiconductorModuleContext tsmContext);
@@ -48,17 +61,19 @@ namespace TestSteps.Common
     }
 
     /// <summary>
-    /// Meter strategy using PXIe-4137 SMU as a voltage meter. Routes signal via RL1.
+    /// Meter strategy using PXIe-4137 SMU as a meter. Routes signal via RL2.
     /// </summary>
     public class Smu4137Strategy : IMeterStrategy
     {
         private const string Dc901A = "DC90V_SL23_1A";
+        private const string DaqK1 = "P127_6368_DIG0_P0_0";
+        private const string DaqK2 = "P127_6368_DIG0_P0_1";
         private DCPower _smu;
 
-        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType)
+        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType, ForceMode forceMode)
         {
             _smu = InstrCtrl.DCPowerPinsToSessions(tsmContext, Dc901A);
-            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL1", "RL2", "RL13", "RL14" }, false);
 
             _smu.Abort();
             _smu.ConfigureSense(
@@ -67,17 +82,25 @@ namespace TestSteps.Common
             _smu.ConfigureSettings(
                 apertureTime: 10e-3,
                 apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
-            _smu.ConfigureCurrentLevelRange(currentLevelRange: 10e-3);
-            _smu.ConfigureVoltageLimitRange(voltageLimitRange: 20);
-            _smu.ConfigureOutputConnected();
-            _smu.ConfigureOutputEnabled();
 
-            _smu.ForceCurrent(currentLevel: 0, voltageLimit: 20);
+            if (forceMode == ForceMode.ForceCurrent)
+            {
+                _smu.ConfigureCurrentLevelRange(currentLevelRange: 10e-3);
+                _smu.ConfigureVoltageLimitRange(voltageLimitRange: 20);
+                _smu.ConfigureOutputConnected();
+                _smu.ConfigureOutputEnabled();
+                _smu.ForceCurrent(currentLevel: 0, voltageLimit: 20);
+            }
+            else
+            {
+                _smu.ConfigureVoltageLevelRange(voltageLevelRange: 20);
+                _smu.ConfigureCurrentLimitRange(currentLimitRange: 10e-3);
+                _smu.ConfigureOutputConnected();
+                _smu.ConfigureOutputEnabled();
+                _smu.ForceVoltage(voltageLevel: 0, currentLimit: 10e-3);
+            }
 
-            DaqRelayDrive(tsmContext, new string[] { 
-                "P127_6368_DIG0_P0_0", 
-                "P127_6368_DIG0_P0_1" }, 
-                true);
+            DaqRelayDrive(tsmContext, new string[] { DaqK1, DaqK2 }, true);
 
             Relay.ControlRelay(tsmContext, new string[] { "RL2" }, true);
             Globals.TheHdw.Wait(5e-3);
@@ -88,7 +111,7 @@ namespace TestSteps.Common
             _smu.Measure(out double[] voltages, out _);
             return voltages;
         }
-        
+
         public double[] MeasureCurrent(ISemiconductorModuleContext tsmContext)
         {
             _smu.Measure(out _, out double[] currents);
@@ -102,29 +125,26 @@ namespace TestSteps.Common
 
         public void Cleanup(ISemiconductorModuleContext tsmContext)
         {
+            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
+            DaqRelayDrive(tsmContext, new string[] { DaqK1, DaqK2 }, false);
             _smu.Abort();
             _smu.ConfigureOutputEnabled(false);
             _smu.ConfigureOutputConnected(false);
-            DaqRelayDrive(tsmContext, new string[] { 
-                "P127_6368_DIG0_P0_0", 
-                "P127_6368_DIG0_P0_1" }, 
-                false);
-            Relay.ControlRelay(tsmContext, new string[] { "RL2" }, false);
         }
     }
 
     /// <summary>
-    /// Meter strategy using PXIe-4081 DMM as a current meter. Routes signal via RL2.
+    /// Meter strategy using PXIe-4081 DMM as a meter. Routes signal via RL1.
     /// </summary>
     public class Dmm4081Strategy : IMeterStrategy
     {
         private const string DmmP131 = "P131_4081_DMM";
         private Dmm _dmm;
 
-        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType)
+        public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType, ForceMode forceMode)
         {
             _dmm = InstrCtrl.DmmPinsToSessions(tsmContext, DmmP131);
-            Relay.ControlRelay(tsmContext, new string[] { "RL0", "RL1", "RL2", "RL13", "RL14" }, false);
+            Relay.ControlRelay(tsmContext, new string[] { "RL1", "RL2", "RL13", "RL14" }, false);
             Relay.ControlRelay(tsmContext, new string[] { "RL1" }, true);
         }
 
@@ -133,7 +153,7 @@ namespace TestSteps.Common
             ConfigureDmm(_dmm, DmmMeasurementFunction.DCVolts, range: 100);
             return _dmm.Read();
         }
-        
+
         public double[] MeasureCurrent(ISemiconductorModuleContext tsmContext)
         {
             ConfigureDmm(_dmm, DmmMeasurementFunction.DCCurrent, range: 10e-3);

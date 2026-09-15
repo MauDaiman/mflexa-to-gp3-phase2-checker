@@ -293,65 +293,11 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             return result;
         }
 
-        /// <summary>
-        /// Shifts 32-bit data into Checker Board HMOD1 through HMOD13
-        /// (1x 32-ch + 12x 32-bit groups = 416 clocks, 392 effective bits).
-        /// </summary>
-        public static void CHMOD1to13(ISemiconductorModuleContext tsmContext,
-           uint HMOD_Data_1 = 0,
-           uint HMOD_Data_2 = 0,
-           uint HMOD_Data_3 = 0,
-           uint HMOD_Data_4 = 0,
-           uint HMOD_Data_5 = 0,
-           uint HMOD_Data_6 = 0,
-           uint HMOD_Data_7 = 0,
-           uint HMOD_Data_8 = 0,
-           uint HMOD_Data_9 = 0,
-           uint HMOD_Data_10 = 0,
-           uint HMOD_Data_11 = 0,
-           uint HMOD_Data_12 = 0,
-           uint HMOD_Data_13 = 0
-           )
-        // There are a total of 1 pc 32-ch HMOD and 5 pcs 72-ch HMOD
-        // Total databits is 32*1 + 72*5 = 392
-        // Configuring 392 bits into a group of 32 bits =  392/32 = 12.25 or 13
-        // Thus 13 groups of 32 bits
-        // Of the 416(32*13) databits, only up to 392 databit will be clocked in. CS will be set to high on the 393rd Databit
-        {
-#if TestTimeMeasure
-            Globals.TestTimeMeasure.TestTimeStart();
-#endif
-            // Turn ON relays to connect DIO pins to HSD
-            HMOD14to18(tsmContext, HMOD_Data_14: RelayID("K1, K2, K3, K4"));
-
-            InstrumentControl.Digital CHMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxDataPin);
-            CHMOD_DIN.ApplyLevelsandTimings(dataLevels, dataTimings);
-            CHMOD_DIN.CreateSourceWaveformBroadcast("HMOD_1_13", SourceDataMapping.Broadcast, 32, BitOrder.MostSignificantBitFirst);
-
-            CHMOD_DIN.WriteSourceWaveformBroadcast("HMOD_1_13", new uint[] { 
-                HMOD_Data_13, 
-                    HMOD_Data_12, 
-                        HMOD_Data_11, 
-                            HMOD_Data_10,
-                                HMOD_Data_9, 
-                                    HMOD_Data_8, 
-                                        HMOD_Data_7, 
-                                            HMOD_Data_6,
-                                                HMOD_Data_5, 
-                                                    HMOD_Data_4, 
-                                                        HMOD_Data_3, 
-                                                            HMOD_Data_2, 
-                                                                HMOD_Data_1 });
-
-            CHMOD_DIN.BurstPattern("HMOD_1_13_pat");
-            Globals.TheHdw.Wait(5 * Globals.mS);
-#if TestTimeMeasure
-            Globals.TestTimeMeasure.TestTimeStop();
-#endif
-        }
-
         public static void CHMODInit(ISemiconductorModuleContext tsmContext)
         {
+            // Turn ON relays to connect DIO pins to HSD
+            HMODControl.HMOD14to18(tsmContext, HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4"));
+
             InstrumentControl.Digital CHMOD_Reset = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxResetPin);
             CHMOD_Reset.WriteStatic(PinState._0);
 
@@ -401,9 +347,6 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             ExpandBits(waveform, ref offset, HMOD_Data_2, 72);
             ExpandBits(waveform, ref offset, HMOD_Data_1, 32);
 
-            // Turn ON relays to connect DIO pins to HSD
-            HMOD14to18(tsmContext, HMOD_Data_14: RelayID("K1, K2, K3, K4"));
-
             InstrumentControl.Digital CHMOD_DIN = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodCxDataPin);
             CHMOD_DIN.ApplyLevelsandTimings(
                 levelsSheetName: "HMOD",
@@ -419,12 +362,12 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             foreach (var ssc in CHMOD_DIN.SSC)
             {
                 ssc.Session.SourceWaveforms.WriteBroadcast(
-                    waveformName: "HMOD_1_6",
+                    waveformName: "CHMOD_1_6",
                     waveformData: waveform);
             }
 
             CHMOD_DIN.BurstPattern(
-                startLabel: "HMOD_1_6_pat",
+                startLabel: "CHMOD_1_6_pat",
                 selectDigitalFunction: true,
                 waitUntilDone: true);
             Globals.TheHdw.Wait(5e-3);

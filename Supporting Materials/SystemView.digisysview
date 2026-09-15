@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="3026ACA7CAA1E5B2479FB17F6034BCD4" Timestamp="1DD3A92DC0FEDF7" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="1B37ABFA45BBF8A773E8CB4444053B82" Timestamp="1DD3C676ABFBC39" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
 		<ParsableNamespace AssemblyFileVersion="5.3.2.54637" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
 		<ApplicationVersionInfo Build="5.3.2.54637" Name="Digital Pattern Editor" Version="21.0.0" />
 	</SourceModelFeatureSet>
-	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSortDescriptions="PinName:Ascending,LastVoltageMeasurementForSorting:Descending,LastCurrentMeasurementForSorting:Descending" DigitalPinColumnInfo="" DigitalPinSortDescriptions="" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySortDescriptions="" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSectionExpanded="False" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
+	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSortDescriptions="PinName:Ascending,LastVoltageMeasurementForSorting:Descending,LastCurrentMeasurementForSorting:Descending" DigitalPinColumnInfo="" DigitalPinSortDescriptions="" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySectionExpanded="False" RelaySortDescriptions="" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSectionExpanded="False" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
 </SourceFile>

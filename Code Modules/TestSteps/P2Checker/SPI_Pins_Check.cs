@@ -27,11 +27,14 @@ namespace TestSteps.P2Checker
         {
             // Configure the selected meter resource (PXIE-4137 or PXIE-4081)
             IMeterStrategy meter = MeterFactory.Create((MeterType)meterType);
-            meter.Configure(tsmContext, senseType);
+            meter.Configure(tsmContext, senseType, ForceMode.ForceCurrent);
 
             // Reset all HMODs (Tx Board and Checker Board)
             HMODControl.AllHMODReset(tsmContext);
             // DaqRelayDrive(tsmContext, dc90RelayPinGroup, true);
+
+            // Turn ON relays to connect DIO pins to HSD
+            HMODControl.HMOD14to18(tsmContext, HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4"));
 
             // Turn OFF RL15 to RL18 to connect Checker board
             // SPI Pins resource to the Checker Board HMOD circuit

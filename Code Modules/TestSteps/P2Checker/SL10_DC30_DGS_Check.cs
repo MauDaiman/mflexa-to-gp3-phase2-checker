@@ -9,7 +9,7 @@ namespace TestSteps.P2Checker
 {
     public class SL10_DC30_DGS_Check
     {
-        private const double SettlingTimeSec = 5e-3;
+        private const double SettlingTimeSec = 10e-3;
 
         /// <summary>
         /// Checks DGS connectivity of each SMU-4162/63 channel. Each SMU channel forces current
@@ -30,6 +30,9 @@ namespace TestSteps.P2Checker
             HMODControl.HMOD1to4(tsmContext, 
                 HMOD_Data_1: HMODControl.RelayRange(21, 32), 
                 HMOD_Data_2: HMODControl.RelayRange(1, 8));
+
+            // Turn ON relays to connect DIO pins to HSD
+            HMODControl.HMOD14to18(tsmContext, HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4"));
 
             // SPI Pins resource to the Checker Board HMOD circuit
             Relay.ControlRelay(tsmContext, new string[] { "RL15", "RL16", "RL17", "RL18" }, false);

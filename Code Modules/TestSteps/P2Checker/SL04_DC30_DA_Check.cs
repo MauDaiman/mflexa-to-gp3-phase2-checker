@@ -8,7 +8,7 @@ namespace TestSteps.P2Checker
 {
     public class SL04_DC30_DA_Check
     {
-        private const double SettlingTimeSec = 5e-3;
+        private const double SettlingTimeSec = 10e-3;
 
         /// <summary>
         /// Checks DIB Access functionality for Slot04 DC30 channels by forcing 5V on two 1Kohm resistors
@@ -27,9 +27,9 @@ namespace TestSteps.P2Checker
             // HMOD1 - DB1 to DB20 -> ON          = 0000 0000 0000 1111 1111 1111 1111 11111 = 1048575
             // HMOD2 - DB29 and DB31 -> ON        = 0101 0000 0000 0000 0000 0000 0000 0000  = 1342177280
             // HMOD3 - DB1 to DB16 ODD bits -> ON = 0000 0000 0000 0000 0101 0101 0101 0101  = 21845
-            HMODControl.HMOD1to4(tsmContext, 
-                HMOD_Data_1: HMODControl.RelayRange(1, 20), 
-                HMOD_Data_2: HMODControl.RelayID("K29, K31"), 
+            HMODControl.HMOD1to4(tsmContext,
+                HMOD_Data_1: HMODControl.RelayRange(1, 20),
+                HMOD_Data_2: HMODControl.RelayID("K29, K31"),
                 HMOD_Data_3: HMODControl.RelayID("K1, K3, K5, K7, K9, K11, K13, K15"));
 
             // HMOD 5 GNDS the LO from DGS

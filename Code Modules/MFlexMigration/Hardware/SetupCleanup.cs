@@ -74,32 +74,37 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             sessions.PPMUConfigureApertureTime(0.000004);   //set to lowest aperture time
         }
 
-            public static void PowerSupply_CleanUp(ISemiconductorModuleContext tsmContext)
+        public static void PowerSupply_CleanUp(ISemiconductorModuleContext tsmContext)
         {
             DCPower DIB_SMU4147_POS5V = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DIB_SMU4147_POS5V");
             DCPower SMU4139_POS5V = InstrCtrl.DCPowerPinsToSessions(tsmContext, "SMU4139_POS5V");
 
-            //MFLEX DIB SUPPLY +5V (1, 2, 3)
-            DIB_SMU4147_POS5V.ForceVoltage(0, 3);
+            try
+            {
+                //MFLEX DIB SUPPLY +5V (1, 2, 3)
+                DIB_SMU4147_POS5V.ForceVoltage(0, 3);
 
-            //-5 XOR and -2V out
-            SMU4139_POS5V.ForceVoltage(0, 3);
+                //-5 XOR and -2V out
+                SMU4139_POS5V.ForceVoltage(0, 3);
+            }
+            finally
+            {
+                Globals.TheHdw.Wait(1 * Globals.mS);
 
-            Globals.TheHdw.Wait(1 * Globals.mS);
+                DIB_SMU4147_POS5V.ConfigureSense(DCPowerMeasurementSense.Local);
+                SMU4139_POS5V.ConfigureSense(DCPowerMeasurementSense.Local);
 
-            DIB_SMU4147_POS5V.ConfigureSense(DCPowerMeasurementSense.Local);
-            SMU4139_POS5V.ConfigureSense(DCPowerMeasurementSense.Local);
-
-            bool enablePos6v = false;   //HMOD +5V
-            bool enablePos20v = false;  //TFE +5V
-            bool enableNeg20v = false;  //Comp -5.2V
-            bool enablePos12vAtP143 = false;
-            bool enablePos12vAtP179 = false; //Relay Supply +12V PS2?
-            bool enablePos24vAtP102Ch0 = false; //Master Support Bd +15V PS1?
-            bool enablePos24vAtP102Ch1 = false; //Slave Support Bd +15V PS2?
-            bool enablePos48vAtP179 = false; //DIB User supply +12V
-            bool enablePos48vAtP143 = false;
-            LoadBoardCtrl.EnableLoadBoardSupplies(tsmContext, enablePos6v, enablePos20v, enableNeg20v, enablePos12vAtP143, enablePos12vAtP179, enablePos24vAtP102Ch0, enablePos24vAtP102Ch1, enablePos48vAtP179, enablePos48vAtP143);
+                bool enablePos6v = false;   //HMOD +5V
+                bool enablePos20v = false;  //TFE +5V
+                bool enableNeg20v = false;  //Comp -5.2V
+                bool enablePos12vAtP143 = false;
+                bool enablePos12vAtP179 = false; //Relay Supply +12V PS2?
+                bool enablePos24vAtP102Ch0 = false; //Master Support Bd +15V PS1?
+                bool enablePos24vAtP102Ch1 = false; //Slave Support Bd +15V PS2?
+                bool enablePos48vAtP179 = false; //DIB User supply +12V
+                bool enablePos48vAtP143 = false;
+                LoadBoardCtrl.EnableLoadBoardSupplies(tsmContext, enablePos6v, enablePos20v, enableNeg20v, enablePos12vAtP143, enablePos12vAtP179, enablePos24vAtP102Ch0, enablePos24vAtP102Ch1, enablePos48vAtP179, enablePos48vAtP143);
+            }
         }
     }
 }

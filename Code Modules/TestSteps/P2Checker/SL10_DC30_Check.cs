@@ -6,7 +6,7 @@ using NationalInstruments.ModularInstruments.NIDCPower;
 
 namespace TestSteps.P2Checker
 {
-    public class DC30_SL10_Check
+    public class SL10_DC30_Check
     {
         private const string Sl10PinGroup = "SL10_DC30";
         private const double SettlingTimeSec = 5e-3;

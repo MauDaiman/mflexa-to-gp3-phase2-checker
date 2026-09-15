@@ -9,21 +9,24 @@ NI STS C# test program for verifying GP3 translator board health prior to DUT te
 │   ├── InstrCtrl/          — Instrument control wrappers (DCPower, Digital, DMM, DAQmx, etc.)
 │   ├── MFlexMigration/     — MFlex-to-GP3 migration framework (HMOD, relay, pattern exec)
 │   ├── TestSteps/
-│   │   ├── Common/         — Shared helpers (MeterInstance, HMODCtrl)
-│   │   └── Modules/        — Individual board check test steps
-│   └── P2Checker.sln       — Visual Studio solution
+│   │   ├── Common/         — Shared helpers (MeterInstance, DAQmxRelay)
+│   │   ├── P2Checker/      — Phase 2 board check test steps
+│   │   └── P1Checker/      — Phase 1 checkerboard test steps (migrated)
+│   └── TBChecker.sln       — Visual Studio solution
 ├── Limits/                  — Test limit files
 ├── STDF File/               — STDF result files
 ├── Supporting Materials/
 │   ├── Digital/             — Compiled patterns, waveforms, levels, timing
-│   ├── Pin Maps/            — P2CPinmap.pinmap
+│   ├── Pin Maps/            — TBChecker.pinmap
 │   ├── Calibration Data/
 │   └── Offline Configuration/
 ├── bin/                     — Pre-built DLLs and NI driver assemblies
-└── STSCsharp_P2Checker.seq  — TestStand sequence file
+└── STSCsharp_TBChecker.seq  — TestStand sequence file
 ```
 
 ## Test Modules
+
+### P2Checker (Phase 2)
 
 | Module | Description |
 |--------|-------------|
@@ -41,9 +44,21 @@ NI STS C# test program for verifying GP3 translator board health prior to DUT te
 | DMM_SL14_Check | PXIe-4081 DMM validation |
 | SPI_Pins_Check | SPI pin connectivity check |
 
+### P1Checker (Phase 1 — migrated from checkerboard)
+
+| Module | Description |
+|--------|-------------|
+| P1_SupplyCheck | Measures 12 on-board supply voltages via DMM through HMOD18 relay mux |
+| P1_HSDOpenCheck | Verifies HSD200 relay group connectivity via PPMU force/measure |
+| P1_DC30OpenCheck | Verifies DC30V channel connectivity (FIMV odd, FVMI even) |
+| P1_DC90OpenCheck | Verifies DC90V channel connectivity and on-board relay droop |
+| P1_POOLOpenCheck | Verifies DIO POOL path connectivity through HMOD11-13 |
+| P1_WindowComparatorCheck | Validates AD96687BRZ window comparator via VOH/VOL thresholds |
+| P1_HMODRelayCheck | Measures 12V relay supply droop across all 22 HMOD groups |
+
 ## Build
 
-Open `Code Modules/P2Checker.sln` in Visual Studio. All DLL dependencies are in `bin/`.
+Open `Code Modules/TBChecker.sln` in Visual Studio. All DLL dependencies are in `bin/`.
 
 ## Branch Info
 

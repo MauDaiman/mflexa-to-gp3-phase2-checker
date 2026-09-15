@@ -9,7 +9,7 @@ using TestSteps.Common;
 
 namespace TestSteps.P2Checker
 {
-    public class DIB_Supply_Check
+    public class P2_Supply_Check
     {
         private const double SettlingTimeSec = 5e-3;
 
@@ -19,13 +19,16 @@ namespace TestSteps.P2Checker
         /// </summary>
         /// <param name="tsmContext">The semiconductor module context for session and site management.</param>
         /// <param name="meterType">Meter selection: 0 = PXIe-4137 SMU, 1 = PXIe-4081 DMM.</param>
-        public static void SupplyCheck(ISemiconductorModuleContext tsmContext, 
+        public static void SupplyCheck(ISemiconductorModuleContext tsmContext,
             DCPowerMeasurementSense senseType,
             int meterType = 0)
         {
+            // Turn ON relays to connect DIO pins to HSD
+            HMODControl.HMOD14to18(tsmContext, HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4"));
+
             // Configure the selected meter resource (PXIE-4137 or PXIE-4081)
             IMeterStrategy meter = MeterFactory.Create((MeterType)meterType);
-            meter.Configure(tsmContext, senseType);
+            meter.Configure(tsmContext, senseType, ForceMode.ForceCurrent);
 
             try
             {

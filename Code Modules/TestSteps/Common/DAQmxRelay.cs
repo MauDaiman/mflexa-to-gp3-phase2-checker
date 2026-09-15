@@ -9,10 +9,6 @@ namespace TestSteps.Common
 {
     public class DAQmxRelay
     {
-        private const string dc90PinGroup = "DC90_PINS";
-        private const string K1 = "P127_6368_DIG0_P0_0";
-        private const string K2 = "P127_6368_DIG0_P0_1";
-        private const double SettlingTimeSec = 1e-3;
         private const double RelaySettleSec = 5e-3;
 
         /// <summary>
