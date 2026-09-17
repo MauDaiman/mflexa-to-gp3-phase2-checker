@@ -146,17 +146,27 @@ namespace TestSteps.Common
             _dmm = InstrCtrl.DmmPinsToSessions(tsmContext, DmmP131);
             Relay.ControlRelay(tsmContext, new string[] { "RL1", "RL2", "RL13", "RL14" }, false);
             Relay.ControlRelay(tsmContext, new string[] { "RL1" }, true);
+
+            _dmm.Abort();
         }
 
         public double[] MeasureVoltage(ISemiconductorModuleContext tsmContext)
         {
+            _dmm.Abort();
+
             ConfigureDmm(_dmm, DmmMeasurementFunction.DCVolts, range: 100);
+
+            Globals.TheHdw.Wait(5e-3);
             return _dmm.Read();
         }
 
         public double[] MeasureCurrent(ISemiconductorModuleContext tsmContext)
         {
+            _dmm.Abort();
+
             ConfigureDmm(_dmm, DmmMeasurementFunction.DCCurrent, range: 10e-3);
+
+            Globals.TheHdw.Wait(5e-3);
             return _dmm.Read();
         }
 
@@ -188,7 +198,6 @@ namespace TestSteps.Common
                 DmmAdcCalibration.Off,
                 settleTimeSeconds: 0,
                 voltageRange: range);
-            dmm.Initiate();
         }
     }
 

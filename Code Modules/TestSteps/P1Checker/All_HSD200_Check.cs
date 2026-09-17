@@ -17,6 +17,7 @@ namespace TestSteps.P1Checker
 
         private static readonly string[] _hsd200HI = new[]
         {
+            "CHMOD_DIN",
             "T_HSD200_SL11_CH5", "T_HSD200_SL11_CH9", "T_HSD200_SL11_CH13", "T_HSD200_SL11_CH17",
             "T_HSD200_SL11_CH21", "T_HSD200_SL11_CH25", "T_HSD200_SL11_CH29",
             "T_HSD200_SL11_CH33", "T_HSD200_SL11_CH37", "T_HSD200_SL11_CH41", "T_HSD200_SL11_CH45",
@@ -30,6 +31,7 @@ namespace TestSteps.P1Checker
 
         private static readonly string[] _hsd200LO = new[]
         {
+            "CHMOD_SCLK", "CHMOD_CS", "CHMOD_RESET",
             "T_HSD200_SL11_CH6", "T_HSD200_SL11_CH7", "T_HSD200_SL11_CH8",
             "T_HSD200_SL11_CH10", "T_HSD200_SL11_CH11", "T_HSD200_SL11_CH12",
             "T_HSD200_SL11_CH14", "T_HSD200_SL11_CH15", "T_HSD200_SL11_CH16",

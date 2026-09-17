@@ -9,7 +9,7 @@ namespace TestSteps.P2Checker
 {
     public class SL10_DC30_DGS_Check
     {
-        private const double SettlingTimeSec = 10e-3;
+        private const double SettlingTimeSec = 15e-3;
 
         /// <summary>
         /// Checks DGS connectivity of each SMU-4162/63 channel. Each SMU channel forces current

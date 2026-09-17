@@ -9,7 +9,7 @@ namespace TestSteps.P2Checker
 {
     public class SL08_Relay_Check
     {
-        private const double RelaySettleSec = 5e-3;
+        private const double RelaySettleSec = 15e-3;
         public static void SL08Check(ISemiconductorModuleContext tsmContext,
             DCPowerMeasurementSense senseType,
             int meterType = 0)

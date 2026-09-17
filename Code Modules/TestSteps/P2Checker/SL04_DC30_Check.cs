@@ -9,7 +9,7 @@ namespace TestSteps.P2Checker
     public class SL04_DC30_Check
     {
         private const string Sl04PinGroup = "SL04_DC30";
-        private const double SettlingTimeSec = 5e-3;
+        private const double SettlingTimeSec = 15e-3;
 
         /// <summary>
         /// Checks if SMU-4162/63 signals are able to reach the MFlex board.

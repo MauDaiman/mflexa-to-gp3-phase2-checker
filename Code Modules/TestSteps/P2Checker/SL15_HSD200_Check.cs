@@ -15,7 +15,7 @@ namespace TestSteps.P2Checker
 {
     public class SL15_HSD200_Check
     {
-        private const double SettlingTimeSec = 5e-3;
+        private const double SettlingTimeSec = 15e-3;
 
         public static void SL15Check(ISemiconductorModuleContext tsmContext, 
             DCPowerMeasurementSense senseType, 

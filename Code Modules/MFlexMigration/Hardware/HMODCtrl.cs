@@ -237,6 +237,53 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         }
  
         /// <summary>
+        /// Shifts data into the HMOD11–13 and HMOD24–25 daisy chain (240 bits total).
+        /// Chain order (farthest from latch shifts first):
+        /// HMOD25 (72-bit) → HMOD24 (72-bit) → HMOD13 (32-bit) → HMOD12 (32-bit) → HMOD11 (32-bit).
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="hmodData11">32-bit data for HMOD11 (K1–K32).</param>
+        /// <param name="hmodData12">32-bit data for HMOD12 (K1–K32).</param>
+        /// <param name="hmodData13">32-bit data for HMOD13 (K1–K32).</param>
+        /// <param name="hmodData24">72-bit data for HMOD24 (K1–K72), as uint[3].</param>
+        /// <param name="hmodData25">72-bit data for HMOD25 (K1–K72), as uint[3].</param>
+        public static void HMOD11to13_24to25(
+            ISemiconductorModuleContext tsmContext,
+            uint hmodData11 = 0,
+            uint hmodData12 = 0,
+            uint hmodData13 = 0,
+            uint[] hmodData24 = null,
+            uint[] hmodData25 = null)
+        {
+            uint[] waveform = new uint[240];
+            int offset = 0;
+
+            ExpandBits(waveform, ref offset, hmodData25, 72);
+            ExpandBits(waveform, ref offset, hmodData24, 72);
+            ExpandBits(waveform, ref offset, hmodData13, 32);
+            ExpandBits(waveform, ref offset, hmodData12, 32);
+            ExpandBits(waveform, ref offset, hmodData11, 32);
+
+            InstrumentControl.Digital dinSessions = InstrCtrl.DigitalPinsToSessions(tsmContext, hmodTxDataPin);
+            dinSessions.ApplyLevelsandTimings(
+                levelsSheetName: dataLevels,
+                timingsSheetName: dataTimings);
+
+            foreach (var ssc in dinSessions.SSC)
+            {
+                ssc.Session.SourceWaveforms.WriteBroadcast(
+                    waveformName: "HMOD_11_13_24_25",
+                    waveformData: waveform);
+            }
+
+            dinSessions.BurstPattern(
+                startLabel: "HMOD_11_13_24_25_pat",
+                selectDigitalFunction: true,
+                waitUntilDone: true);
+            Globals.TheHdw.Wait(5e-3);
+        }
+
+        /// <summary>
         /// Resets all HMOD registers and clears all shift data to zero.
         /// </summary>
         /// <param name="tsmContext">The semiconductor module context.</param>

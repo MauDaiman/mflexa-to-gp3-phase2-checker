@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="P154_6571_DIO_24">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>0.8</Vol>
+        <Voh>2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="T_HSD200_SL11_CH5">
+        <Vil>0</Vil>
+        <Vih>5</Vih>
+        <Vol>0</Vol>
+        <Voh>0</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

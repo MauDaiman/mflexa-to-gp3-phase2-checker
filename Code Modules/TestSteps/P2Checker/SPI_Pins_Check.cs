@@ -13,8 +13,7 @@ namespace TestSteps.P2Checker
     public class SPI_Pins_Check
     {
         private const string AllChmodDigiPins = "CHMOD_DIGITAL_PINS";
-        private const double SettlingTimeSec = 1e-3;
-        private const double RelaySettleSec = 5e-3;
+        private const double RelaySettleSec = 15e-3;
 
         /// <summary>
         /// Checks if the signal from the checker board SPI pins is able to reach the MFlex board.

@@ -8,7 +8,7 @@ namespace TestSteps.P2Checker
 {
     public class SL10_DC30_DA_Check
     {
-        private const double SettlingTimeSec = 10e-3;
+        private const double SettlingTimeSec = 15e-3;
 
         /// <summary>
         /// Checks DIB Access functionality for Slot10 DC30 channels by forcing 5V on two 1Kohm resistors
