@@ -59,14 +59,24 @@ namespace NationalInstruments.TestStand.SemiconductorModule.InstrumentControl
         /// <param name="semiconductorModuleContext">Test Stand Semiconductor Module Context.</param>
         /// <param name="samplingRate">Specifies the sampling rate in samples per channel per second. If you use an external source for the Sample Clock, set this input to the maximum expected rate of that clock.</param>
         /// <param name="sampleSize">Specifies the number of samples to acquire or generate for each channel.</param>
-        public static void SetDAQmxAITasks(ISemiconductorModuleContext semiconductorModuleContext, double samplingRate = 100, int sampleSize = 1)
+        /// <param name="minimumVoltage">Minimum voltage expected on the channel, in volts.</param>
+        /// <param name="maximumVoltage">Maximum voltage expected on the channel, in volts.</param>
+        /// <remarks>
+        /// Existing "AI" tasks are cleared first, for the same reason as
+        /// <see cref="SetDAQmxAOFuncGenTasks"/>: these tasks carry the pin map names, so a second
+        /// call would otherwise fail with -200089 duplicate task name. The clear is scoped to "AI"
+        /// so it cannot destroy the "AOFuncGen" tasks a caller has already set up.
+        /// </remarks>
+        public static void SetDAQmxAITasks(ISemiconductorModuleContext semiconductorModuleContext, double samplingRate = 100, int sampleSize = 1, double minimumVoltage = -1, double maximumVoltage = 1)
         {
+            ClearDAQmxTasks(semiconductorModuleContext, "AI");
+
             var AI_taskNames = semiconductorModuleContext.GetNIDAQmxTaskNames("AI", out var AIchannelLists);
 
             Parallel.For(0, AI_taskNames.Length, i =>
             {
                 var AI_task = new NationalInstruments.DAQmx.Task(AI_taskNames[i]);
-                AI_task.AIChannels.CreateVoltageChannel(AIchannelLists[i], "", AITerminalConfiguration.Differential, -1, 1, AIVoltageUnits.Volts);
+                AI_task.AIChannels.CreateVoltageChannel(AIchannelLists[i], "", AITerminalConfiguration.Differential, minimumVoltage, maximumVoltage, AIVoltageUnits.Volts);
                 AI_task.Timing.SampleClockRate = samplingRate;
                 AI_task.Timing.SampleQuantityMode = SampleQuantityMode.FiniteSamples;
                 AI_task.Timing.SamplesPerChannel = sampleSize;
@@ -240,8 +250,17 @@ namespace NationalInstruments.TestStand.SemiconductorModule.InstrumentControl
         /// <param name="amplitude">The desired amplitude of the output waveformType, in units of volts zero-to-peak. Zero and negative values are valid.</param>
         /// <param name="frequency">The desired frequency of the output waveformType.</param>
         /// <param name="type">The AOFunctionGenerationType waveformType to generate.</param>
+        /// <remarks>
+        /// The tasks are created with the pin map task names, and a named DAQmx task stays
+        /// registered in the driver until it is disposed. Existing "AOFuncGen" tasks are therefore
+        /// cleared first, so calling this method more than once, whether for a second channel in the
+        /// same run or on a repeat run, cannot fail with -200089 duplicate task name. The clear is
+        /// scoped to "AOFuncGen" so it cannot destroy the "AI" tasks a caller has already set up.
+        /// </remarks>
         public static void SetDAQmxAOFuncGenTasks(ISemiconductorModuleContext semiconductorModuleContext, double offset, double amplitude, double frequency, AOFunctionGenerationType type)
         {
+            ClearDAQmxTasks(semiconductorModuleContext, "AOFuncGen");
+
             var AOFuncGen_taskNames = semiconductorModuleContext.GetNIDAQmxTaskNames("AOFuncGen", out var AOchannelLists);
 
             Parallel.For(0, AOFuncGen_taskNames.Length, i =>
@@ -253,15 +272,31 @@ namespace NationalInstruments.TestStand.SemiconductorModule.InstrumentControl
         }
 
         /// <summary>
-        /// Stops and Disposes all initiated tasks for all NI-DAQmx instruments in the Semiconductor Module Context.
+        /// Stops and Disposes initiated tasks for the NI-DAQmx instruments in the Semiconductor Module Context.
         /// </summary>
         /// <param name="semiconductorModuleContext">Test Stand Semiconductor Module Context.</param>
-        public static void ClearDAQmxTasks(ISemiconductorModuleContext semiconductorModuleContext)
+        /// <param name="taskType">Task type to clear, for example "AI" or "AOFuncGen". Use an empty string, the default, to clear every task regardless of type.</param>
+        /// <remarks>
+        /// Each task is disposed independently. Stop throws on a task that was never committed or
+        /// started, and letting that escape would abandon the remaining tasks still registered in
+        /// the driver, which brings back the -200089 duplicate task name failure on the next run.
+        /// </remarks>
+        public static void ClearDAQmxTasks(ISemiconductorModuleContext semiconductorModuleContext, string taskType = "")
         {
-            Parallel.ForEach(semiconductorModuleContext.GetAllNIDAQmxTasks(""), task =>
+            Parallel.ForEach(semiconductorModuleContext.GetAllNIDAQmxTasks(taskType), task =>
             {
-                task.Stop();
-                task.Dispose();
+                try
+                {
+                    task.Stop();
+                }
+                catch (DaqException)
+                {
+                    // Task was never committed or started; Dispose below is what actually matters.
+                }
+                finally
+                {
+                    task.Dispose();
+                }
             });
         }
 

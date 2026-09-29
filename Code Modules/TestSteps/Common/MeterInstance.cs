@@ -138,7 +138,7 @@ namespace TestSteps.Common
     /// </summary>
     public class Dmm4081Strategy : IMeterStrategy
     {
-        private const string DmmP131 = "P131_4081_DMM";
+        private const string DmmP131 = "P131_4081_METER";
         private Dmm _dmm;
 
         public void Configure(ISemiconductorModuleContext tsmContext, DCPowerMeasurementSense senseType, ForceMode forceMode)

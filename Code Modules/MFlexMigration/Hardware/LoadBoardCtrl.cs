@@ -43,31 +43,52 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// </summary>
         internal static readonly string[] FixedVoltageSupplyStrings = new string[] { "POS12V_P143", "POS12V_P179_CHY", "POS24V_P102_CH0", "POS24V_P102_CH1", "POS48V_P179_CHX", "POS48V_P143" };
 
+        // All four fixed-voltage auxiliary channels live on the single AuxPs1 instrument as
+        // sub-channels 0-3. Every one of them is strapped as a POSITIVE supply on this hardware;
+        // there is no negative auxiliary rail. Schematic note 1 of 02-089357 allows either polarity
+        // by tying the HI or the LO leg to PGND, and forbids stacking them.
+        //
+        // Beware that the schematic's PS1 / PS2 prefix is a per-connector position label, not a
+        // channel index, and it does not run in the same direction on both connectors: at P102,
+        // PS1 is CHy and PS2 is CHx, while at P179 PS2 is CHy and PS1 is CHx. Use this table rather
+        // than inferring the mapping from either naming scheme.
+        //
+        // | Resource  | Block / channel | Schematic net          | Load on 02-089357      |
+        // |-----------|-----------------|------------------------|------------------------|
+        // | AuxPs1/0  | P102 CH0 (CHy)  | P102_PS1_AUX_24V_HI/LO | M2 converter -> +5V_1  |
+        // | AuxPs1/1  | P102 CH1 (CHx)  | P102_PS2_AUX_24V_HI/LO | M3 converter -> +5V_2  |
+        // | AuxPs1/2  | P179 CH2 (CHy)  | P179_PS2_AUX_12V_HI/LO | M4 converter -> +5V_3  |
+        // | AuxPs1/3  | P179 CH3 (CHx)  | P179_PS1_AUX_48V_HI/LO | M5 converter -> +12V   |
+
         /// <summary>
-        ///  24V Fixed-Voltage Auxilary Power Supply.
-        ///  Spring Pin Block Location: P102 (CHy).
+        ///  +24V Fixed-Voltage Auxilary Power Supply.
+        ///  Spring Pin Block Location: P102 (CHy). Schematic net P102_PS1_AUX_24V.
         ///  Name in STS Maintence Software: AUX PS1 CH0.
+        ///  On 02-089357 this feeds the M2 DC/DC converter that generates the +5V_1 DIB user supply.
         /// </summary>
         private const string POS24V_P102_CH0 = "AuxPs1/0";
 
         /// <summary>
-        ///  24V Fixed-Voltage Auxilary Power Supply.
-        ///  Spring Pin Block Location: P102 (CHx).
+        ///  +24V Fixed-Voltage Auxilary Power Supply.
+        ///  Spring Pin Block Location: P102 (CHx). Schematic net P102_PS2_AUX_24V.
         ///  Name in STS Maintence Software: AUX PS1 CH1.
+        ///  On 02-089357 this feeds the M3 DC/DC converter that generates the +5V_2 DIB user supply.
         /// </summary>
         private const string POS24V_P102_CH1 = "AuxPs1/1";
 
         /// <summary>
-        ///  12V Fixed-Voltage Auxilary Power Supply.
-        ///  Spring Pin Block Location: P179 (CHy).
+        ///  +12V Fixed-Voltage Auxilary Power Supply.
+        ///  Spring Pin Block Location: P179 (CHy). Schematic net P179_PS2_AUX_12V.
         ///  Name in STS Maintence Software: AUX PS1 CH2.
+        ///  On 02-089357 this feeds the M4 DC/DC converter that generates the +5V_3 DIB user supply.
         /// </summary>
         private const string POS12V_P179_CHY = "AuxPs1/2";
 
         /// <summary>
-        ///  48V Fixed-Voltage Auxilary Power Supply.
-        ///  Spring Pin Block Location: P179 (CHx).
+        ///  +48V Fixed-Voltage Auxilary Power Supply.
+        ///  Spring Pin Block Location: P179 (CHx). Schematic net P179_PS1_AUX_48V.
         ///  Name in STS Maintence Software: AUX PS1 CH3.
+        ///  On 02-089357 this feeds the M5 DC/DC converter that generates the +12V DIB user supply.
         /// </summary>
         private const string POS48V_P179_CHX = "AuxPs1/3";
 
@@ -83,12 +104,12 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// <param name="enablePos6v">Positive 5V Supply pin (Default: "LB_p5") defined in the pinmap file that connect to the System Power Supply at P143</param>
         /// <param name="enablePos20v">Positive 15V Supply pin (Default: "LB_p15") defined in the pinmap file that connect to the System Power Supply at P143</param>
         /// <param name="enableNeg20v">Negative 15V Supply pin (Default: "LB_n15") defined in the pinmap file that connect to the System Power Supply at P143</param>
-        /// <param name="enablePos12vAtP143">Postive 12V System Supply at P143.</param>
-        /// <param name="enablePos12vAtP179">Postive 12V Aux Supply at P179.</param>
-        /// <param name="enableNeg24vAtP102">Negative 24V Aux Supply at P102.</param>
-        /// <param name="enablePos24vAtP102">Postive 24V Aux Supply at P102.</param>
-        /// <param name="enablePos48vAtP179">Postive 48V Aux Supply at P179.</param>
-        /// <param name="enablePos48vAtP143">Postive 48V System Supply at P143.</param>
+        /// <param name="enablePos12vAtP143">Positive 12V System Supply at P143.</param>
+        /// <param name="enablePos12vAtP179">Positive 12V Aux Supply at P179 CHy (AuxPs1/2).</param>
+        /// <param name="enablePos24vAtP102Ch0">Positive 24V Aux Supply at P102 CHy (AuxPs1/0). On 02-089357 this rail generates +5V_1.</param>
+        /// <param name="enablePos24vAtP102Ch1">Positive 24V Aux Supply at P102 CHx (AuxPs1/1). On 02-089357 this rail generates +5V_2.</param>
+        /// <param name="enablePos48vAtP179">Positive 48V Aux Supply at P179 CHx (AuxPs1/3).</param>
+        /// <param name="enablePos48vAtP143">Positive 48V System Supply at P143.</param>
         /// <param name="offlineModeEnabled">Offline Mode Flag.</param>
         public static void EnableLoadBoardSupplies(
             ISemiconductorModuleContext tsmContext,
@@ -97,8 +118,8 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
             bool enableNeg20v,
             bool enablePos12vAtP143,
             bool enablePos12vAtP179,
-            bool enableNeg24vAtP102,
-            bool enablePos24vAtP102,
+            bool enablePos24vAtP102Ch0,
+            bool enablePos24vAtP102Ch1,
             bool enablePos48vAtP179,
             bool enablePos48vAtP143,
             bool offlineModeEnabled = false)
@@ -112,12 +133,12 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
 
             // Enable TestHead Fixed-Voltage Power Supplies.
             EnableFixedVoltageSupplies(
-                enablePos12vAtP143, // +12V @ P143.
-                enablePos12vAtP179, // +12V @ P179 (CHy) - AUX PS1 CH2.
-                enableNeg24vAtP102, // -24V @ P102 (CHy) - AUX PS1 CH0.
-                enablePos24vAtP102, // +24V @ P102 (CHx) - AUX PS1 CH1.
-                enablePos48vAtP179, // +48V @ P179 (CHx) - AUX PS1 CH3.
-                enablePos48vAtP143, // +48V @ P143.
+                enablePos12vAtP143,    // +12V @ P143.
+                enablePos12vAtP179,    // +12V @ P179 (CHy) - AUX PS1 CH2.
+                enablePos24vAtP102Ch0, // +24V @ P102 (CHy) - AUX PS1 CH0.
+                enablePos24vAtP102Ch1, // +24V @ P102 (CHx) - AUX PS1 CH1.
+                enablePos48vAtP179,    // +48V @ P179 (CHx) - AUX PS1 CH3.
+                enablePos48vAtP143,    // +48V @ P143.
                 offlineModeEnabled // Offline Mode.
                 );
         }
@@ -154,12 +175,12 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// The power supplies are operated on sequentially, in the same order as the input parameters are presented.
         /// This method can be called directly from TestStand or from a statement from another calling method.
         /// </summary>
-        /// <param name="enablePos12vAtP143">Postive 12V System Supply at P143.</param>
-        /// <param name="enablePos12vAtP179">Postive 12V Aux Supply at P179.</param>
-        /// <param name="enableNeg24vAtP102">Negative 24V Aux Supply at P102.</param>
-        /// <param name="enablePos24vAtP102">Postive 24V Aux Supply at P102.</param>
-        /// <param name="enablePos48vAtP179">Postive 48V Aux Supply at P179.</param>
-        /// <param name="enablePos48vAtP143">Postive 48V System Supply at P143.</param>
+        /// <param name="enablePos12vAtP143">Positive 12V System Supply at P143.</param>
+        /// <param name="enablePos12vAtP179">Positive 12V Aux Supply at P179 CHy (AuxPs1/2).</param>
+        /// <param name="enablePos24vAtP102Ch0">Positive 24V Aux Supply at P102 CHy (AuxPs1/0).</param>
+        /// <param name="enablePos24vAtP102Ch1">Positive 24V Aux Supply at P102 CHx (AuxPs1/1).</param>
+        /// <param name="enablePos48vAtP179">Positive 48V Aux Supply at P179 CHx (AuxPs1/3).</param>
+        /// <param name="enablePos48vAtP143">Positive 48V System Supply at P143.</param>
         /// <param name="offlineModeEnabled">Offline Mode Flag.</param>
         public static void EnableFixedVoltageSupplies(
             bool enablePos12vAtP143,

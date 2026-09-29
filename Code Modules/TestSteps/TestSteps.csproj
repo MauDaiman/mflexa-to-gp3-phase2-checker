@@ -39,9 +39,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\NationalInstruments.Common.dll</HintPath>
     </Reference>
-    <Reference Include="NationalInstruments.DAQmx, Version=21.3.45.49161, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=AMD64">
+    <Reference Include="NationalInstruments.DAQmx, Version=21.3.40.49161, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\21.3.40.49161\NationalInstruments.DAQmx.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\21.3.40.49161\NationalInstruments.DAQmx.dll</HintPath>
     </Reference>
     <Reference Include="NationalInstruments.ModularInstruments.NIDCPower.Fx40, Version=23.0.0.49675, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -52,6 +52,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\IVI Foundation\IVI\Microsoft.NET\Framework32\v4.0.30319\NationalInstruments.ModularInstruments.NIDmm 23.0.0\NationalInstruments.ModularInstruments.NIDmm.Fx40.dll</HintPath>
     </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.NIFgen.Fx40, Version=20.0.0.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL" />
     <Reference Include="NationalInstruments.ModularInstruments.NIScope.Fx40, Version=21.0.0.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\NationalInstruments.ModularInstruments.NIScope.Fx40.dll</HintPath>
@@ -61,9 +62,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\..\Program Files\National Instruments\TestStand 2020\API\DotNET\Assemblies\CurrentVersion\NationalInstruments.TestStand.Interop.API.dll</HintPath>
     </Reference>
-    <Reference Include="NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI, Version=21.1.0.0, Culture=neutral, PublicKeyToken=060817a57c0f1a42, processorArchitecture=MSIL">
+    <Reference Include="NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI, Version=20.1.0.0, Culture=neutral, PublicKeyToken=060817a57c0f1a42, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\National Instruments\TestStand 2021\API\DotNET\Assemblies\CurrentVersion\NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI.dll</HintPath>
+      <HintPath>C:\Program Files\National Instruments\TestStand 2020\API\DotNet\Assemblies\CurrentVersion\NationalInstruments.TestStand.SemiconductorModule.CodeModuleAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +82,12 @@
     <Compile Include="Common\Debug.cs" />
     <Compile Include="Common\DAQmxRelay.cs" />
     <Compile Include="Common\MeterInstance.cs" />
+    <Compile Include="Common\PoolCaptureInstance.cs" />
+    <Compile Include="P2Checker\SL12_POOL_Check.cs" />
+    <Compile Include="P2Checker\SL14_POOL_Check.cs" />
+    <Compile Include="P2Checker\SL21_POOL_Check.cs" />
+    <Compile Include="P2Checker\SL02_BBAC_CAP_Check.cs" />
+    <Compile Include="P2Checker\SL02_BBAC_SRC_Check.cs" />
     <Compile Include="P2Checker\SL24_DIFFMETER_Check.cs" />
     <Compile Include="P2Checker\SL10_DIFFMETER_Check.cs" />
     <Compile Include="P2Checker\SL04_DIFFMETER_Check.cs" />

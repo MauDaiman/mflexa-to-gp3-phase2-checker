@@ -47,8 +47,8 @@
 
 [TestProgramData] 
 PartType = "NA"
-Configuration = "P2Checker"
-TestTemperature = "" 
+Configuration = "P2Checker-089357"
+TestTemperature = "25C" 
 TestProgramFile = "STSCsharp_TBChecker.seq"
 TestSequence = "P2Checker"
  

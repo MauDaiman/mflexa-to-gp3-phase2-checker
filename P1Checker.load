@@ -1,6 +1,0 @@
-[TestProgramData] 
-PartType = "NA"
-Configuration = "P1Checker"
-TestTemperature = "" 
-TestProgramFile = "STSCsharp_TBChecker.seq"
-TestSequence = "P1Checker"

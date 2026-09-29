@@ -7,9 +7,9 @@ namespace TestSteps.P2Checker
 {
     public class SL01_GPIO_Check
     {
-        private const string DmmP131 = "P131_4081_DMM";
-        private const double SettlingTimeSec = 1e-3;
-        private const double ApertureTimeSec = 1e-3;
+        private const string DmmP131 = "P131_4081_METER";
+        private const double SettlingTimeSec = 15e-3;
+        private const double ApertureTimeSec = 15e-3;
 
         /// <summary>
         /// Check the Ammeter, Voltmeter and Ohmmeter (2W, 4W) functionality of the PXIE-4081.
@@ -64,6 +64,7 @@ namespace TestSteps.P2Checker
                 // Turn ON RL5 to connect T_GPIO_SL01_4W-HI and T_GPIO_SL01_4W-LO
                 // across 1K resistor network load for 4W resistance measurement check
                 Relay.ControlRelay(tsmContext, "RL5", true);
+                HMODControl.AllHMODReset(tsmContext);
 
                 // DMM as ohmmeter (4-wire)
                 dmm.Abort();

@@ -10,8 +10,11 @@ namespace TestSteps.P2Checker
     {
         private const string DmmS16Pin = "P131_DIFF_METER";
         private const string DmmS13Pin = "P131_4081_DMM";
-        private const double SettlingTimeSec = 5e-3;
-        private const double SmuCurrentLimit = 1e-3;
+        private const int PairCount = 10;
+        private const int Meter1FinalPair = 9;
+        private const int Meter2FinalPair = 10;
+        private const double SettlingTimeSec = 10e-3;
+        private const double SmuCurrentLimit = 10e-3;
         private static readonly int[] Meter1Channels = { 1, 2, 5, 6, 9, 10, 13, 14, 17, 18 };
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace TestSteps.P2Checker
                 int chOdd = (chPair * 2) - 1;
                 int chEven = chPair * 2;
 
-                int relayOffset = (chPair - 1) * 4;
+                int relayOffset = RelayOffsetFor(chPair);
 
                 bool usesMeter1 = Array.IndexOf(Meter1Channels, chOdd) >= 0;
 
@@ -78,7 +81,7 @@ namespace TestSteps.P2Checker
                 {
                     HMODControl.HMOD11to13_24to25(tsmContext,
                         hmodData13: meterRelay,
-                        hmodData24: HMODControl.RelayID72($"K{relayOffset + 1}, K{relayOffset + 4}"));
+                        hmodData24: HMODControl.RelayID72($"K{relayOffset + 1}, K{relayOffset + 4}", true));
 
                     Globals.TheHdw.Wait(SettlingTimeSec);
 
@@ -86,7 +89,7 @@ namespace TestSteps.P2Checker
 
                     HMODControl.HMOD11to13_24to25(tsmContext,
                         hmodData13: meterRelay,
-                        hmodData24: HMODControl.RelayID72($"K{relayOffset + 2}, K{relayOffset + 3}"));
+                        hmodData24: HMODControl.RelayID72($"K{relayOffset + 2}, K{relayOffset + 3}", true));
 
                     Globals.TheHdw.Wait(SettlingTimeSec);
                     double[] negReading = dmm.Read();
@@ -119,25 +122,66 @@ namespace TestSteps.P2Checker
             HMODControl.HMOD1to4(tsmContext, HMOD_Data_1: HMODControl.RelayRange(1, 20));
             HMODControl.HMOD5to10(tsmContext, HMOD_Data_5: HMODControl.RelayRange(6, 15));
 
-            int relayOffset = (9 - 1) * 4;
+            // METER1 and METER2 are separate buses (SL4_DCDIFF_METER1_HI/LO and
+            // SL4_DCDIFF_METER2_HI/LO on the 089357 Translator Board). A pair's HMOD24 relay block
+            // lands on only one of those buses, so the two meters cannot both read one pair. This
+            // previously closed both meter taps against a single pair, leaving METER2 connected to
+            // a bus with nothing driven onto it, so it read ~5 mV. HMOD13 K12 and K15 are
+            // independent two-pole relays that each switch their own DMM's HI and LO, so nothing
+            // was contending. Meter1Channels places pair 9 on the METER1 bus and pair 10 on the
+            // METER2 bus, so each meter path is exercised with the pair that feeds it.
+            MeasureMeterPath(tsmContext, dmmS16, Meter1FinalPair, "K12", "SL04_HMOD13_METER1");
+            MeasureMeterPath(tsmContext, dmmS13, Meter2FinalPair, "K15", "SL04_HMOD13_METER2");
+        }
+/// <summary>
+        /// Single source of truth for which HMOD24/25 relay block serves a channel pair. Both the
+        /// per-pair loop and FinalCheck route through this, so they cannot disagree about the
+        /// block the way a hand-written offset expression allowed.
+        /// </summary>
+        /// <param name="chPair">Channel pair, 1 to 10.</param>
+        private static int RelayOffsetFor(int chPair)
+        {
+            if (chPair < 1 || chPair > PairCount)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(chPair), $"Channel pair {chPair} is outside 1-{PairCount}.");
+            }
+            return (chPair - 1) * 4;
+        }
 
-            DCPower smuHi = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DC30V_SL04_CH18");
-            DCPower smuLo = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DC30V_SL04_CH20");
+        /// <summary>
+        /// Forces one channel pair to a 1 V differential and reads it on the meter whose bus that
+        /// pair is wired to, proving that meter path works end to end.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="dmm">DMM session for the meter under test.</param>
+        /// <param name="chPair">Channel pair whose relay block feeds that meter's bus.</param>
+        /// <param name="meterRelay">HMOD13 relay connecting the meter to its bus.</param>
+        /// <param name="publishId">Published data ID for the reading.</param>
+        private static void MeasureMeterPath(
+            ISemiconductorModuleContext tsmContext,
+            Dmm dmm,
+            int chPair,
+            string meterRelay,
+            string publishId)
+        {
+            int relayOffset = RelayOffsetFor(chPair);
+            int chOdd = (chPair * 2) - 1;
+
+            DCPower smuHi = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DC30V_SL04_CH" + chOdd);
+            DCPower smuLo = InstrCtrl.DCPowerPinsToSessions(tsmContext, "DC30V_SL04_CH" + (chOdd + 1));
 
             ConfigureSmu(smuHi, 10.0);
             ConfigureSmu(smuLo, 9.0);
             try
             {
                 HMODControl.HMOD11to13_24to25(tsmContext,
-                    hmodData13: HMODControl.RelayID("K12, K15"),
-                    hmodData24: HMODControl.RelayID72($"K{relayOffset + 1}, K{relayOffset + 4}"));
+                    hmodData13: HMODControl.RelayID(meterRelay),
+                    hmodData24: HMODControl.RelayID72(
+                        "K" + (relayOffset + 1) + ", K" + (relayOffset + 4), true));
 
                 Globals.TheHdw.Wait(SettlingTimeSec);
-                double[] meter1Reading = dmmS16.Read();
-                double[] meter2Reading = dmmS13.Read();
-
-                tsmContext.PublishPerSite(meter1Reading, "SL04_HMOD13_METER1");
-                tsmContext.PublishPerSite(meter2Reading, "SL04_HMOD13_METER2");
+                tsmContext.PublishPerSite(dmm.Read(), publishId);
             }
             finally
             {
@@ -153,6 +197,7 @@ namespace TestSteps.P2Checker
                 smuLo.Abort();
             }
         }
+
         private static void ConfigureDmm(Dmm dmm)
         {
             dmm.ConfigureDmmSessions(
@@ -169,10 +214,20 @@ namespace TestSteps.P2Checker
             smu.ConfigureSettings(apertureTime: 10e-3, apertureTimeUnitsinSeconds: DCPowerMeasureApertureTimeUnits.Seconds);
             smu.ConfigureSense(sense: DCPowerMeasurementSense.Local, initiateSessionAfter: false);
             smu.ConfigureVoltageLevelRange(voltage);
-            smu.ConfigureCurrentLimitRange(SmuCurrentLimit);
+
+            // Lower the Current Limit value before narrowing the Current Limit Range. DCSetup
+            // leaves every ALLDC channel at a 100 mA limit with a 100 mA range, so narrowing the
+            // range first would leave the stale value outside its own range and the driver
+            // rejects the write. ForceVoltage is given an explicit range for the same reason.
+            smu.ConfigureCurrentLimit(currentLimit: SmuCurrentLimit);
+            smu.ConfigureCurrentLimitRange(currentLimitRange: SmuCurrentLimit);
+
             smu.ConfigureOutputConnected(true);
             smu.ConfigureOutputEnabled(true);
-            smu.ForceVoltage(voltageLevel: voltage, currentLimit: SmuCurrentLimit);
+            smu.ForceVoltage(
+                voltageLevel: voltage,
+                currentLimit: SmuCurrentLimit,
+                currentLimitRange: SmuCurrentLimit);
         }
 
     }

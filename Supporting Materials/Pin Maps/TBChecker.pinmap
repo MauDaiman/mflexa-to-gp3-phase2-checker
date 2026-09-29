@@ -46,6 +46,10 @@
 		<NIRelayDriverModule name="RELAY_2567_C1_S12" numberOfControlLines="64" />
 		<NIDmmInstrument name="DMM_4081_C1_S13" />
 		<NIDmmInstrument name="DMM_4081_C1_S14" />
+		<NIDAQmxTask name="DSA_4467_C1_S15_AOFG_0" taskType="AOFuncGen" channelList="DSA_4467_C1_S15/ao0" />
+		<NIDAQmxTask name="DSA_4467_C1_S15_AOFG_1" taskType="AOFuncGen" channelList="DSA_4467_C1_S15/ao1" />
+		<NIDAQmxTask name="DSA_4467_C1_S15_AI_0" taskType="AI" channelList="DSA_4467_C1_S15/ai0" />
+		<NIDAQmxTask name="DSA_4467_C1_S15_AI_1" taskType="AI" channelList="DSA_4467_C1_S15/ai1" />
 		<NIDmmInstrument name="DMM_4081_C1_S16" />
 		<NIScopeInstrument name="SCOPE_5172_C1_S17" numberOfChannels="8" group="Scope" />
 		<!--Chassis #2-->
@@ -229,9 +233,10 @@
 		<DUTPin name="T_HSD200_SL15_CH46" />
 		<DUTPin name="T_HSD200_SL15_CH47" />
 		<DUTPin name="T_HSD200_SL15_CH48" />
-		<SystemPin name="DIB_POS5V_1" />
-		<SystemPin name="DIB_POS5V_2" />
-		<SystemPin name="DIB_POS5V_3" />
+		<!--PXIe-4147 CH0-CH2. On 02-084291 these drive the LT1529 LDOs of the MFLEX +5V_1/2/3 DIB user supplies. On 02-089357 those rails come from DC/DC converters instead and these channels serve the BBAC SOURCE common-mode nodes (CH0/CH1) and BBAC CAPTURE CH1 ACC_CAP1+ (CH2).-->
+		<SystemPin name="P103_4147_SMU_CH0" />
+		<SystemPin name="P103_4147_SMU_CH1" />
+		<SystemPin name="P103_4147_SMU_CH2" />
 		<SystemPin name="SMU4139_POS5V" />
 		<SystemPin name="PPS4110_POS20V" />
 		<SystemPin name="PPS4110_POS6V" />
@@ -239,6 +244,7 @@
 		<SystemPin name="P143_4081_DMM" />
 		<SystemPin name="P131_4081_DMM" />
 		<SystemPin name="P131_DIFF_METER" />
+		<SystemPin name="P131_4081_METER" />
 		<SystemPin name="P163_4163_SMU_CH18" />
 		<SystemPin name="P163_4163_SMU_CH20" />
 		<SystemPin name="P163_4163_SMU_CH22" />
@@ -247,6 +253,21 @@
 		<SystemPin name="P151_4163_SMU_CH20" />
 		<SystemPin name="P151_4163_SMU_CH22" />
 		<SystemPin name="P138_4163_SMU_CH16" />
+		<!--Slot 2 BBAC source DIB access (BBAC SOURCE CH1: CH18-CH20, CH2: CH21-CH23)-->
+		<SystemPin name="P138_4163_SMU_CH18" />
+		<SystemPin name="P138_4163_SMU_CH19" />
+		<SystemPin name="P138_4163_SMU_CH20" />
+		<SystemPin name="P138_4163_SMU_CH21" />
+		<SystemPin name="P138_4163_SMU_CH22" />
+		<SystemPin name="P138_4163_SMU_CH23" />
+		<!--Slot 2 BBAC AC source (PXIe-4467 SRC_AO0/AO1)-->
+		<SystemPin name="P122_4467_SRC_AO0" />
+		<SystemPin name="P122_4467_SRC_AO1" />
+		<!--Slot 2 BBAC capture differential analog input (PXIe-4467 SRC_AI0/AI1)-->
+		<SystemPin name="P122_4467_SRC_AI0" />
+		<SystemPin name="P122_4467_SRC_AI1" />
+		<!--Slot 2 BBAC CAPTURE CH1 ACC_CAP1- PPMU (PXIe-4147 CH3)-->
+		<SystemPin name="P103_4147_SMU_CH3" />
 		<SystemPin name="P163_4163_SMU_CH17" />
 		<SystemPin name="P163_4163_SMU_CH19" />
 		<SystemPin name="P163_4163_SMU_CH21" />
@@ -357,10 +378,11 @@
 		<SystemPin name="DC90V_SL23_4B" />
 	</Pins>
 	<PinGroups>
+		<!--MFLEX +5V DIB user supply drivers. Used by the 02-084291 setup only.-->
 		<PinGroup name="DIB_SMU4147_POS5V">
-			<PinReference pin="DIB_POS5V_1" />
-			<PinReference pin="DIB_POS5V_2" />
-			<PinReference pin="DIB_POS5V_3" />
+			<PinReference pin="P103_4147_SMU_CH0" />
+			<PinReference pin="P103_4147_SMU_CH1" />
+			<PinReference pin="P103_4147_SMU_CH2" />
 		</PinGroup>
 		<PinGroup name="ALLDC">
 			<PinReference pin="DC90V_SL23_4B" />
@@ -1384,12 +1406,28 @@
 		<SystemConnection pin="P163_4163_SMU_CH22" instrument="SMU_4163_C2_S14" channel="22" />
 		<SystemConnection pin="P163_4163_SMU_CH23" instrument="SMU_4163_C2_S14" channel="23" />
 		<SystemConnection pin="P138_4163_SMU_CH16" instrument="SMU_4163_C2_S13" channel="16" />
+		<!--Slot 2 BBAC source DIB access-->
+		<SystemConnection pin="P138_4163_SMU_CH18" instrument="SMU_4163_C2_S13" channel="18" />
+		<SystemConnection pin="P138_4163_SMU_CH19" instrument="SMU_4163_C2_S13" channel="19" />
+		<SystemConnection pin="P138_4163_SMU_CH20" instrument="SMU_4163_C2_S13" channel="20" />
+		<SystemConnection pin="P138_4163_SMU_CH21" instrument="SMU_4163_C2_S13" channel="21" />
+		<SystemConnection pin="P138_4163_SMU_CH22" instrument="SMU_4163_C2_S13" channel="22" />
+		<SystemConnection pin="P138_4163_SMU_CH23" instrument="SMU_4163_C2_S13" channel="23" />
+		<!--Slot 2 BBAC AC source-->
+		<SystemConnection pin="P122_4467_SRC_AO0" instrument="DSA_4467_C1_S15_AOFG_0" channel="DSA_4467_C1_S15/ao0" />
+		<SystemConnection pin="P122_4467_SRC_AO1" instrument="DSA_4467_C1_S15_AOFG_1" channel="DSA_4467_C1_S15/ao1" />
+		<!--Slot 2 BBAC capture analog input-->
+		<SystemConnection pin="P122_4467_SRC_AI0" instrument="DSA_4467_C1_S15_AI_0" channel="DSA_4467_C1_S15/ai0" />
+		<SystemConnection pin="P122_4467_SRC_AI1" instrument="DSA_4467_C1_S15_AI_1" channel="DSA_4467_C1_S15/ai1" />
+		<!--Slot 2 BBAC capture PPMU-->
+		<SystemConnection pin="P103_4147_SMU_CH3" instrument="SMU_4147_C2_S16" channel="3" />
 		<SystemConnection pin="PPS4110_NEG20V" instrument="PPS_4110_C1_S07" channel="2" />
 		<SystemConnection pin="PPS4110_POS20V" instrument="PPS_4110_C1_S07" channel="1" />
 		<SystemConnection pin="PPS4110_POS6V" instrument="PPS_4110_C1_S07" channel="0" />
-		<SystemConnection pin="DIB_POS5V_1" instrument="SMU_4147_C2_S16" channel="0" />
-		<SystemConnection pin="DIB_POS5V_2" instrument="SMU_4147_C2_S16" channel="1" />
-		<SystemConnection pin="DIB_POS5V_3" instrument="SMU_4147_C2_S16" channel="2" />
+		<SystemConnection pin="P103_4147_SMU_CH0" instrument="SMU_4147_C2_S16" channel="0" />
+		<SystemConnection pin="P103_4147_SMU_CH1" instrument="SMU_4147_C2_S16" channel="1" />
+		<SystemConnection pin="P103_4147_SMU_CH2" instrument="SMU_4147_C2_S16" channel="2" />
+		<SystemConnection pin="P131_4081_METER" instrument="DMM_4081_C1_S14" channel="0" />
 		<SystemConnection pin="P131_DIFF_METER" instrument="DMM_4081_C1_S16" channel="0" />
 		<SystemConnection pin="SMU4139_POS5V" instrument="SMU_4139_C2_S17" channel="0" />
 		<!--Checker Board Relays-->

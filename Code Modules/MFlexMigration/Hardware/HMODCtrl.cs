@@ -443,18 +443,80 @@ namespace NationalInstruments.TestStand.SemiconductorModule.Migration.mFlex
         /// suitable for 72-channel HMOD data parameters.
         /// </summary>
         /// <param name="relayToggle">Comma or semicolon-separated relay names (K1–K72).</param>
-        public static uint[] RelayID72(string relayToggle)
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// A relay name is unparseable or names a relay outside K1–K72. Out-of-range relays used
+        /// to be dropped silently, which let a caller compute a bad relay number and still get a
+        /// well-formed all-zero mask back, so the measurement ran with no relay closed at all and
+        /// simply reported nothing instead of failing.
+        /// </exception>
+        public static uint[] RelayID72(string relayToggle, bool applyHmod2425Remap = false)
         {
             uint[] result = new uint[3]; // 72 bits = 3 words
             foreach (var raw in relayToggle.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 var digits = new string(raw.Where(char.IsDigit).ToArray());
-                if (int.TryParse(digits, out int n) && n >= 1 && n <= 72)
+                if (!int.TryParse(digits, out int n) || n < 1 || n > 72)
                 {
-                    result[(n - 1) / 32] |= (1u << ((n - 1) % 32));
+                    throw new ArgumentOutOfRangeException(
+                        nameof(relayToggle),
+                        $"Relay '{raw.Trim()}' in \"{relayToggle}\" is outside K1-K72.");
                 }
+
+                if (applyHmod2425Remap)
+                {
+                    n = RemapHmod2425Relay(n);
+                }
+
+                result[(n - 1) / 32] |= (1u << ((n - 1) % 32));
             }
             return result;
+        }
+
+        /// <summary>
+        /// Remaps a logical HMOD24 or HMOD25 relay number to the relay it is physically wired to.
+        /// These are the two 72 channel HMODs on the Checker Board, and their K21 to K56 range is
+        /// miswired in four contiguous blocks. Everything outside that range passes through.
+        /// </summary>
+        /// <param name="relay">Logical relay number, 1 to 72.</param>
+        /// <returns>The physical relay number to drive.</returns>
+        /// <remarks>
+        /// <para>
+        /// K21-K28 shift up by 4, K29-K36 up by 20, K37-K52 down by 4, K53-K56 down by 32.
+        /// </para>
+        /// <para>
+        /// K57-K60 are confirmed correctly wired: they are the only relays SL10_DIFFMETER_Check
+        /// uses for channel pairs 5 and 10, and those are the only two pairs of that step that
+        /// pass. K61-K72 are assumed correct but not yet characterized, which covers HMOD24/25
+        /// K71/K72 as used by the BBAC capture checker.
+        /// </para>
+        /// <para>
+        /// Applies to HMOD24 and HMOD25 only. Do not use for the CHMOD registers, which are
+        /// wired correctly.
+        /// </para>
+        /// </remarks>
+        public static int RemapHmod2425Relay(int relay)
+        {
+            if (relay >= 21 && relay <= 28)
+            {
+                return relay + 4;
+            }
+
+            if (relay >= 29 && relay <= 36)
+            {
+                return relay + 20;
+            }
+
+            if (relay >= 37 && relay <= 52)
+            {
+                return relay - 4;
+            }
+
+            if (relay >= 53 && relay <= 56)
+            {
+                return relay - 32;
+            }
+
+            return relay;
         }
     }
 }
