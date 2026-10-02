@@ -140,6 +140,12 @@ namespace TestSteps.Common
             }
         }
 
+        /// <summary>
+        /// Relay settling time in seconds, matching the 20 ms the BBAC steps allow. The
+        /// mechanical relays on both boards need this before any measurement is taken.
+        /// </summary>
+        private const double RelaySettlingTimeSec = 20e-3;
+
         private static string Format(SortedSet<int> relayNumbers)
         {
             return string.Join(", ", relayNumbers.Select(k => "K" + k));
@@ -152,13 +158,36 @@ namespace TestSteps.Common
         /// <param name="tsmContext">The semiconductor module context.</param>
         public void Apply(ISemiconductorModuleContext tsmContext)
         {
+            // HMOD14 carries the drive path. Tx Board 02-089357 sheet 31, "PXIE-6571 To
+            // HSD200(SLOT11) CONNECTIONS", routes each 6571 DIO to its HSD200 channel through
+            // HMOD14 Kn, numbered channel for channel: DIO_4 -> CH5 via K5 (P30/P31),
+            // DIO_5 -> CH6 via K6 (P37/P38), DIO_6 -> CH7 via K7 (P44/P45). Without K5-K7 the
+            // pattern never reaches T_HSD200_SL11_CH5/6/7, the checker board's K16 sees no
+            // step, the RC node stays at 0 V and every width is NaN. The comparator still
+            // works, which is the misleading part: DIO_24 shows the XOR output at -1.73 V and
+            // tracks the thresholds normally.
+            //
+            // K1-K4 are the DIO_0..3 -> CH1..CH4 legs. They are not the shift register path,
+            // which uses the dedicated HMOD_DIN / CHMOD_DIN / CHMOD_RESET pins, but they are
+            // left closed to match the BBAC steps.
+            //
+            // HMOD14to18 is a full chain overwrite, so this write also drops K12-K15 and
+            // K21-K26 from HMODControl's grp_xptsw_pins_hmod14, which HMODInitialization sets.
+            // POOL does not need them; add them here if a later step turns out to.
+            HMODControl.HMOD14to18(tsmContext,
+                HMOD_Data_14: HMODControl.RelayID("K1, K2, K3, K4, K5, K6, K7"));
+
             HMODControl.CHMOD1to6(tsmContext,
                 HMOD_Data_6: HMODControl.RelayID72(Format(_chmod6)));
 
-            HMODControl.HMOD11to13(tsmContext,
-                HMOD_Data_11: HMODControl.RelayID(Format(_hmod11)),
-                HMOD_Data_12: HMODControl.RelayID(Format(_hmod12)),
-                HMOD_Data_13: HMODControl.RelayID(Format(_hmod13)));
+            // HMOD11to13 would shift zeros into HMOD24/25 and silently open every relay
+            // there, so use the combined write that owns the whole 240-bit chain.
+            HMODControl.HMOD11to13_24to25(tsmContext,
+                hmodData11: HMODControl.RelayID(Format(_hmod11)),
+                hmodData12: HMODControl.RelayID(Format(_hmod12)),
+                hmodData13: HMODControl.RelayID(Format(_hmod13)));
+
+            Globals.TheHdw.Wait(RelaySettlingTimeSec);
         }
 
         /// <summary>
@@ -179,8 +208,8 @@ namespace TestSteps.Common
     /// other two.
     ///
     /// Derivation, matching Reports/RC_Charge_Times.xlsx. The checker board drives a 1 kohm
-    /// series resistor into 1 uF, and the TFE "10 kohm" input option loads that node with
-    /// its own 10 kohm input impedance while halving the signal reaching the comparator:
+    /// series resistor into 1 uF, and the TFE "10 kohm" input option both loads that node and
+    /// halves the signal reaching the comparator:
     ///   R in     = R64 15K || (R55 15K + R66 15K)   = 10 kohm
     ///   R eff    = 1 kohm || 10 kohm                = 909.0909 ohm
     ///   tau      = R eff * 1 uF                     = 909.0909 us
@@ -190,9 +219,19 @@ namespace TestSteps.Common
     /// Thresholds are therefore percentages of 2.2727 V, not of 5 V, and each expected
     /// width is tau * ln((1 - lo) / (1 - hi)).
     ///
-    /// Only the 10 kohm input option is usable for rise time. The two 50 ohm options load
-    /// the node to about 47.6 us and leave the comparator under 0.25 V full scale, which
-    /// the window comparator cannot resolve.
+    /// The load is real and must stay in the model. The R64/R66 15K "RESISTOR NETWORK INPUT"
+    /// sits on Tx Board 02-089357 in the CH1 input stage, downstream of the
+    /// T_POOL_SL12_OUT_CH_1 test point and selected by HMOD11 K6, with nothing buffering it
+    /// from the checker board's RC node. An earlier revision moved tau to 1.000 ms and the
+    /// full scale to 2.5 V on the theory that an AD8244 buffer isolated the node. That is
+    /// wrong, and it breaks the measurement rather than just biasing it: a 2.5 V full scale
+    /// puts the 90% threshold at 2.25 V, which is 99% of the true 2.2727 V asymptote, so the
+    /// ramp never crosses it, the comparator window is never exited, and every width is NaN.
+    /// With the loaded model the 90% threshold is 2.045 V and the pulse ends at 2.3 tau.
+    ///
+    /// Only the 10 kohm input option is usable for rise time. The two 50 ohm options (HMOD11
+    /// K4 and K5) load the node to about 47.6 us and leave the comparator under 0.25 V full
+    /// scale, which the window comparator cannot resolve.
     /// </summary>
     public static class PoolRcModel
     {
@@ -221,13 +260,27 @@ namespace TestSteps.Common
             /// <summary>Upper threshold as a fraction of the settled voltage.</summary>
             public double HighFraction { get; }
 
-            /// <summary>VOL setpoint in volts.</summary>
+            /// <summary>Lower threshold in volts for a measured comparator full scale.</summary>
+            /// <param name="fullScaleVolts">Measured settled voltage at the comparator.</param>
+            public double LowVoltsFor(double fullScaleVolts)
+            {
+                return LowFraction * fullScaleVolts;
+            }
+
+            /// <summary>Upper threshold in volts for a measured comparator full scale.</summary>
+            /// <param name="fullScaleVolts">Measured settled voltage at the comparator.</param>
+            public double HighVoltsFor(double fullScaleVolts)
+            {
+                return HighFraction * fullScaleVolts;
+            }
+
+            /// <summary>VOL setpoint in volts at the nominal full scale.</summary>
             public double LowVolts
             {
                 get { return LowFraction * ComparatorFullScaleVolts; }
             }
 
-            /// <summary>VOH setpoint in volts.</summary>
+            /// <summary>VOH setpoint in volts at the nominal full scale.</summary>
             public double HighVolts
             {
                 get { return HighFraction * ComparatorFullScaleVolts; }
@@ -288,6 +341,55 @@ namespace TestSteps.Common
     /// per-slot and per-channel relay knowledge stays in the slot check file and this
     /// file stays instrument only.
     /// </summary>
+    /// <summary>
+    /// Pulse scanning shared by the digital and scope capture strategies. Each strategy has
+    /// its own sample period, so the period is passed in rather than read from a constant.
+    /// </summary>
+    public static class PoolPulse
+    {
+        /// <summary>
+        /// Width of the longest complete high run in a record, in seconds, or NaN when there
+        /// is none.
+        ///
+        /// The longest run is taken rather than the first because a narrow glitch ahead of the
+        /// real pulse would otherwise win and truncate the result. That was observed as 1 us
+        /// and 2 us widths on two of twenty four channels, which then produced ratios of 2378
+        /// and 0.5. A run still high at the end of the record is ignored, since it has no
+        /// falling edge and therefore no measurable width, which keeps a missing crossing
+        /// reporting as NaN rather than as the distance to the end of the capture.
+        /// </summary>
+        /// <param name="count">Number of samples in the record.</param>
+        /// <param name="isHigh">Returns whether the sample at an index is above threshold.</param>
+        /// <param name="samplePeriodSec">Time between samples, in seconds.</param>
+        public static double LongestHighRun(int count, Func<int, bool> isHigh, double samplePeriodSec)
+        {
+            int start = -1;
+            int longest = 0;
+            for (int i = 0; i < count; i++)
+            {
+                if (isHigh(i))
+                {
+                    if (start < 0)
+                    {
+                        start = i;
+                    }
+                }
+                else if (start >= 0)
+                {
+                    int width = i - start;
+                    if (width > longest)
+                    {
+                        longest = width;
+                    }
+
+                    start = -1;
+                }
+            }
+
+            return longest > 0 ? longest * samplePeriodSec : double.NaN;
+        }
+    }
+
     public interface IPoolCaptureStrategy
     {
         /// <summary>The capture type this strategy implements.</summary>
@@ -372,25 +474,58 @@ namespace TestSteps.Common
     /// Vol 0.8 V and Voh 2 V, against which the pin reads a constant low and every
     /// measurement returns NaN.
     /// </summary>
+    /// <remarks>
+    /// The pattern needs the per-vector "capture" opcode, not just the V pin state. V only
+    /// marks a pin as capturable; "capture" is what takes the sample. Without it the burst
+    /// succeeds and FetchCaptureWaveform then reports "Samples Available: 0", which is what
+    /// made this hard to find: the V states, the capture_start/capture_stop bracket, the
+    /// burst label, the waveform's Parallel mode and pin list, the levels and the 0.1 us
+    /// strobe were all individually correct. Bursting the pattern directly in the Digital
+    /// Pattern Editor reproduced the zero, which is what ruled out this class.
+    ///
+    /// Only the repeated vector carries "capture", so the record holds about 5998 samples
+    /// and t = 0 sits at vector 2 rather than vector 1. The 1 us offset does not affect a
+    /// width, which is a difference between two crossings inside the same record.
+    /// </remarks>
     public class PoolDigital6571Strategy : IPoolCaptureStrategy
     {
         // These four must agree with the compiled pattern and its levels/timing sheets.
-        private const string PatternLabel = "rise_time_pattern";
-        private const string CaptureWaveformName = "rise_time_capture_wfm";
+        // The burst label is the pattern's own name, "rise_time_pat", not the file name
+        // "Rise_time_pattern". Bursting the file name executes no capture vectors and the
+        // fetch then fails with "Samples Available: 0".
+        private const string PatternLabel = "Rise_time_pat";
+        private const string CaptureWaveformName = "Rise_time_capture";
         private const string LevelsSheet = "Rise_time_levels";
         private const string TimingSheet = "Rise_time_timing";
 
-        // Vector period from the timing sheet, and the number of captured vectors between
-        // capture_start and capture_stop. 6000 vectors at 1 us covers 6 ms, which is 6.6
-        // time constants of the loaded 909 us RC, so the 90% crossing at 2.3 tau sits well
-        // inside the record.
-        private const double SamplePeriodSec = 1e-6;
-        private const int MaxCaptureSamples = 6000;
+        // Fallback vector period, used only when a caller does not call ConfigureRecord.
+        // The applied timing sheet is 100 ns, not 1 us, so every caller that measures the
+        // 10 kohm option must override this. The mismatch has no symptom other than a width
+        // scaled by the ratio of the two periods, which is why PoolRecordGeometry owns the
+        // real value and the POOL steps pass it explicitly.
+        private const double DefaultSamplePeriodSec = 1e-6;
+
+        // Fallback fetch depth, likewise overridden by every POOL step. The driver documents
+        // -1 as "fetch all samples", but this driver version rejects it with "The enumeration
+        // value for the parameter is not supported", so a positive count is required.
+        // PoolRecordGeometry.SamplesToFetch carries the sizing that matters: raw captures
+        // showed 90% crossings as late as 25993 samples at 100 ns, so a depth chosen for the
+        // nominal crossing alone truncates real parts and reports NaN.
+        private const int DefaultFetchSamples = 5000;
 
         private const double CaptureTimeoutSec = 5.0;
 
+        // Period and depth default to the values above so callers that do not override them
+        // behave exactly as before. The per input option rise time step overrides both,
+        // because the 50 ohm options run twenty times faster than the 10 kohm one and need a
+        // shorter period to resolve, while the 10 kohm option needs a deeper record to
+        // contain its ramp at that period.
+        private double _samplePeriodSec = DefaultSamplePeriodSec;
+        private int _fetchSamples = DefaultFetchSamples;
+
         private Digital _drive;
         private Digital _pattern;
+        private Digital _capture;
         private int _channel;
 
         /// <summary>The capture type this strategy implements.</summary>
@@ -416,6 +551,32 @@ namespace TestSteps.Common
             state.Close(digitalTap);
         }
 
+        /// <summary>
+        /// Overrides the capture record geometry. Must be called before
+        /// <see cref="Configure"/>, and the period must match the applied timing sheet: it is
+        /// used only to convert sample counts into seconds, so a mismatch scales every
+        /// reported width without any other symptom.
+        /// </summary>
+        /// <param name="samplePeriodSec">Vector period of the applied timing sheet, in seconds.</param>
+        /// <param name="samplesToFetch">Samples to fetch, which must contain the whole pulse.</param>
+        public void ConfigureRecord(double samplePeriodSec, int samplesToFetch)
+        {
+            if (samplePeriodSec <= 0)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(samplePeriodSec), samplePeriodSec, "Sample period must be positive.");
+            }
+
+            if (samplesToFetch < 2)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(samplesToFetch), samplesToFetch, "At least two samples are needed.");
+            }
+
+            _samplePeriodSec = samplePeriodSec;
+            _fetchSamples = samplesToFetch;
+        }
+
         /// <summary>Opens the drive and pattern sessions and applies levels and timing.</summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
         /// <param name="channel">POOL channel, 1 to 8.</param>
@@ -430,10 +591,20 @@ namespace TestSteps.Common
             // are high impedance inputs and must not be driven.
             _drive = InstrCtrl.DigitalPinsToSessions(tsmContext, PoolCapturePins.Drive);
             _pattern = InstrCtrl.DigitalPinsToSessions(tsmContext, patternPins.ToArray());
+            _capture = InstrCtrl.DigitalPinsToSessions(tsmContext, PoolCapturePins.Dio);
 
             _pattern.Abort();
             _pattern.SelectFunction(SelectedFunction.Digital);
             _pattern.ApplyLevelsandTimings(LevelsSheet, TimingSheet);
+
+            // The capture waveform is not created here. InstrCtrl.InitDigitalSessions loads
+            // every .digicapture file in the digital project via CaptureWaveforms.CreateFromFile,
+            // naming each waveform after its file, so rise_time_capture_wfm.digicapture is
+            // already registered on the session before any step runs. Creating it again would
+            // conflict with the driver's rule that capture settings cannot be reconfigured
+            // after creation. The file declares Parallel mode over the eight DIO pins, so one
+            // sample is one 8-bit word with channel n in bit n-1, which is what PulseWidth
+            // indexes.
         }
 
         /// <summary>Discharges the RC node, bursts the pattern and returns the pulse width.</summary>
@@ -452,14 +623,24 @@ namespace TestSteps.Common
                 waitUntilDone: true,
                 timeoutinSeconds: CaptureTimeoutSec);
 
-            uint[][][] captureData = _pattern.FetchCaptureWaveform(
+            // Burst on the 11 pin bundle, because the step is driven from S05 while the
+            // capture happens on S06, but fetch only from the capture pins. Asking the
+            // 11 pin bundle for capture data also queries the S05 session, which owns no
+            // capture pins and so can never hold samples. Restricting the fetch keeps any
+            // "Samples Available: 0" attributable to S06, where the capture really lives.
+            uint[][][] captureData = _capture.FetchCaptureWaveform(
                 CaptureWaveformName,
-                samplesToRead: MaxCaptureSamples,
+                samplesToRead: _fetchSamples,
                 timeoutInSeconds: CaptureTimeoutSec);
 
-            uint[][] perSiteData = _pattern.PerInstrumentToPerSiteData(captureData);
+            uint[][] perSiteData = _capture.PerInstrumentToPerSiteData(captureData);
 
-            int bit = _channel - 1;
+            // DIO_24..DIO_31 are packed MSB first in each parallel sample, so the first pin
+            // in the capture waveform's pin list is the high bit: CH1 (DIO_24) is bit 7 and
+            // CH8 (DIO_31) is bit 0. Using _channel - 1 masks 0x01 for CH1, which never
+            // matches the 0x80 the hardware sets, so PulseWidth sees no high sample and
+            // returns NaN for every channel.
+            int bit = PoolCapturePins.Dio.Length - _channel;
             var widths = new double[perSiteData.Length];
             for (int site = 0; site < perSiteData.Length; site++)
             {
@@ -470,11 +651,11 @@ namespace TestSteps.Common
         }
 
         /// <summary>
-        /// Width of the first complete high pulse on the channel's captured bit. Edge
+        /// Width of the longest complete high pulse on the channel's captured bit. Edge
         /// indices are differenced rather than counting every high sample, so a glitch
         /// elsewhere in the record cannot inflate the result.
         /// </summary>
-        private static double PulseWidth(uint[] samples, int bit)
+        private double PulseWidth(uint[] samples, int bit)
         {
             if (samples == null)
             {
@@ -482,26 +663,8 @@ namespace TestSteps.Common
             }
 
             uint mask = 1u << bit;
-            int firstHigh = -1;
-            for (int i = 0; i < samples.Length; i++)
-            {
-                bool high = (samples[i] & mask) != 0;
-                if (firstHigh < 0)
-                {
-                    if (high)
-                    {
-                        firstHigh = i;
-                    }
-                }
-                else if (!high)
-                {
-                    return (i - firstHigh) * SamplePeriodSec;
-                }
-            }
-
-            // Either the window was never entered or never left, so there is no measurable
-            // crossing interval.
-            return double.NaN;
+            return PoolPulse.LongestHighRun(
+                samples.Length, i => (samples[i] & mask) != 0, _samplePeriodSec);
         }
 
         /// <summary>Returns the drive pins low and aborts the pattern session.</summary>
@@ -558,9 +721,19 @@ namespace TestSteps.Common
             get { return PoolCaptureType.Scope5172; }
         }
 
-        /// <summary>Energises the changeover onto its NO branch and closes the scope tap.</summary>
+        /// <summary>
+        /// Closes the channel's scope tap, leaving the changeover de-energised.
+        ///
+        /// The changeover does not select the destination, it selects the source: the XOR
+        /// output (U3/U4 pin 7, Q) lands on its B_NC contact, which is also where the
+        /// TFE_OUT_CHn test point taps. Its common then feeds both the scope tap and the
+        /// digital tap, so the destination is chosen by which of those two closes. Energising
+        /// the changeover would switch the common onto B_NO and take the XOR output away,
+        /// leaving the 5172's 1 Mohm input floating near 0 V, which is above the ECL midpoint
+        /// and so reads as a pulse that never ends.
+        /// </summary>
         /// <param name="state">Relay state to add to.</param>
-        /// <param name="changeover">The channel's output changeover relay.</param>
+        /// <param name="changeover">The channel's output changeover relay, left open here.</param>
         /// <param name="scopeTap">The channel's relay to the 5172.</param>
         /// <param name="digitalTap">The channel's relay to the 6571, unused here.</param>
         public void SelectOutputPath(
@@ -569,7 +742,7 @@ namespace TestSteps.Common
             PoolRelay scopeTap,
             PoolRelay digitalTap)
         {
-            state.Close(changeover, scopeTap);
+            state.Close(scopeTap);
         }
 
         /// <summary>Opens the drive session and configures the scope for one channel.</summary>
@@ -590,6 +763,18 @@ namespace TestSteps.Common
                 probeAttenuation: 1.0,
                 enabled: true);
             _scope.ConfigureAcquisition(ScopeAcquisitionType.Normal);
+
+            // Trigger immediately on Initiate. Without this the 5172 keeps its default edge
+            // trigger on channel 0 at 0 V, which an NECL output terminated 50 ohm to -2 V
+            // never reaches: it swings about -1.7 V to -0.9 V, so the trigger never fires.
+            // StepAndMeasure arms before driving the step and the record is twice as long as
+            // the ramp, so the whole pulse is contained without needing an aligned trigger.
+            // The InstrCtrl Scope wrapper only exposes a digital edge trigger, hence the
+            // reach through to the driver session.
+            foreach (var ssc in _scope.SSC)
+            {
+                ssc.Session.Trigger.ConfigureTriggerImmediate();
+            }
             _scope.ConfigureHorizontalTiming(
                 sampleRateMin: SampleRateHz,
                 numberOfPointsMin: RecordLength,
@@ -615,9 +800,29 @@ namespace TestSteps.Common
             var widths = new double[waveforms.Length];
             for (int session = 0; session < waveforms.Length; session++)
             {
-                widths[session] = waveforms[session] == null || waveforms[session].Count == 0
-                    ? double.NaN
-                    : PulseWidth(waveforms[session][0].GetScaledData());
+                if (waveforms[session] == null || waveforms[session].Count == 0)
+                {
+                    widths[session] = double.NaN;
+                    System.Diagnostics.Debug.WriteLine(
+                        "POOL scope session " + session + ": no waveform returned");
+                    continue;
+                }
+
+                double[] samples = waveforms[session][0].GetScaledData();
+                widths[session] = PulseWidth(samples);
+
+                // An unconnected 1 Mohm input floats near 0 V, which is above the ECL
+                // midpoint, so PulseWidth sees a signal that starts high and never falls and
+                // returns NaN, exactly as it does for a real but absent pulse. Logging the
+                // extremes separates the two: ECL reads about -1.7 to -0.9 V, a floating
+                // input reads near 0 V on both, and a dead channel reads a flat rail.
+                System.Diagnostics.Debug.WriteLine(string.Format(
+                    "POOL scope session {0}: n={1} min={2:F3} V max={3:F3} V width={4}",
+                    session,
+                    samples.Length,
+                    samples.Min(),
+                    samples.Max(),
+                    widths[session]));
             }
 
             return widths;
@@ -635,24 +840,8 @@ namespace TestSteps.Common
                 return double.NaN;
             }
 
-            int firstHigh = -1;
-            for (int i = 0; i < samples.Length; i++)
-            {
-                bool high = samples[i] > EclMidpointVolts;
-                if (firstHigh < 0)
-                {
-                    if (high)
-                    {
-                        firstHigh = i;
-                    }
-                }
-                else if (!high)
-                {
-                    return (i - firstHigh) * SamplePeriodSec;
-                }
-            }
-
-            return double.NaN;
+            return PoolPulse.LongestHighRun(
+                samples.Length, i => samples[i] > EclMidpointVolts, SamplePeriodSec);
         }
 
         /// <summary>Returns the drive pins low and aborts the scope.</summary>

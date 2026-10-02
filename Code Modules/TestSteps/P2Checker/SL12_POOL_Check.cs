@@ -121,29 +121,66 @@ namespace TestSteps.P2Checker
         private static readonly int[] CheckerFanOutRelays = { 17, 22, 25, 28, 31, 34, 37, 40 };
 
         /// <summary>
-        /// Measures the rise time of one SL12 POOL channel at the 10/90, 20/80 and 30/70
-        /// threshold pairs. Publishes three widths in seconds plus two width ratios that are
-        /// independent of tau and of every component tolerance.
+        /// Measures the rise time of every SL12 POOL channel, or of one channel when
+        /// <paramref name="channel"/> is given. This is the TestStand entry point: one step
+        /// covers the whole slot, matching how SL04_DIFFMETER and SL10_DC30 are driven.
+        /// </summary>
+        /// <param name="tsmContext">The semiconductor module context.</param>
+        /// <param name="captureType">Capture back end, 0 for 6571 digital or 1 for 5172 scope.</param>
+        /// <param name="channel">POOL channel 1 to 8, or 0 to sweep all eight.</param>
+        public static void SL12PoolRiseTimeCheck(
+            ISemiconductorModuleContext tsmContext,
+            int captureType = 0,
+            int channel = 0)
+        {
+            if (channel < 0 || channel > ChannelCount)
+            {
+                throw new System.ArgumentOutOfRangeException(
+                    nameof(channel), channel, "Channel must be 0 for all channels, or 1..8.");
+            }
+
+            if (channel != 0)
+            {
+                MeasureChannel(tsmContext, channel, captureType);
+                return;
+            }
+
+            for (int sweep = 1; sweep <= ChannelCount; sweep++)
+            {
+                MeasureChannel(tsmContext, sweep, captureType);
+            }
+        }
+
+        /// <summary>
+        /// Measures one SL12 POOL channel at the 10/90, 20/80 and 30/70 threshold pairs.
+        /// Publishes three widths in seconds plus two width ratios that are independent of tau
+        /// and of every component tolerance.
         /// </summary>
         /// <param name="tsmContext">The semiconductor module context.</param>
         /// <param name="channel">POOL channel, 1 to 8.</param>
         /// <param name="captureType">Capture back end, 0 for 6571 digital or 1 for 5172 scope.</param>
-        public static void SL12PoolRiseTimeCheck(
+        private static void MeasureChannel(
             ISemiconductorModuleContext tsmContext,
             int channel,
-            int captureType = 0)
+            int captureType)
         {
-            if (channel < 1 || channel > ChannelCount)
-            {
-                throw new System.ArgumentOutOfRangeException(nameof(channel), channel, "Channel must be 1..8.");
-            }
-
             int index = channel - 1;
             string prefix = "SL12_POOL_CH" + channel;
 
             HMODControl.AllHMODReset(tsmContext);
 
             IPoolCaptureStrategy capture = PoolCaptureFactory.Create((PoolCaptureType)captureType);
+
+            // The shared timing sheet runs at 100 ns, so the digital strategy's 1 us default
+            // would scale every reported width by ten. Only the digital strategy exposes the
+            // override; the 5172 path keeps its own sample rate.
+            var digital = capture as PoolDigital6571Strategy;
+            if (digital != null)
+            {
+                digital.ConfigureRecord(
+                    PoolRecordGeometry.SamplePeriodSec,
+                    PoolRecordGeometry.SamplesToFetch(PoolInputOption.TenKOhm10V));
+            }
             DCPower smuVoh = InstrCtrl.DCPowerPinsToSessions(tsmContext, VohPins[index]);
             DCPower smuVol = InstrCtrl.DCPowerPinsToSessions(tsmContext, VolPins[index]);
 
@@ -164,13 +201,26 @@ namespace TestSteps.P2Checker
                 ConfigureThresholdSmu(smuVoh);
                 ConfigureThresholdSmu(smuVol);
 
+                // Thresholds follow the full scale the Calibration sequence measured for this
+                // channel, not the nominal 2.2727 V and no longer a VOH bisection here.
+                bool calibrated;
+                double fullScale = PoolCalibrationStore.SmuLevelFor(
+                    tsmContext, PoolSlot.SL12, channel, PoolInputOption.TenKOhm10V,
+                    out calibrated);
+                System.Diagnostics.Debug.WriteLine(
+                    prefix + " comparator full scale: " + fullScale.ToString("F4")
+                    + " V, nominal " + PoolRcModel.ComparatorFullScaleVolts.ToString("F4")
+                    + " V, source " + (calibrated ? "calibration" : "prediction"));
+
                 var widths = new double[PoolRcModel.Pairs.Length][];
                 for (int pair = 0; pair < PoolRcModel.Pairs.Length; pair++)
                 {
                     PoolRcModel.ThresholdPair thresholds = PoolRcModel.Pairs[pair];
 
-                    smuVol.ForceVoltage(voltageLevel: thresholds.LowVolts, currentLimit: SmuCurrentLimit);
-                    smuVoh.ForceVoltage(voltageLevel: thresholds.HighVolts, currentLimit: SmuCurrentLimit);
+                    smuVol.ForceVoltage(
+                        voltageLevel: thresholds.LowVoltsFor(fullScale), currentLimit: SmuCurrentLimit);
+                    smuVoh.ForceVoltage(
+                        voltageLevel: thresholds.HighVoltsFor(fullScale), currentLimit: SmuCurrentLimit);
 
                     Globals.TheHdw.Wait(SettlingTimeSec);
 

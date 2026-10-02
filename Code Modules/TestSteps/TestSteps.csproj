@@ -79,10 +79,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Debug.cs" />
     <Compile Include="Common\DAQmxRelay.cs" />
     <Compile Include="Common\MeterInstance.cs" />
     <Compile Include="Common\PoolCaptureInstance.cs" />
+    <Compile Include="P2Checker\POOL_Input_Probe.cs" />
+    <Compile Include="P2Checker\POOL_Calibration.cs" />
+    <Compile Include="P2Checker\POOL_RiseTime_Options.cs" />
+    <Compile Include="P2Checker\POOL_VtSweep.cs" />
     <Compile Include="P2Checker\SL12_POOL_Check.cs" />
     <Compile Include="P2Checker\SL14_POOL_Check.cs" />
     <Compile Include="P2Checker\SL21_POOL_Check.cs" />
@@ -91,7 +94,6 @@
     <Compile Include="P2Checker\SL24_DIFFMETER_Check.cs" />
     <Compile Include="P2Checker\SL10_DIFFMETER_Check.cs" />
     <Compile Include="P2Checker\SL04_DIFFMETER_Check.cs" />
-    <Compile Include="P2Checker\POOL2_Rise_Time_Check.cs" />
     <Compile Include="P2Checker\SL15_HSD200_DA_Check.cs" />
     <Compile Include="P2Checker\SL13_HSD200_DA_Check.cs" />
     <Compile Include="P2Checker\SL11_HSD200_DA_Check.cs" />

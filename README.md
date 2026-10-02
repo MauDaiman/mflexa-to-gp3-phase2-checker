@@ -43,10 +43,435 @@ NI STS C# test program for verifying GP3 translator board health prior to DUT te
 | SL24_DC30_DGS_Check | DC30 Slot 24 DGS relay check |
 | DMM_SL14_Check | PXIe-4081 DMM validation |
 | SPI_Pins_Check | SPI pin connectivity check |
-| POOL2_Rise_Time_Check | 10%–90% rise time measurement of 1kΩ+1µF RC via TFE window comparator |
+| SL12_POOL_Check | POOL (PL OUT) RC rise time, slot 12, 8 channels (`SL12PoolRiseTimeCheck`) |
+| SL14_POOL_Check | POOL (PL OUT) RC rise time, slot 14, 8 channels (`SL14PoolRiseTimeCheck`) |
+| SL21_POOL_Check | POOL (PL OUT) RC rise time, slot 21, 8 channels (`SL21PoolRiseTimeCheck`) |
+| POOL_Input_Probe | Bench diagnostic, reports the DC level at the TFE input for any slot/channel/input option (`PoolInputProbe`) |
 | SL04_DIFFMETER_Check | SL04 differential meter check via HMOD24 + HMOD13 K12/K15 |
 | SL10_DIFFMETER_Check | SL10 differential meter check via HMOD24 (chPair 1–5) / HMOD25 (chPair 6–10) + HMOD13 K13/K16 |
 | SL24_DIFFMETER_Check | SL24 differential meter check via HMOD25 + HMOD13 K14/K17 |
+
+#### POOL relay map
+
+`PoolPathMap` in `P2Checker/POOL_Input_Probe.cs` derives every translator board relay in the
+3 slot × 8 channel × 3 input option matrix from one rule: each channel owns nine consecutive
+relays, packed across HMOD11, HMOD12 and HMOD13 with no gaps, starting at global relay
+`1 + 9 × (channel − 1)` where HMOD11 K1 is 1 and HMOD13 K32 is 96. Offsets within a block are
+slot select 0/1/2 for SL12/SL14/SL21, input option 3/4/5 for 50 Ω 3.3 V, 50 Ω 10 V and
+10 kΩ 10 V, then changeover 6, scope tap 7 and digital tap 8.
+
+The map reproduces all five literal tables in `SL12_POOL_Check` exactly, including the channel
+4 and channel 8 straddles where a block crosses a register boundary. Checker board CHMOD6
+drive relays are K16/K18/K20 per slot; channel 1 fan-out interleaves at K17/K19/K21 and
+channels 2–8 occupy a contiguous K22–K42 block, three per channel in slot order.
+
+#### POOL input option probe
+
+`POOL_Input_Probe.PoolInputProbe` is a one-off bench step, not a production test: it forces a
+DC level on the slot's HSD200 drive pin, settles the RC, and PPMU-reads the channel's 6571 DIO
+pin. It sweeps the drive level and publishes each reading so the **slope** identifies which
+node the DIO pin actually reaches — 1.0 for the drive side of the 1 kΩ, 0.909 for the RC node
+before the 15K divider, 0.4545 for `TFE_IN` after it, 0.0476 for either 50 Ω option, and ~0
+for no DC path at all. A near-zero slope parked near −1.0 V or −1.7 V means the changeover does
+not bypass the comparator, so the full scale must keep coming from the VOH bisection.
+
+HMOD11 K7 and its per-channel equivalents are an **input**-path changeover, not an output one.
+De-energised the divided node feeds the AD96687BRZ window comparator, which is normal POOL
+operation; energised it is diverted to the 6571 DIO pin, bypassing the comparator and the XOR.
+So the rise time steps must leave it open and the probe closes it — `divertToDio` defaults to
+true. Note the `OutputChangeover` comment in the `SL*_POOL_Check` files describes K7 as
+selecting between the 6571 and the 5172, which is wrong; the measurement path is unaffected
+because the digital strategy leaves the relay open regardless.
+
+The 50 Ω 3.3 V option is rated at the relay input rather than the attenuated node, so the drive
+sweep is clamped to 3.3 V for that option only.
+
+#### Measured input option model
+
+Probe results, with the DIO pin diverted to the node by K7:
+
+| Option | R_in | Post-tap gain | Drive | Predicted | Measured | Residual |
+|---|---|---|---|---|---|---|
+| 50 Ω 3.3 V | 50 Ω | 1.0 | 3.3 V | 157.1 mV | 156 mV | −1.1 mV |
+| 50 Ω 10 V | 50 Ω | 0.5 | 5 V | 119.0 mV | 118 mV | −1.0 mV |
+| 10 kΩ 10 V | 10 kΩ | 0.5 | 5 V | 2272.7 mV | 2270 mV | −2.7 mV |
+
+The 10 kΩ row confirms `ComparatorFullScaleVolts = 2.2727` and `TauLoadedSec = 909.09 µs`
+directly, so the loaded RC model is settled. The residuals are a roughly constant −1 mV rather
+than a constant percentage, so they are PPMU offset and not gain error — the resistor ratios are
+good to a few tenths of a percent, which rules out drive droop as a cause of a long 10/90 width.
+
+The two 50 Ω options have **different** gains: the 3.3 V option taps the node directly, the 10 V
+option divides by two through R62/R63. This is not legible from the schematic text.
+
+Derived per option, with R_eff = 1k ∥ R_in:
+
+| Option | τ | 10/90 | 20/80 | 30/70 |
+|---|---|---|---|---|
+| 50 Ω (both) | 47.62 µs | 104.6 µs | 66.0 µs | 40.3 µs |
+| 10 kΩ | 909.09 µs | 1997.5 µs | 1260.3 µs | 770.3 µs |
+
+The width ratios are 1.5850 and 1.6361 for *every* option, since they cancel τ and amplitude
+alike, so one pair of ratio limits covers all nine slot × option combinations.
+
+#### Calibration sequence
+
+`POOL_Calibration.PoolFullScaleCalibration` runs in a **Calibration** sequence ahead of
+MainSequence and measures the comparator full scale for every slot × channel × option, storing
+it as TSM per-site data under `POOL_FS_<slot>_CH<n>_<option>`.
+
+This replaces the VOH bisection that `CalibrateFullScale` performed inside the rise time steps.
+The bisection found the same level indirectly at eight bursts per channel, and had two defects
+beyond being ~6× slower: its resolution was ~10 mV against the PPMU's ~1 mV, far too coarse for
+the 50 Ω options whose full scale is only ~120 mV; and because one SMU level serves every site it
+converged on the lowest site, leaving every other site reading long at 10/90. A PPMU read is
+per-site.
+
+An implausible reading — outside 50–150% of the predicted level — is replaced by the prediction
+and logged. That window doubles as a relay fault detector: a pin still sitting on the ECL XOR
+output reads about −1.0 V or −1.7 V and trips it.
+
+Per-site data is scoped to the semiconductor module context, so **Calibration and MainSequence
+must run in the same execution**. Calling Calibration as a sequence before MainSequence satisfies
+this; launching it as its own execution does not, and `TryLoad` then returns false and falls back
+to the predicted level rather than failing.
+
+Step type must be **Semiconductor Multi Test**, since `PublishPerSite` has no Tests table to
+publish into from an Action step. Each published ID needs a matching Tests tab entry, so the full
+sweep needs 72. Set `publishResults = false` to run it as an Action instead, storing site data and
+logging only.
+
+#### Per-option rise time step
+
+`POOL_RiseTime_Options.PoolRiseTimeByOption(tsmContext, slot, channel, inputOption)` covers all
+3 slots × 8 channels × 3 options, publishing three widths and two ratios per combination.
+Thresholds come from the stored calibration for that exact combination, so no bisection runs.
+
+One **100 ns timing sheet** serves every option; only the record depth varies, via
+`PoolDigital6571Strategy.ConfigureRecord`:
+
+| Option | τ | 90% crossing | Samples @100 ns | Fetch | Margin | Discharge |
+|---|---|---|---|---|---|---|
+| 50 Ω (both) | 47.62 µs | 109.6 µs | 1,096 | 3,000 | 2.74× | 476 µs |
+| 10 kΩ | 909.09 µs | 2093.3 µs | 20,933 | 25,000 | 1.19× | 9.1 ms |
+
+Period and depth are separate knobs and only depth needs to vary, so a second timing sheet buys
+nothing and adds a per-option branch plus a sheet to keep in sync — the exact class of silent
+mismatch that produced the wrong-capture-bit and wrong-HMOD-chain bugs. `ConfigureRecord` defaults
+to the previous 1 µs / 5,000 values, so `SL12`/`SL14`/`SL21_POOL_Check` are unaffected.
+
+Note the SMU threshold tables are **identical across all three slots** — the threshold SMUs sit on
+the TFE side of the slot select relays. Only the checker board relays differ, and `PoolPathMap`
+derives those (drive 16/18/20, verified against all three literal tables).
+
+Caveats:
+
+- The step constructs `PoolDigital6571Strategy` directly rather than via `PoolCaptureFactory`,
+  because the record override is specific to it. The 5172 path is not supported here.
+- Changing the timing sheet to 100 ns **invalidates the existing 1 µs sheet for the older
+  `SL*_POOL_Check` steps**; they will report widths 10× wrong until they are migrated or given
+  their own sheet. `ConfigureRecord` exists so the period is stated explicitly rather than assumed.
+- `PoolRcModel.ExpectedWidthSec` still uses the 10 kΩ τ, so limits for the 50 Ω options must come
+  from the per-option τ above, not from that property.
+
+#### Test limits
+
+`Reports/add_calibration_limits.py` appends two blocks to `Reports/TestLimits.xlsx`, both for the
+10 kΩ option only, and backs up to `.tmp/TestLimits.before_calibration.xlsx` first. It refuses to
+run if any published ID already exists, so it is not idempotent-by-overwrite and cannot silently
+duplicate rows. Set `OPTIONS = ALL_OPTIONS` to generate the 50 Ω rows; nothing else changes.
+
+| Block | Rows | Test numbers | Tolerance |
+|---|---|---|---|
+| `POOL_CAL_<slot>_CH<n>_<option>_FullScale` | 24 | 1130–1153 | ±10%, 2045.5–2500.0 mV |
+| `POOL_<slot>_CH<n>_<option>_RiseTime_*` and `_Ratio_*` | 120 | 1154–1273 | ±15% widths, ±2% ratios |
+
+The second block is needed because `POOL_RiseTime_Options` publishes different IDs
+(`POOL_SL12_CH1_TenKOhm10V_RiseTime_10_90`) from the older `SL*_POOL_Check` steps
+(`SL12_POOL_CH1_RiseTime_10_90`). The older 120 rows are left untouched so both step generations
+can run; the new rows carry bit-identical limits for the same pairs, since both derive from
+τ = 909.09 µs.
+
+Full scale uses ±10% rather than the ±15% applied to widths: tight enough to catch a wrong relay,
+a wrong input option or an open path, loose enough not to fail on resistor tolerance, which the
+bench data showed to be a few tenths of a percent. It is deliberately tighter than the 50–150%
+plausibility window in `PoolCalibrationStore`, which exists to reject an ECL level rather than to
+grade the measurement.
+
+#### POOL rise time
+
+Each slot steps a 1 kΩ + 1 µF RC network and times the pulse from the TFE window comparator,
+whose two thresholds come from 4163 SMUs and whose XOR output width is the crossing interval.
+Three threshold pairs are measured per channel — 10/90, 20/80 and 30/70 — plus the two ratios
+between them. The ratios are `ln9 : ln4 : ln(7/3)`, which depend only on the threshold
+percentages and so cancel τ, the divider ratio and every component tolerance; a wrong capacitor
+passes the ratios and fails the widths, while a broken buffer or comparator fails both.
+
+Analytical expectations and limits are in `Reports/RC_Charge_Times.xlsx`, generated by
+`Reports/make_rc_times.py`, and loaded into `Reports/TestLimits.xlsx` as test numbers 1010–1129.
+Widths carry ±15% and ratios ±2%.
+
+`captureType` selects the back end: `0` for PXIe-6571 digital capture through the output
+changeover's NC branch, `1` for the PXIe-5172 scope through its NO branch. `channel` defaults to
+`0`, which sweeps all eight.
+
+##### The TFE input loads the RC node, so τ is the loaded value
+
+The TFE "10 kΩ" input option is named for its input impedance,
+`R64 15K ∥ (R55 15K + R66 15K)` = 10 kΩ. That network is the `R64`/`R66` "RESISTOR NETWORK
+INPUT" on Tx Board 02-089357 in the CH1 input stage, selected by **HMOD11 K6**, sitting
+downstream of the `T_POOL_SL12_OUT_CH_1` test point with nothing buffering it from the checker
+board's RC node. So it both loads the node and halves the signal reaching the comparator:
+
+| | Value |
+|---|---|
+| R input | `R64` ∥ (`R55` + `R66`) = 10 kΩ |
+| R effective | 1 kΩ ∥ 10 kΩ = **909.09 Ω** |
+| τ | 909.09 Ω × 1 µF = **909.09 µs** |
+| V node settled | 5 V × 10k/(1k + 10k) = 4.5455 V |
+| V comparator full scale | 4.5455 V × `R66`/(`R55`+`R66`) = **2.2727 V** |
+
+| Pair | Expected width | VOL | VOH |
+|---|---|---|---|
+| 10/90 | 1.9975 ms | 0.227 V | 2.045 V |
+| 20/80 | 1.2603 ms | 0.455 V | 1.818 V |
+| 30/70 | 0.7703 ms | 0.682 V | 1.591 V |
+
+A previous revision moved τ to 1.000 ms and the full scale to 2.5 V, on the theory that an
+`AD8244` buffer isolated the node. That is wrong, and it does not merely bias the limits — it
+breaks the test outright. A 2.5 V full scale puts the 90% threshold at 2.25 V, which is **99% of
+the true 2.2727 V asymptote**, so the ramp never crosses it, the comparator window is entered and
+never exited, and every width reads `NaN`. The symptom is a captured bit that goes high around
+sample 253 and stays high to the end of the record. With the loaded model the 90% threshold is
+2.045 V and the pulse ends at 2.3 τ.
+
+The two 50 Ω options (`HMOD11 K4` and `K5`) remain unusable: they load the node to about 47.6 µs
+and leave the comparator under 0.25 V full scale, which the window comparator cannot resolve.
+
+The CHMOD6 relay map is verified against sheets 55 and 56: drive `K16`/`K18`/`K20` for
+SL12/SL14/SL21, CH1 fan-out at `K17`/`K19`/`K21`, then CH2–CH8 in steps of 3 from `K22`/`K23`/`K24`.
+
+##### The drive path needs HMOD14 K5/K6/K7
+
+Tx Board sheet 31, "PXIE-6571 To HSD200(SLOT11) CONNECTIONS", routes each 6571 DIO to its HSD200
+channel through `HMOD14 Kn`, numbered channel for channel: `DIO_4 → CH5` via **K5**,
+`DIO_5 → CH6` via **K6**, `DIO_6 → CH7` via **K7**. Without them the pattern never reaches
+`T_HSD200_SL11_CH5/6/7`, so the checker board's `K16` sees no step, the node stays at 0 V and
+every width is `NaN`. This fails misleadingly, because the comparator chain is untouched:
+`DIO_24` still shows the XOR output at −1.73 V and still tracks the thresholds.
+
+`K1–K4` are the `DIO_0..3 → CH1..CH4` legs, not the shift-register path — the HMOD and CHMOD
+chains use the dedicated `HMOD_DIN` / `CHMOD_DIN` / `CHMOD_RESET` pins. They are left closed to
+match the BBAC steps. Note `HMOD14to18` is a full-chain overwrite, so this write also drops
+`K12–K15` and `K21–K26` from `grp_xptsw_pins_hmod14`, which `HMODInitialization` sets.
+
+##### Capture samples are packed MSB first
+
+`DIO_24..DIO_31` occupy one 8-bit parallel sample with the **first pin in the waveform's pin list
+as the high bit**, so CH1 (`DIO_24`) is bit 7 and CH8 (`DIO_31`) is bit 0. The bit index is
+therefore `PoolCapturePins.Dio.Length - _channel`, not `_channel - 1`. The latter masks `0x01`
+for CH1, which never matches the `0x80` the hardware sets, so `PulseWidth` sees no high sample
+and returns `NaN` on every channel — indistinguishable from a signal that never arrives.
+
+##### Thresholds are calibrated per channel, not taken from the nominal full scale
+
+`CalibrateFullScale` bisects VOH to measure the settled voltage at the comparator before the
+30-70 pair is measured, and the thresholds are then fractions of that measured level via
+`ThresholdPair.LowVoltsFor` / `HighVoltsFor`. The probe needs no extra instrument: with VOL held
+at 0.05 V the window closes only if VOH is below the settled level, so "did every site return a
+finite width" is itself a comparator for VOH against that level. Eight steps narrow 0.5–3.0 V to
+under 10 mV. The lowest level across sites is used, since one SMU level serves every site.
+
+This is necessary because a crossing time depends on `ln(1 − V/A)`, which is brutally sensitive
+near the asymptote. A 3% error in the settled level `A` moves the 90% crossing from 2.30 τ to
+2.63 τ — a 16% error in the 10/90 width — while costing 10% at 20/80 and 8% at 30/70. First
+silicon showed exactly that ranking:
+
+| Pair | Implied τ (mean of 8 channels) |
+|---|---|
+| 30/70 | ~910 µs — matches the model's 909.09 µs |
+| 20/80 | ~978 µs |
+| 10/90 | ~1075 µs |
+
+The least sensitive pair confirmed τ, and the inflation grew with sensitivity, which located the
+error in `A` rather than in τ. Solving back gave `A` ≈ 2.195 V against a nominal 2.2727 V, about
+3.4% low — consistent with drive droop into 909 Ω plus resistor tolerance. With absolute
+thresholds every channel failed 10/90 while passing 20/80 and 30/70; calibrated thresholds remove
+the drive droop and the 1 kΩ and 15K tolerances in one step.
+
+##### The longest pulse is measured, not the first
+
+`LongestHighRun` scans the whole record and returns the widest complete high run. Taking the
+first run lets a narrow glitch ahead of the real pulse win and *truncate* the result, which was
+observed as 1 µs and 2 µs widths on 2 of 24 channels, producing ratios of 2378 and 0.5. A run
+still high at the end of the record is ignored, since it has no falling edge and so no measurable
+width — that preserves the `NaN` contract instead of silently reporting the distance to the end of
+the capture.
+
+##### Digital capture needs the `capture` opcode, not just the `V` pin state
+
+`V` only marks a pin as capturable. The per-vector `capture` opcode is what takes the sample.
+With `V` alone the burst succeeds and `FetchCaptureWaveform` then fails with
+`Samples Available: 0`, even though the `capture_start`/`capture_stop` bracket, the burst label,
+the waveform's Parallel mode and pin list, the comparator levels and the 0.1 µs strobe are all
+correct. Bursting the pattern directly in the Digital Pattern Editor reproduces the zero, which
+is what localises the fault to the pattern rather than to the C#.
+
+Since only the repeated vector carries `capture`, the record holds two samples fewer than the
+repeat count and t = 0 sits at vector 2 rather than vector 1. The one vector offset does not
+affect a width, which is a difference between two crossings inside one record.
+
+##### Record depth is set by the measured 90% crossing, not the nominal one
+
+`PoolRecordGeometry.SamplesToFetch` returns **49000** samples for the 10 kΩ option, which needs
+the pattern repeat count to be at least 49000. All four `ConfigureRecord` call sites — the three
+`SL*_POOL_Check` steps and `POOL_RiseTime_Options` — route through it, so the depth is set in one
+place.
+
+The earlier 26000 was derived from the nominal 2.303 τ crossing at 20933 samples plus allowance
+for a capacitor 24% high. Raw captures of all eight SL12 channels disproved that margin:
+
+| Channel | 90% crossing | Margin to the old 26000 sample window |
+|---|---|---|
+| CH6 | 2599.3 µs | 0.7 µs |
+| CH1 | 2592.7 µs | 7.3 µs |
+| CH8 | 2589.4 µs | 10.6 µs |
+| CH2 | 2565.3 µs | 34.7 µs |
+| CH4 | 2549.9 µs | 50.1 µs |
+| CH7 | 2484.3 µs | 115.7 µs |
+
+CH1, CH6 and CH8 are exactly the channels that returned an intermittent `NaN` on the 10/90 pair.
+The cause is the window edge, so the symptom is not distinguishable from a dead channel by
+looking at the result alone — which is the reason the depth is now sized from measurement.
+
+The crossings run late because the 10/90 high threshold at 0.9 full scale sits only 60–200 mV
+below the asymptote the node actually reaches, so the signal creeps across it on the flattest
+part of the ramp. Raising the depth stops a crossing that *does* occur from being truncated; it
+does not address the threshold margin itself, which is a question about the drive level. Fitting
+τ and the asymptote to the three glitch-immune widths per channel gives a true final value of
+2.11–2.25 V against the calibrated 2.2727 V, and a τ spread of 724–1000 µs that a single shared
+1 kΩ/1 µF cannot explain.
+
+Because of that margin, **30/70 is the most trustworthy of the three pairs** — it sits in the
+steepest part of the ramp, so it is insensitive both to the asymptote and to the comparator
+chatter below. 10/90 is structurally fragile on this hardware regardless of record depth. This is
+why 30-70 is now the only pair measured; see the threshold-pair section above.
+
+##### The V(t) sweep step
+
+`POOL_VtSweep.PoolNodeVoltageSweep(tsmContext, slot, channel, inputOption, publishResults)`
+samples the RC node against time so the asymptote, τ and shape are measured rather than inferred.
+Defaults are `slot = 0, channel = 0, inputOption = 2` — every slot and channel, matching the
+calibration and rise-time steps, so the **312 published IDs line up exactly with the 312 generated
+limit rows**. That alignment is not cosmetic: a Semiconductor Multi Test step errors on any Tests
+tab entry that is never published, so a narrower default fails the step for every combination it
+skipped. Pass `slot = 12, channel = 1` for a single combination on the bench.
+
+The full sweep costs about **4.5 s** — 24 combinations at roughly 190 ms each, being eleven
+discharges of 10 τ (100 ms) plus 42 τ of delays (38 ms). The discharges dominate, not the delays.
+
+It exists because three window widths cannot distinguish the two candidate defects. Fitting the
+measured SL12 widths gives an **identical 2.31% residual** for a reduced asymptote of 0.947 full
+scale and for a constant threshold offset of +121 mV, both wanting τ ≈ 832 µs against the
+modelled 909 µs. That degeneracy is structural, so no number of parts separates them.
+
+The threshold half of that pair is now ruled out on the bench. The SMU forces the window edges at
+0.2274 V and 2.0466 V, exactly 10% and 90% of the 2.274 V calibration stored for the channel, and
+reads them back to eight decimals — so the calibrate-to-force chain is sound. It sources 4.3 and
+4.5 µA, which raised the prospect of an I×R error to the comparator, but the current is **sourced**
+rather than sunk, giving the drop the wrong sign to lengthen a width, and the channels are
+**remote sensed**, so it is regulated out regardless. That leaves the asymptote.
+
+###### Threshold pairs: 30-70 only
+
+`POOL_RiseTime_Options` measures **one** threshold pair, `30_70`, selected by name via
+`MeasuredPairName` so that reordering the shared `PoolRcModel.Pairs` cannot silently change it.
+10-90 and 20-80 are retired, and with them both published ratios, since each ratio needs two
+pairs.
+
+The reason is amplitude error gain: a 1% asymptote shortfall moves the 10-90 width by **5.79%**
+against 30-70's **2.55%**, because 10-90's high threshold sits only 227 mV below an asymptote the
+ramp may not reach while 30-70 sits in the steepest part of the ramp with 682 mV of headroom.
+10-90 failed 40 of 40 results while 30-70 passed 40 of 40 from the *same* captures and the *same*
+calibration. Dropping the two pairs saves only about 1.6 s plus 48 fetches across the whole
+block, so this was a correctness decision, not a throughput one.
+
+What this costs: the ratios were the only **τ-independent shape monitor** in production. Shape is
+now covered only by `POOL_VtSweep`, which is a characterisation step. If a future failure needs
+shape data, it will have to be collected deliberately rather than read out of history.
+
+Published IDs are now `POOL_<slot>_CH<n>_<option>_RiseTime_30_70` — 3 options × 24 channels = **72
+rows**, plus 72 calibration rows, 144 total reconciled exactly against the limits file.
+
+###### V(t) sweep delays
+
+Delays are multiples of the option's own τ, so one list serves all three options despite their
+twentyfold spread: 0.55, 1.1, 1.65, 2.2, 3.3, 4.4, 6.6, 8.8, 13.2 τ. Published IDs are
+`POOL_VT_<slot>_CH<n>_<option>_Tau055` … `_Tau1320`, plus `_Asymptote` and `_TauEstimate`.
+
+Three constraints are load bearing:
+
+| Constraint | Value | Why |
+|---|---|---|
+| Aperture | **20 µs** | Calibration's 2 ms is right for a settled node but integrates 2.4 τ on a ramp and smears the curve flat. This is the one constant that must not be copied from that step. |
+| PPMU force | **0 A** | The node sits behind the 15K divider at ~7.5 kΩ, so forcing voltage loads it. |
+| Discharge | **10 τ** before every point | Without it a point starts from where the previous longer delay left the capacitor, and the curve flattens into the asymptote from the first point while still looking like data. |
+
+Delays start at 0.55 τ rather than near zero because `Globals.TheHdw.Wait` is a software wait with
+millisecond-scale jitter, so points below ~1 τ carry timing error comparable to the delay. That
+costs nothing, because both unknowns live in the tail; the 13.2 τ point is settled to within 2 ppm
+and is published as the asymptote directly rather than as an estimate. τ is estimated by inverting
+V = A(1 − e^−t/τ) at the point nearest 1 τ, where sensitivity is highest, and returns `NaN` for a
+site that cannot be inverted rather than a plausible-looking number.
+
+**What it cannot settle.** The sweep drives with `WriteStatic`, like calibration, so it measures
+the static path. The rise-time step's step is driven from the *pattern* — `StepAndMeasure` only
+calls `WriteStatic(PinState._0)` before bursting, and there is no `WriteStatic(PinState._1)` in the
+digital strategy at all. So if the burst reaches a different level than static drive, this sweep
+will not show it. That question is answered by checking the state the drive pins
+`T_HSD200_SL11_CH5/6/7` hold on the repeated capture vector in the DPE; the timing sheet puts all
+11 pins, drive included, in `tset1`, so their per-vector state matters.
+
+##### Glitch immunity is already in the width measurement
+
+`PulseWidth` calls `PoolPulse.LongestHighRun`, which differences the edge indices of the longest
+contiguous high run rather than counting high samples or spanning first rising to last falling
+edge. That matters because comparator chatter is heavy and strongly channel dependent. High run
+counts from the raw captures, per 10/90, 20/80, 30/70:
+
+| Channel | High runs | Verdict |
+|---|---|---|
+| CH1, CH4, CH7 | 1 / 1 / 1 | clean |
+| CH2, CH8 | 1–2 | clean |
+| CH6 | 35 / 9 / 5 | mild |
+| CH3 | 25 / 31 / 33 | mild |
+| CH5 | 447 / 182 / 119 | severe |
+
+The glitches are small: CH5's 447 runs total 2522 µs against a longest run of 2431 µs, so about
+446 glitches averaging ~0.2 µs, roughly two samples each. The pulse body is intact, so this is
+chatter at the crossings and not a mid-pulse dropout. CH5's chatter extends to 3024 µs, after its
+main run ends, consistent with the signal hovering at a threshold close to the asymptote. Taking
+the longest run rather than the first-to-last span is what keeps CH3 and CH5 measurable at all.
+
+##### The 5172 needs an immediate trigger
+
+The scope's default edge trigger sits at 0 V, which the NECL XOR output terminated 50 Ω to −2 V
+never reaches — it swings about −1.7 V to −0.9 V, so the trigger never fires. `Configure` calls
+`ConfigureTriggerImmediate` on each session directly, because the `InstrCtrl.Scope` wrapper only
+exposes a digital edge trigger. `StepAndMeasure` arms before driving the step and the 12 ms
+record is twice the ramp, so the pulse is contained without an aligned trigger.
+
+An unconnected 1 MΩ scope input floats near 0 V, which is *above* the ECL midpoint, so
+`PulseWidth` sees a signal that starts high and never falls and returns `NaN` — the same result
+as a real but absent pulse. The per-fetch min/max is logged to separate the two: ECL reads about
+−1.7 to −0.9 V, a floating input reads near 0 V on both.
+
+##### The output changeover selects the source, not the destination
+
+`K7`/`K16`/`K25`… must stay **de-energised** for both back ends. The XOR output lands on the
+changeover's `B_NC` contact, and its common feeds both taps, so the destination is chosen by
+closing the scope tap or the digital tap. Energising the changeover switches the common onto
+`B_NO` and disconnects the XOR output entirely.
 
 #### DIFFMETER limits
 

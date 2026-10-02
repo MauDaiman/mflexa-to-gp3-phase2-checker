@@ -5,11 +5,74 @@
       <DigitalPinLevelSet pin="P154_6571_DIO_24">
         <Vil>0</Vil>
         <Vih>0</Vih>
-        <Vol>0.8</Vol>
-        <Voh>2</Voh>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_25">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_26">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_27">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_28">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_29">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_30">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="P154_6571_DIO_31">
+        <Vil>0</Vil>
+        <Vih>0</Vih>
+        <Vol>-1.4</Vol>
+        <Voh>-1.2</Voh>
         <TerminationMode>HighZ</TerminationMode>
       </DigitalPinLevelSet>
       <DigitalPinLevelSet pin="T_HSD200_SL11_CH5">
+        <Vil>0</Vil>
+        <Vih>5</Vih>
+        <Vol>0</Vol>
+        <Voh>0</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="T_HSD200_SL11_CH6">
+        <Vil>0</Vil>
+        <Vih>5</Vih>
+        <Vol>0</Vol>
+        <Voh>0</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="T_HSD200_SL11_CH7">
         <Vil>0</Vil>
         <Vih>5</Vih>
         <Vol>0</Vol>

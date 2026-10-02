@@ -3,16 +3,93 @@
   <TimingSheet>
     <TimeSets>
       <TimeSet name="tset1">
-        <Period>10 µs</Period>
+        <Period>100 ns</Period>
         <PinEdges>
           <PinEdge pin="P154_6571_DIO_24">
             <DriveNonReturn>
               <On>0 ns</On>
               <Data>0 ns</Data>
-              <Off>0 ns</Off>
+              <Off>100 ns</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>5 µs</Strobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_25">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_26">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_27">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_28">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_29">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_30">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="P154_6571_DIO_31">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -20,10 +97,32 @@
             <DriveNonReturn>
               <On>0 ns</On>
               <Data>0 ns</Data>
-              <Off>0 ns</Off>
+              <Off>100 ns</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>5 µs</Strobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="T_HSD200_SL11_CH6">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="T_HSD200_SL11_CH7">
+            <DriveNonReturn>
+              <On>0 ns</On>
+              <Data>0 ns</Data>
+              <Off>100 ns</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>50 ns</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>

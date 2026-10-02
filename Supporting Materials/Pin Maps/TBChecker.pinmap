@@ -245,6 +245,14 @@
 		<SystemPin name="P131_4081_DMM" />
 		<SystemPin name="P131_DIFF_METER" />
 		<SystemPin name="P131_4081_METER" />
+		<SystemPin name="P110_SCOPE_5172_CH0" />
+		<SystemPin name="P110_SCOPE_5172_CH1" />
+		<SystemPin name="P110_SCOPE_5172_CH2" />
+		<SystemPin name="P110_SCOPE_5172_CH3" />
+		<SystemPin name="P110_SCOPE_5172_CH4" />
+		<SystemPin name="P110_SCOPE_5172_CH5" />
+		<SystemPin name="P110_SCOPE_5172_CH6" />
+		<SystemPin name="P110_SCOPE_5172_CH7" />
 		<SystemPin name="P163_4163_SMU_CH18" />
 		<SystemPin name="P163_4163_SMU_CH20" />
 		<SystemPin name="P163_4163_SMU_CH22" />
@@ -1430,6 +1438,14 @@
 		<SystemConnection pin="P131_4081_METER" instrument="DMM_4081_C1_S14" channel="0" />
 		<SystemConnection pin="P131_DIFF_METER" instrument="DMM_4081_C1_S16" channel="0" />
 		<SystemConnection pin="SMU4139_POS5V" instrument="SMU_4139_C2_S17" channel="0" />
+		<SystemConnection pin="P110_SCOPE_5172_CH0" instrument="SCOPE_5172_C1_S17" channel="0" />
+		<SystemConnection pin="P110_SCOPE_5172_CH1" instrument="SCOPE_5172_C1_S17" channel="1" />
+		<SystemConnection pin="P110_SCOPE_5172_CH2" instrument="SCOPE_5172_C1_S17" channel="2" />
+		<SystemConnection pin="P110_SCOPE_5172_CH3" instrument="SCOPE_5172_C1_S17" channel="3" />
+		<SystemConnection pin="P110_SCOPE_5172_CH4" instrument="SCOPE_5172_C1_S17" channel="4" />
+		<SystemConnection pin="P110_SCOPE_5172_CH5" instrument="SCOPE_5172_C1_S17" channel="5" />
+		<SystemConnection pin="P110_SCOPE_5172_CH6" instrument="SCOPE_5172_C1_S17" channel="6" />
+		<SystemConnection pin="P110_SCOPE_5172_CH7" instrument="SCOPE_5172_C1_S17" channel="7" />
 		<!--Checker Board Relays-->
 		<SystemRelayConnection relay="RL0" relayDriverModule="RELAY_2567_C1_S12" controlLine="K8" />
 		<SystemRelayConnection relay="RL1" relayDriverModule="RELAY_2567_C1_S12" controlLine="K9" />
